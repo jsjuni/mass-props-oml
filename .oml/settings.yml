@@ -1,0 +1,35 @@
+# oml-code settings
+oml-code:
+  schemaVersion: 1
+
+# project npm settings
+project:
+  name: "@oml/fireforce6"
+  version: 0.1.0
+  title: Fire Force VI
+  description: The Fire Force VI architecture
+
+# source folders
+sources:
+  - src
+
+# npm registries
+registries:
+  - url: https://www.npmjs.com/
+
+# npm dependencies
+dependencies:
+  "@oml/core": "^1.0.0"
+
+# oml server settings
+server:
+  port: 8080
+
+# oml-cli parameter defaults
+defaults:
+  build:
+    owl: build/owl
+  render:
+    md: src/model/md
+    web: build/web
+    context: src/model/oml/fireforce6.github.io/mission-control/bundle.oml
