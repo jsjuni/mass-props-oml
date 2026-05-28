@@ -1,0 +1,36 @@
+@dc:creator "WP.1.2.2.3"
+description <http://studioj.us/mass-props-oml/WP.1.2.2.3.2/C#> as WP.1.2.2.3.2_C {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    extends <http://studioj.us/mass-props-oml/WP.1.2.2.3/C#> as WP.1.2.2.3_C
+    uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+    uses <http://imce.jpl.nasa.gov/foundation/base#> as base
+    uses <http://studioj.us/metrology#> as metrology
+
+    instance C.1.2.2.3.2.2 : mission:Component [
+        base:hasCanonicalName "Subassembly 285"
+        base:isContainedIn WP.1.2.2.3_C:C.1.2.2.3.2
+        metrology:hasPoiConvention "-"
+        metrology:isPointMass false
+    ]
+
+    instance C.1.2.2.3.2.1 : mission:Component [
+        base:hasCanonicalName "Subassembly 284"
+        base:isContainedIn WP.1.2.2.3_C:C.1.2.2.3.2
+        metrology:hasPoiConvention "-"
+        metrology:isPointMass false
+    ]
+
+    instance C.1.2.2.3.2.4 : mission:Component [
+        base:hasCanonicalName "Subassembly 287"
+        base:isContainedIn WP.1.2.2.3_C:C.1.2.2.3.2
+        metrology:hasPoiConvention "-"
+        metrology:isPointMass false
+    ]
+
+    instance C.1.2.2.3.2.3 : mission:Component [
+        base:hasCanonicalName "Subassembly 286"
+        base:isContainedIn WP.1.2.2.3_C:C.1.2.2.3.2
+        metrology:hasPoiConvention "-"
+        metrology:isPointMass false
+    ]
+}

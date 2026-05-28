@@ -1,0 +1,27 @@
+@dc:creator "WP.1.2.2.2"
+description <http://studioj.us/mass-props-oml/WP.1.2.2.2.4/WP#> as WP.1.2.2.2.4_WP {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    extends <http://studioj.us/mass-props-oml/WP.1.2.2.2.4/C#> as WP.1.2.2.2.4_C
+    uses <http://imce.jpl.nasa.gov/foundation/project#> as project
+    uses <http://imce.jpl.nasa.gov/foundation/base#> as base
+
+    instance WP.1.2.2.2.4.2 : project:WorkPackage [
+        base:hasCanonicalName "Subassembly 279"
+        project:supplies WP.1.2.2.2.4_C:C.1.2.2.2.4.2
+    ]
+
+    instance WP.1.2.2.2.4.3 : project:WorkPackage [
+        base:hasCanonicalName "Subassembly 280"
+        project:supplies WP.1.2.2.2.4_C:C.1.2.2.2.4.3
+    ]
+
+    instance WP.1.2.2.2.4.4 : project:WorkPackage [
+        base:hasCanonicalName "Subassembly 281"
+        project:supplies WP.1.2.2.2.4_C:C.1.2.2.2.4.4
+    ]
+
+    instance WP.1.2.2.2.4.1 : project:WorkPackage [
+        base:hasCanonicalName "Subassembly 278"
+        project:supplies WP.1.2.2.2.4_C:C.1.2.2.2.4.1
+    ]
+}

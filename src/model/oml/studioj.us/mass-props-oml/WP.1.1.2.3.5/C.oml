@@ -4,24 +4,33 @@ description <http://studioj.us/mass-props-oml/WP.1.1.2.3.5/C#> as WP.1.1.2.3.5_C
     extends <http://studioj.us/mass-props-oml/WP.1.1.2.3/C#> as WP.1.1.2.3_C
     uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
     uses <http://imce.jpl.nasa.gov/foundation/base#> as base
+    uses <http://studioj.us/metrology#> as metrology
 
     instance C.1.1.2.3.5.3 : mission:Component [
         base:hasCanonicalName "Subassembly 72"
         base:isContainedIn WP.1.1.2.3_C:C.1.1.2.3.5
+        metrology:hasPoiConvention "-"
+        metrology:isPointMass false
     ]
 
     instance C.1.1.2.3.5.2 : mission:Component [
         base:hasCanonicalName "Subassembly 71"
         base:isContainedIn WP.1.1.2.3_C:C.1.1.2.3.5
+        metrology:hasPoiConvention "-"
+        metrology:isPointMass false
     ]
 
     instance C.1.1.2.3.5.4 : mission:Component [
         base:hasCanonicalName "Subassembly 73"
         base:isContainedIn WP.1.1.2.3_C:C.1.1.2.3.5
+        metrology:hasPoiConvention "-"
+        metrology:isPointMass false
     ]
 
     instance C.1.1.2.3.5.1 : mission:Component [
         base:hasCanonicalName "Subassembly 70"
         base:isContainedIn WP.1.1.2.3_C:C.1.1.2.3.5
+        metrology:hasPoiConvention "-"
+        metrology:isPointMass false
     ]
 }
