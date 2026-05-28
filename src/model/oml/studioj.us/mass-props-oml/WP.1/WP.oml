@@ -1,22 +1,22 @@
 @dc:creator "WP.1"
 description <http://studioj.us/mass-props-oml/WP.1/WP#> as WP.1_WP {
     uses <http://purl.org/dc/elements/1.1/> as dc
+    extends <http://studioj.us/mass-props-oml/WP.1/C#> as WP.1_C
     uses <http://imce.jpl.nasa.gov/foundation/project#> as project
     uses <http://imce.jpl.nasa.gov/foundation/base#> as base
-    uses <http://studioj.us/mass-props-oml/WP.1/C#> as c
 
     instance WP.1 : project:WorkPackage [
         base:hasCanonicalName "System 1"
-        project:supplies c:C.1
+        project:supplies WP.1_C:C.1
     ]
 
     instance WP.1.2 : project:WorkPackage [
         base:hasCanonicalName "Segment 2"
-        project:supplies c:C.1.2
+        project:supplies WP.1_C:C.1.2
     ]
 
     instance WP.1.1 : project:WorkPackage [
         base:hasCanonicalName "Segment 1"
-        project:supplies c:C.1.1
+        project:supplies WP.1_C:C.1.1
     ]
 }

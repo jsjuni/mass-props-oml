@@ -1,14 +1,37 @@
 vocabulary <http://studioj.us/metrology#> as metrology {
+    extends <http://www.w3.org/2001/XMLSchema#> as xsd
     extends <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis 
 
-concept Quantity < analysis:Characterization
+    concept Quantity < analysis:Characterization
 
-concept MassQuantity < Quantity
+    concept MassQuantity < Quantity
 
-concept LengthQuantity < Quantity
-concept CenterOfMassQuantity < LengthQuantity
+    concept LengthQuantity < Quantity
+    concept CenterOfMassQuantity < LengthQuantity
 
-concept MomentOfInertiaQuantity < Quantity
-concept ProductOfInertiaQuantity < Quantity
+    concept MomentOfInertiaQuantity < Quantity
+    concept ProductOfInertiaQuantity < Quantity
+
+    concept Value < analysis:Characterization
+
+    concept MassValue < Value
+
+    concept LengthValue < Value
+    concept CenterOfMassValue < LengthValue
+
+    concept MomentOfInertiaValue < Value
+    concept ProductOfInertiaValue < Value
+
+    scalar property hasNumber [
+        domain Value
+        range xsd:double
+        functional
+    ]
+
+    scalar property hasUnit [
+        domain Value
+        range xsd:string
+        functional
+    ]
 
 }

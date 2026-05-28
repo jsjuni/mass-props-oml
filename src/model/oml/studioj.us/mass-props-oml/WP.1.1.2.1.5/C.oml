@@ -1,0 +1,32 @@
+@dc:creator "WP.1.1.2.1"
+description <http://studioj.us/mass-props-oml/WP.1.1.2.1.5/C#> as WP.1.1.2.1.5_C {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    extends <http://studioj.us/mass-props-oml/WP.1.1.2.1/C#> as WP.1.1.2.1_C
+    uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+    uses <http://imce.jpl.nasa.gov/foundation/base#> as base
+
+    instance C.1.1.2.1.5.4 : mission:Component [
+        base:hasCanonicalName "Subassembly 42"
+        base:isContainedIn WP.1.1.2.1_C:C.1.1.2.1.5
+    ]
+
+    instance C.1.1.2.1.5.2 : mission:Component [
+        base:hasCanonicalName "Subassembly 40"
+        base:isContainedIn WP.1.1.2.1_C:C.1.1.2.1.5
+    ]
+
+    instance C.1.1.2.1.5.5 : mission:Component [
+        base:hasCanonicalName "Subassembly 43"
+        base:isContainedIn WP.1.1.2.1_C:C.1.1.2.1.5
+    ]
+
+    instance C.1.1.2.1.5.3 : mission:Component [
+        base:hasCanonicalName "Subassembly 41"
+        base:isContainedIn WP.1.1.2.1_C:C.1.1.2.1.5
+    ]
+
+    instance C.1.1.2.1.5.1 : mission:Component [
+        base:hasCanonicalName "Subassembly 39"
+        base:isContainedIn WP.1.1.2.1_C:C.1.1.2.1.5
+    ]
+}
