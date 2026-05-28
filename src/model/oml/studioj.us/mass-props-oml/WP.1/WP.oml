@@ -1,9 +1,9 @@
 @dc:creator "WP.1"
-description <http://studioj.us/mass-props-oml/WP.1/WP#> as WP.1 {
+description <http://studioj.us/mass-props-oml/WP.1/WP#> as WP.1_WP {
     uses <http://purl.org/dc/elements/1.1/> as dc
-    extends <http://studioj.us/mass-props-oml/WP.1/C#> as c
     uses <http://imce.jpl.nasa.gov/foundation/project#> as project
     uses <http://imce.jpl.nasa.gov/foundation/base#> as base
+    uses <http://studioj.us/mass-props-oml/WP.1/C#> as c
 
     instance WP.1 : project:WorkPackage [
         base:hasCanonicalName "System 1"

@@ -1,0 +1,4 @@
+@dc:creator "WP.1"
+description <http://studioj.us/mass-props-oml/WP.1/QV#> as WP.1_QV {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+}
