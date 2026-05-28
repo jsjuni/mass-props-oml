@@ -1,5 +1,6 @@
 vocabulary <http://studioj.us/metrology#> as metrology {
     extends <http://www.w3.org/2001/XMLSchema#> as xsd
+    extends <http://imce.jpl.nasa.gov/foundation/mission#> as mission 
     extends <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis 
 
     concept Quantity < analysis:Characterization
@@ -34,4 +35,19 @@ vocabulary <http://studioj.us/metrology#> as metrology {
         functional
     ]
 
+    scalar poiConvention [
+        oneOf "+", "-"
+    ]
+
+    scalar property hasPoiConvention [
+        domain mission:Component
+        range poiConvention
+        functional
+    ]
+
+    scalar property isPointMass [
+        domain mission:Component
+        range xsd:boolean
+        functional
+    ]
 }
