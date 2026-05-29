@@ -5,11 +5,6 @@ description <http://studioj.us/mass-props-oml/WP.1.2.2.1.2/WP#> as WP.1.2.2.1.2_
     uses <http://imce.jpl.nasa.gov/foundation/project#> as project
     uses <http://imce.jpl.nasa.gov/foundation/base#> as base
 
-    instance WP.1.2.2.1.2.3 : project:WorkPackage [
-        base:hasCanonicalName "Subassembly 266"
-        project:supplies WP.1.2.2.1.2_C:C.1.2.2.1.2.3
-    ]
-
     instance WP.1.2.2.1.2.2 : project:WorkPackage [
         base:hasCanonicalName "Subassembly 265"
         project:supplies WP.1.2.2.1.2_C:C.1.2.2.1.2.2

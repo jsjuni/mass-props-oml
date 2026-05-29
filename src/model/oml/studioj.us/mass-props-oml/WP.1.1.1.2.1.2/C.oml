@@ -13,22 +13,8 @@ description <http://studioj.us/mass-props-oml/WP.1.1.1.2.1.2/C#> as WP.1.1.1.2.1
         metrology:isPointMass false
     ]
 
-    instance C.1.1.1.2.1.2.4 : mission:Component [
-        base:hasCanonicalName "Part 55"
-        base:isContainedIn WP.1.1.1.2.1_C:C.1.1.1.2.1.2
-        metrology:hasPoiConvention "-"
-        metrology:isPointMass false
-    ]
-
     instance C.1.1.1.2.1.2.1 : mission:Component [
         base:hasCanonicalName "Part 52"
-        base:isContainedIn WP.1.1.1.2.1_C:C.1.1.1.2.1.2
-        metrology:hasPoiConvention "-"
-        metrology:isPointMass false
-    ]
-
-    instance C.1.1.1.2.1.2.3 : mission:Component [
-        base:hasCanonicalName "Part 54"
         base:isContainedIn WP.1.1.1.2.1_C:C.1.1.1.2.1.2
         metrology:hasPoiConvention "-"
         metrology:isPointMass false

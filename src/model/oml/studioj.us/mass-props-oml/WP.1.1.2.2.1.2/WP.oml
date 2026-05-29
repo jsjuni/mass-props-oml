@@ -14,19 +14,4 @@ description <http://studioj.us/mass-props-oml/WP.1.1.2.2.1.2/WP#> as WP.1.1.2.2.
         base:hasCanonicalName "Part 157"
         project:supplies WP.1.1.2.2.1.2_C:C.1.1.2.2.1.2.1
     ]
-
-    instance WP.1.1.2.2.1.2.5 : project:WorkPackage [
-        base:hasCanonicalName "Part 161"
-        project:supplies WP.1.1.2.2.1.2_C:C.1.1.2.2.1.2.5
-    ]
-
-    instance WP.1.1.2.2.1.2.4 : project:WorkPackage [
-        base:hasCanonicalName "Part 160"
-        project:supplies WP.1.1.2.2.1.2_C:C.1.1.2.2.1.2.4
-    ]
-
-    instance WP.1.1.2.2.1.2.3 : project:WorkPackage [
-        base:hasCanonicalName "Part 159"
-        project:supplies WP.1.1.2.2.1.2_C:C.1.1.2.2.1.2.3
-    ]
 }

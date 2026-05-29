@@ -14,9 +14,4 @@ description <http://studioj.us/mass-props-oml/WP.1.2/WP#> as WP.1.2_WP {
         base:hasCanonicalName "Element 5"
         project:supplies WP.1.2_C:C.1.2.1
     ]
-
-    instance WP.1.2.3 : project:WorkPackage [
-        base:hasCanonicalName "Element 7"
-        project:supplies WP.1.2_C:C.1.2.3
-    ]
 }

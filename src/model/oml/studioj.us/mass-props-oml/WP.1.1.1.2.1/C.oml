@@ -13,20 +13,6 @@ description <http://studioj.us/mass-props-oml/WP.1.1.1.2.1/C#> as WP.1.1.1.2.1_C
         metrology:isPointMass false
     ]
 
-    instance C.1.1.1.2.1.4 : mission:Component [
-        base:hasCanonicalName "Subassembly 17"
-        base:isContainedIn WP.1.1.1.2_C:C.1.1.1.2.1
-        metrology:hasPoiConvention "-"
-        metrology:isPointMass false
-    ]
-
-    instance C.1.1.1.2.1.3 : mission:Component [
-        base:hasCanonicalName "Subassembly 16"
-        base:isContainedIn WP.1.1.1.2_C:C.1.1.1.2.1
-        metrology:hasPoiConvention "-"
-        metrology:isPointMass false
-    ]
-
     instance C.1.1.1.2.1.1 : mission:Component [
         base:hasCanonicalName "Subassembly 14"
         base:isContainedIn WP.1.1.1.2_C:C.1.1.1.2.1

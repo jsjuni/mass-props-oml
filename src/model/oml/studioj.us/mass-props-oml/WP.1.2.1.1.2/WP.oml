@@ -14,9 +14,4 @@ description <http://studioj.us/mass-props-oml/WP.1.2.1.1.2/WP#> as WP.1.2.1.1.2_
         base:hasCanonicalName "Subassembly 210"
         project:supplies WP.1.2.1.1.2_C:C.1.2.1.1.2.1
     ]
-
-    instance WP.1.2.1.1.2.3 : project:WorkPackage [
-        base:hasCanonicalName "Subassembly 212"
-        project:supplies WP.1.2.1.1.2_C:C.1.2.1.1.2.3
-    ]
 }

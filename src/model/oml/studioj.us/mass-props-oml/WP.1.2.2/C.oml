@@ -6,13 +6,6 @@ description <http://studioj.us/mass-props-oml/WP.1.2.2/C#> as WP.1.2.2_C {
     uses <http://imce.jpl.nasa.gov/foundation/base#> as base
     uses <http://studioj.us/metrology#> as metrology
 
-    instance C.1.2.2.3 : mission:Component [
-        base:hasCanonicalName "Subsystem 22"
-        base:isContainedIn WP.1.2_C:C.1.2.2
-        metrology:hasPoiConvention "-"
-        metrology:isPointMass false
-    ]
-
     instance C.1.2.2.1 : mission:Component [
         base:hasCanonicalName "Subsystem 20"
         base:isContainedIn WP.1.2_C:C.1.2.2

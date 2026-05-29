@@ -19,11 +19,4 @@ description <http://studioj.us/mass-props-oml/WP.1.2/C#> as WP.1.2_C {
         metrology:hasPoiConvention "-"
         metrology:isPointMass false
     ]
-
-    instance C.1.2.3 : mission:Component [
-        base:hasCanonicalName "Element 7"
-        base:isContainedIn WP.1_C:C.1.2
-        metrology:hasPoiConvention "-"
-        metrology:isPointMass false
-    ]
 }

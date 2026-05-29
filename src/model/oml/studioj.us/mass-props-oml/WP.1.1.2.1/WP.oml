@@ -5,16 +5,6 @@ description <http://studioj.us/mass-props-oml/WP.1.1.2.1/WP#> as WP.1.1.2.1_WP {
     uses <http://imce.jpl.nasa.gov/foundation/project#> as project
     uses <http://imce.jpl.nasa.gov/foundation/base#> as base
 
-    instance WP.1.1.2.1.3 : project:WorkPackage [
-        base:hasCanonicalName "Assembly 9"
-        project:supplies WP.1.1.2.1_C:C.1.1.2.1.3
-    ]
-
-    instance WP.1.1.2.1.4 : project:WorkPackage [
-        base:hasCanonicalName "Assembly 10"
-        project:supplies WP.1.1.2.1_C:C.1.1.2.1.4
-    ]
-
     instance WP.1.1.2.1.2 : project:WorkPackage [
         base:hasCanonicalName "Assembly 8"
         project:supplies WP.1.1.2.1_C:C.1.1.2.1.2
@@ -23,10 +13,5 @@ description <http://studioj.us/mass-props-oml/WP.1.1.2.1/WP#> as WP.1.1.2.1_WP {
     instance WP.1.1.2.1.1 : project:WorkPackage [
         base:hasCanonicalName "Assembly 7"
         project:supplies WP.1.1.2.1_C:C.1.1.2.1.1
-    ]
-
-    instance WP.1.1.2.1.5 : project:WorkPackage [
-        base:hasCanonicalName "Assembly 11"
-        project:supplies WP.1.1.2.1_C:C.1.1.2.1.5
     ]
 }
