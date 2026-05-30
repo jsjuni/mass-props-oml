@@ -1,0 +1,115 @@
+@dc:creator WP.1.1.4.2.1_WP:WP.1.1.4.2.1.1
+description <http://studioj.us/mass-props-oml/WP.1.1.4.2.1.1/QV#> as WP.1.1.4.2.1.1_QV {
+    uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    uses <http://studioj.us/metrology#> as metrology
+    uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
+    extends <http://studioj.us/mass-props-oml/WP.1.1.4.2.1/Q#> as WP.1.1.4.2.1_Q
+    extends <http://studioj.us/mass-props-oml/WP.1.1.4.2.1/C#> as WP.1.1.4.2.1_C
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    extends <http://studioj.us/mass-props-oml/WP.1.1.4.2.1/WP#> as WP.1.1.4.2.1_WP
+
+    @rdfs:label "sigma_Izz"
+    instance C.1.1.4.2.1.1_sigma_Izz_value : metrology:MomentOfInertiaValue [
+        analysis:characterizes WP.1.1.4.2.1_Q:C.1.1.4.2.1.1_sigma_Izz
+    ]
+
+    @rdfs:label "sigma_Iyz"
+    instance C.1.1.4.2.1.1_sigma_Iyz_value : metrology:ProductOfInertiaValue [
+        analysis:characterizes WP.1.1.4.2.1_Q:C.1.1.4.2.1.1_sigma_Iyz
+    ]
+
+    @rdfs:label "Ixx"
+    instance C.1.1.4.2.1.1_Ixx_value : metrology:MomentOfInertiaValue [
+        analysis:characterizes WP.1.1.4.2.1_Q:C.1.1.4.2.1.1_Ixx
+    ]
+
+    @rdfs:label "Cz"
+    instance C.1.1.4.2.1.1_Cz_value : metrology:CenterOfMassValue [
+        analysis:characterizes WP.1.1.4.2.1_Q:C.1.1.4.2.1.1_Cz
+    ]
+
+    @rdfs:label "sigma_Cy"
+    instance C.1.1.4.2.1.1_sigma_Cy_value : metrology:CenterOfMassValue [
+        analysis:characterizes WP.1.1.4.2.1_Q:C.1.1.4.2.1.1_sigma_Cy
+    ]
+
+    @rdfs:label "sigma_Iyy"
+    instance C.1.1.4.2.1.1_sigma_Iyy_value : metrology:MomentOfInertiaValue [
+        analysis:characterizes WP.1.1.4.2.1_Q:C.1.1.4.2.1.1_sigma_Iyy
+    ]
+
+    @rdfs:label "sigma_Ixx"
+    instance C.1.1.4.2.1.1_sigma_Ixx_value : metrology:MomentOfInertiaValue [
+        analysis:characterizes WP.1.1.4.2.1_Q:C.1.1.4.2.1.1_sigma_Ixx
+    ]
+
+    @rdfs:label "Iyz"
+    instance C.1.1.4.2.1.1_Iyz_value : metrology:ProductOfInertiaValue [
+        analysis:characterizes WP.1.1.4.2.1_Q:C.1.1.4.2.1.1_Iyz
+    ]
+
+    @rdfs:label "sigma_mass"
+    instance C.1.1.4.2.1.1_sigma_mass_value : metrology:MassValue [
+        analysis:characterizes WP.1.1.4.2.1_Q:C.1.1.4.2.1.1_sigma_mass
+    ]
+
+    @rdfs:label "Iyy"
+    instance C.1.1.4.2.1.1_Iyy_value : metrology:MomentOfInertiaValue [
+        analysis:characterizes WP.1.1.4.2.1_Q:C.1.1.4.2.1.1_Iyy
+    ]
+
+    @rdfs:label "sigma_Ixz"
+    instance C.1.1.4.2.1.1_sigma_Ixz_value : metrology:ProductOfInertiaValue [
+        analysis:characterizes WP.1.1.4.2.1_Q:C.1.1.4.2.1.1_sigma_Ixz
+    ]
+
+    @rdfs:label "Cy"
+    instance C.1.1.4.2.1.1_Cy_value : metrology:CenterOfMassValue [
+        analysis:characterizes WP.1.1.4.2.1_Q:C.1.1.4.2.1.1_Cy
+    ]
+
+    @rdfs:label "sigma_Cz"
+    instance C.1.1.4.2.1.1_sigma_Cz_value : metrology:CenterOfMassValue [
+        analysis:characterizes WP.1.1.4.2.1_Q:C.1.1.4.2.1.1_sigma_Cz
+    ]
+
+    @rdfs:label "mass"
+    instance C.1.1.4.2.1.1_mass_value : metrology:MassValue [
+        analysis:characterizes WP.1.1.4.2.1_Q:C.1.1.4.2.1.1_mass
+    ]
+
+    @rdfs:label "Cx"
+    instance C.1.1.4.2.1.1_Cx_value : metrology:CenterOfMassValue [
+        analysis:characterizes WP.1.1.4.2.1_Q:C.1.1.4.2.1.1_Cx
+    ]
+
+    @rdfs:label "sigma_Cx"
+    instance C.1.1.4.2.1.1_sigma_Cx_value : metrology:CenterOfMassValue [
+        analysis:characterizes WP.1.1.4.2.1_Q:C.1.1.4.2.1.1_sigma_Cx
+    ]
+
+    @rdfs:label "sigma_Ixy"
+    instance C.1.1.4.2.1.1_sigma_Ixy_value : metrology:ProductOfInertiaValue [
+        analysis:characterizes WP.1.1.4.2.1_Q:C.1.1.4.2.1.1_sigma_Ixy
+    ]
+
+    @rdfs:label "Izz"
+    instance C.1.1.4.2.1.1_Izz_value : metrology:MomentOfInertiaValue [
+        analysis:characterizes WP.1.1.4.2.1_Q:C.1.1.4.2.1.1_Izz
+    ]
+
+    @rdfs:label "Ixy"
+    instance C.1.1.4.2.1.1_Ixy_value : metrology:ProductOfInertiaValue [
+        analysis:characterizes WP.1.1.4.2.1_Q:C.1.1.4.2.1.1_Ixy
+    ]
+
+    @rdfs:label "Ixz"
+    instance C.1.1.4.2.1.1_Ixz_value : metrology:ProductOfInertiaValue [
+        analysis:characterizes WP.1.1.4.2.1_Q:C.1.1.4.2.1.1_Ixz
+    ]
+
+    ref instance WP.1.1.4.2.1_C:C.1.1.4.2.1.1 [
+        metrology:hasPoiConvention "-"
+        metrology:isPointMass false
+    ]
+}

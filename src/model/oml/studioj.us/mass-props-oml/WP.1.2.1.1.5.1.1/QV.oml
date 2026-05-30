@@ -1,0 +1,156 @@
+@dc:creator WP.1.2.1.1.5.1_WP:WP.1.2.1.1.5.1.1
+description <http://studioj.us/mass-props-oml/WP.1.2.1.1.5.1.1/QV#> as WP.1.2.1.1.5.1.1_QV {
+    uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    uses <http://studioj.us/metrology#> as metrology
+    uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
+    extends <http://studioj.us/mass-props-oml/WP.1.2.1.1.5.1/Q#> as WP.1.2.1.1.5.1_Q
+    extends <http://studioj.us/units#> as units
+    extends <http://studioj.us/mass-props-oml/WP.1.2.1.1.5.1/C#> as WP.1.2.1.1.5.1_C
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    extends <http://studioj.us/mass-props-oml/WP.1.2.1.1.5.1/WP#> as WP.1.2.1.1.5.1_WP
+
+    @rdfs:label "sigma_Izz"
+    instance C.1.2.1.1.5.1.1_sigma_Izz_value : metrology:MomentOfInertiaValue [
+        analysis:characterizes WP.1.2.1.1.5.1_Q:C.1.2.1.1.5.1.1_sigma_Izz
+        metrology:hasNumber 0.374164784864648
+        metrology:hasUnit units:kg_mm_2
+    ]
+
+    @rdfs:label "sigma_Iyz"
+    instance C.1.2.1.1.5.1.1_sigma_Iyz_value : metrology:ProductOfInertiaValue [
+        analysis:characterizes WP.1.2.1.1.5.1_Q:C.1.2.1.1.5.1.1_sigma_Iyz
+        metrology:hasNumber 0.0224252422361279
+        metrology:hasUnit units:kg_mm_2
+    ]
+
+    @rdfs:label "Ixx"
+    instance C.1.2.1.1.5.1.1_Ixx_value : metrology:MomentOfInertiaValue [
+        analysis:characterizes WP.1.2.1.1.5.1_Q:C.1.2.1.1.5.1.1_Ixx
+        metrology:hasNumber 0.74414155348796
+        metrology:hasUnit units:kg_mm_2
+    ]
+
+    @rdfs:label "Cz"
+    instance C.1.2.1.1.5.1.1_Cz_value : metrology:CenterOfMassValue [
+        analysis:characterizes WP.1.2.1.1.5.1_Q:C.1.2.1.1.5.1.1_Cz
+        metrology:hasNumber -1.79307768121362
+        metrology:hasUnit units:mm
+    ]
+
+    @rdfs:label "sigma_Cy"
+    instance C.1.2.1.1.5.1.1_sigma_Cy_value : metrology:CenterOfMassValue [
+        analysis:characterizes WP.1.2.1.1.5.1_Q:C.1.2.1.1.5.1.1_sigma_Cy
+        metrology:hasNumber 29.1637070837215
+        metrology:hasUnit units:mm
+    ]
+
+    @rdfs:label "sigma_Iyy"
+    instance C.1.2.1.1.5.1.1_sigma_Iyy_value : metrology:MomentOfInertiaValue [
+        analysis:characterizes WP.1.2.1.1.5.1_Q:C.1.2.1.1.5.1.1_sigma_Iyy
+        metrology:hasNumber 0.36942277459594
+        metrology:hasUnit units:kg_mm_2
+    ]
+
+    @rdfs:label "sigma_Ixx"
+    instance C.1.2.1.1.5.1.1_sigma_Ixx_value : metrology:MomentOfInertiaValue [
+        analysis:characterizes WP.1.2.1.1.5.1_Q:C.1.2.1.1.5.1.1_sigma_Ixx
+        metrology:hasNumber 0.372229441260767
+        metrology:hasUnit units:kg_mm_2
+    ]
+
+    @rdfs:label "Iyz"
+    instance C.1.2.1.1.5.1.1_Iyz_value : metrology:ProductOfInertiaValue [
+        analysis:characterizes WP.1.2.1.1.5.1_Q:C.1.2.1.1.5.1.1_Iyz
+        metrology:hasNumber -0.00621973517666819
+        metrology:hasUnit units:kg_mm_2
+    ]
+
+    @rdfs:label "sigma_mass"
+    instance C.1.2.1.1.5.1.1_sigma_mass_value : metrology:MassValue [
+        analysis:characterizes WP.1.2.1.1.5.1_Q:C.1.2.1.1.5.1.1_sigma_mass
+        metrology:hasNumber 0.289220546600936
+        metrology:hasUnit units:kg
+    ]
+
+    @rdfs:label "Iyy"
+    instance C.1.2.1.1.5.1.1_Iyy_value : metrology:MomentOfInertiaValue [
+        analysis:characterizes WP.1.2.1.1.5.1_Q:C.1.2.1.1.5.1.1_Iyy
+        metrology:hasNumber 0.83905617931327
+        metrology:hasUnit units:kg_mm_2
+    ]
+
+    @rdfs:label "sigma_Ixz"
+    instance C.1.2.1.1.5.1.1_sigma_Ixz_value : metrology:ProductOfInertiaValue [
+        analysis:characterizes WP.1.2.1.1.5.1_Q:C.1.2.1.1.5.1.1_sigma_Ixz
+        metrology:hasNumber 0.0214698151227243
+        metrology:hasUnit units:kg_mm_2
+    ]
+
+    @rdfs:label "Cy"
+    instance C.1.2.1.1.5.1.1_Cy_value : metrology:CenterOfMassValue [
+        analysis:characterizes WP.1.2.1.1.5.1_Q:C.1.2.1.1.5.1.1_Cy
+        metrology:hasNumber -38.2245780434459
+        metrology:hasUnit units:mm
+    ]
+
+    @rdfs:label "sigma_Cz"
+    instance C.1.2.1.1.5.1.1_sigma_Cz_value : metrology:CenterOfMassValue [
+        analysis:characterizes WP.1.2.1.1.5.1_Q:C.1.2.1.1.5.1.1_sigma_Cz
+        metrology:hasNumber 29.5945914710325
+        metrology:hasUnit units:mm
+    ]
+
+    @rdfs:label "mass"
+    instance C.1.2.1.1.5.1.1_mass_value : metrology:MassValue [
+        analysis:characterizes WP.1.2.1.1.5.1_Q:C.1.2.1.1.5.1.1_mass
+        metrology:hasNumber 0.68482659698301
+        metrology:hasUnit units:kg
+    ]
+
+    @rdfs:label "Cx"
+    instance C.1.2.1.1.5.1.1_Cx_value : metrology:CenterOfMassValue [
+        analysis:characterizes WP.1.2.1.1.5.1_Q:C.1.2.1.1.5.1.1_Cx
+        metrology:hasNumber 85.7079564128071
+        metrology:hasUnit units:mm
+    ]
+
+    @rdfs:label "sigma_Cx"
+    instance C.1.2.1.1.5.1.1_sigma_Cx_value : metrology:CenterOfMassValue [
+        analysis:characterizes WP.1.2.1.1.5.1_Q:C.1.2.1.1.5.1.1_sigma_Cx
+        metrology:hasNumber 28.8332142065316
+        metrology:hasUnit units:mm
+    ]
+
+    @rdfs:label "sigma_Ixy"
+    instance C.1.2.1.1.5.1.1_sigma_Ixy_value : metrology:ProductOfInertiaValue [
+        analysis:characterizes WP.1.2.1.1.5.1_Q:C.1.2.1.1.5.1.1_sigma_Ixy
+        metrology:hasNumber 0.0219147131886038
+        metrology:hasUnit units:kg_mm_2
+    ]
+
+    @rdfs:label "Izz"
+    instance C.1.2.1.1.5.1.1_Izz_value : metrology:MomentOfInertiaValue [
+        analysis:characterizes WP.1.2.1.1.5.1_Q:C.1.2.1.1.5.1.1_Izz
+        metrology:hasNumber 0.7920201055637
+        metrology:hasUnit units:kg_mm_2
+    ]
+
+    @rdfs:label "Ixy"
+    instance C.1.2.1.1.5.1.1_Ixy_value : metrology:ProductOfInertiaValue [
+        analysis:characterizes WP.1.2.1.1.5.1_Q:C.1.2.1.1.5.1.1_Ixy
+        metrology:hasNumber 0.0939494672689354
+        metrology:hasUnit units:kg_mm_2
+    ]
+
+    @rdfs:label "Ixz"
+    instance C.1.2.1.1.5.1.1_Ixz_value : metrology:ProductOfInertiaValue [
+        analysis:characterizes WP.1.2.1.1.5.1_Q:C.1.2.1.1.5.1.1_Ixz
+        metrology:hasNumber -0.00197347253285574
+        metrology:hasUnit units:kg_mm_2
+    ]
+
+    ref instance WP.1.2.1.1.5.1_C:C.1.2.1.1.5.1.1 [
+        metrology:hasPoiConvention "+"
+        metrology:isPointMass false
+    ]
+}

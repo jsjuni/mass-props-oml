@@ -1,0 +1,39 @@
+@dc:creator WP.1.1.2.3.1_WP:WP.1.1.2.3.1.4
+description <http://studioj.us/mass-props-oml/WP.1.1.2.3.1.4/C#> as WP.1.1.2.3.1.4_C {
+    uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+    uses <http://imce.jpl.nasa.gov/foundation/base#> as base
+    uses <http://studioj.us/base#> as base1
+    extends <http://studioj.us/mass-props-oml/WP.1.1.2.3.1/C#> as WP.1.1.2.3.1_C
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    extends <http://studioj.us/mass-props-oml/WP.1.1.2.3.1/WP#> as WP.1.1.2.3.1_WP
+
+    instance C.1.1.2.3.1.4.1 : mission:Component [
+        base:hasCanonicalName "Part 202"
+        base1:hasComponentIdentifier "C.1.1.2.3.1.4.1"
+        base:isContainedIn WP.1.1.2.3.1_C:C.1.1.2.3.1.4
+    ]
+
+    instance C.1.1.2.3.1.4.2 : mission:Component [
+        base:hasCanonicalName "Part 203"
+        base1:hasComponentIdentifier "C.1.1.2.3.1.4.2"
+        base:isContainedIn WP.1.1.2.3.1_C:C.1.1.2.3.1.4
+    ]
+
+    instance C.1.1.2.3.1.4.3 : mission:Component [
+        base:hasCanonicalName "Part 204"
+        base1:hasComponentIdentifier "C.1.1.2.3.1.4.3"
+        base:isContainedIn WP.1.1.2.3.1_C:C.1.1.2.3.1.4
+    ]
+
+    instance C.1.1.2.3.1.4.4 : mission:Component [
+        base:hasCanonicalName "Part 205"
+        base1:hasComponentIdentifier "C.1.1.2.3.1.4.4"
+        base:isContainedIn WP.1.1.2.3.1_C:C.1.1.2.3.1.4
+    ]
+
+    instance C.1.1.2.3.1.4.5 : mission:Component [
+        base:hasCanonicalName "Part 206"
+        base1:hasComponentIdentifier "C.1.1.2.3.1.4.5"
+        base:isContainedIn WP.1.1.2.3.1_C:C.1.1.2.3.1.4
+    ]
+}

@@ -1,0 +1,9 @@
+description <http://studioj.us/units#> as units {
+    uses <http://studioj.us/metrology#> as metrology
+ 
+    instance kg : metrology:MassUnit
+
+    instance mm : metrology:LengthUnit
+
+    instance kg_mm_2 : metrology:InertiaUnit
+ }

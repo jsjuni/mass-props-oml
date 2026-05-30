@@ -1,0 +1,21 @@
+@dc:creator WP.1.2.2.3.1_WP:WP.1.2.2.3.1.1
+description <http://studioj.us/mass-props-oml/WP.1.2.2.3.1.1/C#> as WP.1.2.2.3.1.1_C {
+    uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+    uses <http://imce.jpl.nasa.gov/foundation/base#> as base
+    uses <http://studioj.us/base#> as base1
+    extends <http://studioj.us/mass-props-oml/WP.1.2.2.3.1/C#> as WP.1.2.2.3.1_C
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    extends <http://studioj.us/mass-props-oml/WP.1.2.2.3.1/WP#> as WP.1.2.2.3.1_WP
+
+    instance C.1.2.2.3.1.1.2 : mission:Component [
+        base:hasCanonicalName "Part 999"
+        base1:hasComponentIdentifier "C.1.2.2.3.1.1.2"
+        base:isContainedIn WP.1.2.2.3.1_C:C.1.2.2.3.1.1
+    ]
+
+    instance C.1.2.2.3.1.1.1 : mission:Component [
+        base:hasCanonicalName "Part 998"
+        base1:hasComponentIdentifier "C.1.2.2.3.1.1.1"
+        base:isContainedIn WP.1.2.2.3.1_C:C.1.2.2.3.1.1
+    ]
+}

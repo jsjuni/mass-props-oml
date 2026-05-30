@@ -1,17 +1,39 @@
-@dc:creator "WP.1.2.1.2.1"
+@dc:creator WP.1.2.1.2.1_WP:WP.1.2.1.2.1.2
 description <http://studioj.us/mass-props-oml/WP.1.2.1.2.1.2/WP#> as WP.1.2.1.2.1.2_WP {
-    uses <http://purl.org/dc/elements/1.1/> as dc
-    extends <http://studioj.us/mass-props-oml/WP.1.2.1.2.1.2/C#> as WP.1.2.1.2.1.2_C
     uses <http://imce.jpl.nasa.gov/foundation/project#> as project
     uses <http://imce.jpl.nasa.gov/foundation/base#> as base
+    uses <http://studioj.us/base#> as base1
+    extends <http://studioj.us/mass-props-oml/WP.1.2.1.2.1.2/C#> as WP.1.2.1.2.1.2_C
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    extends <http://studioj.us/mass-props-oml/WP.1.2.1.2.1/WP#> as WP.1.2.1.2.1_WP
+
+    instance WP.1.2.1.2.1.2.5 : project:WorkPackage [
+        base:hasCanonicalName "Part 785"
+        base1:hasWorkPackageIdentifier "WP.1.2.1.2.1.2.5"
+        project:supplies WP.1.2.1.2.1.2_C:C.1.2.1.2.1.2.5
+    ]
+
+    instance WP.1.2.1.2.1.2.4 : project:WorkPackage [
+        base:hasCanonicalName "Part 784"
+        base1:hasWorkPackageIdentifier "WP.1.2.1.2.1.2.4"
+        project:supplies WP.1.2.1.2.1.2_C:C.1.2.1.2.1.2.4
+    ]
 
     instance WP.1.2.1.2.1.2.2 : project:WorkPackage [
         base:hasCanonicalName "Part 782"
+        base1:hasWorkPackageIdentifier "WP.1.2.1.2.1.2.2"
         project:supplies WP.1.2.1.2.1.2_C:C.1.2.1.2.1.2.2
+    ]
+
+    instance WP.1.2.1.2.1.2.3 : project:WorkPackage [
+        base:hasCanonicalName "Part 783"
+        base1:hasWorkPackageIdentifier "WP.1.2.1.2.1.2.3"
+        project:supplies WP.1.2.1.2.1.2_C:C.1.2.1.2.1.2.3
     ]
 
     instance WP.1.2.1.2.1.2.1 : project:WorkPackage [
         base:hasCanonicalName "Part 781"
+        base1:hasWorkPackageIdentifier "WP.1.2.1.2.1.2.1"
         project:supplies WP.1.2.1.2.1.2_C:C.1.2.1.2.1.2.1
     ]
 }

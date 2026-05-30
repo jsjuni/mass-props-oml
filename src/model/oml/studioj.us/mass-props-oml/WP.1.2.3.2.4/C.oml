@@ -1,0 +1,39 @@
+@dc:creator WP.1.2.3.2_WP:WP.1.2.3.2.4
+description <http://studioj.us/mass-props-oml/WP.1.2.3.2.4/C#> as WP.1.2.3.2.4_C {
+    uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+    uses <http://imce.jpl.nasa.gov/foundation/base#> as base
+    uses <http://studioj.us/base#> as base1
+    extends <http://studioj.us/mass-props-oml/WP.1.2.3.2/C#> as WP.1.2.3.2_C
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    extends <http://studioj.us/mass-props-oml/WP.1.2.3.2/WP#> as WP.1.2.3.2_WP
+
+    instance C.1.2.3.2.4.2 : mission:Component [
+        base:hasCanonicalName "Subassembly 311"
+        base1:hasComponentIdentifier "C.1.2.3.2.4.2"
+        base:isContainedIn WP.1.2.3.2_C:C.1.2.3.2.4
+    ]
+
+    instance C.1.2.3.2.4.1 : mission:Component [
+        base:hasCanonicalName "Subassembly 310"
+        base1:hasComponentIdentifier "C.1.2.3.2.4.1"
+        base:isContainedIn WP.1.2.3.2_C:C.1.2.3.2.4
+    ]
+
+    instance C.1.2.3.2.4.3 : mission:Component [
+        base:hasCanonicalName "Subassembly 312"
+        base1:hasComponentIdentifier "C.1.2.3.2.4.3"
+        base:isContainedIn WP.1.2.3.2_C:C.1.2.3.2.4
+    ]
+
+    instance C.1.2.3.2.4.5 : mission:Component [
+        base:hasCanonicalName "Subassembly 314"
+        base1:hasComponentIdentifier "C.1.2.3.2.4.5"
+        base:isContainedIn WP.1.2.3.2_C:C.1.2.3.2.4
+    ]
+
+    instance C.1.2.3.2.4.4 : mission:Component [
+        base:hasCanonicalName "Subassembly 313"
+        base1:hasComponentIdentifier "C.1.2.3.2.4.4"
+        base:isContainedIn WP.1.2.3.2_C:C.1.2.3.2.4
+    ]
+}

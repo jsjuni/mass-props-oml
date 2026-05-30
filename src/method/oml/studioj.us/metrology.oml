@@ -13,15 +13,38 @@ vocabulary <http://studioj.us/metrology#> as metrology {
     concept MomentOfInertiaQuantity < Quantity
     concept ProductOfInertiaQuantity < Quantity
 
-    concept Value < analysis:Characterization
+    concept Value < analysis:Characterization [
+        restricts all analysis:characterizes to Quantity
+    ]
 
-    concept MassValue < Value
+    concept MassValue < Value [
+        restricts all analysis:characterizes to MassQuantity
+        restricts all hasUnit to MassUnit
+    ]
 
-    concept LengthValue < Value
+    concept LengthValue < Value [
+        restricts all analysis:characterizes to LengthQuantity
+        restricts all hasUnit to LengthUnit
+    ]
     concept CenterOfMassValue < LengthValue
 
-    concept MomentOfInertiaValue < Value
-    concept ProductOfInertiaValue < Value
+    concept MomentOfInertiaValue < Value [
+        restricts all analysis:characterizes to MomentOfInertiaQuantity
+        restricts all hasUnit to InertiaUnit
+    ]
+
+    concept ProductOfInertiaValue < Value [
+        restricts all analysis:characterizes to ProductOfInertiaQuantity
+        restricts all hasUnit to InertiaUnit
+    ]
+
+    concept Unit
+
+    concept MassUnit < Unit
+
+    concept LengthUnit
+
+    concept InertiaUnit
 
     scalar property hasNumber [
         domain Value
@@ -29,9 +52,10 @@ vocabulary <http://studioj.us/metrology#> as metrology {
         functional
     ]
 
-    scalar property hasUnit [
-        domain Value
-        range xsd:string
+    relation entity HasUnit [
+        from Value
+        to Unit
+        forward hasUnit
         functional
     ]
 

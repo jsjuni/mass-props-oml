@@ -1,0 +1,33 @@
+@dc:creator WP.1.1.4_WP:WP.1.1.4.4
+description <http://studioj.us/mass-props-oml/WP.1.1.4.4/WP#> as WP.1.1.4.4_WP {
+    uses <http://imce.jpl.nasa.gov/foundation/project#> as project
+    uses <http://imce.jpl.nasa.gov/foundation/base#> as base
+    uses <http://studioj.us/base#> as base1
+    extends <http://studioj.us/mass-props-oml/WP.1.1.4.4/C#> as WP.1.1.4.4_C
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    extends <http://studioj.us/mass-props-oml/WP.1.1.4/WP#> as WP.1.1.4_WP
+
+    instance WP.1.1.4.4.4 : project:WorkPackage [
+        base:hasCanonicalName "Assembly 53"
+        base1:hasWorkPackageIdentifier "WP.1.1.4.4.4"
+        project:supplies WP.1.1.4.4_C:C.1.1.4.4.4
+    ]
+
+    instance WP.1.1.4.4.2 : project:WorkPackage [
+        base:hasCanonicalName "Assembly 51"
+        base1:hasWorkPackageIdentifier "WP.1.1.4.4.2"
+        project:supplies WP.1.1.4.4_C:C.1.1.4.4.2
+    ]
+
+    instance WP.1.1.4.4.3 : project:WorkPackage [
+        base:hasCanonicalName "Assembly 52"
+        base1:hasWorkPackageIdentifier "WP.1.1.4.4.3"
+        project:supplies WP.1.1.4.4_C:C.1.1.4.4.3
+    ]
+
+    instance WP.1.1.4.4.1 : project:WorkPackage [
+        base:hasCanonicalName "Assembly 50"
+        base1:hasWorkPackageIdentifier "WP.1.1.4.4.1"
+        project:supplies WP.1.1.4.4_C:C.1.1.4.4.1
+    ]
+}

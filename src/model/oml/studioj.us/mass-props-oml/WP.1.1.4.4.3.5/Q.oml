@@ -1,0 +1,509 @@
+@dc:creator WP.1.1.4.4.3_WP:WP.1.1.4.4.3.5
+description <http://studioj.us/mass-props-oml/WP.1.1.4.4.3.5/Q#> as WP.1.1.4.4.3.5_Q {
+    uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    uses <http://studioj.us/metrology#> as metrology
+    uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
+    extends <http://studioj.us/mass-props-oml/WP.1.1.4.4.3.5/C#> as WP.1.1.4.4.3.5_C
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    extends <http://studioj.us/mass-props-oml/WP.1.1.4.4.3/WP#> as WP.1.1.4.4.3_WP
+
+    @rdfs:label "sigma_Izz"
+    instance C.1.1.4.4.3.5.2_sigma_Izz : metrology:MomentOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.2
+    ]
+
+    @rdfs:label "sigma_Iyz"
+    instance C.1.1.4.4.3.5.2_sigma_Iyz : metrology:ProductOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.2
+    ]
+
+    @rdfs:label "Ixx"
+    instance C.1.1.4.4.3.5.2_Ixx : metrology:MomentOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.2
+    ]
+
+    @rdfs:label "Cz"
+    instance C.1.1.4.4.3.5.2_Cz : metrology:CenterOfMassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.2
+    ]
+
+    @rdfs:label "sigma_Cy"
+    instance C.1.1.4.4.3.5.2_sigma_Cy : metrology:CenterOfMassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.2
+    ]
+
+    @rdfs:label "sigma_Iyy"
+    instance C.1.1.4.4.3.5.2_sigma_Iyy : metrology:MomentOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.2
+    ]
+
+    @rdfs:label "sigma_Ixx"
+    instance C.1.1.4.4.3.5.2_sigma_Ixx : metrology:MomentOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.2
+    ]
+
+    @rdfs:label "Iyz"
+    instance C.1.1.4.4.3.5.2_Iyz : metrology:ProductOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.2
+    ]
+
+    @rdfs:label "sigma_mass"
+    instance C.1.1.4.4.3.5.2_sigma_mass : metrology:MassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.2
+    ]
+
+    @rdfs:label "Iyy"
+    instance C.1.1.4.4.3.5.2_Iyy : metrology:MomentOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.2
+    ]
+
+    @rdfs:label "sigma_Ixz"
+    instance C.1.1.4.4.3.5.2_sigma_Ixz : metrology:ProductOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.2
+    ]
+
+    @rdfs:label "Cy"
+    instance C.1.1.4.4.3.5.2_Cy : metrology:CenterOfMassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.2
+    ]
+
+    @rdfs:label "sigma_Cz"
+    instance C.1.1.4.4.3.5.2_sigma_Cz : metrology:CenterOfMassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.2
+    ]
+
+    @rdfs:label "mass"
+    instance C.1.1.4.4.3.5.2_mass : metrology:MassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.2
+    ]
+
+    @rdfs:label "Cx"
+    instance C.1.1.4.4.3.5.2_Cx : metrology:CenterOfMassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.2
+    ]
+
+    @rdfs:label "sigma_Cx"
+    instance C.1.1.4.4.3.5.2_sigma_Cx : metrology:CenterOfMassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.2
+    ]
+
+    @rdfs:label "sigma_Ixy"
+    instance C.1.1.4.4.3.5.2_sigma_Ixy : metrology:ProductOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.2
+    ]
+
+    @rdfs:label "Izz"
+    instance C.1.1.4.4.3.5.2_Izz : metrology:MomentOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.2
+    ]
+
+    @rdfs:label "Ixy"
+    instance C.1.1.4.4.3.5.2_Ixy : metrology:ProductOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.2
+    ]
+
+    @rdfs:label "Ixz"
+    instance C.1.1.4.4.3.5.2_Ixz : metrology:ProductOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.2
+    ]
+
+    @rdfs:label "sigma_Izz"
+    instance C.1.1.4.4.3.5.5_sigma_Izz : metrology:MomentOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.5
+    ]
+
+    @rdfs:label "sigma_Iyz"
+    instance C.1.1.4.4.3.5.5_sigma_Iyz : metrology:ProductOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.5
+    ]
+
+    @rdfs:label "Ixx"
+    instance C.1.1.4.4.3.5.5_Ixx : metrology:MomentOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.5
+    ]
+
+    @rdfs:label "Cz"
+    instance C.1.1.4.4.3.5.5_Cz : metrology:CenterOfMassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.5
+    ]
+
+    @rdfs:label "sigma_Cy"
+    instance C.1.1.4.4.3.5.5_sigma_Cy : metrology:CenterOfMassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.5
+    ]
+
+    @rdfs:label "sigma_Iyy"
+    instance C.1.1.4.4.3.5.5_sigma_Iyy : metrology:MomentOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.5
+    ]
+
+    @rdfs:label "sigma_Ixx"
+    instance C.1.1.4.4.3.5.5_sigma_Ixx : metrology:MomentOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.5
+    ]
+
+    @rdfs:label "Iyz"
+    instance C.1.1.4.4.3.5.5_Iyz : metrology:ProductOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.5
+    ]
+
+    @rdfs:label "sigma_mass"
+    instance C.1.1.4.4.3.5.5_sigma_mass : metrology:MassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.5
+    ]
+
+    @rdfs:label "Iyy"
+    instance C.1.1.4.4.3.5.5_Iyy : metrology:MomentOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.5
+    ]
+
+    @rdfs:label "sigma_Ixz"
+    instance C.1.1.4.4.3.5.5_sigma_Ixz : metrology:ProductOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.5
+    ]
+
+    @rdfs:label "Cy"
+    instance C.1.1.4.4.3.5.5_Cy : metrology:CenterOfMassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.5
+    ]
+
+    @rdfs:label "sigma_Cz"
+    instance C.1.1.4.4.3.5.5_sigma_Cz : metrology:CenterOfMassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.5
+    ]
+
+    @rdfs:label "mass"
+    instance C.1.1.4.4.3.5.5_mass : metrology:MassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.5
+    ]
+
+    @rdfs:label "Cx"
+    instance C.1.1.4.4.3.5.5_Cx : metrology:CenterOfMassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.5
+    ]
+
+    @rdfs:label "sigma_Cx"
+    instance C.1.1.4.4.3.5.5_sigma_Cx : metrology:CenterOfMassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.5
+    ]
+
+    @rdfs:label "sigma_Ixy"
+    instance C.1.1.4.4.3.5.5_sigma_Ixy : metrology:ProductOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.5
+    ]
+
+    @rdfs:label "Izz"
+    instance C.1.1.4.4.3.5.5_Izz : metrology:MomentOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.5
+    ]
+
+    @rdfs:label "Ixy"
+    instance C.1.1.4.4.3.5.5_Ixy : metrology:ProductOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.5
+    ]
+
+    @rdfs:label "Ixz"
+    instance C.1.1.4.4.3.5.5_Ixz : metrology:ProductOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.5
+    ]
+
+    @rdfs:label "sigma_Izz"
+    instance C.1.1.4.4.3.5.1_sigma_Izz : metrology:MomentOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.1
+    ]
+
+    @rdfs:label "sigma_Iyz"
+    instance C.1.1.4.4.3.5.1_sigma_Iyz : metrology:ProductOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.1
+    ]
+
+    @rdfs:label "Ixx"
+    instance C.1.1.4.4.3.5.1_Ixx : metrology:MomentOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.1
+    ]
+
+    @rdfs:label "Cz"
+    instance C.1.1.4.4.3.5.1_Cz : metrology:CenterOfMassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.1
+    ]
+
+    @rdfs:label "sigma_Cy"
+    instance C.1.1.4.4.3.5.1_sigma_Cy : metrology:CenterOfMassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.1
+    ]
+
+    @rdfs:label "sigma_Iyy"
+    instance C.1.1.4.4.3.5.1_sigma_Iyy : metrology:MomentOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.1
+    ]
+
+    @rdfs:label "sigma_Ixx"
+    instance C.1.1.4.4.3.5.1_sigma_Ixx : metrology:MomentOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.1
+    ]
+
+    @rdfs:label "Iyz"
+    instance C.1.1.4.4.3.5.1_Iyz : metrology:ProductOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.1
+    ]
+
+    @rdfs:label "sigma_mass"
+    instance C.1.1.4.4.3.5.1_sigma_mass : metrology:MassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.1
+    ]
+
+    @rdfs:label "Iyy"
+    instance C.1.1.4.4.3.5.1_Iyy : metrology:MomentOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.1
+    ]
+
+    @rdfs:label "sigma_Ixz"
+    instance C.1.1.4.4.3.5.1_sigma_Ixz : metrology:ProductOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.1
+    ]
+
+    @rdfs:label "Cy"
+    instance C.1.1.4.4.3.5.1_Cy : metrology:CenterOfMassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.1
+    ]
+
+    @rdfs:label "sigma_Cz"
+    instance C.1.1.4.4.3.5.1_sigma_Cz : metrology:CenterOfMassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.1
+    ]
+
+    @rdfs:label "mass"
+    instance C.1.1.4.4.3.5.1_mass : metrology:MassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.1
+    ]
+
+    @rdfs:label "Cx"
+    instance C.1.1.4.4.3.5.1_Cx : metrology:CenterOfMassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.1
+    ]
+
+    @rdfs:label "sigma_Cx"
+    instance C.1.1.4.4.3.5.1_sigma_Cx : metrology:CenterOfMassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.1
+    ]
+
+    @rdfs:label "sigma_Ixy"
+    instance C.1.1.4.4.3.5.1_sigma_Ixy : metrology:ProductOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.1
+    ]
+
+    @rdfs:label "Izz"
+    instance C.1.1.4.4.3.5.1_Izz : metrology:MomentOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.1
+    ]
+
+    @rdfs:label "Ixy"
+    instance C.1.1.4.4.3.5.1_Ixy : metrology:ProductOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.1
+    ]
+
+    @rdfs:label "Ixz"
+    instance C.1.1.4.4.3.5.1_Ixz : metrology:ProductOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.1
+    ]
+
+    @rdfs:label "sigma_Izz"
+    instance C.1.1.4.4.3.5.4_sigma_Izz : metrology:MomentOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.4
+    ]
+
+    @rdfs:label "sigma_Iyz"
+    instance C.1.1.4.4.3.5.4_sigma_Iyz : metrology:ProductOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.4
+    ]
+
+    @rdfs:label "Ixx"
+    instance C.1.1.4.4.3.5.4_Ixx : metrology:MomentOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.4
+    ]
+
+    @rdfs:label "Cz"
+    instance C.1.1.4.4.3.5.4_Cz : metrology:CenterOfMassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.4
+    ]
+
+    @rdfs:label "sigma_Cy"
+    instance C.1.1.4.4.3.5.4_sigma_Cy : metrology:CenterOfMassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.4
+    ]
+
+    @rdfs:label "sigma_Iyy"
+    instance C.1.1.4.4.3.5.4_sigma_Iyy : metrology:MomentOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.4
+    ]
+
+    @rdfs:label "sigma_Ixx"
+    instance C.1.1.4.4.3.5.4_sigma_Ixx : metrology:MomentOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.4
+    ]
+
+    @rdfs:label "Iyz"
+    instance C.1.1.4.4.3.5.4_Iyz : metrology:ProductOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.4
+    ]
+
+    @rdfs:label "sigma_mass"
+    instance C.1.1.4.4.3.5.4_sigma_mass : metrology:MassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.4
+    ]
+
+    @rdfs:label "Iyy"
+    instance C.1.1.4.4.3.5.4_Iyy : metrology:MomentOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.4
+    ]
+
+    @rdfs:label "sigma_Ixz"
+    instance C.1.1.4.4.3.5.4_sigma_Ixz : metrology:ProductOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.4
+    ]
+
+    @rdfs:label "Cy"
+    instance C.1.1.4.4.3.5.4_Cy : metrology:CenterOfMassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.4
+    ]
+
+    @rdfs:label "sigma_Cz"
+    instance C.1.1.4.4.3.5.4_sigma_Cz : metrology:CenterOfMassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.4
+    ]
+
+    @rdfs:label "mass"
+    instance C.1.1.4.4.3.5.4_mass : metrology:MassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.4
+    ]
+
+    @rdfs:label "Cx"
+    instance C.1.1.4.4.3.5.4_Cx : metrology:CenterOfMassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.4
+    ]
+
+    @rdfs:label "sigma_Cx"
+    instance C.1.1.4.4.3.5.4_sigma_Cx : metrology:CenterOfMassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.4
+    ]
+
+    @rdfs:label "sigma_Ixy"
+    instance C.1.1.4.4.3.5.4_sigma_Ixy : metrology:ProductOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.4
+    ]
+
+    @rdfs:label "Izz"
+    instance C.1.1.4.4.3.5.4_Izz : metrology:MomentOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.4
+    ]
+
+    @rdfs:label "Ixy"
+    instance C.1.1.4.4.3.5.4_Ixy : metrology:ProductOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.4
+    ]
+
+    @rdfs:label "Ixz"
+    instance C.1.1.4.4.3.5.4_Ixz : metrology:ProductOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.4
+    ]
+
+    @rdfs:label "sigma_Izz"
+    instance C.1.1.4.4.3.5.3_sigma_Izz : metrology:MomentOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.3
+    ]
+
+    @rdfs:label "sigma_Iyz"
+    instance C.1.1.4.4.3.5.3_sigma_Iyz : metrology:ProductOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.3
+    ]
+
+    @rdfs:label "Ixx"
+    instance C.1.1.4.4.3.5.3_Ixx : metrology:MomentOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.3
+    ]
+
+    @rdfs:label "Cz"
+    instance C.1.1.4.4.3.5.3_Cz : metrology:CenterOfMassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.3
+    ]
+
+    @rdfs:label "sigma_Cy"
+    instance C.1.1.4.4.3.5.3_sigma_Cy : metrology:CenterOfMassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.3
+    ]
+
+    @rdfs:label "sigma_Iyy"
+    instance C.1.1.4.4.3.5.3_sigma_Iyy : metrology:MomentOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.3
+    ]
+
+    @rdfs:label "sigma_Ixx"
+    instance C.1.1.4.4.3.5.3_sigma_Ixx : metrology:MomentOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.3
+    ]
+
+    @rdfs:label "Iyz"
+    instance C.1.1.4.4.3.5.3_Iyz : metrology:ProductOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.3
+    ]
+
+    @rdfs:label "sigma_mass"
+    instance C.1.1.4.4.3.5.3_sigma_mass : metrology:MassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.3
+    ]
+
+    @rdfs:label "Iyy"
+    instance C.1.1.4.4.3.5.3_Iyy : metrology:MomentOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.3
+    ]
+
+    @rdfs:label "sigma_Ixz"
+    instance C.1.1.4.4.3.5.3_sigma_Ixz : metrology:ProductOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.3
+    ]
+
+    @rdfs:label "Cy"
+    instance C.1.1.4.4.3.5.3_Cy : metrology:CenterOfMassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.3
+    ]
+
+    @rdfs:label "sigma_Cz"
+    instance C.1.1.4.4.3.5.3_sigma_Cz : metrology:CenterOfMassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.3
+    ]
+
+    @rdfs:label "mass"
+    instance C.1.1.4.4.3.5.3_mass : metrology:MassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.3
+    ]
+
+    @rdfs:label "Cx"
+    instance C.1.1.4.4.3.5.3_Cx : metrology:CenterOfMassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.3
+    ]
+
+    @rdfs:label "sigma_Cx"
+    instance C.1.1.4.4.3.5.3_sigma_Cx : metrology:CenterOfMassQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.3
+    ]
+
+    @rdfs:label "sigma_Ixy"
+    instance C.1.1.4.4.3.5.3_sigma_Ixy : metrology:ProductOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.3
+    ]
+
+    @rdfs:label "Izz"
+    instance C.1.1.4.4.3.5.3_Izz : metrology:MomentOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.3
+    ]
+
+    @rdfs:label "Ixy"
+    instance C.1.1.4.4.3.5.3_Ixy : metrology:ProductOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.3
+    ]
+
+    @rdfs:label "Ixz"
+    instance C.1.1.4.4.3.5.3_Ixz : metrology:ProductOfInertiaQuantity [
+        analysis:characterizes WP.1.1.4.4.3.5_C:C.1.1.4.4.3.5.3
+    ]
+}

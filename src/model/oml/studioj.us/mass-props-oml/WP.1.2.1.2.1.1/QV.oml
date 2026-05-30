@@ -1,10 +1,12 @@
-@dc:creator "WP.1.2.1.2.1"
+@dc:creator WP.1.2.1.2.1_WP:WP.1.2.1.2.1.1
 description <http://studioj.us/mass-props-oml/WP.1.2.1.2.1.1/QV#> as WP.1.2.1.2.1.1_QV {
-    uses <http://purl.org/dc/elements/1.1/> as dc
-    extends <http://studioj.us/mass-props-oml/WP.1.2.1.2.1/Q#> as WP.1.2.1.2.1_Q
     uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
     uses <http://studioj.us/metrology#> as metrology
     uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
+    extends <http://studioj.us/mass-props-oml/WP.1.2.1.2.1/Q#> as WP.1.2.1.2.1_Q
+    extends <http://studioj.us/mass-props-oml/WP.1.2.1.2.1/C#> as WP.1.2.1.2.1_C
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    extends <http://studioj.us/mass-props-oml/WP.1.2.1.2.1/WP#> as WP.1.2.1.2.1_WP
 
     @rdfs:label "sigma_Izz"
     instance C.1.2.1.2.1.1_sigma_Izz_value : metrology:MomentOfInertiaValue [
@@ -104,5 +106,10 @@ description <http://studioj.us/mass-props-oml/WP.1.2.1.2.1.1/QV#> as WP.1.2.1.2.
     @rdfs:label "Ixz"
     instance C.1.2.1.2.1.1_Ixz_value : metrology:ProductOfInertiaValue [
         analysis:characterizes WP.1.2.1.2.1_Q:C.1.2.1.2.1.1_Ixz
+    ]
+
+    ref instance WP.1.2.1.2.1_C:C.1.2.1.2.1.1 [
+        metrology:hasPoiConvention "-"
+        metrology:isPointMass false
     ]
 }
