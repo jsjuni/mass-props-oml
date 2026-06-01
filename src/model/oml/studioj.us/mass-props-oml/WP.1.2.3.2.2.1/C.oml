@@ -10,24 +10,28 @@ description <http://studioj.us/mass-props-oml/WP.1.2.3.2.2.1/C#> as WP.1.2.3.2.2
     instance C.1.2.3.2.2.1.2 : mission:Component [
         base:hasCanonicalName "Part 1083"
         base1:hasComponentIdentifier "C.1.2.3.2.2.1.2"
+        base:hasSortKey "01020302020102"
         base:isContainedIn WP.1.2.3.2.2_C:C.1.2.3.2.2.1
     ]
 
     instance C.1.2.3.2.2.1.4 : mission:Component [
         base:hasCanonicalName "Part 1085"
         base1:hasComponentIdentifier "C.1.2.3.2.2.1.4"
+        base:hasSortKey "01020302020104"
         base:isContainedIn WP.1.2.3.2.2_C:C.1.2.3.2.2.1
     ]
 
     instance C.1.2.3.2.2.1.1 : mission:Component [
         base:hasCanonicalName "Part 1082"
         base1:hasComponentIdentifier "C.1.2.3.2.2.1.1"
+        base:hasSortKey "01020302020101"
         base:isContainedIn WP.1.2.3.2.2_C:C.1.2.3.2.2.1
     ]
 
     instance C.1.2.3.2.2.1.3 : mission:Component [
         base:hasCanonicalName "Part 1084"
         base1:hasComponentIdentifier "C.1.2.3.2.2.1.3"
+        base:hasSortKey "01020302020103"
         base:isContainedIn WP.1.2.3.2.2_C:C.1.2.3.2.2.1
     ]
 }

@@ -9,17 +9,20 @@ description <http://studioj.us/mass-props-oml/WP.1/C#> as WP.1_C {
     instance C.1 : mission:Component [
         base:hasCanonicalName "System 1"
         base1:hasComponentIdentifier "C.1"
+        base:hasSortKey "01"
     ]
 
     instance C.1.2 : mission:Component [
         base:hasCanonicalName "Segment 2"
         base1:hasComponentIdentifier "C.1.2"
+        base:hasSortKey "0102"
         base:isContainedIn C.1
     ]
 
     instance C.1.1 : mission:Component [
         base:hasCanonicalName "Segment 1"
         base1:hasComponentIdentifier "C.1.1"
+        base:hasSortKey "0101"
         base:isContainedIn C.1
     ]
 }

@@ -10,30 +10,35 @@ description <http://studioj.us/mass-props-oml/WP.1.1.4.3.2/C#> as WP.1.1.4.3.2_C
     instance C.1.1.4.3.2.5 : mission:Component [
         base:hasCanonicalName "Subassembly 172"
         base1:hasComponentIdentifier "C.1.1.4.3.2.5"
+        base:hasSortKey "010104030205"
         base:isContainedIn WP.1.1.4.3_C:C.1.1.4.3.2
     ]
 
     instance C.1.1.4.3.2.3 : mission:Component [
         base:hasCanonicalName "Subassembly 170"
         base1:hasComponentIdentifier "C.1.1.4.3.2.3"
+        base:hasSortKey "010104030203"
         base:isContainedIn WP.1.1.4.3_C:C.1.1.4.3.2
     ]
 
     instance C.1.1.4.3.2.2 : mission:Component [
         base:hasCanonicalName "Subassembly 169"
         base1:hasComponentIdentifier "C.1.1.4.3.2.2"
+        base:hasSortKey "010104030202"
         base:isContainedIn WP.1.1.4.3_C:C.1.1.4.3.2
     ]
 
     instance C.1.1.4.3.2.1 : mission:Component [
         base:hasCanonicalName "Subassembly 168"
         base1:hasComponentIdentifier "C.1.1.4.3.2.1"
+        base:hasSortKey "010104030201"
         base:isContainedIn WP.1.1.4.3_C:C.1.1.4.3.2
     ]
 
     instance C.1.1.4.3.2.4 : mission:Component [
         base:hasCanonicalName "Subassembly 171"
         base1:hasComponentIdentifier "C.1.1.4.3.2.4"
+        base:hasSortKey "010104030204"
         base:isContainedIn WP.1.1.4.3_C:C.1.1.4.3.2
     ]
 }

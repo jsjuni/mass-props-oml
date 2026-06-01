@@ -10,30 +10,35 @@ description <http://studioj.us/mass-props-oml/WP.1.2.3.4.1.4/C#> as WP.1.2.3.4.1
     instance C.1.2.3.4.1.4.1 : mission:Component [
         base:hasCanonicalName "Part 1206"
         base1:hasComponentIdentifier "C.1.2.3.4.1.4.1"
+        base:hasSortKey "01020304010401"
         base:isContainedIn WP.1.2.3.4.1_C:C.1.2.3.4.1.4
     ]
 
     instance C.1.2.3.4.1.4.5 : mission:Component [
         base:hasCanonicalName "Part 1210"
         base1:hasComponentIdentifier "C.1.2.3.4.1.4.5"
+        base:hasSortKey "01020304010405"
         base:isContainedIn WP.1.2.3.4.1_C:C.1.2.3.4.1.4
     ]
 
     instance C.1.2.3.4.1.4.4 : mission:Component [
         base:hasCanonicalName "Part 1209"
         base1:hasComponentIdentifier "C.1.2.3.4.1.4.4"
+        base:hasSortKey "01020304010404"
         base:isContainedIn WP.1.2.3.4.1_C:C.1.2.3.4.1.4
     ]
 
     instance C.1.2.3.4.1.4.2 : mission:Component [
         base:hasCanonicalName "Part 1207"
         base1:hasComponentIdentifier "C.1.2.3.4.1.4.2"
+        base:hasSortKey "01020304010402"
         base:isContainedIn WP.1.2.3.4.1_C:C.1.2.3.4.1.4
     ]
 
     instance C.1.2.3.4.1.4.3 : mission:Component [
         base:hasCanonicalName "Part 1208"
         base1:hasComponentIdentifier "C.1.2.3.4.1.4.3"
+        base:hasSortKey "01020304010403"
         base:isContainedIn WP.1.2.3.4.1_C:C.1.2.3.4.1.4
     ]
 }

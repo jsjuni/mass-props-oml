@@ -10,30 +10,35 @@ description <http://studioj.us/mass-props-oml/WP.1.2.1.4.3.2/WP#> as WP.1.2.1.4.
     instance WP.1.2.1.4.3.2.3 : project:WorkPackage [
         base:hasCanonicalName "Part 889"
         base1:hasWorkPackageIdentifier "WP.1.2.1.4.3.2.3"
+        base:hasSortKey "01020104030203"
         project:supplies WP.1.2.1.4.3.2_C:C.1.2.1.4.3.2.3
     ]
 
     instance WP.1.2.1.4.3.2.4 : project:WorkPackage [
         base:hasCanonicalName "Part 890"
         base1:hasWorkPackageIdentifier "WP.1.2.1.4.3.2.4"
+        base:hasSortKey "01020104030204"
         project:supplies WP.1.2.1.4.3.2_C:C.1.2.1.4.3.2.4
     ]
 
     instance WP.1.2.1.4.3.2.5 : project:WorkPackage [
         base:hasCanonicalName "Part 891"
         base1:hasWorkPackageIdentifier "WP.1.2.1.4.3.2.5"
+        base:hasSortKey "01020104030205"
         project:supplies WP.1.2.1.4.3.2_C:C.1.2.1.4.3.2.5
     ]
 
     instance WP.1.2.1.4.3.2.1 : project:WorkPackage [
         base:hasCanonicalName "Part 887"
         base1:hasWorkPackageIdentifier "WP.1.2.1.4.3.2.1"
+        base:hasSortKey "01020104030201"
         project:supplies WP.1.2.1.4.3.2_C:C.1.2.1.4.3.2.1
     ]
 
     instance WP.1.2.1.4.3.2.2 : project:WorkPackage [
         base:hasCanonicalName "Part 888"
         base1:hasWorkPackageIdentifier "WP.1.2.1.4.3.2.2"
+        base:hasSortKey "01020104030202"
         project:supplies WP.1.2.1.4.3.2_C:C.1.2.1.4.3.2.2
     ]
 }

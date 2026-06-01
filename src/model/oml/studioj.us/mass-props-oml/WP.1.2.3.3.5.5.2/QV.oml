@@ -12,140 +12,140 @@ description <http://studioj.us/mass-props-oml/WP.1.2.3.3.5.5.2/QV#> as WP.1.2.3.
     @rdfs:label "sigma_Izz"
     instance C.1.2.3.3.5.5.2_sigma_Izz_value : metrology:MomentOfInertiaValue [
         analysis:characterizes WP.1.2.3.3.5.5_Q:C.1.2.3.3.5.5.2_sigma_Izz
-        metrology:hasNumber 0.374164784864648
+        metrology:hasNumber 0.374164784864648e0
         metrology:hasUnit units:kg_mm_2
     ]
 
     @rdfs:label "sigma_Iyz"
     instance C.1.2.3.3.5.5.2_sigma_Iyz_value : metrology:ProductOfInertiaValue [
         analysis:characterizes WP.1.2.3.3.5.5_Q:C.1.2.3.3.5.5.2_sigma_Iyz
-        metrology:hasNumber 0.0224252422361279
+        metrology:hasNumber 0.0224252422361279e0
         metrology:hasUnit units:kg_mm_2
     ]
 
     @rdfs:label "Ixx"
     instance C.1.2.3.3.5.5.2_Ixx_value : metrology:MomentOfInertiaValue [
         analysis:characterizes WP.1.2.3.3.5.5_Q:C.1.2.3.3.5.5.2_Ixx
-        metrology:hasNumber 0.768110661391538
+        metrology:hasNumber 0.768110661391538e0
         metrology:hasUnit units:kg_mm_2
     ]
 
     @rdfs:label "Cz"
     instance C.1.2.3.3.5.5.2_Cz_value : metrology:CenterOfMassValue [
         analysis:characterizes WP.1.2.3.3.5.5_Q:C.1.2.3.3.5.5.2_Cz
-        metrology:hasNumber -7.55513994954526
+        metrology:hasNumber -7.55513994954526e0
         metrology:hasUnit units:mm
     ]
 
     @rdfs:label "sigma_Cy"
     instance C.1.2.3.3.5.5.2_sigma_Cy_value : metrology:CenterOfMassValue [
         analysis:characterizes WP.1.2.3.3.5.5_Q:C.1.2.3.3.5.5.2_sigma_Cy
-        metrology:hasNumber 29.1637070837215
+        metrology:hasNumber 29.1637070837215e0
         metrology:hasUnit units:mm
     ]
 
     @rdfs:label "sigma_Iyy"
     instance C.1.2.3.3.5.5.2_sigma_Iyy_value : metrology:MomentOfInertiaValue [
         analysis:characterizes WP.1.2.3.3.5.5_Q:C.1.2.3.3.5.5.2_sigma_Iyy
-        metrology:hasNumber 0.36942277459594
+        metrology:hasNumber 0.36942277459594e0
         metrology:hasUnit units:kg_mm_2
     ]
 
     @rdfs:label "sigma_Ixx"
     instance C.1.2.3.3.5.5.2_sigma_Ixx_value : metrology:MomentOfInertiaValue [
         analysis:characterizes WP.1.2.3.3.5.5_Q:C.1.2.3.3.5.5.2_sigma_Ixx
-        metrology:hasNumber 0.372229441260767
+        metrology:hasNumber 0.372229441260767e0
         metrology:hasUnit units:kg_mm_2
     ]
 
     @rdfs:label "Iyz"
     instance C.1.2.3.3.5.5.2_Iyz_value : metrology:ProductOfInertiaValue [
         analysis:characterizes WP.1.2.3.3.5.5_Q:C.1.2.3.3.5.5.2_Iyz
-        metrology:hasNumber -0.00570790993620007
+        metrology:hasNumber -0.00570790993620007e0
         metrology:hasUnit units:kg_mm_2
     ]
 
     @rdfs:label "sigma_mass"
     instance C.1.2.3.3.5.5.2_sigma_mass_value : metrology:MassValue [
         analysis:characterizes WP.1.2.3.3.5.5_Q:C.1.2.3.3.5.5.2_sigma_mass
-        metrology:hasNumber 0.289220546600936
+        metrology:hasNumber 0.289220546600936e0
         metrology:hasUnit units:kg
     ]
 
     @rdfs:label "Iyy"
     instance C.1.2.3.3.5.5.2_Iyy_value : metrology:MomentOfInertiaValue [
         analysis:characterizes WP.1.2.3.3.5.5_Q:C.1.2.3.3.5.5.2_Iyy
-        metrology:hasNumber 0.62716924476135
+        metrology:hasNumber 0.62716924476135e0
         metrology:hasUnit units:kg_mm_2
     ]
 
     @rdfs:label "sigma_Ixz"
     instance C.1.2.3.3.5.5.2_sigma_Ixz_value : metrology:ProductOfInertiaValue [
         analysis:characterizes WP.1.2.3.3.5.5_Q:C.1.2.3.3.5.5.2_sigma_Ixz
-        metrology:hasNumber 0.0214698151227243
+        metrology:hasNumber 0.0214698151227243e0
         metrology:hasUnit units:kg_mm_2
     ]
 
     @rdfs:label "Cy"
     instance C.1.2.3.3.5.5.2_Cy_value : metrology:CenterOfMassValue [
         analysis:characterizes WP.1.2.3.3.5.5_Q:C.1.2.3.3.5.5.2_Cy
-        metrology:hasNumber 33.1573821138591
+        metrology:hasNumber 33.1573821138591e0
         metrology:hasUnit units:mm
     ]
 
     @rdfs:label "sigma_Cz"
     instance C.1.2.3.3.5.5.2_sigma_Cz_value : metrology:CenterOfMassValue [
         analysis:characterizes WP.1.2.3.3.5.5_Q:C.1.2.3.3.5.5.2_sigma_Cz
-        metrology:hasNumber 29.5945914710325
+        metrology:hasNumber 29.5945914710325e0
         metrology:hasUnit units:mm
     ]
 
     @rdfs:label "mass"
     instance C.1.2.3.3.5.5.2_mass_value : metrology:MassValue [
         analysis:characterizes WP.1.2.3.3.5.5_Q:C.1.2.3.3.5.5.2_mass
-        metrology:hasNumber 0.621914396479959
+        metrology:hasNumber 0.621914396479959e0
         metrology:hasUnit units:kg
     ]
 
     @rdfs:label "Cx"
     instance C.1.2.3.3.5.5.2_Cx_value : metrology:CenterOfMassValue [
         analysis:characterizes WP.1.2.3.3.5.5_Q:C.1.2.3.3.5.5.2_Cx
-        metrology:hasNumber 42.5382158719003
+        metrology:hasNumber 42.5382158719003e0
         metrology:hasUnit units:mm
     ]
 
     @rdfs:label "sigma_Cx"
     instance C.1.2.3.3.5.5.2_sigma_Cx_value : metrology:CenterOfMassValue [
         analysis:characterizes WP.1.2.3.3.5.5_Q:C.1.2.3.3.5.5.2_sigma_Cx
-        metrology:hasNumber 28.8332142065316
+        metrology:hasNumber 28.8332142065316e0
         metrology:hasUnit units:mm
     ]
 
     @rdfs:label "sigma_Ixy"
     instance C.1.2.3.3.5.5.2_sigma_Ixy_value : metrology:ProductOfInertiaValue [
         analysis:characterizes WP.1.2.3.3.5.5_Q:C.1.2.3.3.5.5.2_sigma_Ixy
-        metrology:hasNumber 0.0219147131886038
+        metrology:hasNumber 0.0219147131886038e0
         metrology:hasUnit units:kg_mm_2
     ]
 
     @rdfs:label "Izz"
     instance C.1.2.3.3.5.5.2_Izz_value : metrology:MomentOfInertiaValue [
         analysis:characterizes WP.1.2.3.3.5.5_Q:C.1.2.3.3.5.5.2_Izz
-        metrology:hasNumber 0.720222701445747
+        metrology:hasNumber 0.720222701445747e0
         metrology:hasUnit units:kg_mm_2
     ]
 
     @rdfs:label "Ixy"
     instance C.1.2.3.3.5.5.2_Ixy_value : metrology:ProductOfInertiaValue [
         analysis:characterizes WP.1.2.3.3.5.5_Q:C.1.2.3.3.5.5.2_Ixy
-        metrology:hasNumber -0.0101162334315332
+        metrology:hasNumber -0.0101162334315332e0
         metrology:hasUnit units:kg_mm_2
     ]
 
     @rdfs:label "Ixz"
     instance C.1.2.3.3.5.5.2_Ixz_value : metrology:ProductOfInertiaValue [
         analysis:characterizes WP.1.2.3.3.5.5_Q:C.1.2.3.3.5.5.2_Ixz
-        metrology:hasNumber 0.0417901967555841
+        metrology:hasNumber 0.0417901967555841e0
         metrology:hasUnit units:kg_mm_2
     ]
 

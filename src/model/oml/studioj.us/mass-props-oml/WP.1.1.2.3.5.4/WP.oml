@@ -10,12 +10,14 @@ description <http://studioj.us/mass-props-oml/WP.1.1.2.3.5.4/WP#> as WP.1.1.2.3.
     instance WP.1.1.2.3.5.4.1 : project:WorkPackage [
         base:hasCanonicalName "Part 251"
         base1:hasWorkPackageIdentifier "WP.1.1.2.3.5.4.1"
+        base:hasSortKey "01010203050401"
         project:supplies WP.1.1.2.3.5.4_C:C.1.1.2.3.5.4.1
     ]
 
     instance WP.1.1.2.3.5.4.2 : project:WorkPackage [
         base:hasCanonicalName "Part 252"
         base1:hasWorkPackageIdentifier "WP.1.1.2.3.5.4.2"
+        base:hasSortKey "01010203050402"
         project:supplies WP.1.1.2.3.5.4_C:C.1.1.2.3.5.4.2
     ]
 }

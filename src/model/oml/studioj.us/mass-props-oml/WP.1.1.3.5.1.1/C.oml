@@ -10,30 +10,35 @@ description <http://studioj.us/mass-props-oml/WP.1.1.3.5.1.1/C#> as WP.1.1.3.5.1
     instance C.1.1.3.5.1.1.2 : mission:Component [
         base:hasCanonicalName "Part 459"
         base1:hasComponentIdentifier "C.1.1.3.5.1.1.2"
+        base:hasSortKey "01010305010102"
         base:isContainedIn WP.1.1.3.5.1_C:C.1.1.3.5.1.1
     ]
 
     instance C.1.1.3.5.1.1.5 : mission:Component [
         base:hasCanonicalName "Part 462"
         base1:hasComponentIdentifier "C.1.1.3.5.1.1.5"
+        base:hasSortKey "01010305010105"
         base:isContainedIn WP.1.1.3.5.1_C:C.1.1.3.5.1.1
     ]
 
     instance C.1.1.3.5.1.1.1 : mission:Component [
         base:hasCanonicalName "Part 458"
         base1:hasComponentIdentifier "C.1.1.3.5.1.1.1"
+        base:hasSortKey "01010305010101"
         base:isContainedIn WP.1.1.3.5.1_C:C.1.1.3.5.1.1
     ]
 
     instance C.1.1.3.5.1.1.3 : mission:Component [
         base:hasCanonicalName "Part 460"
         base1:hasComponentIdentifier "C.1.1.3.5.1.1.3"
+        base:hasSortKey "01010305010103"
         base:isContainedIn WP.1.1.3.5.1_C:C.1.1.3.5.1.1
     ]
 
     instance C.1.1.3.5.1.1.4 : mission:Component [
         base:hasCanonicalName "Part 461"
         base1:hasComponentIdentifier "C.1.1.3.5.1.1.4"
+        base:hasSortKey "01010305010104"
         base:isContainedIn WP.1.1.3.5.1_C:C.1.1.3.5.1.1
     ]
 }

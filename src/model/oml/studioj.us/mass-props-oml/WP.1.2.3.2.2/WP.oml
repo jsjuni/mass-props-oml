@@ -10,12 +10,14 @@ description <http://studioj.us/mass-props-oml/WP.1.2.3.2.2/WP#> as WP.1.2.3.2.2_
     instance WP.1.2.3.2.2.1 : project:WorkPackage [
         base:hasCanonicalName "Subassembly 306"
         base1:hasWorkPackageIdentifier "WP.1.2.3.2.2.1"
+        base:hasSortKey "010203020201"
         project:supplies WP.1.2.3.2.2_C:C.1.2.3.2.2.1
     ]
 
     instance WP.1.2.3.2.2.2 : project:WorkPackage [
         base:hasCanonicalName "Subassembly 307"
         base1:hasWorkPackageIdentifier "WP.1.2.3.2.2.2"
+        base:hasSortKey "010203020202"
         project:supplies WP.1.2.3.2.2_C:C.1.2.3.2.2.2
     ]
 }

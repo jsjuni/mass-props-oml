@@ -10,18 +10,21 @@ description <http://studioj.us/mass-props-oml/WP.1.1.2.1.4/WP#> as WP.1.1.2.1.4_
     instance WP.1.1.2.1.4.3 : project:WorkPackage [
         base:hasCanonicalName "Subassembly 38"
         base1:hasWorkPackageIdentifier "WP.1.1.2.1.4.3"
+        base:hasSortKey "010102010403"
         project:supplies WP.1.1.2.1.4_C:C.1.1.2.1.4.3
     ]
 
     instance WP.1.1.2.1.4.1 : project:WorkPackage [
         base:hasCanonicalName "Subassembly 36"
         base1:hasWorkPackageIdentifier "WP.1.1.2.1.4.1"
+        base:hasSortKey "010102010401"
         project:supplies WP.1.1.2.1.4_C:C.1.1.2.1.4.1
     ]
 
     instance WP.1.1.2.1.4.2 : project:WorkPackage [
         base:hasCanonicalName "Subassembly 37"
         base1:hasWorkPackageIdentifier "WP.1.1.2.1.4.2"
+        base:hasSortKey "010102010402"
         project:supplies WP.1.1.2.1.4_C:C.1.1.2.1.4.2
     ]
 }

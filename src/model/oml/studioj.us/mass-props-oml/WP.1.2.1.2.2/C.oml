@@ -10,12 +10,14 @@ description <http://studioj.us/mass-props-oml/WP.1.2.1.2.2/C#> as WP.1.2.1.2.2_C
     instance C.1.2.1.2.2.2 : mission:Component [
         base:hasCanonicalName "Subassembly 223"
         base1:hasComponentIdentifier "C.1.2.1.2.2.2"
+        base:hasSortKey "010201020202"
         base:isContainedIn WP.1.2.1.2_C:C.1.2.1.2.2
     ]
 
     instance C.1.2.1.2.2.1 : mission:Component [
         base:hasCanonicalName "Subassembly 222"
         base1:hasComponentIdentifier "C.1.2.1.2.2.1"
+        base:hasSortKey "010201020201"
         base:isContainedIn WP.1.2.1.2_C:C.1.2.1.2.2
     ]
 }
