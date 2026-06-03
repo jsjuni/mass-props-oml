@@ -3,6 +3,14 @@ vocabulary <http://studioj.us/base#> as base {
     extends <http://imce.jpl.nasa.gov/foundation/mission#> as mission
     extends <http://imce.jpl.nasa.gov/foundation/project#> as project
 
+    ref concept mission:Component [
+        key hasComponentIdentifier
+    ]
+    
+    ref concept project:WorkPackage [
+        key hasWorkPackageIdentifier
+    ]
+
     scalar property hasComponentIdentifier [
         domain mission:Component
         functional
