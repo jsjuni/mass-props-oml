@@ -1,8 +1,11 @@
 description <http://studioj.us/mass-props-oml/P.1/P#> as P.1_P {
     uses <http://imce.jpl.nasa.gov/foundation/project#> as project
-    uses <http://imce.jpl.nasa.gov/foundation/base#> as base
+    uses <http://studioj.us/base#> as base
+    uses <http://imce.jpl.nasa.gov/foundation/base#> as base1
 
     instance P.1 : project:Project [
-        base:hasCanonicalName "Project 1"
+        base:hasProjectIdentifier "P.1"
+        base1:hasCanonicalName "Project 1"
+        base1:hasSortKey "00"
     ]
 }

@@ -11,6 +11,10 @@ vocabulary <http://studioj.us/base#> as base {
         key hasWorkPackageIdentifier
     ]
 
+    ref concept project:Project [
+        key hasProjectIdentifier
+    ]
+    
     scalar property hasComponentIdentifier [
         domain mission:Component
         functional
@@ -18,6 +22,11 @@ vocabulary <http://studioj.us/base#> as base {
 
     scalar property hasWorkPackageIdentifier [
         domain project:WorkPackage
+        functional
+    ] < imce-base:hasIdentifier
+
+    scalar property hasProjectIdentifier [
+        domain project:Project
         functional
     ] < imce-base:hasIdentifier
 }
