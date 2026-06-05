@@ -1,0 +1,43 @@
+@dc:creator WP.4.2.1_WP:WP.4.2.1.4
+description <http://studioj.us/mass-props-oml/WP.4.2.1.4/C#> as WP.4.2.1.4_C {
+    extends <http://studioj.us/mass-props-oml/WP.4.2.1/C#> as WP.4.2.1_C
+    uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+    uses <http://imce.jpl.nasa.gov/foundation/base#> as base
+    uses <http://studioj.us/base#> as base1
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    extends <http://studioj.us/mass-props-oml/WP.4.2.1/WP#> as WP.4.2.1_WP
+
+    ref instance WP.4.2.1_C:C.1.2.1.4 [
+        base:contains C.1.2.1.4.4, C.1.2.1.4.2, C.1.2.1.4.5, C.1.2.1.4.1, C.1.2.1.4.3
+    ]
+
+    instance C.1.2.1.4.4 : mission:Component [
+        base:hasCanonicalName "Assembly 73"
+        base1:hasComponentIdentifier "C.1.2.1.4.4"
+        base:hasSortKey "0102010404"
+    ]
+
+    instance C.1.2.1.4.2 : mission:Component [
+        base:hasCanonicalName "Assembly 71"
+        base1:hasComponentIdentifier "C.1.2.1.4.2"
+        base:hasSortKey "0102010402"
+    ]
+
+    instance C.1.2.1.4.5 : mission:Component [
+        base:hasCanonicalName "Assembly 74"
+        base1:hasComponentIdentifier "C.1.2.1.4.5"
+        base:hasSortKey "0102010405"
+    ]
+
+    instance C.1.2.1.4.1 : mission:Component [
+        base:hasCanonicalName "Assembly 70"
+        base1:hasComponentIdentifier "C.1.2.1.4.1"
+        base:hasSortKey "0102010401"
+    ]
+
+    instance C.1.2.1.4.3 : mission:Component [
+        base:hasCanonicalName "Assembly 72"
+        base1:hasComponentIdentifier "C.1.2.1.4.3"
+        base:hasSortKey "0102010403"
+    ]
+}

@@ -1,0 +1,8 @@
+description <http://studioj.us/mass-props-oml/P.1/P#> as P.1_P {
+    uses <http://imce.jpl.nasa.gov/foundation/project#> as project
+    uses <http://imce.jpl.nasa.gov/foundation/base#> as base
+
+    instance P.1 : project:Project [
+        base:hasCanonicalName "Project 1"
+    ]
+}

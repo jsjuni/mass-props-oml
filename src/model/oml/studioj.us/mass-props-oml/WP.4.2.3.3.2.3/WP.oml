@@ -1,0 +1,37 @@
+@dc:creator WP.4.2.3.3.2_WP:WP.4.2.3.3.2.3
+description <http://studioj.us/mass-props-oml/WP.4.2.3.3.2.3/WP#> as WP.4.2.3.3.2.3_WP {
+    uses <http://imce.jpl.nasa.gov/foundation/project#> as project
+    uses <http://imce.jpl.nasa.gov/foundation/base#> as base
+    uses <http://studioj.us/base#> as base1
+    extends <http://studioj.us/mass-props-oml/WP.4.2.3.3.2.3/C#> as WP.4.2.3.3.2.3_C
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    extends <http://studioj.us/mass-props-oml/WP.4.2.3.3.2/WP#> as WP.4.2.3.3.2_WP
+
+    instance WP.4.2.3.3.2.3.3 : project:WorkPackage [
+        base:hasCanonicalName "Part 1138"
+        base1:hasWorkPackageIdentifier "WP.4.2.3.3.2.3.3"
+        base:hasSortKey "01020303020303"
+        project:supplies WP.4.2.3.3.2.3_C:C.1.2.3.3.2.3.3
+    ]
+
+    instance WP.4.2.3.3.2.3.1 : project:WorkPackage [
+        base:hasCanonicalName "Part 1136"
+        base1:hasWorkPackageIdentifier "WP.4.2.3.3.2.3.1"
+        base:hasSortKey "01020303020301"
+        project:supplies WP.4.2.3.3.2.3_C:C.1.2.3.3.2.3.1
+    ]
+
+    instance WP.4.2.3.3.2.3.4 : project:WorkPackage [
+        base:hasCanonicalName "Part 1139"
+        base1:hasWorkPackageIdentifier "WP.4.2.3.3.2.3.4"
+        base:hasSortKey "01020303020304"
+        project:supplies WP.4.2.3.3.2.3_C:C.1.2.3.3.2.3.4
+    ]
+
+    instance WP.4.2.3.3.2.3.2 : project:WorkPackage [
+        base:hasCanonicalName "Part 1137"
+        base1:hasWorkPackageIdentifier "WP.4.2.3.3.2.3.2"
+        base:hasSortKey "01020303020302"
+        project:supplies WP.4.2.3.3.2.3_C:C.1.2.3.3.2.3.2
+    ]
+}
