@@ -1,11 +1,15 @@
 @dc:creator WP.4.2.1.3.2_WP:WP.4.2.1.3.2.4
 description <http://studioj.us/mass-props-oml/WP.4.2.1.3.2.4/WP#> as WP.4.2.1.3.2.4_WP {
+    extends <http://studioj.us/mass-props-oml/WP.4.2.1.3.2/WP#> as WP.4.2.1.3.2_WP
     uses <http://imce.jpl.nasa.gov/foundation/project#> as project
     uses <http://imce.jpl.nasa.gov/foundation/base#> as base
     uses <http://studioj.us/base#> as base1
     extends <http://studioj.us/mass-props-oml/WP.4.2.1.3.2.4/C#> as WP.4.2.1.3.2.4_C
     uses <http://purl.org/dc/elements/1.1/> as dc
-    extends <http://studioj.us/mass-props-oml/WP.4.2.1.3.2/WP#> as WP.4.2.1.3.2_WP
+
+    ref instance WP.4.2.1.3.2_WP:WP.4.2.1.3.2.4 [
+        project:authorizes WP.4.2.1.3.2.4.1, WP.4.2.1.3.2.4.2
+    ]
 
     instance WP.4.2.1.3.2.4.1 : project:WorkPackage [
         base:hasCanonicalName "Part 862"

@@ -1,11 +1,15 @@
 @dc:creator WP.4.2.3.5.2_WP:WP.4.2.3.5.2.2
 description <http://studioj.us/mass-props-oml/WP.4.2.3.5.2.2/WP#> as WP.4.2.3.5.2.2_WP {
+    extends <http://studioj.us/mass-props-oml/WP.4.2.3.5.2/WP#> as WP.4.2.3.5.2_WP
     uses <http://imce.jpl.nasa.gov/foundation/project#> as project
     uses <http://imce.jpl.nasa.gov/foundation/base#> as base
     uses <http://studioj.us/base#> as base1
     extends <http://studioj.us/mass-props-oml/WP.4.2.3.5.2.2/C#> as WP.4.2.3.5.2.2_C
     uses <http://purl.org/dc/elements/1.1/> as dc
-    extends <http://studioj.us/mass-props-oml/WP.4.2.3.5.2/WP#> as WP.4.2.3.5.2_WP
+
+    ref instance WP.4.2.3.5.2_WP:WP.4.2.3.5.2.2 [
+        project:authorizes WP.4.2.3.5.2.2.1, WP.4.2.3.5.2.2.3, WP.4.2.3.5.2.2.2
+    ]
 
     instance WP.4.2.3.5.2.2.1 : project:WorkPackage [
         base:hasCanonicalName "Part 1251"
