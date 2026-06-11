@@ -5,7 +5,7 @@ description <http://studioj.us/mass-props-oml/P.1/P#> as P.1_P {
 
     instance P.1 : project:Project [
         base:hasProjectIdentifier "P.1"
-        base1:hasCanonicalName "Project 1"
+        base1:hasCanonicalName "Project"
         base1:hasSortKey "00"
     ]
 }

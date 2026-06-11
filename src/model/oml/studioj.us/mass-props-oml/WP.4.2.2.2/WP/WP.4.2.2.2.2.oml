@@ -1,0 +1,17 @@
+@dc:creator "http://studioj.us/mass-props-oml/WP.4.2.2/WP/WP.4.2.2.2#WP.4.2.2.2"^^xsd:anyURI
+@dc:rights "http://studioj.us/mass-props-oml/WP.4.2.2.2/WP/WP.4.2.2.2.2#WP.4.2.2.2.2"^^xsd:anyURI
+description <http://studioj.us/mass-props-oml/WP.4.2.2.2/WP/WP.4.2.2.2.2#> as WP.4.2.2.2.2 {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    uses <http://imce.jpl.nasa.gov/foundation/project#> as project
+    uses <http://imce.jpl.nasa.gov/foundation/base#> as base
+    uses <http://studioj.us/base#> as base1
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2.2/C/C.1.2.2.2.2#> as C.1.2.2.2.2
+
+    instance WP.4.2.2.2.2 : project:WorkPackage [
+        base:hasCanonicalName "Assembly 2"
+        base1:hasWorkPackageIdentifier "WP.4.2.2.2.2"
+        base:hasSortKey "0102020202"
+        project:supplies C.1.2.2.2.2:C.1.2.2.2.2
+    ]
+}

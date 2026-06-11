@@ -1,0 +1,151 @@
+@dc:creator "http://studioj.us/mass-props-oml/WP.4.2.2.2.3/WP/WP.4.2.2.2.3.3#WP.4.2.2.2.3.3"^^xsd:anyURI
+@dc:rights "http://studioj.us/mass-props-oml/WP.4.2.2.2.3.3/WP/WP.4.2.2.2.3.3.2#WP.4.2.2.2.3.3.2"^^xsd:anyURI
+description <http://studioj.us/mass-props-oml/WP.4.2.2.2.3.3/C/C.1.2.2.2.3.3.2#> as C.1.2.2.2.3.3.2 {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+    uses <http://imce.jpl.nasa.gov/foundation/base#> as base
+    uses <http://studioj.us/base#> as base1
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2.2.3.3/IT/IT.C.1.2.2.2.3.3.1_out#> as IT.C.1.2.2.2.3.3.1_out
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2.2.3.3/IT/IT.C.1.2.2.2.3.3.2_out#> as IT.C.1.2.2.2.3.3.2_out
+    uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    uses <http://studioj.us/metrology#> as metrology
+    uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
+
+    instance C.1.2.2.2.3.3.2 : mission:Component [
+        base:hasCanonicalName "Part 11"
+        base1:hasComponentIdentifier "C.1.2.2.2.3.3.2"
+        base:hasSortKey "01020202030302"
+        mission:presents IF.C.1.2.2.2.3.3.2_in, IF.C.1.2.2.2.3.3.2_out
+    ]
+
+    instance IF.C.1.2.2.2.3.3.2_in : mission:Interface [
+        base1:hasComponentIdentifier "IF.C.1.2.2.2.3.3.2_in"
+        mission:transfersIn IT.C.1.2.2.2.3.3.1_out:IT.C.1.2.2.2.3.3.1_out
+    ]
+
+    instance IF.C.1.2.2.2.3.3.2_out : mission:Interface [
+        base1:hasComponentIdentifier "IF.C.1.2.2.2.3.3.2_out"
+        mission:transfersOut IT.C.1.2.2.2.3.3.2_out:IT.C.1.2.2.2.3.3.2_out
+    ]
+
+    @rdfs:label "sigma_Izz"
+    instance C.1.2.2.2.3.3.2_sigma_Izz : metrology:MomentOfInertiaQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.3.3.2_sigma_Izz"
+        analysis:characterizes C.1.2.2.2.3.3.2
+    ]
+
+    @rdfs:label "sigma_Iyz"
+    instance C.1.2.2.2.3.3.2_sigma_Iyz : metrology:ProductOfInertiaQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.3.3.2_sigma_Iyz"
+        analysis:characterizes C.1.2.2.2.3.3.2
+    ]
+
+    @rdfs:label "Ixx"
+    instance C.1.2.2.2.3.3.2_Ixx : metrology:MomentOfInertiaQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.3.3.2_Ixx"
+        analysis:characterizes C.1.2.2.2.3.3.2
+    ]
+
+    @rdfs:label "Cz"
+    instance C.1.2.2.2.3.3.2_Cz : metrology:CenterOfMassQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.3.3.2_Cz"
+        analysis:characterizes C.1.2.2.2.3.3.2
+    ]
+
+    @rdfs:label "sigma_Cy"
+    instance C.1.2.2.2.3.3.2_sigma_Cy : metrology:CenterOfMassQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.3.3.2_sigma_Cy"
+        analysis:characterizes C.1.2.2.2.3.3.2
+    ]
+
+    @rdfs:label "sigma_Iyy"
+    instance C.1.2.2.2.3.3.2_sigma_Iyy : metrology:MomentOfInertiaQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.3.3.2_sigma_Iyy"
+        analysis:characterizes C.1.2.2.2.3.3.2
+    ]
+
+    @rdfs:label "sigma_Ixx"
+    instance C.1.2.2.2.3.3.2_sigma_Ixx : metrology:MomentOfInertiaQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.3.3.2_sigma_Ixx"
+        analysis:characterizes C.1.2.2.2.3.3.2
+    ]
+
+    @rdfs:label "Iyz"
+    instance C.1.2.2.2.3.3.2_Iyz : metrology:ProductOfInertiaQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.3.3.2_Iyz"
+        analysis:characterizes C.1.2.2.2.3.3.2
+    ]
+
+    @rdfs:label "sigma_mass"
+    instance C.1.2.2.2.3.3.2_sigma_mass : metrology:MassQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.3.3.2_sigma_mass"
+        analysis:characterizes C.1.2.2.2.3.3.2
+    ]
+
+    @rdfs:label "Iyy"
+    instance C.1.2.2.2.3.3.2_Iyy : metrology:MomentOfInertiaQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.3.3.2_Iyy"
+        analysis:characterizes C.1.2.2.2.3.3.2
+    ]
+
+    @rdfs:label "sigma_Ixz"
+    instance C.1.2.2.2.3.3.2_sigma_Ixz : metrology:ProductOfInertiaQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.3.3.2_sigma_Ixz"
+        analysis:characterizes C.1.2.2.2.3.3.2
+    ]
+
+    @rdfs:label "Cy"
+    instance C.1.2.2.2.3.3.2_Cy : metrology:CenterOfMassQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.3.3.2_Cy"
+        analysis:characterizes C.1.2.2.2.3.3.2
+    ]
+
+    @rdfs:label "sigma_Cz"
+    instance C.1.2.2.2.3.3.2_sigma_Cz : metrology:CenterOfMassQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.3.3.2_sigma_Cz"
+        analysis:characterizes C.1.2.2.2.3.3.2
+    ]
+
+    @rdfs:label "mass"
+    instance C.1.2.2.2.3.3.2_mass : metrology:MassQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.3.3.2_mass"
+        analysis:characterizes C.1.2.2.2.3.3.2
+    ]
+
+    @rdfs:label "Cx"
+    instance C.1.2.2.2.3.3.2_Cx : metrology:CenterOfMassQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.3.3.2_Cx"
+        analysis:characterizes C.1.2.2.2.3.3.2
+    ]
+
+    @rdfs:label "sigma_Cx"
+    instance C.1.2.2.2.3.3.2_sigma_Cx : metrology:CenterOfMassQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.3.3.2_sigma_Cx"
+        analysis:characterizes C.1.2.2.2.3.3.2
+    ]
+
+    @rdfs:label "sigma_Ixy"
+    instance C.1.2.2.2.3.3.2_sigma_Ixy : metrology:ProductOfInertiaQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.3.3.2_sigma_Ixy"
+        analysis:characterizes C.1.2.2.2.3.3.2
+    ]
+
+    @rdfs:label "Izz"
+    instance C.1.2.2.2.3.3.2_Izz : metrology:MomentOfInertiaQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.3.3.2_Izz"
+        analysis:characterizes C.1.2.2.2.3.3.2
+    ]
+
+    @rdfs:label "Ixy"
+    instance C.1.2.2.2.3.3.2_Ixy : metrology:ProductOfInertiaQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.3.3.2_Ixy"
+        analysis:characterizes C.1.2.2.2.3.3.2
+    ]
+
+    @rdfs:label "Ixz"
+    instance C.1.2.2.2.3.3.2_Ixz : metrology:ProductOfInertiaQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.3.3.2_Ixz"
+        analysis:characterizes C.1.2.2.2.3.3.2
+    ]
+}

@@ -1,0 +1,16 @@
+@dc:creator "http://studioj.us/mass-props-oml/WP.4.2/WP/WP.4.2.3#WP.4.2.3"^^xsd:anyURI
+description <http://studioj.us/mass-props-oml/WP.4.2.3/SBS#> as WP.4.2.3_SBS {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    extends <http://studioj.us/mass-props-oml/WP.4.2/C/C.1.2.3#> as C.1.2.3
+    uses <http://imce.jpl.nasa.gov/foundation/base#> as base
+    extends <http://studioj.us/mass-props-oml/WP.4.2.3/C/C.1.2.3.1#> as C.1.2.3.1
+    extends <http://studioj.us/mass-props-oml/WP.4.2.3/C/C.1.2.3.2#> as C.1.2.3.2
+    extends <http://studioj.us/mass-props-oml/WP.4.2.3/C/C.1.2.3.3#> as C.1.2.3.3
+    extends <http://studioj.us/mass-props-oml/WP.4.2.3/C/C.1.2.3.4#> as C.1.2.3.4
+    extends <http://studioj.us/mass-props-oml/WP.4.2.3/C/C.1.2.3.5#> as C.1.2.3.5
+
+    ref instance C.1.2.3:C.1.2.3 [
+        base:contains C.1.2.3.1:C.1.2.3.1, C.1.2.3.2:C.1.2.3.2, C.1.2.3.3:C.1.2.3.3, C.1.2.3.4:C.1.2.3.4, C.1.2.3.5:C.1.2.3.5
+    ]
+}

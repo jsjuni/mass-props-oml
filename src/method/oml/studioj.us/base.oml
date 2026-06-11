@@ -15,6 +15,10 @@ vocabulary <http://studioj.us/base#> as base {
         key hasProjectIdentifier
     ]
     
+    ref concept mission:Interface [
+        key hasInterfaceIdentifier
+    ]
+
     scalar property hasComponentIdentifier [
         domain mission:Component
         functional
@@ -29,4 +33,10 @@ vocabulary <http://studioj.us/base#> as base {
         domain project:Project
         functional
     ] < imce-base:hasIdentifier
+
+    scalar property hasInterfaceIdentifier [
+        domain mission:Interface
+        functional
+    ] < imce-base:hasIdentifier
+
 }

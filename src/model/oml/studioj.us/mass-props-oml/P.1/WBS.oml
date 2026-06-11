@@ -1,0 +1,12 @@
+@dc:creator "http://studioj.us/mass-props-oml/P.1/P#P.1"^^xsd:anyURI
+description <http://studioj.us/mass-props-oml/P.1/WBS#> as P.1_WBS {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    extends <http://studioj.us/mass-props-oml/P.1/P#> as P.1_P
+    uses <http://imce.jpl.nasa.gov/foundation/project#> as project
+    extends <http://studioj.us/mass-props-oml/P.1/WP/WP.4#> as WP.4
+
+    ref instance P.1_P:P.1 [
+        project:authorizes WP.4:WP.4
+    ]
+}

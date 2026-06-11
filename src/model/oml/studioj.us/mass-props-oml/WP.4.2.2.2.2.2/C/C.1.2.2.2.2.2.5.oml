@@ -1,0 +1,151 @@
+@dc:creator "http://studioj.us/mass-props-oml/WP.4.2.2.2.2/WP/WP.4.2.2.2.2.2#WP.4.2.2.2.2.2"^^xsd:anyURI
+@dc:rights "http://studioj.us/mass-props-oml/WP.4.2.2.2.2.2/WP/WP.4.2.2.2.2.2.5#WP.4.2.2.2.2.2.5"^^xsd:anyURI
+description <http://studioj.us/mass-props-oml/WP.4.2.2.2.2.2/C/C.1.2.2.2.2.2.5#> as C.1.2.2.2.2.2.5 {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+    uses <http://imce.jpl.nasa.gov/foundation/base#> as base
+    uses <http://studioj.us/base#> as base1
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2.2.2.2/IT/IT.C.1.2.2.2.2.2.4_out#> as IT.C.1.2.2.2.2.2.4_out
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2.2.2/IT/IT.C.1.2.2.2.2.2_out#> as IT.C.1.2.2.2.2.2_out
+    uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    uses <http://studioj.us/metrology#> as metrology
+    uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
+
+    instance C.1.2.2.2.2.2.5 : mission:Component [
+        base:hasCanonicalName "Part 5"
+        base1:hasComponentIdentifier "C.1.2.2.2.2.2.5"
+        base:hasSortKey "01020202020205"
+        mission:presents IF.C.1.2.2.2.2.2.5_in, IF.C.1.2.2.2.2.2.5_out
+    ]
+
+    instance IF.C.1.2.2.2.2.2.5_in : mission:Interface [
+        base1:hasComponentIdentifier "IF.C.1.2.2.2.2.2.5_in"
+        mission:transfersIn IT.C.1.2.2.2.2.2.4_out:IT.C.1.2.2.2.2.2.4_out
+    ]
+
+    instance IF.C.1.2.2.2.2.2.5_out : mission:Interface [
+        base1:hasComponentIdentifier "IF.C.1.2.2.2.2.2.5_out"
+        mission:transfersOut IT.C.1.2.2.2.2.2_out:IT.C.1.2.2.2.2.2_out
+    ]
+
+    @rdfs:label "sigma_Izz"
+    instance C.1.2.2.2.2.2.5_sigma_Izz : metrology:MomentOfInertiaQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.2.2.5_sigma_Izz"
+        analysis:characterizes C.1.2.2.2.2.2.5
+    ]
+
+    @rdfs:label "sigma_Iyz"
+    instance C.1.2.2.2.2.2.5_sigma_Iyz : metrology:ProductOfInertiaQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.2.2.5_sigma_Iyz"
+        analysis:characterizes C.1.2.2.2.2.2.5
+    ]
+
+    @rdfs:label "Ixx"
+    instance C.1.2.2.2.2.2.5_Ixx : metrology:MomentOfInertiaQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.2.2.5_Ixx"
+        analysis:characterizes C.1.2.2.2.2.2.5
+    ]
+
+    @rdfs:label "Cz"
+    instance C.1.2.2.2.2.2.5_Cz : metrology:CenterOfMassQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.2.2.5_Cz"
+        analysis:characterizes C.1.2.2.2.2.2.5
+    ]
+
+    @rdfs:label "sigma_Cy"
+    instance C.1.2.2.2.2.2.5_sigma_Cy : metrology:CenterOfMassQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.2.2.5_sigma_Cy"
+        analysis:characterizes C.1.2.2.2.2.2.5
+    ]
+
+    @rdfs:label "sigma_Iyy"
+    instance C.1.2.2.2.2.2.5_sigma_Iyy : metrology:MomentOfInertiaQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.2.2.5_sigma_Iyy"
+        analysis:characterizes C.1.2.2.2.2.2.5
+    ]
+
+    @rdfs:label "sigma_Ixx"
+    instance C.1.2.2.2.2.2.5_sigma_Ixx : metrology:MomentOfInertiaQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.2.2.5_sigma_Ixx"
+        analysis:characterizes C.1.2.2.2.2.2.5
+    ]
+
+    @rdfs:label "Iyz"
+    instance C.1.2.2.2.2.2.5_Iyz : metrology:ProductOfInertiaQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.2.2.5_Iyz"
+        analysis:characterizes C.1.2.2.2.2.2.5
+    ]
+
+    @rdfs:label "sigma_mass"
+    instance C.1.2.2.2.2.2.5_sigma_mass : metrology:MassQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.2.2.5_sigma_mass"
+        analysis:characterizes C.1.2.2.2.2.2.5
+    ]
+
+    @rdfs:label "Iyy"
+    instance C.1.2.2.2.2.2.5_Iyy : metrology:MomentOfInertiaQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.2.2.5_Iyy"
+        analysis:characterizes C.1.2.2.2.2.2.5
+    ]
+
+    @rdfs:label "sigma_Ixz"
+    instance C.1.2.2.2.2.2.5_sigma_Ixz : metrology:ProductOfInertiaQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.2.2.5_sigma_Ixz"
+        analysis:characterizes C.1.2.2.2.2.2.5
+    ]
+
+    @rdfs:label "Cy"
+    instance C.1.2.2.2.2.2.5_Cy : metrology:CenterOfMassQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.2.2.5_Cy"
+        analysis:characterizes C.1.2.2.2.2.2.5
+    ]
+
+    @rdfs:label "sigma_Cz"
+    instance C.1.2.2.2.2.2.5_sigma_Cz : metrology:CenterOfMassQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.2.2.5_sigma_Cz"
+        analysis:characterizes C.1.2.2.2.2.2.5
+    ]
+
+    @rdfs:label "mass"
+    instance C.1.2.2.2.2.2.5_mass : metrology:MassQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.2.2.5_mass"
+        analysis:characterizes C.1.2.2.2.2.2.5
+    ]
+
+    @rdfs:label "Cx"
+    instance C.1.2.2.2.2.2.5_Cx : metrology:CenterOfMassQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.2.2.5_Cx"
+        analysis:characterizes C.1.2.2.2.2.2.5
+    ]
+
+    @rdfs:label "sigma_Cx"
+    instance C.1.2.2.2.2.2.5_sigma_Cx : metrology:CenterOfMassQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.2.2.5_sigma_Cx"
+        analysis:characterizes C.1.2.2.2.2.2.5
+    ]
+
+    @rdfs:label "sigma_Ixy"
+    instance C.1.2.2.2.2.2.5_sigma_Ixy : metrology:ProductOfInertiaQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.2.2.5_sigma_Ixy"
+        analysis:characterizes C.1.2.2.2.2.2.5
+    ]
+
+    @rdfs:label "Izz"
+    instance C.1.2.2.2.2.2.5_Izz : metrology:MomentOfInertiaQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.2.2.5_Izz"
+        analysis:characterizes C.1.2.2.2.2.2.5
+    ]
+
+    @rdfs:label "Ixy"
+    instance C.1.2.2.2.2.2.5_Ixy : metrology:ProductOfInertiaQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.2.2.5_Ixy"
+        analysis:characterizes C.1.2.2.2.2.2.5
+    ]
+
+    @rdfs:label "Ixz"
+    instance C.1.2.2.2.2.2.5_Ixz : metrology:ProductOfInertiaQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.2.2.2.5_Ixz"
+        analysis:characterizes C.1.2.2.2.2.2.5
+    ]
+}
