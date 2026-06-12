@@ -1,13 +1,24 @@
 PREFIX mission: <http://imce.jpl.nasa.gov/foundation/mission#>
-PREFIX IT_C_1_in: <http://studioj.us/mass-props-oml/P.1/IT/IT.C.1_in#>
-PREFIX IT_C_1_out: <http://studioj.us/mass-props-oml/P.1/IT/IT.C.1_out#>
 
 ASK {
-  <http://studioj.us/mass-props-oml/P.1/IT/IT.C.1_in#IT.C.1_in>
-    (^mission:transfersIn/^mission:presents)
+  BIND(<http://studioj.us/mass-props-oml/WP.4/IT/IT.C.1.1_out#IT.C.1.1_out> as ?in_item)
+  BIND(<http://studioj.us/mass-props-oml/WP.4/IT/IT.C.1.2_out#IT.C.1.2_out> as ?out_item)
+
+  #
+  # direct path through parent component
+  #
+
+  ?in_item ^mission:transfersIn/^mission:presents/mission:presents/mission:transfersOut ?out_item .
+
+  #
+  # indirect path through implementing components
+  #
+
+  ?in_item
+    ^mission:transfersIn/^mission:presents
     /
     (mission:presents/^mission:joins1/mission:joins2/^mission:presents)+
     /
-    (mission:presents/mission:transfersOut)
-  <http://studioj.us/mass-props-oml/P.1/IT/IT.C.1_out#IT.C.1_out>
+    mission:presents/mission:transfersOut
+  ?out_item
 }
