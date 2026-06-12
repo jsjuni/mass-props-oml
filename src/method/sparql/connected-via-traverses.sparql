@@ -1,0 +1,13 @@
+PREFIX mission: <http://imce.jpl.nasa.gov/foundation/mission#>
+PREFIX IT_C_1_in: <http://studioj.us/mass-props-oml/P.1/IT/IT.C.1_in#>
+PREFIX IT_C_1_out: <http://studioj.us/mass-props-oml/P.1/IT/IT.C.1_out#>
+
+ASK {
+  <http://studioj.us/mass-props-oml/P.1/IT/IT.C.1_in#IT.C.1_in>
+    (^mission:transfersIn/^mission:presents)
+    /
+    (mission:presents/mission:transfersOut/mission:traverses/^mission:traverses/^mission:transfersIn/^mission:presents)+
+    /
+    (mission:presents/mission:transfersOut)
+  <http://studioj.us/mass-props-oml/P.1/IT/IT.C.1_out#IT.C.1_out>
+}
