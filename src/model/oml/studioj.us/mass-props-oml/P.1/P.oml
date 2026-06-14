@@ -1,7 +1,10 @@
+@dc:creator "http://studioj.us/mass-props-oml/P.1/P#P.1"^^xsd:anyURI
 description <http://studioj.us/mass-props-oml/P.1/P#> as P.1_P {
     uses <http://imce.jpl.nasa.gov/foundation/project#> as project
     uses <http://studioj.us/base#> as base
     uses <http://imce.jpl.nasa.gov/foundation/base#> as base1
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
 
     instance P.1 : project:Project [
         base:hasProjectIdentifier "P.1"
