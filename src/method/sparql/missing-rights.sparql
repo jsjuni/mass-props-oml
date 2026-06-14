@@ -11,7 +11,9 @@ WHERE {
         oml:type oml:Description ;
         dc:creator ?creator .
     ?imported oml:type oml:Description .
-    FILTER(NOT EXISTS { { ?imported dc:rights ?creator } UNION { ?imported dc:creator ?creator } })
-    FILTER(?imported != ?stop) VALUES ?stop { <http://studioj.us/units> }
+    BIND(EXISTS { ?imported dc:creator ?creator } as ?has_creator_rights)
+    BIND(EXISTS { ?imported dc:rights ?creator } as ?has_explicit_rights)
+    BIND(NOT EXISTS { ?imported dc:rights ?holder . ?auth a project:Authority FILTER(STR(?holder) = STR(?auth)) }  as ?has_implicit_rights)
+    FILTER(!(?has_creator_rights || ?has_explicit_rights || ?has_implicit_rights))
 }
 ORDER BY ?imported
