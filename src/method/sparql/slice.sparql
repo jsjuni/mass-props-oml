@@ -11,3 +11,5 @@ WHERE {
     BIND(STR(?my_wp) as ?my_wp_str)
     VALUES ?my_wp_str { "http://studioj.us/mass-props-oml/WP.4.2/WP/WP.4.2.2#WP.4.2.2" }
 }
+ORDER BY STR(?g)
+

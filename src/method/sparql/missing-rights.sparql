@@ -1,0 +1,17 @@
+# finds importing descriptions whose imported descriptions do not grant rights to the
+# creator of the importing description
+
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX oml: <http://opencaesar.io/oml#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX project: <http://imce.jpl.nasa.gov/foundation/project#>
+SELECT ?creator ?importing ?imported
+WHERE {
+    ?importing owl:imports ?imported ;
+        oml:type oml:Description ;
+        dc:creator ?creator .
+    ?imported oml:type oml:Description .
+    FILTER(NOT EXISTS { { ?imported dc:rights ?creator } UNION { ?imported dc:creator ?creator } })
+    FILTER(?imported != ?stop) VALUES ?stop { <http://studioj.us/units> }
+}
+ORDER BY ?imported
