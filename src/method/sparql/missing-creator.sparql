@@ -1,0 +1,16 @@
+# finds importing descriptions whose imported descriptions do not grant rights to the
+# creator of the importing description
+
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX oml: <http://opencaesar.io/oml#>
+PREFIX project: <http://imce.jpl.nasa.gov/foundation/project#>
+SELECT ?description
+WHERE {
+    ?description oml:type oml:Description .
+    OPTIONAL {
+        ?description dc:creator ?creator .
+        ?auth a project:Authority .
+        FILTER(IRI(STR(?creator)) = ?auth)
+    }
+    FILTER(!BOUND(?creator))
+}

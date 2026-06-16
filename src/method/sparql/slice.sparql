@@ -2,14 +2,13 @@ PREFIX dc: <http://purl.org/dc/elements/1.1/>
 SELECT ?g ?perm
 WHERE {
     {
-        ?g dc:creator ?my_wp
+        ?g dc:creator ?holder
         BIND("read/write" as ?perm)
     } UNION {
-        ?g dc:rights ?my_wp
+        ?g dc:rights ?holder
         BIND("read" as ?perm)
     }
-    BIND(STR(?my_wp) as ?my_wp_str)
-    VALUES ?my_wp_str { "http://studioj.us/mass-props-oml/WP.4.2/WP/WP.4.2.2#WP.4.2.2" }
+    FILTER(STR(?holder) = STR(?my_wp))
+    VALUES ?my_wp { <http://studioj.us/mass-props-oml/WP.4.2/WP/WP.4.2.2#WP.4.2.2> }
 }
 ORDER BY STR(?g)
-

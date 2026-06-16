@@ -13,7 +13,11 @@ WHERE {
     ?imported oml:type oml:Description .
     BIND(EXISTS { ?imported dc:creator ?creator } as ?has_creator_rights)
     BIND(EXISTS { ?imported dc:rights ?creator } as ?has_explicit_rights)
-    BIND(NOT EXISTS { ?imported dc:rights ?holder . ?auth a project:Authority FILTER(STR(?holder) = STR(?auth)) }  as ?has_implicit_rights)
+    BIND(NOT EXISTS {
+        ?imported dc:rights ?holder .
+        ?auth a project:Authority
+        FILTER(IRI(STR(?holder)) = ?auth)
+        }  as ?has_implicit_rights)
     FILTER(!(?has_creator_rights || ?has_explicit_rights || ?has_implicit_rights))
 }
 ORDER BY ?imported
