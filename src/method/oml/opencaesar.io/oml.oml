@@ -1,5 +1,0 @@
-vocabulary <http://opencaesar.io/oml#> as oml {
-
-    annotation property label
-    
-}
