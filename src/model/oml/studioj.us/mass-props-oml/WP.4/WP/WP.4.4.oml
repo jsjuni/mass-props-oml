@@ -11,7 +11,7 @@ description <http://studioj.us/mass-props-oml/WP.4/WP/WP.4.4#> as WP.4.4 {
     instance WP.4.4 : project:WorkPackage [
         base:hasCanonicalName "Segment 4"
         base1:hasWorkPackageIdentifier "WP.4.4"
-        base:hasSortKey "0104"
+        base:hasSortKey "0404"
         project:supplies C.1.4:C.1.4
     ]
 }

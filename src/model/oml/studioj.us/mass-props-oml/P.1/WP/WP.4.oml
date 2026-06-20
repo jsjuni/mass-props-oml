@@ -11,7 +11,7 @@ description <http://studioj.us/mass-props-oml/P.1/WP/WP.4#> as WP.4 {
     instance WP.4 : project:WorkPackage [
         base:hasCanonicalName "System 1"
         base1:hasWorkPackageIdentifier "WP.4"
-        base:hasSortKey "01"
+        base:hasSortKey "04"
         project:supplies C.1:C.1
     ]
 }

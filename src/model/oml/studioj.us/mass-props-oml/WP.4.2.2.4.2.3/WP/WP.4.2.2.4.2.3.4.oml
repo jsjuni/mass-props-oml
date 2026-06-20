@@ -11,7 +11,7 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2.4.2.3/WP/WP.4.2.2.4.2.3.4
     instance WP.4.2.2.4.2.3.4 : project:WorkPackage [
         base:hasCanonicalName "Part 20"
         base1:hasWorkPackageIdentifier "WP.4.2.2.4.2.3.4"
-        base:hasSortKey "01020204020304"
+        base:hasSortKey "04020204020304"
         project:supplies C.1.2.2.4.2.3.4:C.1.2.2.4.2.3.4
     ]
 }

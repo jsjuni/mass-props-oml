@@ -11,7 +11,7 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2.2/WP/WP.4.2.2.2.4#> as WP
     instance WP.4.2.2.2.4 : project:WorkPackage [
         base:hasCanonicalName "Assembly 4"
         base1:hasWorkPackageIdentifier "WP.4.2.2.2.4"
-        base:hasSortKey "0102020204"
+        base:hasSortKey "0402020204"
         project:supplies C.1.2.2.2.4:C.1.2.2.2.4
     ]
 }
