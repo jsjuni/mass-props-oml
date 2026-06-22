@@ -1,5 +1,5 @@
 @dc:creator "http://studioj.us/mass-props-oml/WP.4.2.2.4/WP/WP.4.2.2.4.2#WP.4.2.2.4.2"^^xsd:anyURI
-@dc:rights "http://studioj.us/mass-props-oml/WP.4.2.2.4.2/WP/WP.4.2.2.4.2.1#WP.4.2.2.4.2.1"^^xsd:anyURI
+@dc:rights "http://studioj.us/mass-props-oml/WP.4.2.2.4/WP/WP.4.2.2.4.2#WP.4.2.2.4.2"^^xsd:anyURI, "http://studioj.us/mass-props-oml/WP.4.2.2.4.2/WP/WP.4.2.2.4.2.1#WP.4.2.2.4.2.1"^^xsd:anyURI
 description <http://studioj.us/mass-props-oml/WP.4.2.2.4.2/WP/WP.4.2.2.4.2.1#> as WP.4.2.2.4.2.1 {
     uses <http://purl.org/dc/elements/1.1/> as dc
     uses <http://www.w3.org/2001/XMLSchema#> as xsd
