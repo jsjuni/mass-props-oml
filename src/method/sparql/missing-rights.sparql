@@ -1,7 +1,8 @@
 # finds importing descriptions whose imported descriptions do not grant rights to the
 # creator of the importing description
-# rights are explicit when the rights of the imported match the creator of the importing
-# rights are implicit when not explicit and right of the imported as a regex match the creator of the importing
+# creator rights => creator of the imported matches creator of the importing
+# explicit rights => rights of the imported match creator of the importing
+# implicit_rights => neither creator nor explicit and rights of the imported as a regex match the creator of the importing
 
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX oml: <http://opencaesar.io/oml#>
@@ -13,8 +14,13 @@ WHERE {
         oml:type oml:Description ;
         dc:creator ?creator .
     ?imported oml:type oml:Description .
+
+BIND(EXISTS { ?imported dc:creator ?creator } as ?has_creator_rights)
 BIND(EXISTS { ?imported dc:rights ?creator } as ?has_explicit_rights)
-BIND(!?has_explicit_rights && EXISTS { ?imported dc:rights ?holder FILTER(REGEX(STR(?creator), STR(?holder))) } as ?has_implicit_rights)
-FILTER(!?has_explicit_rights && !?has_implicit_rights)
+BIND(!?has_creator_rights && !?has_explicit_rights && EXISTS {
+    ?imported dc:rights ?holder FILTER(REGEX(STR(?creator), STR(?holder)))
+} as ?has_implicit_rights)
+
+FILTER(!?has_creator_rights && !?has_explicit_rights && !?has_implicit_rights)
 }
 ORDER BY ?imported ?importing
