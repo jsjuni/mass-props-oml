@@ -4,6 +4,9 @@ description <http://studioj.us/mass-props-oml/P.1/IT/IT.C.1_in#> as IT.C.1_in {
     uses <http://purl.org/dc/elements/1.1/> as dc
     uses <http://www.w3.org/2001/XMLSchema#> as xsd
     uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+    uses <http://studioj.us/base#> as base
 
-    instance IT.C.1_in : mission:Item
+    instance IT.C.1_in : mission:Item [
+        base:hasItemIdentifier "IT.C.1_in"
+    ]
 }

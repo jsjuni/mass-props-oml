@@ -4,6 +4,9 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2.4.3/IT/IT.C.1.2.2.4.3.3_o
     uses <http://purl.org/dc/elements/1.1/> as dc
     uses <http://www.w3.org/2001/XMLSchema#> as xsd
     uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+    uses <http://studioj.us/base#> as base
 
-    instance IT.C.1.2.2.4.3.3_out : mission:Item
+    instance IT.C.1.2.2.4.3.3_out : mission:Item [
+        base:hasItemIdentifier "IT.C.1.2.2.4.3.3_out"
+    ]
 }

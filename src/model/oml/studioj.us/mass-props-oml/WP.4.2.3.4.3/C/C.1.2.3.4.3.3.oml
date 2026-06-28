@@ -20,12 +20,12 @@ description <http://studioj.us/mass-props-oml/WP.4.2.3.4.3/C/C.1.2.3.4.3.3#> as 
     ]
 
     instance IF.C.1.2.3.4.3.3_in : mission:Interface [
-        base1:hasComponentIdentifier "IF.C.1.2.3.4.3.3_in"
+        base1:hasInterfaceIdentifier "IF.C.1.2.3.4.3.3_in"
         mission:transfersIn IT.C.1.2.3.4.3.2_out:IT.C.1.2.3.4.3.2_out
     ]
 
     instance IF.C.1.2.3.4.3.3_out : mission:Interface [
-        base1:hasComponentIdentifier "IF.C.1.2.3.4.3.3_out"
+        base1:hasInterfaceIdentifier "IF.C.1.2.3.4.3.3_out"
         mission:transfersOut IT.C.1.2.3.4.3.3_out:IT.C.1.2.3.4.3.3_out
     ]
 
