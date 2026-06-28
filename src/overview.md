@@ -108,6 +108,8 @@ To make it slightly more interesting, let us suppose that out Element 2 is compo
 
 How should we partition this content into descriptions that honor our access control conventions?
 
+### System and Work Breakdown Structures
+
 If each of our subsystems will be supplied by a separate work package, then we should create each subsystem in its own description with a `@dc:rights` annotation that makes it available to the supplier. Here, for example, is the description C.1.2.2.1:
 
 ```
@@ -217,3 +219,204 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2/WBS#> as WP.4.2.2_WBS {
     ]
 }
 ```
+
+### System Interconnection Structure
+
+To further illustrate the pattern, we introduce internal connectivity structure in the form of mission:Interfaces, mission:Junctions, and mission:Items.
+
+We ommitted some detail in the earler description of C.1.2.2 (Element 2). Here is some of that detail:
+
+```
+@dc:creator "http://studioj.us/mass-props-oml/WP.4/WP/WP.4.2#WP.4.2"^^xsd:anyURI
+@dc:rights "http://studioj.us/mass-props-oml/WP.4.2/WP/WP.4.2.2#WP.4.2.2"^^xsd:anyURI
+description <http://studioj.us/mass-props-oml/WP.4.2/C/C.1.2.2#> as C.1.2.2 {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+    uses <http://imce.jpl.nasa.gov/foundation/base#> as base
+    uses <http://studioj.us/base#> as base1
+    extends <http://studioj.us/mass-props-oml/WP.4.2/IT/IT.C.1.2.1_out#> as IT.C.1.2.1_out
+    extends <http://studioj.us/mass-props-oml/WP.4.2/IT/IT.C.1.2.2_out#> as IT.C.1.2.2_out
+    uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    uses <http://studioj.us/metrology#> as metrology
+    uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
+
+    instance C.1.2.2 : mission:Component [
+        base:hasCanonicalName "Element 2"
+        base1:hasComponentIdentifier "C.1.2.2"
+        base:hasSortKey "010202"
+        mission:presents IF.C.1.2.2_in, IF.C.1.2.2_out
+    ]
+
+    instance IF.C.1.2.2_in : mission:Interface [
+        base1:hasComponentIdentifier "IF.C.1.2.2_in"
+        mission:transfersIn IT.C.1.2.1_out:IT.C.1.2.1_out
+    ]
+
+    instance IF.C.1.2.2_out : mission:Interface [
+        base1:hasComponentIdentifier "IF.C.1.2.2_out"
+        mission:transfersOut IT.C.1.2.2_out:IT.C.1.2.2_out
+    ]
+
+    ...
+}
+```
+
+Our supplied component presents an input and an output interface, each of which transfers an item. Note that the transfer specification are merely type constraints on the interfaces, and do not represent any realizational connectivity that allows component-to-component interchange. We will see that below.
+
+Every item in the model except the input to C.1 (System 1) is the output of some component (via an output interface), so we arbitrarily name each such item to correspond to the output interface of that component.
+
+Again for the purpose of illustration, we assume that the implementation of any component is the arrangement of its subcomponents into a string of output-to-input connections.
+
+Here is more detail on C.1.2.2.1 (Subsystem)
+
+```
+@dc:creator "http://studioj.us/mass-props-oml/WP.4.2/WP/WP.4.2.2#WP.4.2.2"^^xsd:anyURI
+@dc:rights "http://studioj.us/mass-props-oml/WP.4.2.2/WP/WP.4.2.2.1#WP.4.2.2.1"^^xsd:anyURI
+description <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.1#> as C.1.2.2.1 {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+    uses <http://imce.jpl.nasa.gov/foundation/base#> as base
+    uses <http://studioj.us/base#> as base1
+    extends <http://studioj.us/mass-props-oml/WP.4.2/IT/IT.C.1.2.1_out#> as IT.C.1.2.1_out
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/IT/IT.C.1.2.2.1_out#> as IT.C.1.2.2.1_out
+    uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    uses <http://studioj.us/metrology#> as metrology
+    uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
+
+    instance C.1.2.2.1 : mission:Component [
+        base:hasCanonicalName "Subsystem 1"
+        base1:hasComponentIdentifier "C.1.2.2.1"
+        base:hasSortKey "01020201"
+        mission:presents IF.C.1.2.2.1_in, IF.C.1.2.2.1_out
+    ]
+
+    instance IF.C.1.2.2.1_in : mission:Interface [
+        base1:hasComponentIdentifier "IF.C.1.2.2.1_in"
+        mission:transfersIn IT.C.1.2.1_out:IT.C.1.2.1_out
+    ]
+
+    instance IF.C.1.2.2.1_out : mission:Interface [
+        base1:hasComponentIdentifier "IF.C.1.2.2.1_out"
+        mission:transfersOut IT.C.1.2.2.1_out:IT.C.1.2.2.1_out
+    ]
+
+    ...
+}
+```
+
+Here is similar detail on C.1.2.2.2 (Subsystem 2):
+
+```
+@dc:creator "http://studioj.us/mass-props-oml/WP.4.2/WP/WP.4.2.2#WP.4.2.2"^^xsd:anyURI
+@dc:rights "http://studioj.us/mass-props-oml/WP.4.2.2/WP/WP.4.2.2.2#WP.4.2.2.2"^^xsd:anyURI
+description <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.2#> as C.1.2.2.2 {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+    uses <http://imce.jpl.nasa.gov/foundation/base#> as base
+    uses <http://studioj.us/base#> as base1
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/IT/IT.C.1.2.2.1_out#> as IT.C.1.2.2.1_out
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/IT/IT.C.1.2.2.2_out#> as IT.C.1.2.2.2_out
+    uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    uses <http://studioj.us/metrology#> as metrology
+    uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
+
+    instance C.1.2.2.2 : mission:Component [
+        base:hasCanonicalName "Subsystem 2"
+        base1:hasComponentIdentifier "C.1.2.2.2"
+        base:hasSortKey "01020202"
+        mission:presents IF.C.1.2.2.2_in, IF.C.1.2.2.2_out
+    ]
+
+    instance IF.C.1.2.2.2_in : mission:Interface [
+        base1:hasComponentIdentifier "IF.C.1.2.2.2_in"
+        mission:transfersIn IT.C.1.2.2.1_out:IT.C.1.2.2.1_out
+    ]
+
+    instance IF.C.1.2.2.2_out : mission:Interface [
+        base1:hasComponentIdentifier "IF.C.1.2.2.2_out"
+        mission:transfersOut IT.C.1.2.2.2_out:IT.C.1.2.2.2_out
+    ]
+
+    ...
+}
+```
+
+ Note that the item (IT.C.1.2.2.1_out) transferred out of C.1.2.2.1 via interface IF.C.1.2.2.1_out is transferred into C.1.2.2.2 via interface IF.C.1.2.2.2_in. This implies that the description of IT.C.1.2.2.1_out must be visible to the suppliers of those components. Consequently, we create a description with those rights:
+
+ ```
+@dc:creator "http://studioj.us/mass-props-oml/WP.4.2/WP/WP.4.2.2#WP.4.2.2"^^xsd:anyURI
+@dc:rights "http://studioj.us/mass-props-oml/WP.4.2.2/WP/WP.4.2.2.1#WP.4.2.2.1"^^xsd:anyURI, "http://studioj.us/mass-props-oml/WP.4.2.2/WP/WP.4.2.2.2#WP.4.2.2.2"^^xsd:anyURI
+description <http://studioj.us/mass-props-oml/WP.4.2.2/IT/IT.C.1.2.2.1_out#> as IT.C.1.2.2.1_out {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+
+    instance IT.C.1.2.2.1_out : mission:Item
+}
+```
+
+ 
+ We express this in our System Interconnection Specification:
+
+```
+@dc:creator "http://studioj.us/mass-props-oml/WP.4.2/WP/WP.4.2.2#WP.4.2.2"^^xsd:anyURI
+description <http://studioj.us/mass-props-oml/WP.4.2.2/SIS#> as WP.4.2.2_SIS {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    uses <http://imce.jpl.nasa.gov/foundation/base#> as base
+    uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.1#> as C.1.2.2.1
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.2#> as C.1.2.2.2
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/IT/IT.C.1.2.2.1_out#> as IT.C.1.2.2.1_out
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.3#> as C.1.2.2.3
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/IT/IT.C.1.2.2.2_out#> as IT.C.1.2.2.2_out
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.4#> as C.1.2.2.4
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/IT/IT.C.1.2.2.3_out#> as IT.C.1.2.2.3_out
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.5#> as C.1.2.2.5
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/IT/IT.C.1.2.2.4_out#> as IT.C.1.2.2.4_out
+
+    instance J.IF.C.1.2.2.1_out.IF.C.1.2.2.2_in : mission:Junction [
+        base:hasIdentifier "J.IF.C.1.2.2.1_out.IF.C.1.2.2.2_in"
+        mission:joins1 C.1.2.2.1:IF.C.1.2.2.1_out
+        mission:joins2 C.1.2.2.2:IF.C.1.2.2.2_in
+    ]
+
+    ref instance IT.C.1.2.2.1_out:IT.C.1.2.2.1_out [
+        mission:traverses J.IF.C.1.2.2.1_out.IF.C.1.2.2.2_in
+    ]
+
+    instance J.IF.C.1.2.2.2_out.IF.C.1.2.2.3_in : mission:Junction [
+        base:hasIdentifier "J.IF.C.1.2.2.2_out.IF.C.1.2.2.3_in"
+        mission:joins1 C.1.2.2.2:IF.C.1.2.2.2_out
+        mission:joins2 C.1.2.2.3:IF.C.1.2.2.3_in
+    ]
+
+    ref instance IT.C.1.2.2.2_out:IT.C.1.2.2.2_out [
+        mission:traverses J.IF.C.1.2.2.2_out.IF.C.1.2.2.3_in
+    ]
+
+    instance J.IF.C.1.2.2.3_out.IF.C.1.2.2.4_in : mission:Junction [
+        base:hasIdentifier "J.IF.C.1.2.2.3_out.IF.C.1.2.2.4_in"
+        mission:joins1 C.1.2.2.3:IF.C.1.2.2.3_out
+        mission:joins2 C.1.2.2.4:IF.C.1.2.2.4_in
+    ]
+
+    ref instance IT.C.1.2.2.3_out:IT.C.1.2.2.3_out [
+        mission:traverses J.IF.C.1.2.2.3_out.IF.C.1.2.2.4_in
+    ]
+
+    instance J.IF.C.1.2.2.4_out.IF.C.1.2.2.5_in : mission:Junction [
+        base:hasIdentifier "J.IF.C.1.2.2.4_out.IF.C.1.2.2.5_in"
+        mission:joins1 C.1.2.2.4:IF.C.1.2.2.4_out
+        mission:joins2 C.1.2.2.5:IF.C.1.2.2.5_in
+    ]
+
+    ref instance IT.C.1.2.2.4_out:IT.C.1.2.2.4_out [
+        mission:traverses J.IF.C.1.2.2.4_out.IF.C.1.2.2.5_in
+    ]
+}
+```
+
