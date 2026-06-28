@@ -1,4 +1,4 @@
-vocabulary <http://studioj.us/base#> as base {
+vocabulary  <http://studioj.us/base#>as base {
     extends <http://imce.jpl.nasa.gov/foundation/base#> as imce-base 
     extends <http://imce.jpl.nasa.gov/foundation/mission#> as mission
     extends <http://imce.jpl.nasa.gov/foundation/project#> as project
@@ -19,6 +19,14 @@ vocabulary <http://studioj.us/base#> as base {
         key hasInterfaceIdentifier
     ]
 
+    ref concept mission:Junction [
+        key hasJunctionIdentifier
+    ]
+
+    ref concept mission:Item [
+        key hasItemIdentifier
+    ]
+
     scalar property hasComponentIdentifier [
         domain mission:Component
         functional
@@ -36,6 +44,16 @@ vocabulary <http://studioj.us/base#> as base {
 
     scalar property hasInterfaceIdentifier [
         domain mission:Interface
+        functional
+    ] < imce-base:hasIdentifier
+
+    scalar property hasJunctionIdentifier [
+        domain mission:Junction
+        functional
+    ] < imce-base:hasIdentifier
+
+    scalar property hasItemIdentifier [
+        domain mission:Item
         functional
     ] < imce-base:hasIdentifier
 
