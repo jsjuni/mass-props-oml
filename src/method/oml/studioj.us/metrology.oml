@@ -51,9 +51,9 @@ vocabulary <http://studioj.us/metrology#> as metrology {
 
     concept MassUnit < Unit
 
-    concept LengthUnit
+    concept LengthUnit < Unit
 
-    concept InertiaUnit
+    concept InertiaUnit < Unit
 
     scalar property hasNumber [
         domain Value
