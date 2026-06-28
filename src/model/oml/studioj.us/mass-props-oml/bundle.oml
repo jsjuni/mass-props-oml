@@ -1,4 +1,5 @@
 description bundle <http://studioj.us/mass-props-oml/bundle#> as description-bundle {
+    uses <http://studioj.us/bundle#> as studioj-bundle
     includes <http://studioj.us/mass-props-oml/P.1/P#>
     includes <http://studioj.us/mass-props-oml/P.1/SBS#>
     includes <http://studioj.us/mass-props-oml/P.1/WBS#>

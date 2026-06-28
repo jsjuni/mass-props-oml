@@ -1,0 +1,9 @@
+vocabulary bundle <http://studioj.us/bundle#> as studioj-bundle {
+
+    extends <http://imce.jpl.nasa.gov/foundation/bundle#>
+    
+    includes <http://studioj.us/base#>
+
+    includes <http://studioj.us/metrology#>
+
+}
