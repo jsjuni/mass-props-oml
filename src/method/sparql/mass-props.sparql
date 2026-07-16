@@ -25,152 +25,172 @@ WHERE {
         base:hasCanonicalName ?name .
     ?supplied_component base:contains+ ?component .
     OPTIONAL { ?component ^base:contains [ base:hasIdentifier ?pid ] }
-    FILTER(?sid = "C.1.2.2")
+    #FILTER(?sid = "C.1.2.2")
 
     # get mass properties
 
     OPTIONAL {
-        [] a metrology:MassValue ;
+        [ a metrology:MassValue ;
             analysis:characterizes [
                 a metrology:MassQuantity ;
                 rdfs:label "mass" ;
                 analysis:characterizes ?component
             ] ;
-            metrology:hasNumber ?mass .
-        [] a metrology:CenterOfMassValue ;
+            metrology:hasNumber ?mass 
+        ] .
+        [ a metrology:CenterOfMassValue ;
             analysis:characterizes [
                 a metrology:CenterOfMassQuantity ;
                 rdfs:label "Cx" ;
                 analysis:characterizes ?component
             ] ;
-            metrology:hasNumber ?Cx .
-        [] a metrology:CenterOfMassValue ;
+            metrology:hasNumber ?Cx
+        ] .
+        [ a metrology:CenterOfMassValue ;
             analysis:characterizes [
                 a metrology:CenterOfMassQuantity ;
                 rdfs:label "Cy" ;
                 analysis:characterizes ?component
             ] ;
-            metrology:hasNumber ?Cy .
-        [] a metrology:CenterOfMassValue ;
+            metrology:hasNumber ?Cy
+        ] .
+        [ a metrology:CenterOfMassValue ;
             analysis:characterizes [
                 a metrology:CenterOfMassQuantity ;
                 rdfs:label "Cz" ;
                 analysis:characterizes ?component
             ] ;
-            metrology:hasNumber ?Cz .
-        [] a metrology:MomentOfInertiaValue ;
+            metrology:hasNumber ?Cz
+        ] .
+        [ a metrology:MomentOfInertiaValue ;
             analysis:characterizes [
                 a metrology:MomentOfInertiaQuantity ;
                 rdfs:label "Ixx" ;
                 analysis:characterizes ?component
             ] ;
-            metrology:hasNumber ?Ixx .
-        [] a metrology:MomentOfInertiaValue ;
+            metrology:hasNumber ?Ixx
+        ] .
+        [ a metrology:MomentOfInertiaValue ;
             analysis:characterizes [
                 a metrology:MomentOfInertiaQuantity ;
                 rdfs:label "Iyy" ;
                 analysis:characterizes ?component
             ] ;
-            metrology:hasNumber ?Iyy .
-        [] a metrology:MomentOfInertiaValue ;
+            metrology:hasNumber ?Iyy
+        ] .
+        [ a metrology:MomentOfInertiaValue ;
             analysis:characterizes [
                 a metrology:MomentOfInertiaQuantity ;
                 rdfs:label "Izz" ;
                 analysis:characterizes ?component
             ] ;
-            metrology:hasNumber ?Izz .
-        [] a metrology:ProductOfInertiaValue ;
+            metrology:hasNumber ?Izz
+        ] .
+        [ a metrology:ProductOfInertiaValue ;
             analysis:characterizes [
                 a metrology:ProductOfInertiaQuantity ;
                 rdfs:label "Ixy" ;
                 analysis:characterizes ?component
             ] ;
-            metrology:hasNumber ?Ixy .
-        [] a metrology:ProductOfInertiaValue ;
+            metrology:hasNumber ?Ixy
+        ] .
+        [ a metrology:ProductOfInertiaValue ;
             analysis:characterizes [
                 a metrology:ProductOfInertiaQuantity ;
                 rdfs:label "Ixz" ;
                 analysis:characterizes ?component
             ] ;
-            metrology:hasNumber ?Ixz .
-        [] a metrology:ProductOfInertiaValue ;
+            metrology:hasNumber ?Ixz
+        ] .
+        [ a metrology:ProductOfInertiaValue ;
             analysis:characterizes [
                 a metrology:ProductOfInertiaQuantity ;
                 rdfs:label "Iyz" ;
                 analysis:characterizes ?component
             ] ;
-            metrology:hasNumber ?Iyz .
+            metrology:hasNumber ?Iyz
+        ] .
         OPTIONAL {
-            [] a metrology:MassValue ;
+            [ a metrology:MassValue ;
                 analysis:characterizes [
                     a metrology:MassQuantity ;
                     rdfs:label "sigma_mass" ;
                     analysis:characterizes ?component
                 ] ;
-                metrology:hasNumber ?sigma_mass .
-            [] a metrology:CenterOfMassValue ;
+                metrology:hasNumber ?sigma_mass
+            ] .
+            [ a metrology:CenterOfMassValue ;
                 analysis:characterizes [
                     a metrology:CenterOfMassQuantity ;
                     rdfs:label "sigma_Cx" ;
                     analysis:characterizes ?component
                 ] ;
-                metrology:hasNumber ?sigma_Cx .
-            [] a metrology:CenterOfMassValue ;
+                metrology:hasNumber ?sigma_Cx
+            ] .
+            [ a metrology:CenterOfMassValue ;
                 analysis:characterizes [
                     a metrology:CenterOfMassQuantity ;
                     rdfs:label "sigma_Cy" ;
                     analysis:characterizes ?component
                 ] ;
-                metrology:hasNumber ?sigma_Cy .
-            [] a metrology:CenterOfMassValue ;
+                metrology:hasNumber ?sigma_Cy
+            ] .
+            [ a metrology:CenterOfMassValue ;
                 analysis:characterizes [
                     a metrology:CenterOfMassQuantity ;
                     rdfs:label "sigma_Cz" ;
                     analysis:characterizes ?component
                 ] ;
-                metrology:hasNumber ?sigma_Cz .
-            [] a metrology:MomentOfInertiaValue ;
+                metrology:hasNumber ?sigma_Cz
+            ] .
+            [ a metrology:MomentOfInertiaValue ;
                 analysis:characterizes [
                     a metrology:MomentOfInertiaQuantity ;
                     rdfs:label "sigma_Ixx" ;
                     analysis:characterizes ?component
                 ] ;
-                metrology:hasNumber ?sigma_Ixx .
-            [] a metrology:MomentOfInertiaValue ;
+                metrology:hasNumber ?sigma_Ixx
+            ] .
+            [ a metrology:MomentOfInertiaValue ;
                 analysis:characterizes [
                     a metrology:MomentOfInertiaQuantity ;
                     rdfs:label "sigma_Iyy" ;
                     analysis:characterizes ?component
                 ] ;
-                metrology:hasNumber ?sigma_Iyy .
-            [] a metrology:MomentOfInertiaValue ;
+                metrology:hasNumber ?sigma_Iyy
+            ] .
+            [ a metrology:MomentOfInertiaValue ;
                 analysis:characterizes [
                     a metrology:MomentOfInertiaQuantity ;
                     rdfs:label "sigma_Izz" ;
                     analysis:characterizes ?component
                 ] ;
-                metrology:hasNumber ?sigma_Izz .
-            [] a metrology:ProductOfInertiaValue ;
+                metrology:hasNumber ?sigma_Izz
+            ] .
+            [ a metrology:ProductOfInertiaValue ;
                 analysis:characterizes [
                     a metrology:ProductOfInertiaQuantity ;
                     rdfs:label "sigma_Ixy" ;
                     analysis:characterizes ?component
                 ] ;
-                metrology:hasNumber ?sigma_Ixy .
-            [] a metrology:ProductOfInertiaValue ;
+                metrology:hasNumber ?sigma_Ixy
+            ] .
+            [ a metrology:ProductOfInertiaValue ;
                 analysis:characterizes [
                     a metrology:ProductOfInertiaQuantity ;
                     rdfs:label "sigma_Ixz" ;
                     analysis:characterizes ?component
                 ] ;
-                metrology:hasNumber ?sigma_Ixz .
-            [] a metrology:ProductOfInertiaValue ;
+                metrology:hasNumber ?sigma_Ixz
+            ] .
+            [ a metrology:ProductOfInertiaValue ;
                 analysis:characterizes [
                     a metrology:ProductOfInertiaQuantity ;
                     rdfs:label "sigma_Iyz" ;
                     analysis:characterizes ?component
                 ] ;
-                metrology:hasNumber ?sigma_Iyz .
+                metrology:hasNumber ?sigma_Iyz
+            ] .
         }
     }
 }
