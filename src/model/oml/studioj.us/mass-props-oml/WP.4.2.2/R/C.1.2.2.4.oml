@@ -1,0 +1,114 @@
+@dc:creator "http://studioj.us/mass-props-oml/WP.4.2/WP/WP.4.2.2#WP.4.2.2"^^xsd:anyURI
+@dc:rights "http://studioj.us/mass-props-oml/WP.4.2.2/WP/WP.4.2.2.4#WP.4.2.2.4"^^xsd:anyURI
+description <http://studioj.us/mass-props-oml/WP.4.2.2/R/C.1.2.2.4#> as C.1.2.2.4_R {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+    uses <http://studioj.us/base#> as base
+    uses <http://imce.jpl.nasa.gov/foundation/base#> as base1
+    uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.4#> as C.1.2.2.4
+    uses <http://studioj.us/metrology#> as metrology
+    extends <http://studioj.us/units#> as units
+
+    instance C.1.2.2.4_mass_max : mission:Requirement [
+        base:hasRequirementIdentifier "C.1.2.2.4_R.1"
+        base1:hasDescription "The Subsystem 4 mass shall not exceed 17.04 kg."
+        analysis:requires C.1.2.2.4_mass_max_constraint
+    ]
+
+    instance C.1.2.2.4_mass_max_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "le"
+        analysis:explains C.1.2.2.4:C.1.2.2.4_mass
+        analysis:analyzes C.1.2.2.4_mass_max_value
+    ]
+
+    instance C.1.2.2.4_mass_max_value : metrology:MassValue [
+        metrology:hasNumber 17.04e0
+        metrology:hasUnit units:kg
+    ]
+
+    instance C.1.2.2.4_Cx_range : mission:Requirement [
+        base:hasRequirementIdentifier "C.1.2.2.4_R.Cx_R.2"
+        base1:hasDescription "The Subsystem 4 Cx shall lie in the interval [-30.01, 6.57] mm."
+        analysis:requires C.1.2.2.4_Cx_min_constraint, C.1.2.2.4_Cx_max_constraint
+    ]
+
+    instance C.1.2.2.4_Cx_min_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "ge"
+        analysis:explains C.1.2.2.4:C.1.2.2.4_Cx
+        analysis:analyzes C.1.2.2.4_Cx_min_value
+    ]
+
+    instance C.1.2.2.4_Cx_max_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "le"
+        analysis:explains C.1.2.2.4:C.1.2.2.4_Cx
+        analysis:analyzes C.1.2.2.4_Cx_max_value
+    ]
+
+    instance C.1.2.2.4_Cx_min_value : metrology:LengthValue [
+        metrology:hasNumber -30.01e0
+        metrology:hasUnit units:mm
+    ]
+
+    instance C.1.2.2.4_Cx_max_value : metrology:LengthValue [
+        metrology:hasNumber 6.57e0
+        metrology:hasUnit units:mm
+    ]
+
+    instance C.1.2.2.4_Cy_range : mission:Requirement [
+        base:hasRequirementIdentifier "C.1.2.2.4_R.Cy_R.3"
+        base1:hasDescription "The Subsystem 4 Cy shall lie in the interval [-37.64, -2.43] mm."
+        analysis:requires C.1.2.2.4_Cy_min_constraint, C.1.2.2.4_Cy_max_constraint
+    ]
+
+    instance C.1.2.2.4_Cy_min_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "ge"
+        analysis:explains C.1.2.2.4:C.1.2.2.4_Cy
+        analysis:analyzes C.1.2.2.4_Cy_min_value
+    ]
+
+    instance C.1.2.2.4_Cy_max_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "le"
+        analysis:explains C.1.2.2.4:C.1.2.2.4_Cy
+        analysis:analyzes C.1.2.2.4_Cy_max_value
+    ]
+
+    instance C.1.2.2.4_Cy_min_value : metrology:LengthValue [
+        metrology:hasNumber -37.64e0
+        metrology:hasUnit units:mm
+    ]
+
+    instance C.1.2.2.4_Cy_max_value : metrology:LengthValue [
+        metrology:hasNumber -2.43e0
+        metrology:hasUnit units:mm
+    ]
+
+    instance C.1.2.2.4_Cz_range : mission:Requirement [
+        base:hasRequirementIdentifier "C.1.2.2.4_R.Cz_R.4"
+        base1:hasDescription "The Subsystem 4 Cz shall lie in the interval [3.41, 43.81] mm."
+        analysis:requires C.1.2.2.4_Cz_min_constraint, C.1.2.2.4_Cz_max_constraint
+    ]
+
+    instance C.1.2.2.4_Cz_min_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "ge"
+        analysis:explains C.1.2.2.4:C.1.2.2.4_Cz
+        analysis:analyzes C.1.2.2.4_Cz_min_value
+    ]
+
+    instance C.1.2.2.4_Cz_max_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "le"
+        analysis:explains C.1.2.2.4:C.1.2.2.4_Cz
+        analysis:analyzes C.1.2.2.4_Cz_max_value
+    ]
+
+    instance C.1.2.2.4_Cz_min_value : metrology:LengthValue [
+        metrology:hasNumber 3.41e0
+        metrology:hasUnit units:mm
+    ]
+
+    instance C.1.2.2.4_Cz_max_value : metrology:LengthValue [
+        metrology:hasNumber 43.81e0
+        metrology:hasUnit units:mm
+    ]
+}

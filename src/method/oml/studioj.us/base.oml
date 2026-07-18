@@ -27,6 +27,10 @@ vocabulary  <http://studioj.us/base#>as base {
         key hasItemIdentifier
     ]
 
+    ref concept mission:Requirement [
+        key hasRequirementIdentifier
+    ]
+
     scalar property hasComponentIdentifier [
         domain mission:Component
         functional
@@ -57,4 +61,8 @@ vocabulary  <http://studioj.us/base#>as base {
         functional
     ] < imce-base:hasIdentifier
 
+    scalar property hasRequirementIdentifier [
+        domain mission:Requirement
+        functional
+    ] < imce-base:hasIdentifier
 }
