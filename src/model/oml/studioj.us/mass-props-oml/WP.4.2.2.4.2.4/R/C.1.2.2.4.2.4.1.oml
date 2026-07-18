@@ -1,0 +1,114 @@
+@dc:creator "http://studioj.us/mass-props-oml/WP.4.2.2.4.2/WP/WP.4.2.2.4.2.4#WP.4.2.2.4.2.4"^^xsd:anyURI
+@dc:rights "http://studioj.us/mass-props-oml/WP.4.2.2.4.2.4/WP/WP.4.2.2.4.2.4.1#WP.4.2.2.4.2.4.1"^^xsd:anyURI
+description <http://studioj.us/mass-props-oml/WP.4.2.2.4.2.4/R/C.1.2.2.4.2.4.1#> as C.1.2.2.4.2.4.1_R {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+    uses <http://studioj.us/base#> as base
+    uses <http://imce.jpl.nasa.gov/foundation/base#> as base1
+    uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2.4.2.4/C/C.1.2.2.4.2.4.1#> as C.1.2.2.4.2.4.1
+    uses <http://studioj.us/metrology#> as metrology
+    extends <http://studioj.us/units#> as units
+
+    instance C.1.2.2.4.2.4.1_mass_max : mission:Requirement [
+        base:hasRequirementIdentifier "C.1.2.2.4.2.4.1_R.1"
+        base1:hasDescription "The Part 22 mass shall not exceed 0.95 kg."
+        analysis:requires C.1.2.2.4.2.4.1_mass_max_constraint
+    ]
+
+    instance C.1.2.2.4.2.4.1_mass_max_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "le"
+        analysis:explains C.1.2.2.4.2.4.1:C.1.2.2.4.2.4.1_mass
+        analysis:analyzes C.1.2.2.4.2.4.1_mass_max_value
+    ]
+
+    instance C.1.2.2.4.2.4.1_mass_max_value : metrology:MassValue [
+        metrology:hasNumber 0.95e0
+        metrology:hasUnit units:kg
+    ]
+
+    instance C.1.2.2.4.2.4.1_Cx_range : mission:Requirement [
+        base:hasRequirementIdentifier "C.1.2.2.4.2.4.1_R.Cx_R.2"
+        base1:hasDescription "The Part 22 Cx shall lie in the interval [-85.55, 29.78] mm."
+        analysis:requires C.1.2.2.4.2.4.1_Cx_min_constraint, C.1.2.2.4.2.4.1_Cx_max_constraint
+    ]
+
+    instance C.1.2.2.4.2.4.1_Cx_min_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "ge"
+        analysis:explains C.1.2.2.4.2.4.1:C.1.2.2.4.2.4.1_Cx
+        analysis:analyzes C.1.2.2.4.2.4.1_Cx_min_value
+    ]
+
+    instance C.1.2.2.4.2.4.1_Cx_max_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "le"
+        analysis:explains C.1.2.2.4.2.4.1:C.1.2.2.4.2.4.1_Cx
+        analysis:analyzes C.1.2.2.4.2.4.1_Cx_max_value
+    ]
+
+    instance C.1.2.2.4.2.4.1_Cx_min_value : metrology:LengthValue [
+        metrology:hasNumber -85.55e0
+        metrology:hasUnit units:mm
+    ]
+
+    instance C.1.2.2.4.2.4.1_Cx_max_value : metrology:LengthValue [
+        metrology:hasNumber 29.78e0
+        metrology:hasUnit units:mm
+    ]
+
+    instance C.1.2.2.4.2.4.1_Cy_range : mission:Requirement [
+        base:hasRequirementIdentifier "C.1.2.2.4.2.4.1_R.Cy_R.3"
+        base1:hasDescription "The Part 22 Cy shall lie in the interval [-129.37, -12.72] mm."
+        analysis:requires C.1.2.2.4.2.4.1_Cy_min_constraint, C.1.2.2.4.2.4.1_Cy_max_constraint
+    ]
+
+    instance C.1.2.2.4.2.4.1_Cy_min_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "ge"
+        analysis:explains C.1.2.2.4.2.4.1:C.1.2.2.4.2.4.1_Cy
+        analysis:analyzes C.1.2.2.4.2.4.1_Cy_min_value
+    ]
+
+    instance C.1.2.2.4.2.4.1_Cy_max_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "le"
+        analysis:explains C.1.2.2.4.2.4.1:C.1.2.2.4.2.4.1_Cy
+        analysis:analyzes C.1.2.2.4.2.4.1_Cy_max_value
+    ]
+
+    instance C.1.2.2.4.2.4.1_Cy_min_value : metrology:LengthValue [
+        metrology:hasNumber -129.37e0
+        metrology:hasUnit units:mm
+    ]
+
+    instance C.1.2.2.4.2.4.1_Cy_max_value : metrology:LengthValue [
+        metrology:hasNumber -12.72e0
+        metrology:hasUnit units:mm
+    ]
+
+    instance C.1.2.2.4.2.4.1_Cz_range : mission:Requirement [
+        base:hasRequirementIdentifier "C.1.2.2.4.2.4.1_R.Cz_R.4"
+        base1:hasDescription "The Part 22 Cz shall lie in the interval [-4.99, 113.39] mm."
+        analysis:requires C.1.2.2.4.2.4.1_Cz_min_constraint, C.1.2.2.4.2.4.1_Cz_max_constraint
+    ]
+
+    instance C.1.2.2.4.2.4.1_Cz_min_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "ge"
+        analysis:explains C.1.2.2.4.2.4.1:C.1.2.2.4.2.4.1_Cz
+        analysis:analyzes C.1.2.2.4.2.4.1_Cz_min_value
+    ]
+
+    instance C.1.2.2.4.2.4.1_Cz_max_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "le"
+        analysis:explains C.1.2.2.4.2.4.1:C.1.2.2.4.2.4.1_Cz
+        analysis:analyzes C.1.2.2.4.2.4.1_Cz_max_value
+    ]
+
+    instance C.1.2.2.4.2.4.1_Cz_min_value : metrology:LengthValue [
+        metrology:hasNumber -4.99e0
+        metrology:hasUnit units:mm
+    ]
+
+    instance C.1.2.2.4.2.4.1_Cz_max_value : metrology:LengthValue [
+        metrology:hasNumber 113.39e0
+        metrology:hasUnit units:mm
+    ]
+}

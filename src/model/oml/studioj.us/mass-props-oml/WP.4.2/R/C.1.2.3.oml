@@ -1,0 +1,114 @@
+@dc:creator "http://studioj.us/mass-props-oml/WP.4/WP/WP.4.2#WP.4.2"^^xsd:anyURI
+@dc:rights "http://studioj.us/mass-props-oml/WP.4.2/WP/WP.4.2.3#WP.4.2.3"^^xsd:anyURI
+description <http://studioj.us/mass-props-oml/WP.4.2/R/C.1.2.3#> as C.1.2.3_R {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+    uses <http://studioj.us/base#> as base
+    uses <http://imce.jpl.nasa.gov/foundation/base#> as base1
+    uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
+    extends <http://studioj.us/mass-props-oml/WP.4.2/C/C.1.2.3#> as C.1.2.3
+    uses <http://studioj.us/metrology#> as metrology
+    extends <http://studioj.us/units#> as units
+
+    instance C.1.2.3_mass_max : mission:Requirement [
+        base:hasRequirementIdentifier "C.1.2.3_R.1"
+        base1:hasDescription "The Element 3 mass shall not exceed 23.06 kg."
+        analysis:requires C.1.2.3_mass_max_constraint
+    ]
+
+    instance C.1.2.3_mass_max_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "le"
+        analysis:explains C.1.2.3:C.1.2.3_mass
+        analysis:analyzes C.1.2.3_mass_max_value
+    ]
+
+    instance C.1.2.3_mass_max_value : metrology:MassValue [
+        metrology:hasNumber 23.06e0
+        metrology:hasUnit units:kg
+    ]
+
+    instance C.1.2.3_Cx_range : mission:Requirement [
+        base:hasRequirementIdentifier "C.1.2.3_R.Cx_R.2"
+        base1:hasDescription "The Element 3 Cx shall lie in the interval [-28.25, 6.32] mm."
+        analysis:requires C.1.2.3_Cx_min_constraint, C.1.2.3_Cx_max_constraint
+    ]
+
+    instance C.1.2.3_Cx_min_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "ge"
+        analysis:explains C.1.2.3:C.1.2.3_Cx
+        analysis:analyzes C.1.2.3_Cx_min_value
+    ]
+
+    instance C.1.2.3_Cx_max_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "le"
+        analysis:explains C.1.2.3:C.1.2.3_Cx
+        analysis:analyzes C.1.2.3_Cx_max_value
+    ]
+
+    instance C.1.2.3_Cx_min_value : metrology:LengthValue [
+        metrology:hasNumber -28.25e0
+        metrology:hasUnit units:mm
+    ]
+
+    instance C.1.2.3_Cx_max_value : metrology:LengthValue [
+        metrology:hasNumber 6.32e0
+        metrology:hasUnit units:mm
+    ]
+
+    instance C.1.2.3_Cy_range : mission:Requirement [
+        base:hasRequirementIdentifier "C.1.2.3_R.Cy_R.3"
+        base1:hasDescription "The Element 3 Cy shall lie in the interval [1.49, 36.64] mm."
+        analysis:requires C.1.2.3_Cy_min_constraint, C.1.2.3_Cy_max_constraint
+    ]
+
+    instance C.1.2.3_Cy_min_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "ge"
+        analysis:explains C.1.2.3:C.1.2.3_Cy
+        analysis:analyzes C.1.2.3_Cy_min_value
+    ]
+
+    instance C.1.2.3_Cy_max_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "le"
+        analysis:explains C.1.2.3:C.1.2.3_Cy
+        analysis:analyzes C.1.2.3_Cy_max_value
+    ]
+
+    instance C.1.2.3_Cy_min_value : metrology:LengthValue [
+        metrology:hasNumber 1.49e0
+        metrology:hasUnit units:mm
+    ]
+
+    instance C.1.2.3_Cy_max_value : metrology:LengthValue [
+        metrology:hasNumber 36.64e0
+        metrology:hasUnit units:mm
+    ]
+
+    instance C.1.2.3_Cz_range : mission:Requirement [
+        base:hasRequirementIdentifier "C.1.2.3_R.Cz_R.4"
+        base1:hasDescription "The Element 3 Cz shall lie in the interval [-2.88, 30.78] mm."
+        analysis:requires C.1.2.3_Cz_min_constraint, C.1.2.3_Cz_max_constraint
+    ]
+
+    instance C.1.2.3_Cz_min_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "ge"
+        analysis:explains C.1.2.3:C.1.2.3_Cz
+        analysis:analyzes C.1.2.3_Cz_min_value
+    ]
+
+    instance C.1.2.3_Cz_max_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "le"
+        analysis:explains C.1.2.3:C.1.2.3_Cz
+        analysis:analyzes C.1.2.3_Cz_max_value
+    ]
+
+    instance C.1.2.3_Cz_min_value : metrology:LengthValue [
+        metrology:hasNumber -2.88e0
+        metrology:hasUnit units:mm
+    ]
+
+    instance C.1.2.3_Cz_max_value : metrology:LengthValue [
+        metrology:hasNumber 30.78e0
+        metrology:hasUnit units:mm
+    ]
+}
