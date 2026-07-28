@@ -8,13 +8,95 @@
 ## Scaling
 
 Model size:
-* descriptions: 604
-* concept instances: 6,058
-* axioms: 78,379
+* descriptions: 737
+* concept instances: 8452
+* axioms: 106,080
 
 ## Metrology
 
+For this demonstration we adapt the approach of the International Vocabulary of Metrology to describe _quantities_, i.e., the measurable properties of some object. We say the quantity _characterizes_ the object.
+
+The vocabulary in this pedagogical example is highly simplified; for production use a more complete implementation of the relevant international standards is required.
+
+Examples of quantities might include the mass of some component, its length in some defined _x_-dimension, its center of mass in some coordinate frame, etc. We can create a taxonomy of comparable quantities. For example, quantities expressed in terms of length are comparable, while a length quantity cannot be compared with a mass quantity. The quantities employed in this example are mass (a mass quantity), center of mass (a 3-vector of length quantities), moments of inertia (a 3-vector of moments of intertia quantities), and products of inertia (a 3-vector of products of inertia quantities), and their uncertainties.
+
+Here is an example definition of a mass quantity:
+
+```
+@dc:creator "http://studioj.us/mass-props-oml/WP.4.2/WP/WP.4.2.2#WP.4.2.2"^^xsd:anyURI
+@dc:rights "http://studioj.us/mass-props-oml/WP.4.2.2/WP/WP.4.2.2.1#WP.4.2.2.1"^^xsd:anyURI
+description <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.1#> as C.1.2.2.1 {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+    uses <http://imce.jpl.nasa.gov/foundation/base#> as base
+    uses <http://studioj.us/base#> as base1
+    extends <http://studioj.us/mass-props-oml/WP.4.2/IT/IT.C.1.2.1_out#> as IT.C.1.2.1_out
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/IT/IT.C.1.2.2.1_out#> as IT.C.1.2.2.1_out
+    uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    uses <http://studioj.us/metrology#> as metrology
+    uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
+
+    instance C.1.2.2.1 : mission:Component [
+        base:hasCanonicalName "Subsystem 1"
+        base1:hasComponentIdentifier "C.1.2.2.1"
+        base:hasSortKey "01020201"
+        mission:presents IF.C.1.2.2.1_in, IF.C.1.2.2.1_out
+    ]
+
+    ...
+
+    @rdfs:label "mass"
+    instance C.1.2.2.1_mass : metrology:MassQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.1_mass"
+        analysis:characterizes C.1.2.2.1
+    ]
+
+    ...
+}
+
+```
+
+Note that quantities themselves do not have magnitude values. A quantity is simply a named property; its value it many cases (e.g., mass) is unknowable in principle. In fact, we may have multiple estimates for a quantity value with difference provenance. For example, we may begin with a rough estimate of a component's mass based on historical trends. At some later point we may estimate its mass from its geometry and intended material properties. Later still we may measure its mass on a scale. For this purpose we say a quanity value characterizes a quantity.
+
+A _quantity value_ is a pair consisting of a number and a unit identifier. Vocabulary constraints ensure that, for example, the unit property of a mass quantity value has appropriate dimensions for a mass quantity.
+
+Here is an example of quantity value assertions:
+
+```
+@dc:creator "http://studioj.us/mass-props-oml/WP.4.2.2/WP/WP.4.2.2.1#WP.4.2.2.1"^^xsd:anyURI
+@dc:rights "http://studioj.us/mass-props-oml/WP.4.2/WP/WP.4.2.2#WP.4.2.2"^^xsd:anyURI
+description <http://studioj.us/mass-props-oml/WP.4.2.2.1/QV#> as WP.4.2.2.1_QV {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    uses <http://studioj.us/metrology#> as metrology
+    uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.1#> as C.1.2.2.1
+    extends <http://studioj.us/units#> as units
+
+    ...
+    
+    @rdfs:label "mass"
+    instance C.1.2.2.1_mass_value : metrology:MassValue [
+        analysis:characterizes C.1.2.2.1:C.1.2.2.1_mass
+        metrology:hasNumber 0.102492327040061e0
+        metrology:hasUnit units:kg
+    ]
+
+    ...
+}
+```
+
 ## Recursive Analysis
+
+This example extends the metrology pattern above to illustrate a recursive analysis pattern common to systems engineering.
+
+Many properties in systems engineering are recursively defined, i.e., some property of an aggregate is computed from the corresponding properties of its constituents. Those constituent properties are in turn computed from their constituents, and so on. For example, the mass of an aggregate is the sum of the masses of its parts. Other properties such as cost may be summed in a similar fashion. The combining operation may be more complex than simple summing, as in the case of center of mass and inertia tensor. Finally, the property need not be numeric at all. An integration schedule for an aggregate, for example, can be constructed from the integration schedules of its constituents, and so on.
+
+In practice, no single authority would be responsible for analysis spanning the depth of a large project. As we will see in the following section, decomposition and delegation are employed to limit the scope of responsibility for a given authority. In the case of analytica relationships (e.g., mass properties) that are invariant across multiple levels, proper methodology can produce modeling patterns and tools that are reusable across the enterprise.
+
+This demopnstration shows such an approach for mass properties and their uncertainties.
 
 ## Partitioning Pattern
 
@@ -219,6 +301,9 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2/WBS#> as WP.4.2.2_WBS {
     ]
 }
 ```
+### Quantities
+
+### Requirements
 
 ### System Interconnection Structure
 
@@ -420,3 +505,8 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2/SIS#> as WP.4.2.2_SIS {
 }
 ```
 
+### Requirements Propagation
+
+In a large-scale project of sufficient complexity, intermediate levels of decomposition may not merely acquire off-the-shelf subcomponents to integrate, but may instead levy requirements on subcomponents to be designed and manufactured by suppliers.
+
+### System Realization Propagation

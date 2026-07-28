@@ -6,147 +6,108 @@ description <http://studioj.us/mass-props-oml/WP.4/QV#> as WP.4_QV {
     uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
     uses <http://studioj.us/metrology#> as metrology
     uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
+    extends <http://studioj.us/mass-props-oml/P.1/Q/C.1#> as C.1_Q
     extends <http://studioj.us/mass-props-oml/P.1/C/C.1#> as C.1
     extends <http://studioj.us/units#> as units
 
-    @rdfs:label "sigma_Izz"
-    instance C.1_sigma_Izz_value : metrology:MomentOfInertiaValue [
-        analysis:characterizes C.1:C.1_sigma_Izz
-        metrology:hasNumber 37202.86418775429e0
-        metrology:hasUnit units:kg_mm_2
-    ]
-
-    @rdfs:label "sigma_Iyz"
-    instance C.1_sigma_Iyz_value : metrology:ProductOfInertiaValue [
-        analysis:characterizes C.1:C.1_sigma_Iyz
-        metrology:hasNumber 16775.81584570062e0
-        metrology:hasUnit units:kg_mm_2
-    ]
-
-    @rdfs:label "Ixx"
-    instance C.1_Ixx_value : metrology:MomentOfInertiaValue [
-        analysis:characterizes C.1:C.1_Ixx
-        metrology:hasNumber 298846.1142313953e0
-        metrology:hasUnit units:kg_mm_2
-    ]
-
-    @rdfs:label "Cz"
-    instance C.1_Cz_value : metrology:CenterOfMassValue [
-        analysis:characterizes C.1:C.1_Cz
-        metrology:hasNumber 10.515019551100597e0
-        metrology:hasUnit units:mm
-    ]
-
-    @rdfs:label "sigma_Cy"
-    instance C.1_sigma_Cy_value : metrology:CenterOfMassValue [
-        analysis:characterizes C.1:C.1_sigma_Cy
-        metrology:hasNumber 5.497250153620704e0
-        metrology:hasUnit units:mm
-    ]
-
-    @rdfs:label "sigma_Iyy"
-    instance C.1_sigma_Iyy_value : metrology:MomentOfInertiaValue [
-        analysis:characterizes C.1:C.1_sigma_Iyy
-        metrology:hasNumber 35746.04964835629e0
-        metrology:hasUnit units:kg_mm_2
-    ]
-
-    @rdfs:label "sigma_Ixx"
-    instance C.1_sigma_Ixx_value : metrology:MomentOfInertiaValue [
-        analysis:characterizes C.1:C.1_sigma_Ixx
-        metrology:hasNumber 37159.29738652668e0
-        metrology:hasUnit units:kg_mm_2
-    ]
-
-    @rdfs:label "Iyz"
-    instance C.1_Iyz_value : metrology:ProductOfInertiaValue [
-        analysis:characterizes C.1:C.1_Iyz
-        metrology:hasNumber -5021.750038689761e0
-        metrology:hasUnit units:kg_mm_2
-    ]
-
-    @rdfs:label "sigma_mass"
-    instance C.1_sigma_mass_value : metrology:MassValue [
-        analysis:characterizes C.1:C.1_sigma_mass
-        metrology:hasNumber 2.8922054660093606e0
-        metrology:hasUnit units:kg
-    ]
-
-    @rdfs:label "Iyy"
-    instance C.1_Iyy_value : metrology:MomentOfInertiaValue [
-        analysis:characterizes C.1:C.1_Iyy
-        metrology:hasNumber 289514.51605257083e0
-        metrology:hasUnit units:kg_mm_2
-    ]
-
-    @rdfs:label "sigma_Ixz"
-    instance C.1_sigma_Ixz_value : metrology:ProductOfInertiaValue [
-        analysis:characterizes C.1:C.1_sigma_Ixz
-        metrology:hasNumber 16156.254385617971e0
-        metrology:hasUnit units:kg_mm_2
-    ]
-
-    @rdfs:label "Cy"
-    instance C.1_Cy_value : metrology:CenterOfMassValue [
-        analysis:characterizes C.1:C.1_Cy
-        metrology:hasNumber 3.5582653389721006e0
-        metrology:hasUnit units:mm
-    ]
-
-    @rdfs:label "sigma_Cz"
-    instance C.1_sigma_Cz_value : metrology:CenterOfMassValue [
-        analysis:characterizes C.1:C.1_sigma_Cz
-        metrology:hasNumber 5.425774727594722e0
-        metrology:hasUnit units:mm
-    ]
-
     @rdfs:label "mass"
     instance C.1_mass_value : metrology:MassValue [
-        analysis:characterizes C.1:C.1_mass
-        metrology:hasNumber 43.93251073403469e0
-        metrology:hasUnit units:kg
+        analysis:characterizes C.1_Q:C.1_mass
     ]
 
     @rdfs:label "Cx"
     instance C.1_Cx_value : metrology:CenterOfMassValue [
-        analysis:characterizes C.1:C.1_Cx
-        metrology:hasNumber 0.7165107911342586e0
-        metrology:hasUnit units:mm
+        analysis:characterizes C.1_Q:C.1_Cx
     ]
 
-    @rdfs:label "sigma_Cx"
-    instance C.1_sigma_Cx_value : metrology:CenterOfMassValue [
-        analysis:characterizes C.1:C.1_sigma_Cx
-        metrology:hasNumber 5.36231885309333e0
-        metrology:hasUnit units:mm
+    @rdfs:label "Cy"
+    instance C.1_Cy_value : metrology:CenterOfMassValue [
+        analysis:characterizes C.1_Q:C.1_Cy
     ]
 
-    @rdfs:label "sigma_Ixy"
-    instance C.1_sigma_Ixy_value : metrology:ProductOfInertiaValue [
-        analysis:characterizes C.1:C.1_sigma_Ixy
-        metrology:hasNumber 17413.298656199317e0
-        metrology:hasUnit units:kg_mm_2
+    @rdfs:label "Cz"
+    instance C.1_Cz_value : metrology:CenterOfMassValue [
+        analysis:characterizes C.1_Q:C.1_Cz
+    ]
+
+    @rdfs:label "Ixx"
+    instance C.1_Ixx_value : metrology:MomentOfInertiaValue [
+        analysis:characterizes C.1_Q:C.1_Ixx
+    ]
+
+    @rdfs:label "Iyy"
+    instance C.1_Iyy_value : metrology:MomentOfInertiaValue [
+        analysis:characterizes C.1_Q:C.1_Iyy
     ]
 
     @rdfs:label "Izz"
     instance C.1_Izz_value : metrology:MomentOfInertiaValue [
-        analysis:characterizes C.1:C.1_Izz
-        metrology:hasNumber 309146.85068768106e0
-        metrology:hasUnit units:kg_mm_2
+        analysis:characterizes C.1_Q:C.1_Izz
     ]
 
     @rdfs:label "Ixy"
     instance C.1_Ixy_value : metrology:ProductOfInertiaValue [
-        analysis:characterizes C.1:C.1_Ixy
-        metrology:hasNumber 13683.249365930142e0
-        metrology:hasUnit units:kg_mm_2
+        analysis:characterizes C.1_Q:C.1_Ixy
     ]
 
     @rdfs:label "Ixz"
     instance C.1_Ixz_value : metrology:ProductOfInertiaValue [
-        analysis:characterizes C.1:C.1_Ixz
-        metrology:hasNumber 3773.9431241847196e0
-        metrology:hasUnit units:kg_mm_2
+        analysis:characterizes C.1_Q:C.1_Ixz
+    ]
+
+    @rdfs:label "Iyz"
+    instance C.1_Iyz_value : metrology:ProductOfInertiaValue [
+        analysis:characterizes C.1_Q:C.1_Iyz
+    ]
+
+    @rdfs:label "sigma_mass"
+    instance C.1_sigma_mass_value : metrology:MassValue [
+        analysis:characterizes C.1_Q:C.1_sigma_mass
+    ]
+
+    @rdfs:label "sigma_Cx"
+    instance C.1_sigma_Cx_value : metrology:CenterOfMassValue [
+        analysis:characterizes C.1_Q:C.1_sigma_Cx
+    ]
+
+    @rdfs:label "sigma_Cy"
+    instance C.1_sigma_Cy_value : metrology:CenterOfMassValue [
+        analysis:characterizes C.1_Q:C.1_sigma_Cy
+    ]
+
+    @rdfs:label "sigma_Cz"
+    instance C.1_sigma_Cz_value : metrology:CenterOfMassValue [
+        analysis:characterizes C.1_Q:C.1_sigma_Cz
+    ]
+
+    @rdfs:label "sigma_Ixx"
+    instance C.1_sigma_Ixx_value : metrology:MomentOfInertiaValue [
+        analysis:characterizes C.1_Q:C.1_sigma_Ixx
+    ]
+
+    @rdfs:label "sigma_Iyy"
+    instance C.1_sigma_Iyy_value : metrology:MomentOfInertiaValue [
+        analysis:characterizes C.1_Q:C.1_sigma_Iyy
+    ]
+
+    @rdfs:label "sigma_Izz"
+    instance C.1_sigma_Izz_value : metrology:MomentOfInertiaValue [
+        analysis:characterizes C.1_Q:C.1_sigma_Izz
+    ]
+
+    @rdfs:label "sigma_Ixy"
+    instance C.1_sigma_Ixy_value : metrology:ProductOfInertiaValue [
+        analysis:characterizes C.1_Q:C.1_sigma_Ixy
+    ]
+
+    @rdfs:label "sigma_Ixz"
+    instance C.1_sigma_Ixz_value : metrology:ProductOfInertiaValue [
+        analysis:characterizes C.1_Q:C.1_sigma_Ixz
+    ]
+
+    @rdfs:label "sigma_Iyz"
+    instance C.1_sigma_Iyz_value : metrology:ProductOfInertiaValue [
+        analysis:characterizes C.1_Q:C.1_sigma_Iyz
     ]
 
     ref instance C.1:C.1 [
