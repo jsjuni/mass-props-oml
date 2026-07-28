@@ -4,20 +4,20 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2.4.3/SIS#> as WP.4.2.2.4.3
     uses <http://www.w3.org/2001/XMLSchema#> as xsd
     uses <http://studioj.us/base#> as base
     uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
-    extends <http://studioj.us/mass-props-oml/WP.4.2.2.4.3/C/C.1.2.2.4.3.1#> as C.1.2.2.4.3.1
-    extends <http://studioj.us/mass-props-oml/WP.4.2.2.4.3/C/C.1.2.2.4.3.2#> as C.1.2.2.4.3.2
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2.4.3/IF/C.1.2.2.4.3.1#> as C.1.2.2.4.3.1_IF
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2.4.3/IF/C.1.2.2.4.3.2#> as C.1.2.2.4.3.2_IF
     extends <http://studioj.us/mass-props-oml/WP.4.2.2.4.3/IT/IT.C.1.2.2.4.3.1_out#> as IT.C.1.2.2.4.3.1_out
-    extends <http://studioj.us/mass-props-oml/WP.4.2.2.4.3/C/C.1.2.2.4.3.3#> as C.1.2.2.4.3.3
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2.4.3/IF/C.1.2.2.4.3.3#> as C.1.2.2.4.3.3_IF
     extends <http://studioj.us/mass-props-oml/WP.4.2.2.4.3/IT/IT.C.1.2.2.4.3.2_out#> as IT.C.1.2.2.4.3.2_out
-    extends <http://studioj.us/mass-props-oml/WP.4.2.2.4.3/C/C.1.2.2.4.3.4#> as C.1.2.2.4.3.4
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2.4.3/IF/C.1.2.2.4.3.4#> as C.1.2.2.4.3.4_IF
     extends <http://studioj.us/mass-props-oml/WP.4.2.2.4.3/IT/IT.C.1.2.2.4.3.3_out#> as IT.C.1.2.2.4.3.3_out
-    extends <http://studioj.us/mass-props-oml/WP.4.2.2.4.3/C/C.1.2.2.4.3.5#> as C.1.2.2.4.3.5
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2.4.3/IF/C.1.2.2.4.3.5#> as C.1.2.2.4.3.5_IF
     extends <http://studioj.us/mass-props-oml/WP.4.2.2.4.3/IT/IT.C.1.2.2.4.3.4_out#> as IT.C.1.2.2.4.3.4_out
 
     instance J.IF.C.1.2.2.4.3.1_out.IF.C.1.2.2.4.3.2_in : mission:Junction [
         base:hasJunctionIdentifier "J.IF.C.1.2.2.4.3.1_out.IF.C.1.2.2.4.3.2_in"
-        mission:joins1 C.1.2.2.4.3.1:IF.C.1.2.2.4.3.1_out
-        mission:joins2 C.1.2.2.4.3.2:IF.C.1.2.2.4.3.2_in
+        mission:joins1 C.1.2.2.4.3.1_IF:IF.C.1.2.2.4.3.1_out
+        mission:joins2 C.1.2.2.4.3.2_IF:IF.C.1.2.2.4.3.2_in
     ]
 
     ref instance IT.C.1.2.2.4.3.1_out:IT.C.1.2.2.4.3.1_out [
@@ -26,8 +26,8 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2.4.3/SIS#> as WP.4.2.2.4.3
 
     instance J.IF.C.1.2.2.4.3.2_out.IF.C.1.2.2.4.3.3_in : mission:Junction [
         base:hasJunctionIdentifier "J.IF.C.1.2.2.4.3.2_out.IF.C.1.2.2.4.3.3_in"
-        mission:joins1 C.1.2.2.4.3.2:IF.C.1.2.2.4.3.2_out
-        mission:joins2 C.1.2.2.4.3.3:IF.C.1.2.2.4.3.3_in
+        mission:joins1 C.1.2.2.4.3.2_IF:IF.C.1.2.2.4.3.2_out
+        mission:joins2 C.1.2.2.4.3.3_IF:IF.C.1.2.2.4.3.3_in
     ]
 
     ref instance IT.C.1.2.2.4.3.2_out:IT.C.1.2.2.4.3.2_out [
@@ -36,8 +36,8 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2.4.3/SIS#> as WP.4.2.2.4.3
 
     instance J.IF.C.1.2.2.4.3.3_out.IF.C.1.2.2.4.3.4_in : mission:Junction [
         base:hasJunctionIdentifier "J.IF.C.1.2.2.4.3.3_out.IF.C.1.2.2.4.3.4_in"
-        mission:joins1 C.1.2.2.4.3.3:IF.C.1.2.2.4.3.3_out
-        mission:joins2 C.1.2.2.4.3.4:IF.C.1.2.2.4.3.4_in
+        mission:joins1 C.1.2.2.4.3.3_IF:IF.C.1.2.2.4.3.3_out
+        mission:joins2 C.1.2.2.4.3.4_IF:IF.C.1.2.2.4.3.4_in
     ]
 
     ref instance IT.C.1.2.2.4.3.3_out:IT.C.1.2.2.4.3.3_out [
@@ -46,8 +46,8 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2.4.3/SIS#> as WP.4.2.2.4.3
 
     instance J.IF.C.1.2.2.4.3.4_out.IF.C.1.2.2.4.3.5_in : mission:Junction [
         base:hasJunctionIdentifier "J.IF.C.1.2.2.4.3.4_out.IF.C.1.2.2.4.3.5_in"
-        mission:joins1 C.1.2.2.4.3.4:IF.C.1.2.2.4.3.4_out
-        mission:joins2 C.1.2.2.4.3.5:IF.C.1.2.2.4.3.5_in
+        mission:joins1 C.1.2.2.4.3.4_IF:IF.C.1.2.2.4.3.4_out
+        mission:joins2 C.1.2.2.4.3.5_IF:IF.C.1.2.2.4.3.5_in
     ]
 
     ref instance IT.C.1.2.2.4.3.4_out:IT.C.1.2.2.4.3.4_out [

@@ -1,0 +1,25 @@
+@dc:creator "http://studioj.us/mass-props-oml/WP.4.2.2.4.2/WP/WP.4.2.2.4.2.3#WP.4.2.2.4.2.3"^^xsd:anyURI
+@dc:rights "http://studioj.us/mass-props-oml/WP.4.2.2.4.2.3/WP/WP.4.2.2.4.2.3.5#WP.4.2.2.4.2.3.5"^^xsd:anyURI
+description <http://studioj.us/mass-props-oml/WP.4.2.2.4.2.3/IF/C.1.2.2.4.2.3.5#> as C.1.2.2.4.2.3.5_IF {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2.4.2.3/C/C.1.2.2.4.2.3.5#> as C.1.2.2.4.2.3.5
+    uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+    uses <http://studioj.us/base#> as base
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2.4.2.3/IT/IT.C.1.2.2.4.2.3.4_out#> as IT.C.1.2.2.4.2.3.4_out
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2.4.2/IT/IT.C.1.2.2.4.2.3_out#> as IT.C.1.2.2.4.2.3_out
+
+    ref instance C.1.2.2.4.2.3.5:C.1.2.2.4.2.3.5 [
+        mission:presents IF.C.1.2.2.4.2.3.5_in, IF.C.1.2.2.4.2.3.5_out
+    ]
+
+    instance IF.C.1.2.2.4.2.3.5_in : mission:Interface [
+        base:hasInterfaceIdentifier "IF.C.1.2.2.4.2.3.5_in"
+        mission:transfersIn IT.C.1.2.2.4.2.3.4_out:IT.C.1.2.2.4.2.3.4_out
+    ]
+
+    instance IF.C.1.2.2.4.2.3.5_out : mission:Interface [
+        base:hasInterfaceIdentifier "IF.C.1.2.2.4.2.3.5_out"
+        mission:transfersOut IT.C.1.2.2.4.2.3_out:IT.C.1.2.2.4.2.3_out
+    ]
+}
