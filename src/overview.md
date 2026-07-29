@@ -8,9 +8,9 @@
 ## Scaling
 
 Model size:
-* descriptions: 737
+* descriptions: 1003
 * concept instances: 8452
-* axioms: 106,080
+* axioms: 100,784
 
 ## Metrology
 
@@ -57,7 +57,7 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.1#> as C.1.2.2.
 
 ```
 
-Note that quantities themselves do not have magnitude values. A quantity is simply a named property; its value it many cases (e.g., mass) is unknowable in principle. In fact, we may have multiple estimates for a quantity value with difference provenance. For example, we may begin with a rough estimate of a component's mass based on historical trends. At some later point we may estimate its mass from its geometry and intended material properties. Later still we may measure its mass on a scale. For this purpose we say a quanity value characterizes a quantity.
+Note that quantities themselves do not have magnitude values. A quantity is simply a named property; its value in many cases (e.g., mass) is unknowable in principle. In fact, we may have multiple estimates for a quantity value with differening provenance. For example, we may begin with a rough estimate of a component's mass based on historical trends. At some later point we may estimate its mass from its geometry and intended material properties. Later still we may measure its mass on a scale. For this purpose we say a quanity value characterizes a quantity.
 
 A _quantity value_ is a pair consisting of a number and a unit identifier. Vocabulary constraints ensure that, for example, the unit property of a mass quantity value has appropriate dimensions for a mass quantity.
 
@@ -94,9 +94,9 @@ This example extends the metrology pattern above to illustrate a recursive analy
 
 Many properties in systems engineering are recursively defined, i.e., some property of an aggregate is computed from the corresponding properties of its constituents. Those constituent properties are in turn computed from their constituents, and so on. For example, the mass of an aggregate is the sum of the masses of its parts. Other properties such as cost may be summed in a similar fashion. The combining operation may be more complex than simple summing, as in the case of center of mass and inertia tensor. Finally, the property need not be numeric at all. An integration schedule for an aggregate, for example, can be constructed from the integration schedules of its constituents, and so on.
 
-In practice, no single authority would be responsible for analysis spanning the depth of a large project. As we will see in the following section, decomposition and delegation are employed to limit the scope of responsibility for a given authority. In the case of analytica relationships (e.g., mass properties) that are invariant across multiple levels, proper methodology can produce modeling patterns and tools that are reusable across the enterprise.
+In practice, no single authority would be responsible for analysis spanning the depth of a large project. As we will see in the following section, decomposition and delegation are employed to limit the scope of responsibility for a given authority. In the case of analytical relationships (e.g., mass properties) that are invariant across multiple levels, proper methodology can employ modeling patterns and tools that are reusable across the enterprise.
 
-This demopnstration shows such an approach for mass properties and their uncertainties.
+This demopnstration shows the result such an approach for mass properties and their uncertainties. Although not shown in this document, the mass properties for each component were calculated using a single tool that rolls up the mass properties of any tree-shaped aggregation.
 
 ## Partitioning Pattern
 
@@ -150,7 +150,7 @@ description <http://studioj.us/mass-props-oml/WP.4.2/WP/WP.4.2.2#> as WP.4.2.2 {
 ```
 The `@dc:creator` annotation indicates that this instance is attributable to a work package whose URI stem is WP.4.2. In a normal work breakdown structure, the parent of WP.4.2.2 would be WP.4.2, so that makes sense. We'll understand this in more detail later. The `@dc:rights` annotation indicates that our work package (WP.4.2.2) is permitted to see this description, which is fitting. This is how our customer delegates to us: by creating a work package, assigning it an identifier and a name, and exposing it to us.
 
-Note the `project:supplies` relation. That is more model content pertinent to us:
+Note the `project:supplies` relation. That is more model content pertinent to us, visible in this description:
 
 ```
 @dc:creator "http://studioj.us/mass-props-oml/WP.4/WP/WP.4.2#WP.4.2"^^xsd:anyURI
@@ -178,6 +178,7 @@ description <http://studioj.us/mass-props-oml/WP.4.2/C/C.1.2.2#> as C.1.2.2 {
 }
 ```
 Here our customer has asserted the existence of a `mission:Component` _C.1.2.2 (Element 2)_, which is the target of the `project:supplies` relation above. WP.4.2.2 is named "Element 2" because its purpose is to supply the "Element 2" component. Though not shown above, our customer will also have asserted facts about Element 2 in the form of quantity definitions, requirements, operational contexts, etc., and made those assertions visible to us through the `@dc:rights` annotation.
+
 In summary, our customer is telling us what they want us to supply.
 
 Thus authorized, consider how we go about that work.
@@ -301,10 +302,6 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2/WBS#> as WP.4.2.2_WBS {
     ]
 }
 ```
-### Quantities
-
-### Requirements
-
 ### System Interconnection Structure
 
 To further illustrate the pattern, we introduce internal connectivity structure in the form of mission:Interfaces, mission:Junctions, and mission:Items.
@@ -505,8 +502,229 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2/SIS#> as WP.4.2.2_SIS {
 }
 ```
 
-### Requirements Propagation
+### Quantities
 
-In a large-scale project of sufficient complexity, intermediate levels of decomposition may not merely acquire off-the-shelf subcomponents to integrate, but may instead levy requirements on subcomponents to be designed and manufactured by suppliers.
+The mass properties of Element 2 are of interest to us as a supplier. Consequently, we are interested in the mass properties of the parts of Element 2. We express that interest by, among other things, defining quantities of the appropriate type for mass and center of mass (as the triple (_Cx_, _Cy_, _Cz_)). Also included but not shown are quantity definitions for moments and products of inertia, as well as uncertainties for all mass properties).
 
-### System Realization Propagation
+```
+@dc:creator "http://studioj.us/mass-props-oml/WP.4.2/WP/WP.4.2.2#WP.4.2.2"^^xsd:anyURI
+@dc:rights "http://studioj.us/mass-props-oml/WP.4.2.2/WP/WP.4.2.2.1#WP.4.2.2.1"^^xsd:anyURI
+description <http://studioj.us/mass-props-oml/WP.4.2.2/Q/C.1.2.2.1#> as C.1.2.2.1_Q {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    uses <http://studioj.us/metrology#> as metrology
+    uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.1#> as C.1.2.2.1
+
+    @rdfs:label "mass"
+    instance C.1.2.2.1_mass : metrology:MassQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.1_mass"
+        analysis:characterizes C.1.2.2.1:C.1.2.2.1
+    ]
+
+    @rdfs:label "Cx"
+    instance C.1.2.2.1_Cx : metrology:CenterOfMassQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.1_Cx"
+        analysis:characterizes C.1.2.2.1:C.1.2.2.1
+    ]
+
+    @rdfs:label "Cy"
+    instance C.1.2.2.1_Cy : metrology:CenterOfMassQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.1_Cy"
+        analysis:characterizes C.1.2.2.1:C.1.2.2.1
+    ]
+
+    @rdfs:label "Cz"
+    instance C.1.2.2.1_Cz : metrology:CenterOfMassQuantity [
+        metrology:hasQuantityIdentifier "C.1.2.2.1_Cz"
+        analysis:characterizes C.1.2.2.1:C.1.2.2.1
+    ]
+
+    ...
+}
+```
+
+### Requirements
+
+We wish to constrain the mass properties of the components we acquire, in order to constrain the mass properties of our component (Element 2). In particular, we would like to assert an upper bound on each acquired compoment's mass and lower and upper bounds on each coordinate of its center of mass.
+
+We can accomplish this goal by employing a simple vocabulary pattern. A _Requirement_ _requires_ one or more _QuantityValueConstraint_s. A _QuantityValueConstraint_ _hasQuantityValueRelation_ "le" (less than or equal to), "eq" (equal to), "ge" (greater than or equal to), etc., _explains_ a _Quantity_, and _analyzes_ a _QuantityValue_.
+
+Of course, not all requirements are so simple, but more elaborate constraint types can be created as required.
+
+```
+@dc:creator "http://studioj.us/mass-props-oml/WP.4.2/WP/WP.4.2.2#WP.4.2.2"^^xsd:anyURI
+@dc:rights "http://studioj.us/mass-props-oml/WP.4.2.2/WP/WP.4.2.2.1#WP.4.2.2.1"^^xsd:anyURI
+description <http://studioj.us/mass-props-oml/WP.4.2.2/R/C.1.2.2.1#> as C.1.2.2.1_R {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+    uses <http://studioj.us/base#> as base
+    uses <http://imce.jpl.nasa.gov/foundation/base#> as base1
+    uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/Q/C.1.2.2.1#> as C.1.2.2.1_Q
+    uses <http://studioj.us/metrology#> as metrology
+    extends <http://studioj.us/units#> as units
+
+    instance C.1.2.2.1_mass_max : mission:Requirement [
+        base:hasRequirementIdentifier "C.1.2.2.1_R.1"
+        base1:hasDescription "The Subsystem 1 mass shall not exceed 0.44 kg."
+        analysis:requires C.1.2.2.1_mass_max_constraint
+    ]
+
+    instance C.1.2.2.1_mass_max_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "le"
+        analysis:explains C.1.2.2.1_Q:C.1.2.2.1_mass
+        analysis:analyzes C.1.2.2.1_mass_max_value
+    ]
+
+    instance C.1.2.2.1_mass_max_value : metrology:MassValue [
+        metrology:hasNumber 0.44e0
+        metrology:hasUnit units:kg
+    ]
+
+    instance C.1.2.2.1_Cx_range : mission:Requirement [
+        base:hasRequirementIdentifier "C.1.2.2.1_R.Cx_R.2"
+        base1:hasDescription "The Subsystem 1 Cx shall lie in the interval [33.87, 149.20] mm."
+        analysis:requires C.1.2.2.1_Cx_min_constraint, C.1.2.2.1_Cx_max_constraint
+    ]
+
+    instance C.1.2.2.1_Cx_min_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "ge"
+        analysis:explains C.1.2.2.1_Q:C.1.2.2.1_Cx
+        analysis:analyzes C.1.2.2.1_Cx_min_value
+    ]
+
+    instance C.1.2.2.1_Cx_max_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "le"
+        analysis:explains C.1.2.2.1_Q:C.1.2.2.1_Cx
+        analysis:analyzes C.1.2.2.1_Cx_max_value
+    ]
+
+    instance C.1.2.2.1_Cx_min_value : metrology:LengthValue [
+        metrology:hasNumber 33.87e0
+        metrology:hasUnit units:mm
+    ]
+
+    instance C.1.2.2.1_Cx_max_value : metrology:LengthValue [
+        metrology:hasNumber 149.2e0
+        metrology:hasUnit units:mm
+    ]
+
+    ...
+    
+}
+```
+
+### Quantity Values
+
+Our model partitioning examples so far have illustrated only projecting "down" from customer to supplier. Requirements, for example, flow from customer to supplier. On the right-hand side of the traditional systems engineering "V", however, system implementation details (e.g., quantity values) are projected "up" from supplier to customer.
+
+Suppose that, at some point in our life cycle, Work Package WP.4.2.2.1 provides this description giving numbers and units for quanity values for C.1.2.2.1:
+
+```
+@dc:creator "http://studioj.us/mass-props-oml/WP.4.2.2/WP/WP.4.2.2.1#WP.4.2.2.1"^^xsd:anyURI
+@dc:rights "http://studioj.us/mass-props-oml/WP.4.2/WP/WP.4.2.2#WP.4.2.2"^^xsd:anyURI
+description <http://studioj.us/mass-props-oml/WP.4.2.2.1/QV#> as WP.4.2.2.1_QV {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    uses <http://studioj.us/metrology#> as metrology
+    uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/Q/C.1.2.2.1#> as C.1.2.2.1_Q
+    extends <http://studioj.us/units#> as units
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.1#> as C.1.2.2.1
+
+    @rdfs:label "mass"
+    instance C.1.2.2.1_mass_value : metrology:MassValue [
+        analysis:characterizes C.1.2.2.1_Q:C.1.2.2.1_mass
+        metrology:hasNumber 0.102492327040061e0
+        metrology:hasUnit units:kg
+    ]
+
+    @rdfs:label "Cx"
+    instance C.1.2.2.1_Cx_value : metrology:CenterOfMassValue [
+        analysis:characterizes C.1.2.2.1_Q:C.1.2.2.1_Cx
+        metrology:hasNumber 68.4176930226386e0
+        metrology:hasUnit units:mm
+    ]
+
+    @rdfs:label "Cy"
+    instance C.1.2.2.1_Cy_value : metrology:CenterOfMassValue [
+        analysis:characterizes C.1.2.2.1_Q:C.1.2.2.1_Cy
+        metrology:hasNumber -99.9254682566971e0
+        metrology:hasUnit units:mm
+    ]
+
+    @rdfs:label "Cz"
+    instance C.1.2.2.1_Cz_value : metrology:CenterOfMassValue [
+        analysis:characterizes C.1.2.2.1_Q:C.1.2.2.1_Cz
+        metrology:hasNumber 32.0405026897788e0
+        metrology:hasUnit units:mm
+    ]
+
+    ...
+    
+}
+```
+
+Note the `dc:creator` annotation, which tells us the description was created by our supplier. The `dc:rights` annotation says this supplier is exposing this description to their customer (us).
+
+When we have collected quantity values from all suppliers, we can calculate the mass properties of Element 2 and project them upward to our customer:
+
+```
+@dc:creator "http://studioj.us/mass-props-oml/WP.4.2/WP/WP.4.2.2#WP.4.2.2"^^xsd:anyURI
+@dc:rights "http://studioj.us/mass-props-oml/WP.4/WP/WP.4.2#WP.4.2"^^xsd:anyURI
+description <http://studioj.us/mass-props-oml/WP.4.2.2/QV#> as WP.4.2.2_QV {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    uses <http://studioj.us/metrology#> as metrology
+    uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
+    extends <http://studioj.us/mass-props-oml/WP.4.2/Q/C.1.2.2#> as C.1.2.2_Q
+    extends <http://studioj.us/mass-props-oml/WP.4.2/C/C.1.2.2#> as C.1.2.2
+    extends <http://studioj.us/units#> as units
+
+    @rdfs:label "mass"
+    instance C.1.2.2_mass_value : metrology:MassValue [
+        analysis:characterizes C.1.2.2_Q:C.1.2.2_mass
+        metrology:hasNumber 23.35192460687412e0
+        metrology:hasUnit units:kg
+    ]
+
+    @rdfs:label "Cx"
+    instance C.1.2.2_Cx_value : metrology:CenterOfMassValue [
+        analysis:characterizes C.1.2.2_Q:C.1.2.2_Cx
+        metrology:hasNumber 6.408958326831247e0
+        metrology:hasUnit units:mm
+    ]
+
+    @rdfs:label "Cy"
+    instance C.1.2.2_Cy_value : metrology:CenterOfMassValue [
+        analysis:characterizes C.1.2.2_Q:C.1.2.2_Cy
+        metrology:hasNumber -3.49571469131731e0
+        metrology:hasUnit units:mm
+    ]
+
+    @rdfs:label "Cz"
+    instance C.1.2.2_Cz_value : metrology:CenterOfMassValue [
+        analysis:characterizes C.1.2.2_Q:C.1.2.2_Cz
+        metrology:hasNumber 7.930235096321932e0
+        metrology:hasUnit units:mm
+    ]
+
+    ...
+    
+}
+```
+
+### Summary
+
+The partitioning pattern illustrated here provides guidance for paritioning a model such that proprietary details remain private, but carefully considered and controlled can be exposed to customers and suppliers as required by contracts or other organizational relations.
+
+The guidance is simple:
+* Every assertion in a description is attributable to the sole creator of that assertion.
+* Every assertion is a description can be shared with every authority given rights to it.
+
+This two principles establish the coarsest permissible partition. Finer partitions are possible, as illustrated above by separating Work Packages and Components into distinct descriptions with identical creators and rights.
