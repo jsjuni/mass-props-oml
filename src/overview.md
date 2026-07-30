@@ -59,19 +59,19 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2.1/QV#> as WP.4.2.2.1_QV {
     uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
     uses <http://studioj.us/metrology#> as metrology
     uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
-    extends <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.1#> as C.1.2.2.1
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/Q/C.1.2.2.1#> as C.1.2.2.1_Q
     extends <http://studioj.us/units#> as units
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.1#> as C.1.2.2.1
 
-    ...
-    
     @rdfs:label "mass"
     instance C.1.2.2.1_mass_value : metrology:MassValue [
-        analysis:characterizes C.1.2.2.1:C.1.2.2.1_mass
+        analysis:characterizes C.1.2.2.1_Q:C.1.2.2.1_mass
         metrology:hasNumber 0.102492327040061e0
         metrology:hasUnit units:kg
     ]
-
+    
     ...
+
 }
 ```
 
