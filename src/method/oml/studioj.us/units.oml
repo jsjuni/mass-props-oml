@@ -1,4 +1,4 @@
-@dc:rights "http://studioj.us/mass-props-oml/.*/WP/.*"
+@dc:rights ".*"
 description <http://studioj.us/units#> as units {
     uses <http://purl.org/dc/elements/1.1/> as dc
     uses <http://studioj.us/metrology#> as metrology
