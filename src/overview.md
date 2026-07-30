@@ -20,48 +20,35 @@ The vocabulary in this pedagogical example is highly simplified; for production 
 
 Examples of quantities might include the mass of some component, its length in some defined _x_-dimension, its center of mass in some coordinate frame, etc. We can create a taxonomy of comparable quantities. For example, quantities expressed in terms of length are comparable, while a length quantity cannot be compared with a mass quantity. The quantities employed in this example are mass (a mass quantity), center of mass (a 3-vector of length quantities), moments of inertia (a 3-vector of moments of intertia quantities), and products of inertia (a 3-vector of products of inertia quantities), and their uncertainties.
 
-Here is an example definition of a mass quantity:
+Here is an example definition of a mass quantity definition:
 
 ```
 @dc:creator "http://studioj.us/mass-props-oml/WP.4.2/WP/WP.4.2.2#WP.4.2.2"^^xsd:anyURI
 @dc:rights "http://studioj.us/mass-props-oml/WP.4.2.2/WP/WP.4.2.2.1#WP.4.2.2.1"^^xsd:anyURI
-description <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.1#> as C.1.2.2.1 {
+description <http://studioj.us/mass-props-oml/WP.4.2.2/Q/C.1.2.2.1#> as C.1.2.2.1_Q {
     uses <http://purl.org/dc/elements/1.1/> as dc
     uses <http://www.w3.org/2001/XMLSchema#> as xsd
-    uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
-    uses <http://imce.jpl.nasa.gov/foundation/base#> as base
-    uses <http://studioj.us/base#> as base1
-    extends <http://studioj.us/mass-props-oml/WP.4.2/IT/IT.C.1.2.1_out#> as IT.C.1.2.1_out
-    extends <http://studioj.us/mass-props-oml/WP.4.2.2/IT/IT.C.1.2.2.1_out#> as IT.C.1.2.2.1_out
     uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
     uses <http://studioj.us/metrology#> as metrology
     uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
-
-    instance C.1.2.2.1 : mission:Component [
-        base:hasCanonicalName "Subsystem 1"
-        base1:hasComponentIdentifier "C.1.2.2.1"
-        base:hasSortKey "01020201"
-        mission:presents IF.C.1.2.2.1_in, IF.C.1.2.2.1_out
-    ]
-
-    ...
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.1#> as C.1.2.2.1
 
     @rdfs:label "mass"
     instance C.1.2.2.1_mass : metrology:MassQuantity [
         metrology:hasQuantityIdentifier "C.1.2.2.1_mass"
-        analysis:characterizes C.1.2.2.1
+        analysis:characterizes C.1.2.2.1:C.1.2.2.1
     ]
 
     ...
-}
 
+}
 ```
 
 Note that quantities themselves do not have magnitude values. A quantity is simply a named property; its value in many cases (e.g., mass) is unknowable in principle. In fact, we may have multiple estimates for a quantity value with differening provenance. For example, we may begin with a rough estimate of a component's mass based on historical trends. At some later point we may estimate its mass from its geometry and intended material properties. Later still we may measure its mass on a scale. For this purpose we say a quanity value characterizes a quantity.
 
 A _quantity value_ is a pair consisting of a number and a unit identifier. Vocabulary constraints ensure that, for example, the unit property of a mass quantity value has appropriate dimensions for a mass quantity.
 
-Here is an example of quantity value assertions:
+Here is an example of quantity value assertion:
 
 ```
 @dc:creator "http://studioj.us/mass-props-oml/WP.4.2.2/WP/WP.4.2.2.1#WP.4.2.2.1"^^xsd:anyURI
@@ -72,19 +59,19 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2.1/QV#> as WP.4.2.2.1_QV {
     uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
     uses <http://studioj.us/metrology#> as metrology
     uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
-    extends <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.1#> as C.1.2.2.1
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/Q/C.1.2.2.1#> as C.1.2.2.1_Q
     extends <http://studioj.us/units#> as units
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.1#> as C.1.2.2.1
 
-    ...
-    
     @rdfs:label "mass"
     instance C.1.2.2.1_mass_value : metrology:MassValue [
-        analysis:characterizes C.1.2.2.1:C.1.2.2.1_mass
+        analysis:characterizes C.1.2.2.1_Q:C.1.2.2.1_mass
         metrology:hasNumber 0.102492327040061e0
         metrology:hasUnit units:kg
     ]
-
+    
     ...
+
 }
 ```
 
@@ -725,6 +712,37 @@ The partitioning pattern illustrated here provides guidance for paritioning a mo
 
 The guidance is simple:
 * Every assertion in a description is attributable to the sole creator of that assertion.
-* Every assertion is a description can be shared with every authority given rights to it.
+* Every assertion in a description can be shared with every authority given rights to it.
 
 This two principles establish the coarsest permissible partition. Finer partitions are possible, as illustrated above by separating Work Packages and Components into distinct descriptions with identical creators and rights.
+
+In every well-formed application of this partitioning pattern, the creator of every description must have rights to every description imported by that description. It is straightforward to verify this constraint because the access rules are encoded as OML annotations that can be queried:
+
+```
+# finds importing descriptions whose imported descriptions do not grant rights to the
+# creator of the importing description
+# creator rights => creator of the imported matches creator of the importing
+# explicit rights => rights of the imported match creator of the importing
+# implicit_rights => neither creator nor explicit and rights of the imported as a regex match the creator of the importing
+
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX oml: <http://opencaesar.io/oml#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX project: <http://imce.jpl.nasa.gov/foundation/project#>
+SELECT ?creator ?importing ?imported
+WHERE {
+    ?importing owl:imports ?imported ;
+        oml:type oml:Description ;
+        dc:creator ?creator .
+    ?imported oml:type oml:Description .
+
+BIND(EXISTS { ?imported dc:creator ?creator } as ?has_creator_rights)
+BIND(EXISTS { ?imported dc:rights ?creator } as ?has_explicit_rights)
+BIND(!?has_creator_rights && !?has_explicit_rights && EXISTS {
+    ?imported dc:rights ?holder FILTER(REGEX(STR(?creator), STR(?holder)))
+} as ?has_implicit_rights)
+
+FILTER(!?has_creator_rights && !?has_explicit_rights && !?has_implicit_rights)
+}
+ORDER BY ?imported ?importing
+```
