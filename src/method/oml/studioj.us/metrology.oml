@@ -2,11 +2,12 @@ vocabulary <http://studioj.us/metrology#> as metrology {
     extends <http://www.w3.org/2001/XMLSchema#> as xsd
     extends <http://imce.jpl.nasa.gov/foundation/base#> as base 
     extends <http://imce.jpl.nasa.gov/foundation/mission#> as mission 
-    extends <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis 
+    extends <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
+    extends <http://bipm.org/jcgm/vim4#> as vim4
 
     concept Quantity [
         key hasQuantityIdentifier
-    ] < analysis:Characterization
+    ] < vim4:IndividualUnitaryQuantity
 
     scalar property hasQuantityIdentifier [
         domain Quantity
