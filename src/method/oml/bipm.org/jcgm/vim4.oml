@@ -14,6 +14,8 @@ vocabulary <http://bipm.org/jcgm/vim4#> as vim4 {
 
 	extends <http://www.w3.org/2001/XMLSchema#> as xsd
 
+	extends <http://opencaesar.io/oml#> as oml
+
 	extends <http://iso.org/iso-1087-1#> as iso-1087-1
 
 	@rdfs:label "IdentifiedElement"
@@ -106,9 +108,7 @@ vocabulary <http://bipm.org/jcgm/vim4#> as vim4 {
 	@rdfs:comment "The identity of a property is the unique pair of the GeneralProperty it instantiates and of the Object it characterizes."
 	@iso-1087-1:Concept
 	aspect IndividualProperty [
-		// Not supported in OML 1.0.6
-		// https://github.com/opencaesar/oml/issues/89
-		// key instantiates, characterizes
+		key instantiates, characterizes
 	]
 
 	@rdfs:label "IndividualNominalProperty"
@@ -168,9 +168,7 @@ vocabulary <http://bipm.org/jcgm/vim4#> as vim4 {
 		to GeneralUnitaryQuantity
 		@rdfs:label "system has unitary quantity"
 		forward systemHasUnitaryQuantity
-	// Not supported in OML 1.0.6
-	// https://github.com/opencaesar/oml/issues/89
-	// key oml:hasSource, oml:hasTarget
+		key oml:hasSource, oml:hasTarget
 	]
 
 	@rdfs:label "System Has Base Unitary Quantity"
@@ -286,9 +284,7 @@ vocabulary <http://bipm.org/jcgm/vim4#> as vim4 {
 	@rdfs:isDefinedBy "[VIM4 CD: 1.20]"
 	@iso-1087-1:Concept
 	aspect QuantityValue [
-		// Not supported in OML 1.0.6
-		// https://github.com/opencaesar/oml/issues/89
-		// key isAttributedTo
+		key isAttributedTo
 	] < IndividualQuantity, IdentifiedElement
 
 	@rdfs:label "isTrueValue"
@@ -436,9 +432,7 @@ vocabulary <http://bipm.org/jcgm/vim4#> as vim4 {
 		to MeasurementUnit
 		@rdfs:label "system has unit"
 		forward systemHasUnit
-	// Not supported in OML 1.0.6
-	// https://github.com/opencaesar/oml/issues/89
-	// key oml:hasSource, oml:hasTarget
+		key oml:hasSource, oml:hasTarget
 	]
 
 	@rdfs:label "System Has Base Unit"

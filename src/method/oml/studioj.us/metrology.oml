@@ -4,48 +4,71 @@ vocabulary <http://studioj.us/metrology#> as metrology {
     extends <http://imce.jpl.nasa.gov/foundation/mission#> as mission 
     extends <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
     extends <http://bipm.org/jcgm/vim4#> as vim4
+    uses <http://iso.org/iso-80000-3.1#> as iso-80000-3.1 
+    uses <http://iso.org/iso-80000-4.1#> as iso-80000-4.1 
+    uses <http://iso.org/iso-80000-4.7#> as iso-80000-4.7
 
-    concept Quantity [
+    ref concept vim4:IndividualUnitaryQuantity [
         key hasQuantityIdentifier
-    ] < vim4:IndividualUnitaryQuantity
+    ] < vim4:IndividualUnitaryQuantity 
 
     scalar property hasQuantityIdentifier [
-        domain Quantity
+        domain vim4:IndividualUnitaryQuantity
         range xsd:string
         functional
-    ] < base:hasIdentifier
+    ] < base:hasIdentifier, vim4:id
 
-    concept MassQuantity < Quantity
+    concept MassQuantity < vim4:IndividualUnitaryQuantity [
+        restricts vim4:instantiates to iso-80000-4.1:mass
+    ]
 
-    concept LengthQuantity < Quantity
+    concept LengthQuantity < vim4:IndividualUnitaryQuantity [
+        restricts vim4:instantiates to iso-80000-3.1:length
+    ]
+
     concept CenterOfMassQuantity < LengthQuantity
 
-    concept MomentOfInertiaQuantity < Quantity
-    concept ProductOfInertiaQuantity < Quantity
+    concept MomentOfInertiaQuantity < vim4:IndividualUnitaryQuantity [
+        restricts vim4:instantiates to iso-80000-4.7:moment-of-inertia
+    ]
 
-    concept QuantityValue < analysis:Characterization [
-        restricts all analysis:characterizes to Quantity
+    concept ProductOfInertiaQuantity < vim4:IndividualUnitaryQuantity [
+        restricts vim4:instantiates to iso-80000-4.7:moment-of-inertia
+    ]
+
+    concept QuantityValue < vim4:UnitaryQuantityValue, analysis:Characterization [
+        restricts all analysis:characterizes to vim4:IndividualUnitaryQuantity
+        restricts all vim4:isAttributedTo to vim4:IndividualUnitaryQuantity
     ]
 
     concept MassValue < QuantityValue [
         restricts all analysis:characterizes to MassQuantity
+        restricts all vim4:isAttributedTo to MassQuantity
         restricts all hasUnit to MassUnit
+        restricts vim4:unit to iso-80000-4.1:kilogram
     ]
 
     concept LengthValue < QuantityValue [
         restricts all analysis:characterizes to LengthQuantity
+        restricts all vim4:isAttributedTo to LengthQuantity
         restricts all hasUnit to LengthUnit
+        restricts vim4:unit to iso-80000-3.1:metre
     ]
+
     concept CenterOfMassValue < LengthValue
 
     concept MomentOfInertiaValue < QuantityValue [
         restricts all analysis:characterizes to MomentOfInertiaQuantity
+        restricts all vim4:isAttributedTo to MomentOfInertiaQuantity
         restricts all hasUnit to InertiaUnit
+        restricts vim4:unit to iso-80000-4.7:kilogram-metre-squared
     ]
 
     concept ProductOfInertiaValue < QuantityValue [
         restricts all analysis:characterizes to ProductOfInertiaQuantity
+        restricts all vim4:isAttributedTo to MomentOfInertiaQuantity
         restricts all hasUnit to InertiaUnit
+        restricts vim4:unit to iso-80000-4.7:kilogram-metre-squared
     ]
 
     concept Unit
@@ -84,4 +107,5 @@ vocabulary <http://studioj.us/metrology#> as metrology {
         range xsd:boolean
         functional
     ]
+    
 }

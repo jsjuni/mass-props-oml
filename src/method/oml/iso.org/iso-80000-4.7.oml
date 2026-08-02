@@ -1,0 +1,19 @@
+@dc:creator "J Steven Jenkins https://orcid.org/0000-0002-0725-0884"
+@dc:description "The ISO-80000-4 library."
+@dc:title "ISO-80000-4.3 relative-mass-density"
+description <http://iso.org/iso-80000-4.7#> as iso-80000-4.7 {
+
+  uses <http://purl.org/dc/elements/1.1/> as dc
+  uses <http://bipm.org/jcgm/vim4#> as vim4
+  
+  @dc:source "4-7"
+  instance moment-of-inertia : vim4:GeneralUnitaryQuantity
+  [ vim4:id "moment-of-inertia" ]
+  
+  // -------------------------------------------------------
+  
+  @dc:source "4-7"
+  instance kilogram-metre-squared : vim4:UnprefixedMeasurementUnit 
+  [ vim4:id "kilogram-metre-squared" vim4:instantiates moment-of-inertia ]
+    
+}

@@ -1,7 +1,11 @@
 vocabulary bundle <http://studioj.us/bundle#> as studioj-bundle {
 
     extends <http://imce.jpl.nasa.gov/foundation/bundle#>
+
+    includes <http://bipm.org/jcgm/vim4#>
     
+    includes <http://iso.org/iso-1087-1#>
+
     includes <http://studioj.us/base#>
 
     includes <http://studioj.us/metrology#>
