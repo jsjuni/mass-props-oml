@@ -1,16 +1,16 @@
 @dc:title "ISO-80000-1"
-description <http://iso.org/iso-80000-1#> as iso-80000-1 {
+description <http://iso.org/iso-80000-1-d#> as iso-80000-1-d {
 
 	uses <http://purl.org/dc/elements/1.1/> as dc
 	uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
 	uses <http://bipm.org/jcgm/vim3#> as vim3
 
-	@rdfs:comment "The ISQ"
+	@rdfs:comment "The International System of Quantities"
     instance ISQ : vim3:SystemOfQuantities [
     	vim3:hasSystemOfQuantitiesIdentifier "ISQ"
 	]
   
-    @rdfs:comment "The SI"
+    @rdfs:comment "The International System of Units"
     @rdfs:seeAlso "https://www.bipm.org/en/publications/si-brochure/"
     instance SI : vim3:SystemOfUnits [
 		vim3:hasSystemOfUnitsIdentifier "SI"

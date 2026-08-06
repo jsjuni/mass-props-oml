@@ -1,23 +1,25 @@
 @dc:description "The ISO-80000-4 library."
 @dc:title "ISO-80000-4.7 moment of inertia, kilogram meter squared"
-description <http://iso.org/iso-80000-4.7#> as iso-80000-4.7 {
+description <http://iso.org/iso-80000-4.7-d#> as iso-80000-4.7 {
 
     uses <http://www.w3.org/2002/07/owl#> as owl
     uses <http://purl.org/dc/elements/1.1/> as dc
     uses <http://bipm.org/jcgm/vim3#> as vim3
 
-    extends <http://iso.org/iso-80000-1#> as iso-80000-1
-
+    extends <http://iso.org/iso-80000-1-d#> as iso-80000-1-d
+    extends <http://iso.org/iso-80000-3.1-d#> as iso-80000-3.1-d
+    extends <http://iso.org/iso-80000-4.1-d#> as iso-80000-4.1-d
+   
     instance moment_of_inertia : vim3:Quantity [
         vim3:hasQuantityIdentifier "moment of inertia"
         vim3:isSameKindAs moment_of_inertia
         vim3:hasQuantityDimension : vim3:QuantityDimension [
             vim3:hasDimensionFactor : vim3:BaseDimensionPower [ 
-                vim3:raisesBaseDimension M
+                vim3:raisesBaseDimension iso-80000-4.1-d:M
                 vim3:toPower "1/1"^^owl:rational
             ]
             vim3:hasDimensionFactor : vim3:BaseDimensionPower [ 
-                vim3:raisesBaseDimension L
+                vim3:raisesBaseDimension iso-80000-3.1-d:L
                 vim3:toPower "2/1"^^owl:rational
             ]
         ]
@@ -26,7 +28,7 @@ description <http://iso.org/iso-80000-4.7#> as iso-80000-4.7 {
 
     relation instance moment_of_inertia_derived_quanity_isq : vim3:IsDerivedQuantityIn [
         from moment_of_inertia
-        to iso-80000-1:ISQ
+        to iso-80000-1-d:ISQ
     ]
 
     instance kilogram_meter_squared : vim3:MeasurementUnit [

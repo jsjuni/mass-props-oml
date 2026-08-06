@@ -1,12 +1,12 @@
 @dc:description "The ISO-80000-4 library."
 @dc:title "ISO-80000-4.1 mass, kilogram"
-description <http://iso.org/iso-80000-4.1#> as iso-80000-4.1 {
+description <http://iso.org/iso-80000-4.1-d#> as iso-80000-4.1 {
 
     uses <http://www.w3.org/2002/07/owl#> as owl
     uses <http://purl.org/dc/elements/1.1/> as dc
     uses <http://bipm.org/jcgm/vim3#> as vim3
 
-    extends <http://iso.org/iso-80000-1#> as iso-80000-1
+    extends <http://iso.org/iso-80000-1-d#> as iso-80000-1-d
 
     instance M : vim3:BaseDimension [
         vim3:hasDimensionSymbol "M"
@@ -26,7 +26,7 @@ description <http://iso.org/iso-80000-4.1#> as iso-80000-4.1 {
 
     relation instance mass_base_quanity_isq : vim3:IsBaseQuantityIn [
         from mass
-        to iso-80000-1:ISQ
+        to iso-80000-1-d:ISQ
         vim3:withBaseDimension M
     ]
 

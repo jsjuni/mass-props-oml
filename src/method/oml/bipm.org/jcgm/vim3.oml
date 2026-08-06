@@ -29,7 +29,7 @@ vocabulary <http://bipm.org/jcgm/vim3#> as vim3 {
 	@rdfs:label "quantity"
 	@dc:source "https://jcgm.bipm.org/vim/en/1.1.html"^^xsd:anyURI
 	@dc:description "property of a phenomenon, body, or substance, where the property has a magnitude that can be expressed as a number and a reference"
-	concept Quantity [ key hasQuantityIdentifier ] < imce-base:IdentifiedElement
+	concept Quantity < imce-base:IdentifiedElement
 
 	@rdfs:label "has quantity identifier"
 	@dc:source "https://jcgm.bipm.org/vim/en/1.1.html"
@@ -130,9 +130,7 @@ vocabulary <http://bipm.org/jcgm/vim3#> as vim3 {
 	// 1.7 quantity dimension
 	//
 
-	aspect Dimension [
-		key hasDimensionSymbol
-	]
+	aspect Dimension
 
 	scalar property hasDimensionSymbol [
 		domain Dimension
@@ -252,7 +250,7 @@ vocabulary <http://bipm.org/jcgm/vim3#> as vim3 {
 
 	@dc:source "https://jcgm.bipm.org/vim/en/1.12.html"
 	@rdfs:label "has coherent derived unit relation"
-	relation hasCoherentDerivedUnitRelation  [
+	relation hasCoherentDerivedUnitRelation [
 		from MeasurementUnit
 		to IsDerivedQuantityIn
 	] < hasDerivedUnitRelation
@@ -267,7 +265,7 @@ vocabulary <http://bipm.org/jcgm/vim3#> as vim3 {
 		accordance with given rules, for a given system of quantities"""
 	concept SystemOfUnits [
 		key hasSystemOfUnitsIdentifier
-	]
+	] < imce-base:IdentifiedElement
 
 	@rdfs:label "has system of units identifier"
 	@dc:source "https://jcgm.bipm.org/vim/en/1.13.html"

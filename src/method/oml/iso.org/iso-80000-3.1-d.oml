@@ -1,12 +1,12 @@
 @dc:description "The ISO-80000-3 library."
 @dc:title "ISO-80000-3.1 length, metre"
-description <http://iso.org/iso-80000-3.1#> as iso-80000-3.1 {
+description <http://iso.org/iso-80000-3.1-d#> as iso-80000-3.1-d {
 
     uses <http://www.w3.org/2002/07/owl#> as owl
     uses <http://purl.org/dc/elements/1.1/> as dc
     uses <http://bipm.org/jcgm/vim3#> as vim3
 
-    extends <http://iso.org/iso-80000-1#> as iso-80000-1
+    extends <http://iso.org/iso-80000-1-d#> as iso-80000-1-d
 
     instance L : vim3:BaseDimension [
         vim3:hasDimensionSymbol "L"
@@ -26,7 +26,7 @@ description <http://iso.org/iso-80000-3.1#> as iso-80000-3.1 {
 
     relation instance length_base_quanity_isq : vim3:IsBaseQuantityIn [
         from ^length
-        to iso-80000-1:ISQ
+        to iso-80000-1-d:ISQ
         vim3:withBaseDimension L
     ]
 
