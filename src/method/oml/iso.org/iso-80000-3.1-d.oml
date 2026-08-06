@@ -6,13 +6,13 @@ description <http://iso.org/iso-80000-3.1-d#> as iso-80000-3.1-d {
     uses <http://purl.org/dc/elements/1.1/> as dc
     uses <http://bipm.org/jcgm/vim3-v#> as vim3-v
 
-    extends <http://iso.org/iso-80000-1-d#> as iso-80000-1-d
+    uses <http://iso.org/iso-80000-1-v#> as iso-80000-1-v
 
-    instance L : vim3-v:BaseDimension [
+    instance L : vim3-v:BaseDimension, iso-80000-1-v:ISQDimension [
         vim3-v:hasDimensionSymbol "L"
     ]
 
-    instance ^length : vim3-v:Quantity [
+    instance ^length : vim3-v:Quantity, iso-80000-1-v:ISQBaseQuantity [
         vim3-v:hasQuantityIdentifier "length"
         vim3-v:isSameKindAs ^length
         vim3-v:hasQuantityDimension : vim3-v:QuantityDimension [
@@ -21,17 +21,12 @@ description <http://iso.org/iso-80000-3.1-d#> as iso-80000-3.1-d {
                 vim3-v:toPower "1/1"^^owl:rational
             ]
         ]
+        iso-80000-1-v:hasDimension L
         vim3-v:hasDimensionSymbol "L"
     ]
 
-    relation instance length_base_quanity_isq : vim3-v:IsBaseQuantityIn [
-        from ^length
-        to iso-80000-1-d:ISQ
-        vim3-v:withBaseDimension L
-    ]
-
-    instance metre : vim3-v:MeasurementUnit [
+    instance metre : vim3-v:MeasurementUnit, iso-80000-1-v:SIBaseUnit [
         vim3-v:hasMeasurementUnitIdentifier "metre"
-        vim3-v:isBaseUnitIn length_base_quanity_isq
+        iso-80000-1-v:isBaseUnitFor ^length
     ]
 }

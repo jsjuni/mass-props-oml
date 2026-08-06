@@ -1,7 +1,7 @@
 @dc:creator "J Steven Jenkins https://orcid.org/0000-0002-0725-0884"
 @dc:description "OML formalization of VIM4 Committee Draft 2 31 July 2023"
 @dc:source "https://www.bipm.org/documents/20126/115700832/VIM4_2CD_clean/c6d0dfb2-ddbf-059e-1f74-9b025c9c59d8"
-vocabulary <http://bipm.org/jcgm/vim3-v#> as vim3 {
+vocabulary <http://bipm.org/jcgm/vim3-v#> as vim3-v {
 
 	extends <http://purl.org/dc/elements/1.1/> as dc
 
@@ -222,38 +222,41 @@ vocabulary <http://bipm.org/jcgm/vim3-v#> as vim3 {
 		range xsd:string
 	] < hasQuantityIdentifier
 
+	relation isMeasurementUnitFor [
+		from MeasurementUnit
+		to Quantity
+	]
+
 	//
 	// 1.10 base unit
 	//
 
-	// base unit 
-	@dc:source "https://jcgm.bipm.org/vim/en/1.10.html"
-	@rdfs:label "is base unit in"
 	relation isBaseUnitIn [
 		from MeasurementUnit
-		to IsBaseQuantityIn
+		to SystemOfUnits
+		functional
 	]
 
 	//
 	// 1.11 derived unit
 	//
 
-	@rdfs:label "has derived unit relation"
-	relation hasDerivedUnitRelation [
+	relation isDerivedUnitIn [
 		from MeasurementUnit
-		to IsDerivedQuantityIn
+		to SystemOfUnits
+		functional
 	]
 
 	//
 	// 1.12 coherent derived unit
 	//
 
-	@dc:source "https://jcgm.bipm.org/vim/en/1.12.html"
-	@rdfs:label "has coherent derived unit relation"
-	relation hasCoherentDerivedUnitRelation [
+	relation isCoherentDerivedUnitIn [
 		from MeasurementUnit
-		to IsDerivedQuantityIn
-	] < hasDerivedUnitRelation
+		to SystemOfUnits
+		functional
+	] < isDerivedUnitIn
+
 
 	//
 	// 1.13 system of units

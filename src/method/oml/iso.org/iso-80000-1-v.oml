@@ -1,10 +1,68 @@
-@dc:description "The ISO-80000-3 library."
-@dc:title "ISO-80000-3.1 length, metre"
 vocabulary <http://iso.org/iso-80000-1-v#> as iso-80000-1-v {
 
     extends <http://purl.org/dc/elements/1.1/> as dc
     extends <http://bipm.org/jcgm/vim3-v#> as vim3-v
 
-    scalar property hasISQIdentifier < vim3-v:hasQuantityIdentifier
+    uses <http://iso.org/iso-80000-1-d#> as iso-80000-1-d
+
+    aspect ISQDimension [
+        key vim3-v:hasDimensionSymbol
+    ]
+
+    aspect ISQQuantity [
+        key vim3-v:hasQuantityIdentifier
+    ]
+
+    concept ISQBaseQuantity < ISQQuantity [
+        restricts vim3-v:isBaseQuantityIn to iso-80000-1-d:ISQ
+    ]
+
+    relation hasDimension [
+        from ISQBaseQuantity
+        to ISQDimension
+        functional
+        inverse functional
+    ]
+
+    concept ISQDerivedQuantity < ISQQuantity [
+        restricts vim3-v:isDerivedQuantityIn to iso-80000-1-d:ISQ
+    ]
+
+    aspect SIUnit [
+        key vim3-v:hasMeasurementUnitIdentifier
+    ]
+
+    concept SIBaseUnit < SIUnit [
+        restricts vim3-v:isBaseUnitIn to iso-80000-1-d:SI
+    ]
+
+    relation isBaseUnitFor [
+        from SIBaseUnit
+        to ISQBaseQuantity
+        functional
+        inverse functional
+    ]
+
+    concept SIDerivedUnit < SIUnit [
+        restricts vim3-v:isDerivedUnitIn to iso-80000-1-d:SI
+    ]
+
+    relation isDerivedUnitFor [
+        from SIDerivedUnit
+        to ISQDerivedQuantity
+        functional
+        inverse functional
+    ]
+
+    concept SICoherentDerivedUnit < SIDerivedUnit [
+         restricts vim3-v:isCoherentDerivedUnitIn to iso-80000-1-d:SI
+    ]
+
+    relation isCoherentDerivedUnitFor < isDerivedUnitFor [
+        from SIDerivedUnit
+        to ISQDerivedQuantity
+        functional
+        inverse functional
+    ]
 
 }

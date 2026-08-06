@@ -5,12 +5,12 @@ description <http://iso.org/iso-80000-4.7-d#> as iso-80000-4.7 {
     uses <http://www.w3.org/2002/07/owl#> as owl
     uses <http://purl.org/dc/elements/1.1/> as dc
     uses <http://bipm.org/jcgm/vim3-v#> as vim3-v
+    uses <http://iso.org/iso-80000-1-v#> as iso-80000-1-v
 
-    extends <http://iso.org/iso-80000-1-d#> as iso-80000-1-d
     extends <http://iso.org/iso-80000-3.1-d#> as iso-80000-3.1-d
     extends <http://iso.org/iso-80000-4.1-d#> as iso-80000-4.1-d
    
-    instance moment_of_inertia : vim3-v:Quantity [
+    instance moment_of_inertia : vim3-v:Quantity, iso-80000-1-v:ISQDerivedQuantity [
         vim3-v:hasQuantityIdentifier "moment of inertia"
         vim3-v:isSameKindAs moment_of_inertia
         vim3-v:hasQuantityDimension : vim3-v:QuantityDimension [
@@ -26,13 +26,9 @@ description <http://iso.org/iso-80000-4.7-d#> as iso-80000-4.7 {
         vim3-v:hasDimensionSymbol "ML<sup>2</sup>"
     ]
 
-    relation instance moment_of_inertia_derived_quanity_isq : vim3-v:IsDerivedQuantityIn [
-        from moment_of_inertia
-        to iso-80000-1-d:ISQ
-    ]
-
-    instance kilogram_meter_squared : vim3-v:MeasurementUnit [
-        vim3-v:hasMeasurementUnitIdentifier "kilgram meter squared"
+    instance kilogram_meter_squared : vim3-v:MeasurementUnit, iso-80000-1-v:SICoherentDerivedUnit [
+        vim3-v:hasMeasurementUnitIdentifier "kilogram meter squared"
+        iso-80000-1-v:isCoherentDerivedUnitFor moment_of_inertia
     ]
 
 }

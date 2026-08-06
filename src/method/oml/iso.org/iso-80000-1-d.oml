@@ -12,7 +12,7 @@ description <http://iso.org/iso-80000-1-d#> as iso-80000-1-d {
   
     @rdfs:comment "The International System of Units"
     @rdfs:seeAlso "https://www.bipm.org/en/publications/si-brochure/"
-    instance SI : vim3-v:SystemOfUnits [
+    instance SI : vim3-v:CoherentSystemOfUnits [
 		vim3-v:hasSystemOfUnitsIdentifier "SI"
 		vim3-v:isSystemOfUnitsFor ISQ
 	]
