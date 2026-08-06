@@ -3,12 +3,12 @@
 vocabulary <http://iso.org/iso-80000-3.1-v#> as iso-80000-3.1-v {
 
     extends <http://purl.org/dc/elements/1.1/> as dc
-    extends <http://bipm.org/jcgm/vim3#> as vim3
+    extends <http://bipm.org/jcgm/vim3-v#> as vim3-v
 
     uses <http://iso.org/iso-80000-3.1-d#> as iso-80000-3.1-d
 
-    concept LengthQuantity = vim3:Quantity [
-        restricts vim3:isSameKindAs to iso-80000-3.1-d:length
+    concept LengthQuantity = vim3-v:Quantity [
+        restricts vim3-v:isSameKindAs to iso-80000-3.1-d:length
     ]
 
 }

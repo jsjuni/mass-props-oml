@@ -4,35 +4,35 @@ description <http://iso.org/iso-80000-4.7-d#> as iso-80000-4.7 {
 
     uses <http://www.w3.org/2002/07/owl#> as owl
     uses <http://purl.org/dc/elements/1.1/> as dc
-    uses <http://bipm.org/jcgm/vim3#> as vim3
+    uses <http://bipm.org/jcgm/vim3-v#> as vim3-v
 
     extends <http://iso.org/iso-80000-1-d#> as iso-80000-1-d
     extends <http://iso.org/iso-80000-3.1-d#> as iso-80000-3.1-d
     extends <http://iso.org/iso-80000-4.1-d#> as iso-80000-4.1-d
    
-    instance moment_of_inertia : vim3:Quantity [
-        vim3:hasQuantityIdentifier "moment of inertia"
-        vim3:isSameKindAs moment_of_inertia
-        vim3:hasQuantityDimension : vim3:QuantityDimension [
-            vim3:hasDimensionFactor : vim3:BaseDimensionPower [ 
-                vim3:raisesBaseDimension iso-80000-4.1-d:M
-                vim3:toPower "1/1"^^owl:rational
+    instance moment_of_inertia : vim3-v:Quantity [
+        vim3-v:hasQuantityIdentifier "moment of inertia"
+        vim3-v:isSameKindAs moment_of_inertia
+        vim3-v:hasQuantityDimension : vim3-v:QuantityDimension [
+            vim3-v:hasDimensionFactor : vim3-v:BaseDimensionPower [ 
+                vim3-v:raisesBaseDimension iso-80000-4.1-d:M
+                vim3-v:toPower "1/1"^^owl:rational
             ]
-            vim3:hasDimensionFactor : vim3:BaseDimensionPower [ 
-                vim3:raisesBaseDimension iso-80000-3.1-d:L
-                vim3:toPower "2/1"^^owl:rational
+            vim3-v:hasDimensionFactor : vim3-v:BaseDimensionPower [ 
+                vim3-v:raisesBaseDimension iso-80000-3.1-d:L
+                vim3-v:toPower "2/1"^^owl:rational
             ]
         ]
-        vim3:hasDimensionSymbol "ML<sup>2</sup>"
+        vim3-v:hasDimensionSymbol "ML<sup>2</sup>"
     ]
 
-    relation instance moment_of_inertia_derived_quanity_isq : vim3:IsDerivedQuantityIn [
+    relation instance moment_of_inertia_derived_quanity_isq : vim3-v:IsDerivedQuantityIn [
         from moment_of_inertia
         to iso-80000-1-d:ISQ
     ]
 
-    instance kilogram_meter_squared : vim3:MeasurementUnit [
-        vim3:hasMeasurementUnitIdentifier "kilgram meter squared"
+    instance kilogram_meter_squared : vim3-v:MeasurementUnit [
+        vim3-v:hasMeasurementUnitIdentifier "kilgram meter squared"
     ]
 
 }

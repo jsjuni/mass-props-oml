@@ -4,34 +4,34 @@ description <http://iso.org/iso-80000-4.1-d#> as iso-80000-4.1 {
 
     uses <http://www.w3.org/2002/07/owl#> as owl
     uses <http://purl.org/dc/elements/1.1/> as dc
-    uses <http://bipm.org/jcgm/vim3#> as vim3
+    uses <http://bipm.org/jcgm/vim3-v#> as vim3-v
 
     extends <http://iso.org/iso-80000-1-d#> as iso-80000-1-d
 
-    instance M : vim3:BaseDimension [
-        vim3:hasDimensionSymbol "M"
+    instance M : vim3-v:BaseDimension [
+        vim3-v:hasDimensionSymbol "M"
     ]
 
-    instance mass : vim3:Quantity [
-        vim3:hasQuantityIdentifier "mass"
-        vim3:isSameKindAs mass
-        vim3:hasQuantityDimension : vim3:QuantityDimension [
-            vim3:hasDimensionFactor : vim3:BaseDimensionPower [ 
-                vim3:raisesBaseDimension M
-                vim3:toPower "1/1"^^owl:rational
+    instance mass : vim3-v:Quantity [
+        vim3-v:hasQuantityIdentifier "mass"
+        vim3-v:isSameKindAs mass
+        vim3-v:hasQuantityDimension : vim3-v:QuantityDimension [
+            vim3-v:hasDimensionFactor : vim3-v:BaseDimensionPower [ 
+                vim3-v:raisesBaseDimension M
+                vim3-v:toPower "1/1"^^owl:rational
             ]
         ]
-        vim3:hasDimensionSymbol "M"
+        vim3-v:hasDimensionSymbol "M"
     ]
 
-    relation instance mass_base_quanity_isq : vim3:IsBaseQuantityIn [
+    relation instance mass_base_quanity_isq : vim3-v:IsBaseQuantityIn [
         from mass
         to iso-80000-1-d:ISQ
-        vim3:withBaseDimension M
+        vim3-v:withBaseDimension M
     ]
 
-    instance kilogram : vim3:MeasurementUnit [
-        vim3:hasMeasurementUnitIdentifier "kilogram"
-        vim3:isBaseUnitIn mass_base_quanity_isq
+    instance kilogram : vim3-v:MeasurementUnit [
+        vim3-v:hasMeasurementUnitIdentifier "kilogram"
+        vim3-v:isBaseUnitIn mass_base_quanity_isq
     ]
 }

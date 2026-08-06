@@ -1,0 +1,10 @@
+@dc:description "The ISO-80000-3 library."
+@dc:title "ISO-80000-3.1 length, metre"
+vocabulary <http://iso.org/iso-80000-1-v#> as iso-80000-1-v {
+
+    extends <http://purl.org/dc/elements/1.1/> as dc
+    extends <http://bipm.org/jcgm/vim3-v#> as vim3-v
+
+    scalar property hasISQIdentifier < vim3-v:hasQuantityIdentifier
+
+}

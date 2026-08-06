@@ -3,46 +3,18 @@ description <http://iso.org/iso-80000-1-d#> as iso-80000-1-d {
 
 	uses <http://purl.org/dc/elements/1.1/> as dc
 	uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
-	uses <http://bipm.org/jcgm/vim3#> as vim3
+	uses <http://bipm.org/jcgm/vim3-v#> as vim3-v
 
 	@rdfs:comment "The International System of Quantities"
-    instance ISQ : vim3:SystemOfQuantities [
-    	vim3:hasSystemOfQuantitiesIdentifier "ISQ"
+    instance ISQ : vim3-v:SystemOfQuantities [
+    	vim3-v:hasSystemOfQuantitiesIdentifier "ISQ"
 	]
   
     @rdfs:comment "The International System of Units"
     @rdfs:seeAlso "https://www.bipm.org/en/publications/si-brochure/"
-    instance SI : vim3:SystemOfUnits [
-		vim3:hasSystemOfUnitsIdentifier "SI"
-		vim3:isSystemOfUnitsFor ISQ
-	]
-  
-	instance T : vim3:QuantityDimension [
-		vim3:hasDimensionSymbol "T"
-	]
-
-    instance L : vim3:QuantityDimension [
-		vim3:hasDimensionSymbol "L"
-	]
-
-	instance M : vim3:QuantityDimension [
-		vim3:hasDimensionSymbol "M"
-	]
-
-	instance I : vim3:QuantityDimension [
-		vim3:hasDimensionSymbol "I"
-	]
-
-	instance theta : vim3:QuantityDimension [
-		vim3:hasDimensionSymbol "Θ"
-	]
-
-	instance N : vim3:QuantityDimension [
-		vim3:hasDimensionSymbol "N"
-	]
-
-	instance J : vim3:QuantityDimension [
-		vim3:hasDimensionSymbol "J"
+    instance SI : vim3-v:SystemOfUnits [
+		vim3-v:hasSystemOfUnitsIdentifier "SI"
+		vim3-v:isSystemOfUnitsFor ISQ
 	]
 	
 }
