@@ -10,6 +10,6 @@ vocabulary bundle <http://studioj.us/bundle#> as studioj-bundle {
     
     includes <http://studioj.us/base#>
 
-    includes <http://studioj.us/metrology#>
+    includes <http://studioj.us/mass-properties#>
 
 }

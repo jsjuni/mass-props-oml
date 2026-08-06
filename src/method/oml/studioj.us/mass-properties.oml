@@ -1,0 +1,48 @@
+vocabulary <http://studioj.us/mass-properties#> as mass-properties {
+    extends <http://www.w3.org/2001/XMLSchema#> as xsd
+    extends <http://imce.jpl.nasa.gov/foundation/mission#> as mission 
+    extends <http://bipm.org/jcgm/vim3-v#> as vim3-v
+    extends <http://iso.org/iso-80000-3.1-v#> as iso-80000-3.1-v
+    extends <http://iso.org/iso-80000-4.1-v#> as iso-80000-4.1-v
+    extends <http://iso.org/iso-80000-4.7-v#> as iso-80000-4.7-v
+
+    concept Mass < iso-80000-4.1-v:MassQuantity 
+
+    // later
+    concept CenterOfMass < iso-80000-3.1-v:LengthQuantity
+
+    concept CenterOfMassCoordinate < iso-80000-3.1-v:LengthQuantity
+
+    // later
+    concept InertiaTensor < iso-80000-4.7-v:MomentOfInertiaQuantity
+
+    concept MomentOfInertia < iso-80000-4.7-v:MomentOfInertiaQuantity
+
+    concept ProductOfInertia < iso-80000-4.7-v:MomentOfInertiaQuantity 
+
+    scalar poiConvention [
+        oneOf "+", "-"
+    ]
+
+    scalar property hasPoiConvention [
+        domain mission:Component
+        range poiConvention
+        functional
+    ]
+
+    scalar property isPointMass [
+        domain mission:Component
+        range xsd:boolean
+        functional
+    ]
+    
+    concept MassValue < vim3-v:QuantityValue
+
+    concept CenterOfMassCoordinateValue < vim3-v:QuantityValue
+
+    concept MomentOfInertiaValue < vim3-v:QuantityValue
+
+    concept ProductOfInertiaValue < vim3-v:QuantityValue
+
+    ref concept mission:Component < vim3-v:Object
+}

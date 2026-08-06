@@ -26,8 +26,8 @@ description <http://iso.org/iso-80000-4.7-d#> as iso-80000-4.7 {
         vim3-v:hasDimensionSymbol "ML<sup>2</sup>"
     ]
 
-    instance kilogram_meter_squared : vim3-v:MeasurementUnit, iso-80000-1-v:SICoherentDerivedUnit [
-        vim3-v:hasMeasurementUnitIdentifier "kilogram meter squared"
+    instance kilogram_metre_squared : vim3-v:MeasurementUnit, iso-80000-1-v:SICoherentDerivedUnit [
+        vim3-v:hasMeasurementUnitIdentifier "kilogram metre squared"
         iso-80000-1-v:isCoherentDerivedUnitFor moment_of_inertia
     ]
 

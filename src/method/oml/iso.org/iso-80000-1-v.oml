@@ -1,3 +1,4 @@
+@dc:creator "J Steven Jenkins https://orcid.org/0000-0002-0725-0884"
 vocabulary <http://iso.org/iso-80000-1-v#> as iso-80000-1-v {
 
     extends <http://purl.org/dc/elements/1.1/> as dc
@@ -30,7 +31,7 @@ vocabulary <http://iso.org/iso-80000-1-v#> as iso-80000-1-v {
 
     aspect SIUnit [
         key vim3-v:hasMeasurementUnitIdentifier
-    ]
+    ] < vim3-v:Reference
 
     concept SIBaseUnit < SIUnit [
         restricts vim3-v:isBaseUnitIn to iso-80000-1-d:SI
@@ -58,11 +59,11 @@ vocabulary <http://iso.org/iso-80000-1-v#> as iso-80000-1-v {
          restricts vim3-v:isCoherentDerivedUnitIn to iso-80000-1-d:SI
     ]
 
-    relation isCoherentDerivedUnitFor < isDerivedUnitFor [
+    relation isCoherentDerivedUnitFor [
         from SIDerivedUnit
         to ISQDerivedQuantity
         functional
         inverse functional
-    ]
+    ] < isDerivedUnitFor
 
 }
