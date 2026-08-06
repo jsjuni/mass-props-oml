@@ -1,0 +1,258 @@
+@dc:creator "J Steven Jenkins https://orcid.org/0000-0002-0725-0884"
+@dc:description "OML formalization of VIM4 Committee Draft 2 31 July 2023"
+@dc:source "https://www.bipm.org/documents/20126/115700832/VIM4_2CD_clean/c6d0dfb2-ddbf-059e-1f74-9b025c9c59d8"
+vocabulary <http://bipm.org/jcgm/vim4-2cd#> as vim4-2cd {
+
+	extends <http://purl.org/dc/elements/1.1/> as dc
+
+	extends <http://www.w3.org/2001/XMLSchema#> as xsd
+
+	extends <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+
+	extends <http://www.w3.org/2002/07/owl#> as owl
+
+	//
+	//
+	// 1 Quantities and units
+	//
+	//
+
+	//
+	// 1.1 quantity
+	//
+
+	@rdfs:label "quantity"
+	@rdfs:isDefinedBy "VIM4 2CD §1.1"
+	@dc:description "property for which comparability by ratio, or by difference, or by order applies"
+	concept Quantity
+
+	@rdfs:label "general quantity"
+	@rdfs:isDefinedBy "VIM4 2CD §1.1"
+	concept GeneralQuantity < Quantity
+
+	@rdfs:label "individual quantity"
+	@rdfs:isDefinedBy "VIM4 2CD §1.1"
+	concept IndividualQuantity < GeneralQuantity
+
+	//
+	// 1.2 quantities of the same kind
+	//
+
+	@rdfs:label "quantities of the same kind"
+	@rdfs:isDefinedBy "VIM4 2CD §1.2"
+	@dc:description "quantities that are comparable with each other"
+
+	//
+	// 1.3 ratio quantity
+	//
+	
+	@rdfs:label "has defined distance"
+	@rdfs:isDefinedBy "VIM4 2CD §1.3"
+	scalar property hasDefinedDistance [
+		domain GeneralQuantity
+		range xsd:boolean
+	]
+
+	@rdfs:label "has defined zero"
+	@rdfs:isDefinedBy "VIM4 2CD §1.3"
+	scalar property hasDefinedZero [
+		domain GeneralQuantity
+		range xsd:boolean
+	]
+
+	@rdfs:label "ratio quantity"
+	@rdfs:isDefinedBy "VIM4 2CD §1.3"
+	@dc:description "A quantity that has a defined distance and a defined zero."
+	aspect RatioQuantity < [
+		restricts hasDefinedDistance to true
+		restricts hasDefinedZero to true
+	]
+
+	rule ratio_quantity [
+		hasDefinedDistance(q, true) & hasDefinedZero(q, true) -> RatioQuantity(q)
+	]
+
+	//
+	// 1.4 interval quantity
+	//
+
+	@rdfs:label "interval quantity"
+	@rdfs:isDefinedBy "VIM4 2CD §1.4"
+	@dc:description "quantity for which comparability by difference but not by ratio applies"
+	aspect IntervalQuantity < [
+		restricts hasDefinedDistance to true
+		restricts hasDefinedZero to false
+	]
+
+	rule interval_quantity [
+		hasDefinedDistance(q, true) & hasDefinedZero(q, false) -> IntervalQuantity(q)
+	]
+
+	//
+	// 1.5 system of quantities
+	//
+
+	@rdfs:label "system of quantities"
+	@rdfs:isDefinedBy "VIM4 2CD §1.5"
+	@dc:description "set of quantities together with a set of non-contradictory equations relating those quantities"
+	concept SystemOfQuantities
+
+	//
+	// 1.6 base quantity
+	//
+
+	@rdfs:label "has base quantity"
+	@rdfs:isDefinedBy "VIM4 2CD §1.6"
+	@dc:description "quantity that in a given system of quantities is not defined in terms of the others"
+	relation hasBaseQuantity [
+		from SystemOfQuantities
+		to RatioQuantity
+		reverse isBaseQuantityOf
+	]
+
+	//
+	// 1.7 derived quantity
+	//
+
+	@rdfs:label "ratio or interval quantity"
+	aspect RatioOrIntervalQuantity
+	ref aspect RatioQuantity < RatioOrIntervalQuantity
+	ref aspect IntervalQuantity < RatioOrIntervalQuantity
+
+	@rdfs:label "has derived quantity"
+	@rdfs:isDefinedBy "VIM4 2CD §1.7"
+	@dc:description """quantity that in a given system of quantities is defined in terms
+		of the base quantities of that system"""
+	relation hasDerivedQuantity [
+		from SystemOfQuantities
+		to RatioOrIntervalQuantity
+		reverse isDerivedQuantityOf
+	]
+
+	//
+	// 1.8 International System of Quantities
+	//
+
+	//
+	// 1.9 quantity dimension
+	//
+
+	@rdfs:label "quantity dimension"
+	@rdfs:label "dimension of a quantity"
+	@rdfs:label "dimension"
+	@rdfs:isDefinedBy "VIM4 2CD §1.9"
+	@dc:description """relation of a quantity to the base quantities of a system of quantities as a product of the base
+		quantities each raised to a power, omitting any proportionality factor"""
+	concept QuantityDimension
+	scalar property hasDimensionSymbol [
+		domain QuantityDimension
+		range xsd:string
+	]
+
+	@rdfs:label "Has quantity dimension"
+	relation entity HasQuantityDimension [
+		from RatioOrIntervalQuantity
+		to QuantityDimension
+		@rdfs:label "has quantity dimension"
+		forward hasQuantityDimension
+		@rdfs:label "is quantity dimension of"
+		reverse isQuantityDimensionOf
+	]
+
+	@rdfs:label "in system of quantities"
+	relation inSystemOfQuantities [
+		from HasQuantityDimension
+		to SystemOfQuantities
+		@rdfs:label "is quantity dimension in"
+		reverse isQuantityDimensionIn
+	]
+
+	@rdfs:label "base quantity power"
+	@rdfs:isDefinedBy "VIM4 2CD §1.9"
+	@dc:description """base quantity raised to a power in the expression of a quantity dimension"""
+	concept BaseQuantityPower
+	relation raisesBaseQuantity [
+		from BaseQuantityPower
+		to Quantity
+	]
+
+	@rdfs:label "to power"
+	scalar property toPower [
+		domain BaseQuantityPower
+		range owl:rational
+	]
+
+	//
+	// 1.10 quantity with unit one
+	//
+
+	@rdfs:label "quantity with unit one"
+	@rdfs:label "dimensionless quantity"
+	@rdfs:isDefinedBy "VIM4 2CD §1.10"
+	@dc:description "quantity for which all the exponents of the factors in its dimension are zero"
+	concept QuantityWithUnitOne < RatioQuantity [
+		restricts hasQuantityDimension to [
+			raisesBaseQuantity [toPower 0]
+		]
+		restricts hasDimensionSymbol to "1"
+	]
+
+	//
+	// 1.11 reference quantity
+	//
+
+	@rdfs:label "reference quantity"
+	@rdfs:isDefinedBy "VIM4 2CD §1.11"
+	@dc:description """quantity identified and adopted by convention for empirically comparing it with other quantities of
+		the same kind"""
+	concept ReferenceQuantity < IndividualQuantity
+
+	//
+	// 1.12 measurement unit
+	//
+
+	//
+	// 1.13 base unit
+	//
+
+	//
+	// 1.14 derived unit
+	//
+
+	//
+	// 1.15 coherent derived unit
+	//
+
+	//
+	// 1.16 system of units
+	//
+
+	@rdfs:label "system of units"
+	@rdfs:isDefinedBy "VIM4 2CD §1.16"
+	@dc:description """set of base units and derived units, together with their multiples and submultiples, defined in
+		accordance with given rules, for a given system of quantities"""
+	concept SystemOfUnits
+
+	@rdfs:label "is for system of quantities"
+	relation isForSystemOfQuantities [
+		from SystemOfUnits
+		to SystemOfQuantities
+		@rdfs:label "has system of units"
+		reverse hasSystemOfUnits
+		functional
+	]
+
+	//
+	// 1.17 coherent system of units
+	//
+
+	//
+	// 1.18 off-system measurement unit
+	//
+
+	//
+	// 1.19 Internation System of Units
+	//
+
+
+}
