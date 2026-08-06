@@ -1,0 +1,307 @@
+@dc:creator "J Steven Jenkins https://orcid.org/0000-0002-0725-0884"
+@dc:description "OML formalization of VIM4 Committee Draft 2 31 July 2023"
+@dc:source "https://www.bipm.org/documents/20126/115700832/VIM4_2CD_clean/c6d0dfb2-ddbf-059e-1f74-9b025c9c59d8"
+vocabulary <http://bipm.org/jcgm/vim3#> as vim3 {
+
+	extends <http://purl.org/dc/elements/1.1/> as dc
+
+	extends <http://www.w3.org/2001/XMLSchema#> as xsd
+
+	extends <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+
+	extends <http://www.w3.org/2002/07/owl#> as owl
+
+	extends <http://imce.jpl.nasa.gov/foundation/base#> as imce-base
+
+	//
+	//
+	// 1 Quantities and units
+	//
+	//
+
+	//
+	// 1.1 quantity
+	//
+
+	// Quantities as described are instances of the concept Quantity. Quantities are
+	// uniquely identified by a string-valued quantity identifier.
+
+	@rdfs:label "quantity"
+	@dc:source "https://jcgm.bipm.org/vim/en/1.1.html"^^xsd:anyURI
+	@dc:description "property of a phenomenon, body, or substance, where the property has a magnitude that can be expressed as a number and a reference"
+	concept Quantity [ key hasQuantityIdentifier ] < imce-base:IdentifiedElement
+
+	@rdfs:label "has quantity identifier"
+	@dc:source "https://jcgm.bipm.org/vim/en/1.1.html"
+	scalar property hasQuantityIdentifier [
+		domain Quantity
+		range xsd:string
+	] < imce-base:hasIdentifier 
+
+	@rdfs:label "object"
+	@dc:source "https://jcgm.bipm.org/vim/en/1.1.html"
+	aspect Object
+
+	@rdfs:label "is property of"
+	@dc:source "https://jcgm.bipm.org/vim/en/1.1.html"
+	@dc:description "a phenomenon, body, or substance"
+	relation isPropertyOf [
+		from Quantity
+		to Object
+	]
+
+	//
+	// 1.2 kind of quantity
+	//
+
+	// We define an equivalence relation that can relate a quantity to a standard quantity. As an equivalence relation,
+	// it is symmetric, reflexive, and transitive. The latter two are better dealt with in query and analysis. 
+
+	@rdfs:label "is same kind as"
+	@dc:source "https://jcgm.bipm.org/vim/en/1.2.html"
+	relation isSameKindAs [
+		from Quantity
+		to Quantity
+		symmetric
+	]
+
+	//
+	// 1.3 system of quantities
+	//
+
+	// A system of quantities is an instance of the concept SystemOfQuantities.
+
+	@rdfs:label "system of quantities"
+	@dc:source "https://jcgm.bipm.org/vim/en/1.3.html"
+	@dc:description "set of quantities together with a set of non-contradictory equations relating those quantities"
+	concept SystemOfQuantities [
+		key hasSystemOfQuantitiesIdentifier
+	] < imce-base:IdentifiedElement
+
+	@rdfs:label "has system of quantities identifier"
+	@dc:source "https://jcgm.bipm.org/vim/en/1.3.html"
+	scalar property hasSystemOfQuantitiesIdentifier [
+		domain SystemOfQuantities
+		range xsd:string
+	] < imce-base:hasIdentifier
+
+	@dc:source "https://jcgm.bipm.org/vim/en/1.3.html"
+	relation entity IsQuantityIn [
+		from Quantity
+		to SystemOfQuantities
+		@rdfs:label "is quantity in"
+		forward isQuantityIn
+	]
+
+	//
+	// 1.4 base quantity
+	//
+
+	// Base quantity is a relation.
+
+	@dc:source "https://jcgm.bipm.org/vim/en/1.4.html"
+	relation entity IsBaseQuantityIn [
+		from Quantity
+		to SystemOfQuantities
+		@rdfs:label "is base quanity in"
+		forward isBaseQuantityIn
+	] < IsQuantityIn
+
+	//
+	// 1.5 derived quantity
+	//
+
+	// Derived quantity is a relation from a system of quantities to a quantity in that system. It's reified to be used for base unit below.
+
+	@rdfs:label "has derived quantity"
+	@dc:source "https://jcgm.bipm.org/vim/en/1.5.html"
+	relation entity IsDerivedQuantityIn [
+		from Quantity
+		to SystemOfQuantities
+		@rdfs:label "is derived quantity in"
+		forward isDerivedQuantityIn
+	] < IsQuantityIn
+
+	//
+	// 1.6 International System of Quantities
+	//
+
+	//
+	// 1.7 quantity dimension
+	//
+
+	aspect Dimension [
+		key hasDimensionSymbol
+	]
+
+	scalar property hasDimensionSymbol [
+		domain Dimension
+		range xsd:string
+	]
+
+	@rdfs:label "quantity dimension"
+	@dc:source "https://jcgm.bipm.org/vim/en/1.7.html"
+	@dc:description """expression of the dependence of a quantity on the base quantities of a system of quantities as a product
+		of powers of factors corresponding to the base quantities, omitting any numerical factor"""
+	concept QuantityDimension < Dimension
+
+	@rdfs:label "Has quantity dimension"
+	@dc:source "https://jcgm.bipm.org/vim/en/1.7.html"
+	relation entity HasQuantityDimension [
+		from Quantity
+		to QuantityDimension
+		@rdfs:label "has quantity dimension"
+		forward hasQuantityDimension
+	]
+
+	@rdfs:label "in system of quantities"
+	@dc:source "https://jcgm.bipm.org/vim/en/1.7.html"
+	relation inSystemOfQuantities [
+		from HasQuantityDimension
+		to SystemOfQuantities
+	]
+
+	@rdfs:label "has factor"
+	relation hasDimensionFactor [
+		from QuantityDimension
+		to BaseDimensionPower
+	]
+
+	@rdfs:label "base dimension power"
+	@dc:source "https://jcgm.bipm.org/vim/en/1.7.html"
+	concept BaseDimensionPower
+	relation raisesBaseDimension [
+		from BaseDimensionPower
+		to BaseDimension
+	]
+
+	@rdfs:label "to power"
+	@dc:source "https://jcgm.bipm.org/vim/en/1.7.html"
+	scalar property toPower [
+		domain BaseDimensionPower
+		range owl:rational
+	]
+
+	@rdfs:label "base dimension"
+	concept BaseDimension < Dimension
+
+	@rdfs:label "with base dimension"
+	relation withBaseDimension [
+		from IsBaseQuantityIn
+		to BaseDimension
+		functional
+		inverse functional
+	]
+	//
+	// 1.8 quantity of dimension one
+	//
+
+	@rdfs:label "quantity of dimension one"
+	@rdfs:label "dimensionless quantity"
+	@dc:source "https://jcgm.bipm.org/vim/en/1.8.html"
+	@dc:description "quantity for which all the exponents of the factors in its dimension are zero"
+	concept QuantityWithUnitOne = QuantityDimension [
+		restricts hasQuantityDimension to [
+			raisesBaseDimension [toPower 0]
+		]
+		restricts hasDimensionSymbol to "1"
+	]
+
+	//
+	// 1.9 measurement unit
+	//
+
+	@rdfs:label "measurement unit"
+	@dc:source "https://jcgm.bipm.org/vim/en/1.9.html"
+	@dc:description """real scalar quantity, defined and adopted by convention, with which any other quantity of
+		the same kind can be compared to express the ratio of the two quantities as a number"""
+	concept MeasurementUnit < Quantity
+
+	@rdfs:label "has measurement unit identifier"
+	@dc:source "https://jcgm.bipm.org/vim/en/1.9.html"
+	scalar property hasMeasurementUnitIdentifier [
+		domain MeasurementUnit
+		range xsd:string
+	] < hasQuantityIdentifier
+
+	//
+	// 1.10 base unit
+	//
+
+	// base unit 
+	@dc:source "https://jcgm.bipm.org/vim/en/1.10.html"
+	@rdfs:label "is base unit in"
+	relation isBaseUnitIn [
+		from MeasurementUnit
+		to IsBaseQuantityIn
+	]
+
+	//
+	// 1.11 derived unit
+	//
+
+	@rdfs:label "has derived unit relation"
+	relation hasDerivedUnitRelation [
+		from MeasurementUnit
+		to IsDerivedQuantityIn
+	]
+
+	//
+	// 1.12 coherent derived unit
+	//
+
+	@dc:source "https://jcgm.bipm.org/vim/en/1.12.html"
+	@rdfs:label "has coherent derived unit relation"
+	relation hasCoherentDerivedUnitRelation  [
+		from MeasurementUnit
+		to IsDerivedQuantityIn
+	] < hasDerivedUnitRelation
+
+	//
+	// 1.13 system of units
+	//
+
+	@rdfs:label "system of units"
+	@dc:source "https://jcgm.bipm.org/vim/en/1.13.html"
+	@dc:description """set of base units and derived units, together with their multiples and submultiples, defined in
+		accordance with given rules, for a given system of quantities"""
+	concept SystemOfUnits [
+		key hasSystemOfUnitsIdentifier
+	]
+
+	@rdfs:label "has system of units identifier"
+	@dc:source "https://jcgm.bipm.org/vim/en/1.13.html"
+	scalar property hasSystemOfUnitsIdentifier [
+		domain SystemOfUnits
+		range xsd:string
+	] < imce-base:hasIdentifier
+
+	@rdfs:label "is for system of quantities"
+	@dc:source "https://jcgm.bipm.org/vim/en/1.13.html"
+	relation isSystemOfUnitsFor [
+		from SystemOfUnits
+		to SystemOfQuantities
+		functional
+	]
+
+	//
+	// 1.14 coherent system of units
+	//
+
+	@rdfs:label "coherent system of units"
+	@dc:source "https://jcgm.bipm.org/vim/en/1.14.html"
+	@dc:description """ssystem of units, based on a given system of quantities, in which the measurement unit for each derived quantity is a coherent derived unit"""
+	concept CoherentSystemOfUnits < SystemOfUnits
+
+	//
+	// 1.15 off-system measurement unit
+	//
+
+	// It's not clear that there's anything to formalize here.
+
+	//
+	// 1.16 International System of Units
+	//
+
+
+}

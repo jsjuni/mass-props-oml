@@ -1,19 +1,36 @@
-@dc:creator "J Steven Jenkins https://orcid.org/0000-0002-0725-0884"
 @dc:description "The ISO-80000-4 library."
-@dc:title "ISO-80000-4.3 relative-mass-density"
+@dc:title "ISO-80000-4.7 moment of inertia, kilogram meter squared"
 description <http://iso.org/iso-80000-4.7#> as iso-80000-4.7 {
 
-  uses <http://purl.org/dc/elements/1.1/> as dc
-  uses <http://bipm.org/jcgm/vim4#> as vim4
-  
-  @dc:source "4-7"
-  instance moment-of-inertia : vim4:GeneralUnitaryQuantity
-  [ vim4:id "moment-of-inertia" ]
-  
-  // -------------------------------------------------------
-  
-  @dc:source "4-7"
-  instance kilogram-metre-squared : vim4:UnprefixedMeasurementUnit 
-  [ vim4:id "kilogram-metre-squared" vim4:instantiates moment-of-inertia ]
-    
+    uses <http://www.w3.org/2002/07/owl#> as owl
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://bipm.org/jcgm/vim3#> as vim3
+
+    extends <http://iso.org/iso-80000-1#> as iso-80000-1
+
+    instance moment_of_inertia : vim3:Quantity [
+        vim3:hasQuantityIdentifier "moment of inertia"
+        vim3:isSameKindAs moment_of_inertia
+        vim3:hasQuantityDimension : vim3:QuantityDimension [
+            vim3:hasDimensionFactor : vim3:BaseDimensionPower [ 
+                vim3:raisesBaseDimension M
+                vim3:toPower "1/1"^^owl:rational
+            ]
+            vim3:hasDimensionFactor : vim3:BaseDimensionPower [ 
+                vim3:raisesBaseDimension L
+                vim3:toPower "2/1"^^owl:rational
+            ]
+        ]
+        vim3:hasDimensionSymbol "ML<sup>2</sup>"
+    ]
+
+    relation instance moment_of_inertia_derived_quanity_isq : vim3:IsDerivedQuantityIn [
+        from moment_of_inertia
+        to iso-80000-1:ISQ
+    ]
+
+    instance kilogram_meter_squared : vim3:MeasurementUnit [
+        vim3:hasMeasurementUnitIdentifier "kilgram meter squared"
+    ]
+
 }
