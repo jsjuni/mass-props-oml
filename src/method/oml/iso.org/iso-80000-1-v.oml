@@ -66,4 +66,6 @@ vocabulary <http://iso.org/iso-80000-1-v#> as iso-80000-1-v {
         inverse functional
     ] < isDerivedUnitFor
 
+    concept SIValue < vim3-v:QuantityValue
+    
 }

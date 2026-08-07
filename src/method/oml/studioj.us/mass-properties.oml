@@ -36,13 +36,13 @@ vocabulary <http://studioj.us/mass-properties#> as mass-properties {
         functional
     ]
     
-    concept MassValue < vim3-v:QuantityValue
+    concept MassValue < iso-80000-4.1-v:MassValue
 
-    concept CenterOfMassCoordinateValue < vim3-v:QuantityValue
+    concept CenterOfMassCoordinateValue < iso-80000-3.1-v:LengthValue
 
-    concept MomentOfInertiaValue < vim3-v:QuantityValue
+    concept MomentOfInertiaValue < iso-80000-4.7-v:MomentOfInertiaValue
 
-    concept ProductOfInertiaValue < vim3-v:QuantityValue
+    concept ProductOfInertiaValue < iso-80000-4.7-v:MomentOfInertiaValue
 
     ref concept mission:Component < vim3-v:Object
 }
