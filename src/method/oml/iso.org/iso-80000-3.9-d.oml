@@ -1,0 +1,31 @@
+@dc:description "The ISO-80000-3 library."
+@dc:title "ISO-80000-3.9 time, second"
+description <http://iso.org/iso-80000-3.9-d#> as iso-80000-3.9-d {
+
+    uses <http://www.w3.org/2002/07/owl#> as owl
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://bipm.org/jcgm/vim3-v#> as vim3-v
+    uses <http://iso.org/iso-80000-1-v#> as iso-80000-1-v
+    uses <http://iso.org/iso-80000-3.9-v#> as iso-80000-3.9-v
+
+    instance T : vim3-v:BaseDimension, iso-80000-1-v:ISQDimension [
+        vim3-v:hasDimensionSymbol "T"
+    ]
+
+    instance time : iso-80000-3.9-v:TimeQuantity [
+        vim3-v:hasQuantityIdentifier "time"
+        vim3-v:hasQuantityDimension : vim3-v:QuantityDimension [
+            vim3-v:hasDimensionFactor : vim3-v:BaseDimensionPower [ 
+                vim3-v:raisesBaseDimension T
+                vim3-v:toPower "1/1"^^owl:rational
+            ]
+            vim3-v:hasDimensionSymbol "T"
+        ]
+        iso-80000-1-v:hasDimension T
+    ]
+
+    instance second : iso-80000-3.9-v:TimeUnit [
+        vim3-v:hasMeasurementUnitIdentifier "second"
+        iso-80000-1-v:isBaseUnitFor time
+    ]
+}
