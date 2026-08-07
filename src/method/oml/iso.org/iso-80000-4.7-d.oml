@@ -22,8 +22,8 @@ description <http://iso.org/iso-80000-4.7-d#> as iso-80000-4.7-d {
                 vim3-v:raisesBaseDimension iso-80000-3.1-d:L
                 vim3-v:toPower "2/1"^^owl:rational
             ]
+            vim3-v:hasDimensionSymbol "ML<sup>2</sup>"
         ]
-        vim3-v:hasDimensionSymbol "ML<sup>2</sup>"
     ]
 
     instance kilogram_metre_squared : iso-80000-4.7-v:MomentOfInertiaUnit [

@@ -19,13 +19,13 @@ description <http://iso.org/iso-80000-4.1-d#> as iso-80000-4.1-d {
                 vim3-v:raisesBaseDimension M
                 vim3-v:toPower "1/1"^^owl:rational
             ]
+            vim3-v:hasDimensionSymbol "M"
         ]
-        vim3-v:hasDimensionSymbol "M"
         iso-80000-1-v:hasDimension M
     ]
 
     instance kilogram : iso-80000-4.1-v:MassUnit [
         vim3-v:hasMeasurementUnitIdentifier "kilogram"
         iso-80000-1-v:isBaseUnitFor mass
-     ]
+    ]
 }
