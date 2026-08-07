@@ -7,12 +7,13 @@ description <http://iso.org/iso-80000-3.1-d#> as iso-80000-3.1-d {
     uses <http://bipm.org/jcgm/vim3-v#> as vim3-v
 
     uses <http://iso.org/iso-80000-1-v#> as iso-80000-1-v
+    uses <http://iso.org/iso-80000-3.1-v#> as iso-80000-3.1-v
 
     instance L : vim3-v:BaseDimension, iso-80000-1-v:ISQDimension [
         vim3-v:hasDimensionSymbol "L"
     ]
 
-    instance ^length : iso-80000-1-v:ISQBaseQuantity [
+    instance ^length : iso-80000-3.1-v:LengthQuantity [
         vim3-v:hasQuantityIdentifier "length"
         vim3-v:isSameKindAs ^length
         vim3-v:hasQuantityDimension : vim3-v:QuantityDimension [
@@ -25,8 +26,9 @@ description <http://iso.org/iso-80000-3.1-d#> as iso-80000-3.1-d {
         vim3-v:hasDimensionSymbol "L"
     ]
 
-    instance metre : iso-80000-1-v:SIBaseUnit [
+    instance metre : iso-80000-3.1-v:LengthUnit [
         vim3-v:hasMeasurementUnitIdentifier "metre"
         iso-80000-1-v:isBaseUnitFor ^length
+        vim3-v:isSameKindAs ^length
     ]
 }

@@ -15,4 +15,12 @@ vocabulary <http://iso.org/iso-80000-4.1-v#> as iso-80000-4.1-v {
         MassQuantity(l) -> vim3-v:isSameKindAs(l, iso-80000-4.1-d:mass)
     ]
 
+    concept MassUnit < vim3-v:MeasurementUnit [
+        restricts vim3-v:isSameKindAs to iso-80000-4.1-d:mass
+    ]
+
+    rule mass_unit_kind [
+        MassUnit(l) -> vim3-v:isSameKindAs(l, iso-80000-4.1-d:mass)
+    ]
+
 }
