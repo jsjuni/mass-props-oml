@@ -82,6 +82,7 @@ vocabulary <http://bipm.org/jcgm/vim3-v#> as vim3-v {
 	scalar property hasSystemOfQuantitiesIdentifier [
 		domain SystemOfQuantities
 		range xsd:string
+		functional
 	] < imce-base:hasIdentifier
 
 	@dc:source "https://jcgm.bipm.org/vim/en/1.3.html"
@@ -276,6 +277,7 @@ vocabulary <http://bipm.org/jcgm/vim3-v#> as vim3-v {
 	scalar property hasSystemOfUnitsIdentifier [
 		domain SystemOfUnits
 		range xsd:string
+		functional
 	] < imce-base:hasIdentifier
 
 	@rdfs:label "is for system of quantities"
