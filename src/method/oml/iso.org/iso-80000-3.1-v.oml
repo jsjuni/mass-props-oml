@@ -4,25 +4,16 @@ vocabulary <http://iso.org/iso-80000-3.1-v#> as iso-80000-3.1-v {
 
     extends <http://purl.org/dc/elements/1.1/> as dc
     extends <http://bipm.org/jcgm/vim3-v#> as vim3-v
+	extends <http://iso.org/iso-80000-1-v#> as iso-80000-1-v
 
     uses <http://iso.org/iso-80000-3.1-d#> as iso-80000-3.1-d
-
-	extends <http://iso.org/iso-80000-1-v#> as iso-80000-1-v
 
     concept LengthQuantity < iso-80000-1-v:ISQBaseQuantity [
         restricts vim3-v:isSameKindAs to iso-80000-3.1-d:length
     ]
 
-    // rule length_quantity_kind [
-    //     iso-80000-1-v:ISQQuantity(l) & vim3-v:isSameKindAs(l, iso-80000-3.1-d:length) -> LengthQuantity(l)
-    // ]
-
-    concept LengthUnit < iso-80000-1-v:SIBaseUnit [
+     concept LengthUnit < iso-80000-1-v:SIBaseUnit [
         restricts vim3-v:isSameKindAs to iso-80000-3.1-d:length
     ]
-
-    // rule length_unit_kind [
-    //     iso-80000-1-v:SIUnit(u) & vim3-v:isSameKindAs(u, iso-80000-3.1-d:length) -> LengthUnit(u)
-    // ]
 
 }

@@ -6,14 +6,14 @@ description <http://iso.org/iso-80000-4.1-d#> as iso-80000-4.1-d {
     uses <http://purl.org/dc/elements/1.1/> as dc
     uses <http://bipm.org/jcgm/vim3-v#> as vim3-v
     uses <http://iso.org/iso-80000-1-v#> as iso-80000-1-v
+    uses <http://iso.org/iso-80000-4.1-v#> as iso-80000-4.1-v
 
     instance M : vim3-v:BaseDimension [
         vim3-v:hasDimensionSymbol "M"
     ]
 
-    instance mass : iso-80000-1-v:ISQBaseQuantity [
+    instance mass : iso-80000-4.1-v:MassQuantity [
         vim3-v:hasQuantityIdentifier "mass"
-        vim3-v:isSameKindAs mass
         vim3-v:hasQuantityDimension : vim3-v:QuantityDimension [
             vim3-v:hasDimensionFactor : vim3-v:BaseDimensionPower [ 
                 vim3-v:raisesBaseDimension M
@@ -24,7 +24,7 @@ description <http://iso.org/iso-80000-4.1-d#> as iso-80000-4.1-d {
         iso-80000-1-v:hasDimension M
     ]
 
-    instance kilogram : iso-80000-1-v:SIBaseUnit [
+    instance kilogram : iso-80000-4.1-v:MassUnit [
         vim3-v:hasMeasurementUnitIdentifier "kilogram"
         iso-80000-1-v:isBaseUnitFor mass
      ]

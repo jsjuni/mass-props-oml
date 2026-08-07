@@ -1,25 +1,19 @@
 @dc:description "The ISO-80000-4 library."
-@dc:title "ISO-80000-4.1 mass, kilgram"
+@dc:title "ISO-80000-4.7 moment of inertia, kilogram meter squared"
 vocabulary <http://iso.org/iso-80000-4.7-v#> as iso-80000-4.7-v {
 
     extends <http://purl.org/dc/elements/1.1/> as dc
     extends <http://bipm.org/jcgm/vim3-v#> as vim3-v
+	extends <http://iso.org/iso-80000-1-v#> as iso-80000-1-v
 
     uses <http://iso.org/iso-80000-4.7-d#> as iso-80000-4.7-d
 
-    concept MomentOfInertiaQuantity < vim3-v:Quantity [
+    concept MomentOfInertiaQuantity < iso-80000-1-v:ISQDerivedQuantity [
         restricts vim3-v:isSameKindAs to iso-80000-4.7-d:moment_of_inertia
     ]
 
-    rule moment_of_inertia_quantity_kind [
-        MomentOfInertiaQuantity(l) -> vim3-v:isSameKindAs(l, iso-80000-4.7-d:moment_of_inertia)
-    ]
-
-    concept MomentOfInertiaUnit < vim3-v:MeasurementUnit [
+    concept MomentOfInertiaUnit < iso-80000-1-v:SIDerivedUnit [
         restricts vim3-v:isSameKindAs to iso-80000-4.7-d:moment_of_inertia
     ]
 
-    rule moment_of_inertia_unit_kind [
-        MomentOfInertiaUnit(l) -> vim3-v:isSameKindAs(l, iso-80000-4.7-d:moment_of_inertia)
-    ]
 }

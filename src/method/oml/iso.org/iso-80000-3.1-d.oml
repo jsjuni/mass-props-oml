@@ -5,7 +5,6 @@ description <http://iso.org/iso-80000-3.1-d#> as iso-80000-3.1-d {
     uses <http://www.w3.org/2002/07/owl#> as owl
     uses <http://purl.org/dc/elements/1.1/> as dc
     uses <http://bipm.org/jcgm/vim3-v#> as vim3-v
-
     uses <http://iso.org/iso-80000-1-v#> as iso-80000-1-v
     uses <http://iso.org/iso-80000-3.1-v#> as iso-80000-3.1-v
 
@@ -15,7 +14,6 @@ description <http://iso.org/iso-80000-3.1-d#> as iso-80000-3.1-d {
 
     instance ^length : iso-80000-3.1-v:LengthQuantity [
         vim3-v:hasQuantityIdentifier "length"
-        vim3-v:isSameKindAs ^length
         vim3-v:hasQuantityDimension : vim3-v:QuantityDimension [
             vim3-v:hasDimensionFactor : vim3-v:BaseDimensionPower [ 
                 vim3-v:raisesBaseDimension L
@@ -29,6 +27,5 @@ description <http://iso.org/iso-80000-3.1-d#> as iso-80000-3.1-d {
     instance metre : iso-80000-3.1-v:LengthUnit [
         vim3-v:hasMeasurementUnitIdentifier "metre"
         iso-80000-1-v:isBaseUnitFor ^length
-        vim3-v:isSameKindAs ^length
     ]
 }
