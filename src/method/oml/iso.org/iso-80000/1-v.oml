@@ -1,10 +1,10 @@
 @dc:creator "J Steven Jenkins https://orcid.org/0000-0002-0725-0884"
-vocabulary <http://iso.org/iso-80000-1-v#> as iso-80000-1-v {
+vocabulary <http://iso.org/iso-80000/1-v#> as iso-80000-1-v {
 
     extends <http://purl.org/dc/elements/1.1/> as dc
     extends <http://bipm.org/jcgm/vim3-v#> as vim3-v
 
-    uses <http://iso.org/iso-80000-1-d#> as iso-80000-1-d
+    uses <http://iso.org/iso-80000/1-d#> as iso-80000-1-d
 
     aspect ISQDimension [
         key vim3-v:hasDimensionSymbol

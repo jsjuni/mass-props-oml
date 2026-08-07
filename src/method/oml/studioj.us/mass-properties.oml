@@ -2,9 +2,9 @@ vocabulary <http://studioj.us/mass-properties#> as mass-properties {
     extends <http://www.w3.org/2001/XMLSchema#> as xsd
     extends <http://imce.jpl.nasa.gov/foundation/mission#> as mission 
     extends <http://bipm.org/jcgm/vim3-v#> as vim3-v
-    extends <http://iso.org/iso-80000-3.1-v#> as iso-80000-3.1-v
-    extends <http://iso.org/iso-80000-4.1-v#> as iso-80000-4.1-v
-    extends <http://iso.org/iso-80000-4.7-v#> as iso-80000-4.7-v
+    extends <http://iso.org/iso-80000/3.1-v#> as iso-80000-3.1-v
+    extends <http://iso.org/iso-80000/4.1-v#> as iso-80000-4.1-v
+    extends <http://iso.org/iso-80000/4.7-v#> as iso-80000-4.7-v
 
     concept Mass < iso-80000-4.1-v:MassQuantity 
 

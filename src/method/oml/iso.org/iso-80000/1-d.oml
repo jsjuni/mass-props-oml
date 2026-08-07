@@ -1,5 +1,5 @@
 @dc:title "ISO-80000-1"
-description <http://iso.org/iso-80000-1-d#> as iso-80000-1-d {
+description <http://iso.org/iso-80000/1-d#> as iso-80000-1-d {
 
 	uses <http://purl.org/dc/elements/1.1/> as dc
 	uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs

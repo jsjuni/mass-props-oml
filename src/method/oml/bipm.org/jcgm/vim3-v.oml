@@ -10,8 +10,6 @@ vocabulary <http://bipm.org/jcgm/vim3-v#> as vim3-v {
 
 	extends <http://www.w3.org/2002/07/owl#> as owl
 
-	extends <http://imce.jpl.nasa.gov/foundation/base#> as imce-base
-
 	//
 	//
 	// 1 Quantities and units
@@ -28,14 +26,14 @@ vocabulary <http://bipm.org/jcgm/vim3-v#> as vim3-v {
 	@rdfs:label "quantity"
 	@dc:source "https://jcgm.bipm.org/vim/en/1.1.html"^^xsd:anyURI
 	@dc:description "property of a phenomenon, body, or substance, where the property has a magnitude that can be expressed as a number and a reference"
-	concept Quantity < imce-base:IdentifiedElement
+	concept Quantity
 
 	@rdfs:label "has quantity identifier"
 	@dc:source "https://jcgm.bipm.org/vim/en/1.1.html"
 	scalar property hasQuantityIdentifier [
 		domain Quantity
 		range xsd:string
-	] < imce-base:hasIdentifier 
+	]
 
 	@rdfs:label "object"
 	@dc:source "https://jcgm.bipm.org/vim/en/1.1.html"
@@ -75,7 +73,7 @@ vocabulary <http://bipm.org/jcgm/vim3-v#> as vim3-v {
 	@dc:description "set of quantities together with a set of non-contradictory equations relating those quantities"
 	concept SystemOfQuantities [
 		key hasSystemOfQuantitiesIdentifier
-	] < imce-base:IdentifiedElement
+	]
 
 	@rdfs:label "has system of quantities identifier"
 	@dc:source "https://jcgm.bipm.org/vim/en/1.3.html"
@@ -83,7 +81,7 @@ vocabulary <http://bipm.org/jcgm/vim3-v#> as vim3-v {
 		domain SystemOfQuantities
 		range xsd:string
 		functional
-	] < imce-base:hasIdentifier
+	]
 
 	@dc:source "https://jcgm.bipm.org/vim/en/1.3.html"
 	relation entity IsQuantityIn [
@@ -270,7 +268,7 @@ vocabulary <http://bipm.org/jcgm/vim3-v#> as vim3-v {
 		accordance with given rules, for a given system of quantities"""
 	concept SystemOfUnits [
 		key hasSystemOfUnitsIdentifier
-	] < imce-base:IdentifiedElement
+	]
 
 	@rdfs:label "has system of units identifier"
 	@dc:source "https://jcgm.bipm.org/vim/en/1.13.html"
@@ -278,7 +276,7 @@ vocabulary <http://bipm.org/jcgm/vim3-v#> as vim3-v {
 		domain SystemOfUnits
 		range xsd:string
 		functional
-	] < imce-base:hasIdentifier
+	]
 
 	@rdfs:label "is for system of quantities"
 	@dc:source "https://jcgm.bipm.org/vim/en/1.13.html"
@@ -311,7 +309,7 @@ vocabulary <http://bipm.org/jcgm/vim3-v#> as vim3-v {
 	// 1.19 quantity value
 	//
 
-	concept QuantityValue < imce-base:IdentifiedElement
+	concept QuantityValue
 
 	scalar property hasNumber [
 		domain QuantityValue

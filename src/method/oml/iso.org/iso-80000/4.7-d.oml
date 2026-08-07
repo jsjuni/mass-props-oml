@@ -1,15 +1,15 @@
 @dc:description "The ISO-80000-4 library."
 @dc:title "ISO-80000-4.7 moment of inertia, kilogram meter squared"
-description <http://iso.org/iso-80000-4.7-d#> as iso-80000-4.7-d {
+description <http://iso.org/iso-80000/4.7-d#> as iso-80000-4.7-d {
 
     uses <http://www.w3.org/2002/07/owl#> as owl
     uses <http://purl.org/dc/elements/1.1/> as dc
     uses <http://bipm.org/jcgm/vim3-v#> as vim3-v
-    uses <http://iso.org/iso-80000-1-v#> as iso-80000-1-v
-    uses <http://iso.org/iso-80000-4.7-v#> as iso-80000-4.7-v
+    uses <http://iso.org/iso-80000/1-v#> as iso-80000-1-v
+    uses <http://iso.org/iso-80000/4.7-v#> as iso-80000-4.7-v
  
-    extends <http://iso.org/iso-80000-3.1-d#> as iso-80000-3.1-d
-    extends <http://iso.org/iso-80000-4.1-d#> as iso-80000-4.1-d
+    extends <http://iso.org/iso-80000/3.1-d#> as iso-80000-3.1-d
+    extends <http://iso.org/iso-80000/4.1-d#> as iso-80000-4.1-d
    
     instance moment_of_inertia : iso-80000-4.7-v:MomentOfInertiaQuantity [
         vim3-v:hasQuantityIdentifier "moment of inertia"
