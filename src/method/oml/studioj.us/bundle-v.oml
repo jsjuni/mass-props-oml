@@ -7,6 +7,7 @@ vocabulary bundle <http://studioj.us/bundle-v#> as studioj-bundle-v {
     includes <http://iso.org/iso-80000-3.1-v#>
     includes <http://iso.org/iso-80000-4.1-v#>
     includes <http://iso.org/iso-80000-4.7-v#>
+    includes <http://iso.org/iso-80000-5.1-v#>
     
     includes <http://studioj.us/base#>
 
