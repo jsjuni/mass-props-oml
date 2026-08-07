@@ -12,7 +12,7 @@ vocabulary <http://iso.org/iso-80000-3.1-v#> as iso-80000-3.1-v {
         restricts vim3-v:isSameKindAs to iso-80000-3.1-d:length
     ]
 
-     concept LengthUnit < iso-80000-1-v:SIBaseUnit [
+    concept LengthUnit < iso-80000-1-v:SIBaseUnit [
         restricts vim3-v:isSameKindAs to iso-80000-3.1-d:length
     ]
 
