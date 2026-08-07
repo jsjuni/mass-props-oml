@@ -1,4 +1,4 @@
-description bundle <http://studioj.us/bundle-d#> as studioj-d-bundle {
+description bundle <http://studioj.us/bundle-d#> as studioj-bundle-d {
 
     includes <http://bipm.org/jcgm/vim3-d#>
     includes <http://iso.org/iso-80000-1-d#>
