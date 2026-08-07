@@ -1,4 +1,4 @@
-vocabulary bundle <http://studioj.us/bundle#> as studioj-bundle {
+vocabulary bundle <http://studioj.us/bundle-v#> as studioj-bundle-v {
 
     extends <http://imce.jpl.nasa.gov/foundation/bundle#>
 
