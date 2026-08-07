@@ -7,8 +7,11 @@ vocabulary <http://iso.org/iso-80000-3.1-v#> as iso-80000-3.1-v {
 
     uses <http://iso.org/iso-80000-3.1-d#> as iso-80000-3.1-d
 
-    concept LengthQuantity = vim3-v:Quantity [
+    concept LengthQuantity < vim3-v:Quantity [
         restricts vim3-v:isSameKindAs to iso-80000-3.1-d:length
     ]
 
+    rule length_quantity_kind [
+        LengthQuantity(l) -> vim3-v:isSameKindAs(l, iso-80000-3.1-d:length)
+    ]
 }

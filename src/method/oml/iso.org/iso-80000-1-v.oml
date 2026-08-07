@@ -14,7 +14,7 @@ vocabulary <http://iso.org/iso-80000-1-v#> as iso-80000-1-v {
         key vim3-v:hasQuantityIdentifier
     ]
 
-    concept ISQBaseQuantity < ISQQuantity [
+    concept ISQBaseQuantity < vim3-v:Quantity, ISQQuantity [
         restricts vim3-v:isBaseQuantityIn to iso-80000-1-d:ISQ
     ]
 
@@ -25,7 +25,7 @@ vocabulary <http://iso.org/iso-80000-1-v#> as iso-80000-1-v {
         inverse functional
     ]
 
-    concept ISQDerivedQuantity < ISQQuantity [
+    concept ISQDerivedQuantity < vim3-v:Quantity, ISQQuantity [
         restricts vim3-v:isDerivedQuantityIn to iso-80000-1-d:ISQ
     ]
 
@@ -33,7 +33,7 @@ vocabulary <http://iso.org/iso-80000-1-v#> as iso-80000-1-v {
         key vim3-v:hasMeasurementUnitIdentifier
     ] < vim3-v:Reference
 
-    concept SIBaseUnit < SIUnit [
+    concept SIBaseUnit < vim3-v:MeasurementUnit, SIUnit [
         restricts vim3-v:isBaseUnitIn to iso-80000-1-d:SI
     ]
 
@@ -44,7 +44,7 @@ vocabulary <http://iso.org/iso-80000-1-v#> as iso-80000-1-v {
         inverse functional
     ]
 
-    concept SIDerivedUnit < SIUnit [
+    concept SIDerivedUnit < vim3-v:MeasurementUnit, SIUnit [
         restricts vim3-v:isDerivedUnitIn to iso-80000-1-d:SI
     ]
 

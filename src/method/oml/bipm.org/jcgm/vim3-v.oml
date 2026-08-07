@@ -197,9 +197,11 @@ vocabulary <http://bipm.org/jcgm/vim3-v#> as vim3-v {
 	@rdfs:label "dimensionless quantity"
 	@dc:source "https://jcgm.bipm.org/vim/en/1.8.html"
 	@dc:description "quantity for which all the exponents of the factors in its dimension are zero"
-	concept QuantityWithUnitOne = QuantityDimension [
-		restricts hasQuantityDimension to [
-			raisesBaseDimension [toPower 0]
+	concept QuantityWithUnitOne < Quantity [
+		restricts hasQuantityDimension to : QuantityDimension [
+			hasDimensionFactor : BaseDimensionPower [
+				toPower "0/1"^^owl:rational
+			]
 		]
 		restricts hasDimensionSymbol to "1"
 	]

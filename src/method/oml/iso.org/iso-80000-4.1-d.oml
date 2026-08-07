@@ -1,6 +1,6 @@
 @dc:description "The ISO-80000-4 library."
 @dc:title "ISO-80000-4.1 mass, kilogram"
-description <http://iso.org/iso-80000-4.1-d#> as iso-80000-4.1 {
+description <http://iso.org/iso-80000-4.1-d#> as iso-80000-4.1-d {
 
     uses <http://www.w3.org/2002/07/owl#> as owl
     uses <http://purl.org/dc/elements/1.1/> as dc
@@ -11,7 +11,7 @@ description <http://iso.org/iso-80000-4.1-d#> as iso-80000-4.1 {
         vim3-v:hasDimensionSymbol "M"
     ]
 
-    instance mass : vim3-v:Quantity, iso-80000-1-v:ISQBaseQuantity [
+    instance mass : iso-80000-1-v:ISQBaseQuantity [
         vim3-v:hasQuantityIdentifier "mass"
         vim3-v:isSameKindAs mass
         vim3-v:hasQuantityDimension : vim3-v:QuantityDimension [
@@ -24,7 +24,7 @@ description <http://iso.org/iso-80000-4.1-d#> as iso-80000-4.1 {
         iso-80000-1-v:hasDimension M
     ]
 
-    instance kilogram : vim3-v:MeasurementUnit, iso-80000-1-v:SIBaseUnit [
+    instance kilogram : iso-80000-1-v:SIBaseUnit [
         vim3-v:hasMeasurementUnitIdentifier "kilogram"
         iso-80000-1-v:isBaseUnitFor mass
      ]
