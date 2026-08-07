@@ -1,0 +1,23 @@
+@dc:description "The ISO-80000-4 library."
+@dc:title "ISO-80000-4.1 ThermodynamicTemperature, kilogram"
+vocabulary <http://iso.org/iso-80000-5.1-v#> as iso-80000-4.1-v {
+
+    extends <http://purl.org/dc/elements/1.1/> as dc
+    extends <http://bipm.org/jcgm/vim3-v#> as vim3-v
+	extends <http://iso.org/iso-80000-1-v#> as iso-80000-1-v
+
+    uses <http://iso.org/iso-80000-5.1-d#> as iso-80000-5.1-d
+
+    concept ThermodynamicTemperatureQuantity < iso-80000-1-v:ISQBaseQuantity [
+        restricts vim3-v:isSameKindAs to iso-80000-5.1-d:thermodynamic_temperature
+    ]
+
+    concept ThermodynamicTemperatureUnit < iso-80000-1-v:SIBaseUnit [
+        restricts vim3-v:isSameKindAs to iso-80000-5.1-d:thermodynamic_temperature
+    ]
+
+    concept ThermodynamicTemperatureValue < iso-80000-1-v:SIValue [
+        restricts all vim3-v:hasReference to ThermodynamicTemperatureUnit
+    ]
+    
+}
