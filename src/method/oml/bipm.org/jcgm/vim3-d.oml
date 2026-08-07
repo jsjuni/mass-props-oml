@@ -22,7 +22,9 @@ description <http://bipm.org/jcgm/vim3-d#> as vim3-d {
 	@rdfs:label "International System Of Quantities"
 	@rdfs:label "ISQ"
 	@rdfs:isDefinedBy "VIM3 §1.6"
-	instance ISQ : vim3-v:SystemOfQuantities
+	instance ISQ : vim3-v:SystemOfQuantities [
+		vim3-v:hasSystemOfQuantitiesIdentifier "ISQ"
+	]
 
 	//
 	// 1.16 International System of Units
@@ -31,6 +33,9 @@ description <http://bipm.org/jcgm/vim3-d#> as vim3-d {
 	@rdfs:label "International System Of Units"
 	@rdfs:label "SI"
 	@rdfs:isDefinedBy "VIM3 §1.16"
-	instance SI : vim3-v:SystemOfUnits
+	instance SI : vim3-v:SystemOfUnits [
+		vim3-v:hasSystemOfUnitsIdentifier "SI"
+		vim3-v:isSystemOfUnitsFor ISQ
+	]
 
 }
