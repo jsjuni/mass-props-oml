@@ -4,113 +4,113 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2.4/QV#> as WP.4.2.2.4_QV {
     uses <http://purl.org/dc/elements/1.1/> as dc
     uses <http://www.w3.org/2001/XMLSchema#> as xsd
     uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
-    uses <http://studioj.us/metrology#> as metrology
-    uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
+    uses <http://studioj.us/mass-properties#> as mass-properties
+    uses <http://bipm.org/jcgm/vim3-v#> as vim3-v
     extends <http://studioj.us/mass-props-oml/WP.4.2.2/Q/C.1.2.2.4#> as C.1.2.2.4_Q
     extends <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.4#> as C.1.2.2.4
 
     @rdfs:label "mass"
-    instance C.1.2.2.4_mass_value : metrology:MassValue [
-        analysis:characterizes C.1.2.2.4_Q:C.1.2.2.4_mass
+    instance C.1.2.2.4_mass_value : mass-properties:MassValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.4_Q:C.1.2.2.4_mass
     ]
 
     @rdfs:label "Cx"
-    instance C.1.2.2.4_Cx_value : metrology:CenterOfMassValue [
-        analysis:characterizes C.1.2.2.4_Q:C.1.2.2.4_Cx
+    instance C.1.2.2.4_Cx_value : mass-properties:CenterOfMassCoordinateValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.4_Q:C.1.2.2.4_Cx
     ]
 
     @rdfs:label "Cy"
-    instance C.1.2.2.4_Cy_value : metrology:CenterOfMassValue [
-        analysis:characterizes C.1.2.2.4_Q:C.1.2.2.4_Cy
+    instance C.1.2.2.4_Cy_value : mass-properties:CenterOfMassCoordinateValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.4_Q:C.1.2.2.4_Cy
     ]
 
     @rdfs:label "Cz"
-    instance C.1.2.2.4_Cz_value : metrology:CenterOfMassValue [
-        analysis:characterizes C.1.2.2.4_Q:C.1.2.2.4_Cz
+    instance C.1.2.2.4_Cz_value : mass-properties:CenterOfMassCoordinateValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.4_Q:C.1.2.2.4_Cz
     ]
 
     @rdfs:label "Ixx"
-    instance C.1.2.2.4_Ixx_value : metrology:MomentOfInertiaValue [
-        analysis:characterizes C.1.2.2.4_Q:C.1.2.2.4_Ixx
+    instance C.1.2.2.4_Ixx_value : mass-properties:MomentOfInertiaValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.4_Q:C.1.2.2.4_Ixx
     ]
 
     @rdfs:label "Iyy"
-    instance C.1.2.2.4_Iyy_value : metrology:MomentOfInertiaValue [
-        analysis:characterizes C.1.2.2.4_Q:C.1.2.2.4_Iyy
+    instance C.1.2.2.4_Iyy_value : mass-properties:MomentOfInertiaValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.4_Q:C.1.2.2.4_Iyy
     ]
 
     @rdfs:label "Izz"
-    instance C.1.2.2.4_Izz_value : metrology:MomentOfInertiaValue [
-        analysis:characterizes C.1.2.2.4_Q:C.1.2.2.4_Izz
+    instance C.1.2.2.4_Izz_value : mass-properties:MomentOfInertiaValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.4_Q:C.1.2.2.4_Izz
     ]
 
     @rdfs:label "Ixy"
-    instance C.1.2.2.4_Ixy_value : metrology:ProductOfInertiaValue [
-        analysis:characterizes C.1.2.2.4_Q:C.1.2.2.4_Ixy
+    instance C.1.2.2.4_Ixy_value : mass-properties:ProductOfInertiaValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.4_Q:C.1.2.2.4_Ixy
     ]
 
     @rdfs:label "Ixz"
-    instance C.1.2.2.4_Ixz_value : metrology:ProductOfInertiaValue [
-        analysis:characterizes C.1.2.2.4_Q:C.1.2.2.4_Ixz
+    instance C.1.2.2.4_Ixz_value : mass-properties:ProductOfInertiaValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.4_Q:C.1.2.2.4_Ixz
     ]
 
     @rdfs:label "Iyz"
-    instance C.1.2.2.4_Iyz_value : metrology:ProductOfInertiaValue [
-        analysis:characterizes C.1.2.2.4_Q:C.1.2.2.4_Iyz
+    instance C.1.2.2.4_Iyz_value : mass-properties:ProductOfInertiaValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.4_Q:C.1.2.2.4_Iyz
     ]
 
     @rdfs:label "sigma_mass"
-    instance C.1.2.2.4_sigma_mass_value : metrology:MassValue [
-        analysis:characterizes C.1.2.2.4_Q:C.1.2.2.4_sigma_mass
+    instance C.1.2.2.4_sigma_mass_value : mass-properties:MassValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.4_Q:C.1.2.2.4_sigma_mass
     ]
 
     @rdfs:label "sigma_Cx"
-    instance C.1.2.2.4_sigma_Cx_value : metrology:CenterOfMassValue [
-        analysis:characterizes C.1.2.2.4_Q:C.1.2.2.4_sigma_Cx
+    instance C.1.2.2.4_sigma_Cx_value : mass-properties:CenterOfMassCoordinateValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.4_Q:C.1.2.2.4_sigma_Cx
     ]
 
     @rdfs:label "sigma_Cy"
-    instance C.1.2.2.4_sigma_Cy_value : metrology:CenterOfMassValue [
-        analysis:characterizes C.1.2.2.4_Q:C.1.2.2.4_sigma_Cy
+    instance C.1.2.2.4_sigma_Cy_value : mass-properties:CenterOfMassCoordinateValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.4_Q:C.1.2.2.4_sigma_Cy
     ]
 
     @rdfs:label "sigma_Cz"
-    instance C.1.2.2.4_sigma_Cz_value : metrology:CenterOfMassValue [
-        analysis:characterizes C.1.2.2.4_Q:C.1.2.2.4_sigma_Cz
+    instance C.1.2.2.4_sigma_Cz_value : mass-properties:CenterOfMassCoordinateValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.4_Q:C.1.2.2.4_sigma_Cz
     ]
 
     @rdfs:label "sigma_Ixx"
-    instance C.1.2.2.4_sigma_Ixx_value : metrology:MomentOfInertiaValue [
-        analysis:characterizes C.1.2.2.4_Q:C.1.2.2.4_sigma_Ixx
+    instance C.1.2.2.4_sigma_Ixx_value : mass-properties:MomentOfInertiaValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.4_Q:C.1.2.2.4_sigma_Ixx
     ]
 
     @rdfs:label "sigma_Iyy"
-    instance C.1.2.2.4_sigma_Iyy_value : metrology:MomentOfInertiaValue [
-        analysis:characterizes C.1.2.2.4_Q:C.1.2.2.4_sigma_Iyy
+    instance C.1.2.2.4_sigma_Iyy_value : mass-properties:MomentOfInertiaValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.4_Q:C.1.2.2.4_sigma_Iyy
     ]
 
     @rdfs:label "sigma_Izz"
-    instance C.1.2.2.4_sigma_Izz_value : metrology:MomentOfInertiaValue [
-        analysis:characterizes C.1.2.2.4_Q:C.1.2.2.4_sigma_Izz
+    instance C.1.2.2.4_sigma_Izz_value : mass-properties:MomentOfInertiaValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.4_Q:C.1.2.2.4_sigma_Izz
     ]
 
     @rdfs:label "sigma_Ixy"
-    instance C.1.2.2.4_sigma_Ixy_value : metrology:ProductOfInertiaValue [
-        analysis:characterizes C.1.2.2.4_Q:C.1.2.2.4_sigma_Ixy
+    instance C.1.2.2.4_sigma_Ixy_value : mass-properties:ProductOfInertiaValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.4_Q:C.1.2.2.4_sigma_Ixy
     ]
 
     @rdfs:label "sigma_Ixz"
-    instance C.1.2.2.4_sigma_Ixz_value : metrology:ProductOfInertiaValue [
-        analysis:characterizes C.1.2.2.4_Q:C.1.2.2.4_sigma_Ixz
+    instance C.1.2.2.4_sigma_Ixz_value : mass-properties:ProductOfInertiaValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.4_Q:C.1.2.2.4_sigma_Ixz
     ]
 
     @rdfs:label "sigma_Iyz"
-    instance C.1.2.2.4_sigma_Iyz_value : metrology:ProductOfInertiaValue [
-        analysis:characterizes C.1.2.2.4_Q:C.1.2.2.4_sigma_Iyz
+    instance C.1.2.2.4_sigma_Iyz_value : mass-properties:ProductOfInertiaValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.4_Q:C.1.2.2.4_sigma_Iyz
     ]
 
     ref instance C.1.2.2.4:C.1.2.2.4 [
-        metrology:hasPoiConvention "-"
-        metrology:isPointMass false
+        mass-properties:hasPoiConvention "-"
+        mass-properties:isPointMass false
     ]
 }

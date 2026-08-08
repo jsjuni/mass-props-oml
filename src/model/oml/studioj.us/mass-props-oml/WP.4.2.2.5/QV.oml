@@ -4,154 +4,156 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2.5/QV#> as WP.4.2.2.5_QV {
     uses <http://purl.org/dc/elements/1.1/> as dc
     uses <http://www.w3.org/2001/XMLSchema#> as xsd
     uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
-    uses <http://studioj.us/metrology#> as metrology
-    uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
+    uses <http://studioj.us/mass-properties#> as mass-properties
+    uses <http://bipm.org/jcgm/vim3-v#> as vim3-v
     extends <http://studioj.us/mass-props-oml/WP.4.2.2/Q/C.1.2.2.5#> as C.1.2.2.5_Q
-    extends <http://studioj.us/units#> as units
+    extends <http://iso.org/iso-80000/4.1-d#> as iso-80000-4.1-d
+    extends <http://iso.org/iso-80000/3.1-d#> as iso-80000-3.1-d
+    extends <http://iso.org/iso-80000/4.7-d#> as iso-80000-4.7-d
     extends <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.5#> as C.1.2.2.5
 
     @rdfs:label "mass"
-    instance C.1.2.2.5_mass_value : metrology:MassValue [
-        analysis:characterizes C.1.2.2.5_Q:C.1.2.2.5_mass
-        metrology:hasNumber 0.84454788153409e0
-        metrology:hasUnit units:kg
+    instance C.1.2.2.5_mass_value : mass-properties:MassValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.5_Q:C.1.2.2.5_mass
+        vim3-v:hasNumber 0.84454788153409e0
+        vim3-v:hasReference iso-80000-4.1-d:kilogram
     ]
 
     @rdfs:label "Cx"
-    instance C.1.2.2.5_Cx_value : metrology:CenterOfMassValue [
-        analysis:characterizes C.1.2.2.5_Q:C.1.2.2.5_Cx
-        metrology:hasNumber -10.9363756142557e0
-        metrology:hasUnit units:mm
+    instance C.1.2.2.5_Cx_value : mass-properties:CenterOfMassCoordinateValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.5_Q:C.1.2.2.5_Cx
+        vim3-v:hasNumber -0.0109363756142557e0
+        vim3-v:hasReference iso-80000-3.1-d:metre
     ]
 
     @rdfs:label "Cy"
-    instance C.1.2.2.5_Cy_value : metrology:CenterOfMassValue [
-        analysis:characterizes C.1.2.2.5_Q:C.1.2.2.5_Cy
-        metrology:hasNumber 43.512660684064e0
-        metrology:hasUnit units:mm
+    instance C.1.2.2.5_Cy_value : mass-properties:CenterOfMassCoordinateValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.5_Q:C.1.2.2.5_Cy
+        vim3-v:hasNumber 0.043512660684064e0
+        vim3-v:hasReference iso-80000-3.1-d:metre
     ]
 
     @rdfs:label "Cz"
-    instance C.1.2.2.5_Cz_value : metrology:CenterOfMassValue [
-        analysis:characterizes C.1.2.2.5_Q:C.1.2.2.5_Cz
-        metrology:hasNumber 39.7000851109624e0
-        metrology:hasUnit units:mm
+    instance C.1.2.2.5_Cz_value : mass-properties:CenterOfMassCoordinateValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.5_Q:C.1.2.2.5_Cz
+        vim3-v:hasNumber 0.0397000851109624e0
+        vim3-v:hasReference iso-80000-3.1-d:metre
     ]
 
     @rdfs:label "Ixx"
-    instance C.1.2.2.5_Ixx_value : metrology:MomentOfInertiaValue [
-        analysis:characterizes C.1.2.2.5_Q:C.1.2.2.5_Ixx
-        metrology:hasNumber 1.03591934729614e0
-        metrology:hasUnit units:kg_mm_2
+    instance C.1.2.2.5_Ixx_value : mass-properties:MomentOfInertiaValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.5_Q:C.1.2.2.5_Ixx
+        vim3-v:hasNumber 0.00000103591934729614e0
+        vim3-v:hasReference iso-80000-4.7-d:kilogram_metre_squared
     ]
 
     @rdfs:label "Iyy"
-    instance C.1.2.2.5_Iyy_value : metrology:MomentOfInertiaValue [
-        analysis:characterizes C.1.2.2.5_Q:C.1.2.2.5_Iyy
-        metrology:hasNumber 1.17896064430429e0
-        metrology:hasUnit units:kg_mm_2
+    instance C.1.2.2.5_Iyy_value : mass-properties:MomentOfInertiaValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.5_Q:C.1.2.2.5_Iyy
+        vim3-v:hasNumber 0.0000011789606443042898e0
+        vim3-v:hasReference iso-80000-4.7-d:kilogram_metre_squared
     ]
 
     @rdfs:label "Izz"
-    instance C.1.2.2.5_Izz_value : metrology:MomentOfInertiaValue [
-        analysis:characterizes C.1.2.2.5_Q:C.1.2.2.5_Izz
-        metrology:hasNumber 1.12987899445137e0
-        metrology:hasUnit units:kg_mm_2
+    instance C.1.2.2.5_Izz_value : mass-properties:MomentOfInertiaValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.5_Q:C.1.2.2.5_Izz
+        vim3-v:hasNumber 0.00000112987899445137e0
+        vim3-v:hasReference iso-80000-4.7-d:kilogram_metre_squared
     ]
 
     @rdfs:label "Ixy"
-    instance C.1.2.2.5_Ixy_value : metrology:ProductOfInertiaValue [
-        analysis:characterizes C.1.2.2.5_Q:C.1.2.2.5_Ixy
-        metrology:hasNumber -0.0186053385553542e0
-        metrology:hasUnit units:kg_mm_2
+    instance C.1.2.2.5_Ixy_value : mass-properties:ProductOfInertiaValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.5_Q:C.1.2.2.5_Ixy
+        vim3-v:hasNumber -1.86053385553542e-8
+        vim3-v:hasReference iso-80000-4.7-d:kilogram_metre_squared
     ]
 
     @rdfs:label "Ixz"
-    instance C.1.2.2.5_Ixz_value : metrology:ProductOfInertiaValue [
-        analysis:characterizes C.1.2.2.5_Q:C.1.2.2.5_Ixz
-        metrology:hasNumber 0.0497889684636279e0
-        metrology:hasUnit units:kg_mm_2
+    instance C.1.2.2.5_Ixz_value : mass-properties:ProductOfInertiaValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.5_Q:C.1.2.2.5_Ixz
+        vim3-v:hasNumber 4.9788968463627904e-8
+        vim3-v:hasReference iso-80000-4.7-d:kilogram_metre_squared
     ]
 
     @rdfs:label "Iyz"
-    instance C.1.2.2.5_Iyz_value : metrology:ProductOfInertiaValue [
-        analysis:characterizes C.1.2.2.5_Q:C.1.2.2.5_Iyz
-        metrology:hasNumber 0.0156106444531865e0
-        metrology:hasUnit units:kg_mm_2
+    instance C.1.2.2.5_Iyz_value : mass-properties:ProductOfInertiaValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.5_Q:C.1.2.2.5_Iyz
+        vim3-v:hasNumber 1.5610644453186498e-8
+        vim3-v:hasReference iso-80000-4.7-d:kilogram_metre_squared
     ]
 
     @rdfs:label "sigma_mass"
-    instance C.1.2.2.5_sigma_mass_value : metrology:MassValue [
-        analysis:characterizes C.1.2.2.5_Q:C.1.2.2.5_sigma_mass
-        metrology:hasNumber 0.289220546600936e0
-        metrology:hasUnit units:kg
+    instance C.1.2.2.5_sigma_mass_value : mass-properties:MassValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.5_Q:C.1.2.2.5_sigma_mass
+        vim3-v:hasNumber 0.289220546600936e0
+        vim3-v:hasReference iso-80000-4.1-d:kilogram
     ]
 
     @rdfs:label "sigma_Cx"
-    instance C.1.2.2.5_sigma_Cx_value : metrology:CenterOfMassValue [
-        analysis:characterizes C.1.2.2.5_Q:C.1.2.2.5_sigma_Cx
-        metrology:hasNumber 28.8332142065316e0
-        metrology:hasUnit units:mm
+    instance C.1.2.2.5_sigma_Cx_value : mass-properties:CenterOfMassCoordinateValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.5_Q:C.1.2.2.5_sigma_Cx
+        vim3-v:hasNumber 0.0288332142065316e0
+        vim3-v:hasReference iso-80000-3.1-d:metre
     ]
 
     @rdfs:label "sigma_Cy"
-    instance C.1.2.2.5_sigma_Cy_value : metrology:CenterOfMassValue [
-        analysis:characterizes C.1.2.2.5_Q:C.1.2.2.5_sigma_Cy
-        metrology:hasNumber 29.1637070837215e0
-        metrology:hasUnit units:mm
+    instance C.1.2.2.5_sigma_Cy_value : mass-properties:CenterOfMassCoordinateValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.5_Q:C.1.2.2.5_sigma_Cy
+        vim3-v:hasNumber 0.029163707083721502e0
+        vim3-v:hasReference iso-80000-3.1-d:metre
     ]
 
     @rdfs:label "sigma_Cz"
-    instance C.1.2.2.5_sigma_Cz_value : metrology:CenterOfMassValue [
-        analysis:characterizes C.1.2.2.5_Q:C.1.2.2.5_sigma_Cz
-        metrology:hasNumber 29.5945914710325e0
-        metrology:hasUnit units:mm
+    instance C.1.2.2.5_sigma_Cz_value : mass-properties:CenterOfMassCoordinateValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.5_Q:C.1.2.2.5_sigma_Cz
+        vim3-v:hasNumber 0.0295945914710325e0
+        vim3-v:hasReference iso-80000-3.1-d:metre
     ]
 
     @rdfs:label "sigma_Ixx"
-    instance C.1.2.2.5_sigma_Ixx_value : metrology:MomentOfInertiaValue [
-        analysis:characterizes C.1.2.2.5_Q:C.1.2.2.5_sigma_Ixx
-        metrology:hasNumber 0.372229441260767e0
-        metrology:hasUnit units:kg_mm_2
+    instance C.1.2.2.5_sigma_Ixx_value : mass-properties:MomentOfInertiaValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.5_Q:C.1.2.2.5_sigma_Ixx
+        vim3-v:hasNumber 3.72229441260767e-7
+        vim3-v:hasReference iso-80000-4.7-d:kilogram_metre_squared
     ]
 
     @rdfs:label "sigma_Iyy"
-    instance C.1.2.2.5_sigma_Iyy_value : metrology:MomentOfInertiaValue [
-        analysis:characterizes C.1.2.2.5_Q:C.1.2.2.5_sigma_Iyy
-        metrology:hasNumber 0.36942277459594e0
-        metrology:hasUnit units:kg_mm_2
+    instance C.1.2.2.5_sigma_Iyy_value : mass-properties:MomentOfInertiaValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.5_Q:C.1.2.2.5_sigma_Iyy
+        vim3-v:hasNumber 3.6942277459593997e-7
+        vim3-v:hasReference iso-80000-4.7-d:kilogram_metre_squared
     ]
 
     @rdfs:label "sigma_Izz"
-    instance C.1.2.2.5_sigma_Izz_value : metrology:MomentOfInertiaValue [
-        analysis:characterizes C.1.2.2.5_Q:C.1.2.2.5_sigma_Izz
-        metrology:hasNumber 0.374164784864648e0
-        metrology:hasUnit units:kg_mm_2
+    instance C.1.2.2.5_sigma_Izz_value : mass-properties:MomentOfInertiaValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.5_Q:C.1.2.2.5_sigma_Izz
+        vim3-v:hasNumber 3.7416478486464795e-7
+        vim3-v:hasReference iso-80000-4.7-d:kilogram_metre_squared
     ]
 
     @rdfs:label "sigma_Ixy"
-    instance C.1.2.2.5_sigma_Ixy_value : metrology:ProductOfInertiaValue [
-        analysis:characterizes C.1.2.2.5_Q:C.1.2.2.5_sigma_Ixy
-        metrology:hasNumber 0.0219147131886038e0
-        metrology:hasUnit units:kg_mm_2
+    instance C.1.2.2.5_sigma_Ixy_value : mass-properties:ProductOfInertiaValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.5_Q:C.1.2.2.5_sigma_Ixy
+        vim3-v:hasNumber 2.19147131886038e-8
+        vim3-v:hasReference iso-80000-4.7-d:kilogram_metre_squared
     ]
 
     @rdfs:label "sigma_Ixz"
-    instance C.1.2.2.5_sigma_Ixz_value : metrology:ProductOfInertiaValue [
-        analysis:characterizes C.1.2.2.5_Q:C.1.2.2.5_sigma_Ixz
-        metrology:hasNumber 0.0214698151227243e0
-        metrology:hasUnit units:kg_mm_2
+    instance C.1.2.2.5_sigma_Ixz_value : mass-properties:ProductOfInertiaValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.5_Q:C.1.2.2.5_sigma_Ixz
+        vim3-v:hasNumber 2.1469815122724298e-8
+        vim3-v:hasReference iso-80000-4.7-d:kilogram_metre_squared
     ]
 
     @rdfs:label "sigma_Iyz"
-    instance C.1.2.2.5_sigma_Iyz_value : metrology:ProductOfInertiaValue [
-        analysis:characterizes C.1.2.2.5_Q:C.1.2.2.5_sigma_Iyz
-        metrology:hasNumber 0.0224252422361279e0
-        metrology:hasUnit units:kg_mm_2
+    instance C.1.2.2.5_sigma_Iyz_value : mass-properties:ProductOfInertiaValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.5_Q:C.1.2.2.5_sigma_Iyz
+        vim3-v:hasNumber 2.24252422361279e-8
+        vim3-v:hasReference iso-80000-4.7-d:kilogram_metre_squared
     ]
 
     ref instance C.1.2.2.5:C.1.2.2.5 [
-        metrology:hasPoiConvention "-"
-        metrology:isPointMass false
+        mass-properties:hasPoiConvention "-"
+        mass-properties:isPointMass false
     ]
 }
