@@ -6,19 +6,19 @@ vocabulary <http://studioj.us/mass-properties#> as mass-properties {
     extends <http://iso.org/iso-80000/4.1-v#> as iso-80000-4.1-v
     extends <http://iso.org/iso-80000/4.7-v#> as iso-80000-4.7-v
 
-    concept Mass < iso-80000-4.1-v:MassQuantity 
+    concept Mass < iso-80000-4.1-v:Mass 
 
     // later
-    concept CenterOfMass < iso-80000-3.1-v:LengthQuantity
+    concept CenterOfMass < iso-80000-3.1-v:Length
 
-    concept CenterOfMassCoordinate < iso-80000-3.1-v:LengthQuantity
+    concept CenterOfMassCoordinate < iso-80000-3.1-v:Length
 
     // later
-    concept InertiaTensor < iso-80000-4.7-v:MomentOfInertiaQuantity
+    concept InertiaTensor < iso-80000-4.7-v:MomentOfInertia
 
-    concept MomentOfInertia < iso-80000-4.7-v:MomentOfInertiaQuantity
+    concept MomentOfInertia < iso-80000-4.7-v:MomentOfInertia
 
-    concept ProductOfInertia < iso-80000-4.7-v:MomentOfInertiaQuantity 
+    concept ProductOfInertia < iso-80000-4.7-v:MomentOfInertia
 
     scalar poiConvention [
         oneOf "+", "-"

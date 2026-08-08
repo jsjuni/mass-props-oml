@@ -8,7 +8,7 @@ vocabulary <http://iso.org/iso-80000/3.9-v#> as iso-80000-3.9-v {
 
     uses <http://iso.org/iso-80000/3.9-d#> as iso-80000-3.9-d
 
-    concept TimeQuantity < iso-80000-1-v:ISQBaseQuantity [
+    concept Time < iso-80000-1-v:ISQBaseQuantity [
         restricts vim3-v:isSameKindAs to iso-80000-3.9-d:time
     ]
 

@@ -12,7 +12,7 @@ description <http://iso.org/iso-80000/3.9-d#> as iso-80000-3.9-d {
         vim3-v:hasDimensionSymbol "T"
     ]
 
-    instance time : iso-80000-3.9-v:TimeQuantity [
+    instance time : iso-80000-3.9-v:Time [
         vim3-v:hasQuantityIdentifier "time"
         vim3-v:hasQuantityDimension : vim3-v:QuantityDimension [
             vim3-v:hasDimensionFactor : vim3-v:BaseDimensionPower [ 

@@ -12,7 +12,7 @@ description <http://iso.org/iso-80000/3.1-d#> as iso-80000-3.1-d {
         vim3-v:hasDimensionSymbol "L"
     ]
 
-    instance ^length : iso-80000-3.1-v:LengthQuantity [
+    instance ^length : iso-80000-3.1-v:Length [
         vim3-v:hasQuantityIdentifier "length"
         vim3-v:hasQuantityDimension : vim3-v:QuantityDimension [
             vim3-v:hasDimensionFactor : vim3-v:BaseDimensionPower [ 

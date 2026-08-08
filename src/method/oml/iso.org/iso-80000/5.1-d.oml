@@ -12,7 +12,7 @@ description <http://iso.org/iso-80000/5.1-d#> as iso-80000-5.1-d {
         vim3-v:hasDimensionSymbol "Θ"
     ]
 
-    instance thermodynamic_temperature : iso-80000-5.1-v:ThermodynamicTemperatureQuantity [
+    instance thermodynamic_temperature : iso-80000-5.1-v:ThermodynamicTemperature [
         vim3-v:hasQuantityIdentifier "thermodynamic temperature"
         vim3-v:hasQuantityDimension : vim3-v:QuantityDimension [
             vim3-v:hasDimensionFactor : vim3-v:BaseDimensionPower [ 

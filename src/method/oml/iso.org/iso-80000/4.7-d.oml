@@ -11,7 +11,7 @@ description <http://iso.org/iso-80000/4.7-d#> as iso-80000-4.7-d {
     extends <http://iso.org/iso-80000/3.1-d#> as iso-80000-3.1-d
     extends <http://iso.org/iso-80000/4.1-d#> as iso-80000-4.1-d
    
-    instance moment_of_inertia : iso-80000-4.7-v:MomentOfInertiaQuantity [
+    instance moment_of_inertia : iso-80000-4.7-v:MomentOfInertia [
         vim3-v:hasQuantityIdentifier "moment of inertia"
         vim3-v:hasQuantityDimension : vim3-v:QuantityDimension [
             vim3-v:hasDimensionFactor : vim3-v:BaseDimensionPower [ 

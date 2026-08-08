@@ -12,7 +12,7 @@ description <http://iso.org/iso-80000/4.1-d#> as iso-80000-4.1-d {
         vim3-v:hasDimensionSymbol "M"
     ]
 
-    instance mass : iso-80000-4.1-v:MassQuantity [
+    instance mass : iso-80000-4.1-v:Mass [
         vim3-v:hasQuantityIdentifier "mass"
         vim3-v:hasQuantityDimension : vim3-v:QuantityDimension [
             vim3-v:hasDimensionFactor : vim3-v:BaseDimensionPower [ 
