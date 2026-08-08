@@ -24,8 +24,8 @@ description <http://iso.org/iso-80000/6.1-d#> as iso-80000-6.1-d {
         iso-80000-1-v:hasDimension I
     ]
 
-    instance kelvin : iso-80000-6.1-v:ElectricCurrentUnit [
-        vim3-v:hasMeasurementUnitIdentifier "kelvin"
+    instance ampere : iso-80000-6.1-v:ElectricCurrentUnit [
+        vim3-v:hasMeasurementUnitIdentifier "ampere"
         iso-80000-1-v:isBaseUnitFor electric_current
     ]
 }
