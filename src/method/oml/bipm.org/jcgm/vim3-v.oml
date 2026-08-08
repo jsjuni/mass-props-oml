@@ -128,10 +128,10 @@ vocabulary <http://bipm.org/jcgm/vim3-v#> as vim3-v {
 	// 1.7 quantity dimension
 	//
 
-	aspect Dimension
+	aspect Dimensioned
 
 	scalar property hasDimensionSymbol [
-		domain Dimension
+		domain Dimensioned
 		range xsd:string
 	]
 
@@ -139,7 +139,7 @@ vocabulary <http://bipm.org/jcgm/vim3-v#> as vim3-v {
 	@dc:source "https://jcgm.bipm.org/vim/en/1.7.html"
 	@dc:description """expression of the dependence of a quantity on the base quantities of a system of quantities as a product
 		of powers of factors corresponding to the base quantities, omitting any numerical factor"""
-	concept QuantityDimension < Dimension
+	concept QuantityDimension < Dimensioned
 
 	@rdfs:label "Has quantity dimension"
 	@dc:source "https://jcgm.bipm.org/vim/en/1.7.html"
@@ -179,7 +179,7 @@ vocabulary <http://bipm.org/jcgm/vim3-v#> as vim3-v {
 	]
 
 	@rdfs:label "base dimension"
-	concept BaseDimension < QuantityDimension
+	concept BaseDimension < Dimensioned
 
 	@rdfs:label "with base dimension"
 	relation withBaseDimension [
@@ -220,7 +220,7 @@ vocabulary <http://bipm.org/jcgm/vim3-v#> as vim3-v {
 	scalar property hasMeasurementUnitIdentifier [
 		domain MeasurementUnit
 		range xsd:string
-	] < hasQuantityIdentifier
+	]
 
 	relation isMeasurementUnitFor [
 		from MeasurementUnit
