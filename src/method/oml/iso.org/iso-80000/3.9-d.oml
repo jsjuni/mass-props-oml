@@ -24,7 +24,7 @@ description <http://iso.org/iso-80000/3.9-d#> as iso-80000-3.9-d {
         iso-80000-1-v:hasDimension T
     ]
 
-    instance second : iso-80000-3.9-v:TimeUnit [
+    instance second : iso-80000-3.9-v:TimeUnit, iso-80000-1-v:SIBaseUnit [
         vim3-v:hasMeasurementUnitIdentifier "second"
         iso-80000-1-v:isBaseUnitFor time
     ]

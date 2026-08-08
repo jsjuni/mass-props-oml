@@ -14,7 +14,7 @@ vocabulary <http://iso.org/iso-80000/6.1-v#> as iso-80000-6.1-v {
         restricts vim3-v:isSameKindAs to iso-80000-6.1-d:electric_current
     ]
 
-    concept ElectricCurrentUnit < iso-80000-1-v:SIBaseUnit [
+    concept ElectricCurrentUnit < iso-80000-1-v:SIUnit [
         restricts vim3-v:isSameKindAs to iso-80000-5.1-d:thermodynamic_temperature
     ]
 

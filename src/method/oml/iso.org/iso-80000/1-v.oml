@@ -31,11 +31,11 @@ vocabulary <http://iso.org/iso-80000/1-v#> as iso-80000-1-v {
 
     aspect ISQQuantityOfDimensionOne < vim3-v:QuantityOfDimensionOne, ISQDerivedQuantity
 
-    aspect SIUnit [
+    concept SIUnit [
         key vim3-v:hasMeasurementUnitIdentifier
-    ] < vim3-v:Reference
+    ] < vim3-v:MeasurementUnit, vim3-v:Reference
 
-    concept SIBaseUnit < vim3-v:MeasurementUnit, SIUnit [
+    aspect SIBaseUnit < [
         restricts vim3-v:isBaseUnitIn to iso-80000-1-d:SI
     ]
 
@@ -46,7 +46,7 @@ vocabulary <http://iso.org/iso-80000/1-v#> as iso-80000-1-v {
         inverse functional
     ]
 
-    concept SIDerivedUnit < vim3-v:MeasurementUnit, SIUnit [
+    aspect SIDerivedUnit < [
         restricts vim3-v:isDerivedUnitIn to iso-80000-1-d:SI
     ]
 
@@ -57,7 +57,7 @@ vocabulary <http://iso.org/iso-80000/1-v#> as iso-80000-1-v {
         inverse functional
     ]
 
-    concept SICoherentDerivedUnit < SIDerivedUnit [
+    aspect SICoherentDerivedUnit < SIDerivedUnit [
          restricts vim3-v:isCoherentDerivedUnitIn to iso-80000-1-d:SI
     ]
 

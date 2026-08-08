@@ -24,7 +24,7 @@ description <http://iso.org/iso-80000/4.1-d#> as iso-80000-4.1-d {
         iso-80000-1-v:hasDimension M
     ]
 
-    instance kilogram : iso-80000-4.1-v:MassUnit [
+    instance kilogram : iso-80000-4.1-v:MassUnit, iso-80000-1-v:SIBaseUnit [
         vim3-v:hasMeasurementUnitIdentifier "kilogram"
         iso-80000-1-v:isBaseUnitFor mass
     ]

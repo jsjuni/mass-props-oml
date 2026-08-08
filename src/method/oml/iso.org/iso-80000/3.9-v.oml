@@ -12,7 +12,7 @@ vocabulary <http://iso.org/iso-80000/3.9-v#> as iso-80000-3.9-v {
         restricts vim3-v:isSameKindAs to iso-80000-3.9-d:time
     ]
 
-    concept TimeUnit < iso-80000-1-v:SIBaseUnit [
+    concept TimeUnit < iso-80000-1-v:SIUnit [
         restricts vim3-v:isSameKindAs to iso-80000-3.9-d:time
     ]
 

@@ -24,7 +24,7 @@ description <http://iso.org/iso-80000/6.1-d#> as iso-80000-6.1-d {
         iso-80000-1-v:hasDimension I
     ]
 
-    instance ampere : iso-80000-6.1-v:ElectricCurrentUnit [
+    instance ampere : iso-80000-6.1-v:ElectricCurrentUnit, iso-80000-1-v:SIBaseUnit [
         vim3-v:hasMeasurementUnitIdentifier "ampere"
         iso-80000-1-v:isBaseUnitFor electric_current
     ]

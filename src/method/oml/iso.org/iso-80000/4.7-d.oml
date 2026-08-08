@@ -26,7 +26,7 @@ description <http://iso.org/iso-80000/4.7-d#> as iso-80000-4.7-d {
         ]
     ]
 
-    instance kilogram_metre_squared : iso-80000-4.7-v:MomentOfInertiaUnit [
+    instance kilogram_metre_squared : iso-80000-4.7-v:MomentOfInertiaUnit, iso-80000-1-v:SICoherentDerivedUnit [
         vim3-v:hasMeasurementUnitIdentifier "kilogram metre squared"
         iso-80000-1-v:isCoherentDerivedUnitFor moment_of_inertia
     ]

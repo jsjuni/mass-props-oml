@@ -24,7 +24,7 @@ description <http://iso.org/iso-80000/5.1-d#> as iso-80000-5.1-d {
         iso-80000-1-v:hasDimension theta
     ]
 
-    instance kelvin : iso-80000-5.1-v:ThermodynamicTemperatureUnit [
+    instance kelvin : iso-80000-5.1-v:ThermodynamicTemperatureUnit, iso-80000-1-v:SIBaseUnit [
         vim3-v:hasMeasurementUnitIdentifier "kelvin"
         iso-80000-1-v:isBaseUnitFor thermodynamic_temperature
     ]
