@@ -1,0 +1,25 @@
+@dc:description "The ISO-80000-6 library."
+@dc:title "ISO-80000-6.1 electric current, ampere"
+vocabulary <http://iso.org/iso-80000/6.1-v#> as iso-80000-6.1-v {
+
+    extends <http://purl.org/dc/elements/1.1/> as dc
+    extends <http://bipm.org/jcgm/vim3-v#> as vim3-v
+	extends <http://iso.org/iso-80000/1-v#> as iso-80000-1-v
+
+    uses <http://iso.org/iso-80000/5.1-d#> as iso-80000-5.1-d
+
+	uses <http://iso.org/iso-80000/6.1-d#> as iso-80000-6.1-d
+
+    concept ElectricCurrent < iso-80000-1-v:ISQQuantity [
+        restricts vim3-v:isSameKindAs to iso-80000-6.1-d:electric_current
+    ]
+
+    concept ElectricCurrentUnit < iso-80000-1-v:SIBaseUnit [
+        restricts vim3-v:isSameKindAs to iso-80000-5.1-d:thermodynamic_temperature
+    ]
+
+    concept ElectricCurrentValue < iso-80000-1-v:SIValue [
+        restricts all vim3-v:hasReference to ElectricCurrentUnit
+    ]
+    
+}

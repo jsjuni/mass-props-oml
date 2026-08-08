@@ -1,5 +1,5 @@
 @dc:description "The ISO-80000-3 library."
-@dc:title "ISO-80000-3.1 length, metre"
+@dc:title "ISO-80000-3.9 time, second"
 vocabulary <http://iso.org/iso-80000/3.9-v#> as iso-80000-3.9-v {
 
     extends <http://purl.org/dc/elements/1.1/> as dc
