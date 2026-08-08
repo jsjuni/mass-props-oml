@@ -8,15 +8,15 @@ vocabulary <http://iso.org/iso-80000/5.1-v#> as iso-80000-5.1-v {
 
     uses <http://iso.org/iso-80000/5.1-d#> as iso-80000-5.1-d
 
-    concept ThermodynamicTemperature < iso-80000-1-v:ISQQuantity [
+    concept ThermodynamicTemperature < iso-80000-1-v:Quantity [
         restricts vim3-v:isSameKindAs to iso-80000-5.1-d:thermodynamic_temperature
     ]
 
-    concept ThermodynamicTemperatureUnit < iso-80000-1-v:SIUnit [
+    concept ThermodynamicTemperatureUnit < iso-80000-1-v:Unit [
         restricts vim3-v:isSameKindAs to iso-80000-5.1-d:thermodynamic_temperature
     ]
 
-    concept ThermodynamicTemperatureValue < iso-80000-1-v:SIValue [
+    concept ThermodynamicTemperatureValue < iso-80000-1-v:Value [
         restricts all vim3-v:hasReference to ThermodynamicTemperatureUnit
     ]
     

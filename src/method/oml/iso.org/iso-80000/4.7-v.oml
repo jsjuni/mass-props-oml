@@ -8,15 +8,15 @@ vocabulary <http://iso.org/iso-80000/4.7-v#> as iso-80000-4.7-v {
 
     uses <http://iso.org/iso-80000/4.7-d#> as iso-80000-4.7-d
 
-    concept MomentOfInertia < iso-80000-1-v:ISQQuantity [
+    concept MomentOfInertia < iso-80000-1-v:Quantity [
         restricts vim3-v:isSameKindAs to iso-80000-4.7-d:moment_of_inertia
     ]
 
-    concept MomentOfInertiaUnit < iso-80000-1-v:SIUnit [
+    concept MomentOfInertiaUnit < iso-80000-1-v:Unit [
         restricts vim3-v:isSameKindAs to iso-80000-4.7-d:moment_of_inertia
     ]
 
-    concept MomentOfInertiaValue < iso-80000-1-v:SIValue [
+    concept MomentOfInertiaValue < iso-80000-1-v:Value [
         restricts all vim3-v:hasReference to MomentOfInertiaUnit
     ]
     

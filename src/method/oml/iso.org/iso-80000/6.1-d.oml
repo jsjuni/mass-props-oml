@@ -8,12 +8,12 @@ description <http://iso.org/iso-80000/6.1-d#> as iso-80000-6.1-d {
     uses <http://iso.org/iso-80000/1-v#> as iso-80000-1-v
     uses <http://iso.org/iso-80000/6.1-v#> as iso-80000-6.1-v
 
-    instance I : iso-80000-1-v:ISQDimension [
+    instance I : iso-80000-1-v:Dimension [
         vim3-v:hasDimensionSymbol "I"
     ]
 
-    instance electric_current : iso-80000-6.1-v:ElectricCurrent, iso-80000-1-v:ISQBaseQuantity [
-        vim3-v:hasQuantityIdentifier "electric current"
+    instance electric_current : iso-80000-6.1-v:ElectricCurrent, iso-80000-1-v:BaseQuantity [
+        iso-80000-1-v:hasQuantityIdentifier "electric current"
         vim3-v:hasQuantityDimension : vim3-v:QuantityDimension [
             vim3-v:hasDimensionFactor : vim3-v:BaseDimensionPower [ 
                 vim3-v:raisesBaseDimension I
@@ -24,8 +24,8 @@ description <http://iso.org/iso-80000/6.1-d#> as iso-80000-6.1-d {
         iso-80000-1-v:hasDimension I
     ]
 
-    instance ampere : iso-80000-6.1-v:ElectricCurrentUnit, iso-80000-1-v:SIBaseUnit [
-        vim3-v:hasMeasurementUnitIdentifier "ampere"
+    instance ampere : iso-80000-6.1-v:ElectricCurrentUnit, iso-80000-1-v:BaseUnit [
+        iso-80000-1-v:hasUnitIdentifier "ampere"
         iso-80000-1-v:isBaseUnitFor electric_current
     ]
 }

@@ -8,15 +8,15 @@ vocabulary <http://iso.org/iso-80000/3.9-v#> as iso-80000-3.9-v {
 
     uses <http://iso.org/iso-80000/3.9-d#> as iso-80000-3.9-d
 
-    concept Time < iso-80000-1-v:ISQQuantity [
+    concept Time < iso-80000-1-v:Quantity [
         restricts vim3-v:isSameKindAs to iso-80000-3.9-d:time
     ]
 
-    concept TimeUnit < iso-80000-1-v:SIUnit [
+    concept TimeUnit < iso-80000-1-v:Unit [
         restricts vim3-v:isSameKindAs to iso-80000-3.9-d:time
     ]
 
-    concept TimeValue < iso-80000-1-v:SIValue [
+    concept TimeValue < iso-80000-1-v:Value [
         restricts all vim3-v:hasReference to TimeUnit
     ]
     

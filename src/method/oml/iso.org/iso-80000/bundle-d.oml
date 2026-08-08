@@ -5,10 +5,10 @@ description bundle <http://iso.org/iso-80000/bundle-d#> as iso-80000-bundle-d {
     includes <http://bipm.org/jcgm/vim3-d#>
     includes <http://iso.org/iso-80000/1-d#>
     includes <http://iso.org/iso-80000/3.1-d#>
-    includes <http://iso.org/iso-80000/3.9-d#>
-    includes <http://iso.org/iso-80000/4.1-d#>
-    includes <http://iso.org/iso-80000/4.7-d#>
-    includes <http://iso.org/iso-80000/5.1-d#>
-    includes <http://iso.org/iso-80000/6.1-d#>
+    // includes <http://iso.org/iso-80000/3.9-d#>
+    // includes <http://iso.org/iso-80000/4.1-d#>
+    // includes <http://iso.org/iso-80000/4.7-d#>
+    // includes <http://iso.org/iso-80000/5.1-d#>
+    // includes <http://iso.org/iso-80000/6.1-d#>
 
 }

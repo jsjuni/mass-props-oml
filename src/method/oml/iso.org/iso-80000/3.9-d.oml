@@ -8,12 +8,12 @@ description <http://iso.org/iso-80000/3.9-d#> as iso-80000-3.9-d {
     uses <http://iso.org/iso-80000/1-v#> as iso-80000-1-v
     uses <http://iso.org/iso-80000/3.9-v#> as iso-80000-3.9-v
 
-    instance T : iso-80000-1-v:ISQDimension [
+    instance T : iso-80000-1-v:Dimension [
         vim3-v:hasDimensionSymbol "T"
     ]
 
-    instance time : iso-80000-3.9-v:Time, iso-80000-1-v:ISQBaseQuantity [
-        vim3-v:hasQuantityIdentifier "time"
+    instance time : iso-80000-3.9-v:Time, iso-80000-1-v:BaseQuantity [
+        iso-80000-1-v:hasQuantityIdentifier "time"
         vim3-v:hasQuantityDimension : vim3-v:QuantityDimension [
             vim3-v:hasDimensionFactor : vim3-v:BaseDimensionPower [ 
                 vim3-v:raisesBaseDimension T
@@ -24,8 +24,8 @@ description <http://iso.org/iso-80000/3.9-d#> as iso-80000-3.9-d {
         iso-80000-1-v:hasDimension T
     ]
 
-    instance second : iso-80000-3.9-v:TimeUnit, iso-80000-1-v:SIBaseUnit [
-        vim3-v:hasMeasurementUnitIdentifier "second"
+    instance second : iso-80000-3.9-v:TimeUnit, iso-80000-1-v:BaseUnit [
+        iso-80000-1-v:hasUnitIdentifier "second"
         iso-80000-1-v:isBaseUnitFor time
     ]
 }

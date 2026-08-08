@@ -179,7 +179,7 @@ vocabulary <http://bipm.org/jcgm/vim3-v#> as vim3-v {
 	]
 
 	@rdfs:label "base dimension"
-	concept BaseDimension < Dimension
+	concept BaseDimension < QuantityDimension
 
 	@rdfs:label "with base dimension"
 	relation withBaseDimension [

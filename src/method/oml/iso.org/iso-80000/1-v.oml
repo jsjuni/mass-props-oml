@@ -1,73 +1,86 @@
 @dc:creator "J Steven Jenkins https://orcid.org/0000-0002-0725-0884"
 vocabulary <http://iso.org/iso-80000/1-v#> as iso-80000-1-v {
 
+ 	extends <http://www.w3.org/2001/XMLSchema#> as xsd
     extends <http://purl.org/dc/elements/1.1/> as dc
     extends <http://bipm.org/jcgm/vim3-v#> as vim3-v
 
     uses <http://iso.org/iso-80000/1-d#> as iso-80000-1-d
 
-    concept ISQDimension [
+    concept Dimension [
         key vim3-v:hasDimensionSymbol
     ] < vim3-v:BaseDimension 
 
-    concept ISQQuantity [
-        key vim3-v:hasQuantityIdentifier
+    scalar property hasQuantityIdentifier [
+        domain Quantity
+        range xsd:string
+        functional
+    ] < vim3-v:hasQuantityIdentifier
+
+    concept Quantity [
+        key hasQuantityIdentifier
     ] < vim3-v:Quantity
 
-    aspect ISQBaseQuantity < [
+    aspect BaseQuantity < [
         restricts vim3-v:isBaseQuantityIn to iso-80000-1-d:ISQ
     ]
 
     relation hasDimension [
-        from ISQBaseQuantity
-        to ISQDimension
+        from BaseQuantity
+        to Dimension
         functional
         inverse functional
     ]
 
-    aspect ISQDerivedQuantity < [
+    aspect DerivedQuantity < [
         restricts vim3-v:isDerivedQuantityIn to iso-80000-1-d:ISQ
     ]
 
-    aspect ISQQuantityOfDimensionOne < vim3-v:QuantityOfDimensionOne, ISQDerivedQuantity
+    aspect QuantityOfDimensionOne < vim3-v:QuantityOfDimensionOne, DerivedQuantity
 
-    concept SIUnit [
-        key vim3-v:hasMeasurementUnitIdentifier
+    scalar property hasUnitIdentifier [
+        domain Unit
+        range xsd:string
+        functional
+    ] < vim3-v:hasMeasurementUnitIdentifier
+
+    concept Unit [
+        key hasUnitIdentifier
     ] < vim3-v:MeasurementUnit, vim3-v:Reference
 
-    aspect SIBaseUnit < [
+    aspect BaseUnit < [
         restricts vim3-v:isBaseUnitIn to iso-80000-1-d:SI
     ]
 
     relation isBaseUnitFor [
-        from SIBaseUnit
-        to ISQBaseQuantity
+        from BaseUnit
+        to BaseQuantity
         functional
         inverse functional
     ]
 
-    aspect SIDerivedUnit < [
+    aspect DerivedUnit < [
         restricts vim3-v:isDerivedUnitIn to iso-80000-1-d:SI
     ]
 
     relation isDerivedUnitFor [
-        from SIDerivedUnit
-        to ISQDerivedQuantity
+        from DerivedUnit
+        to DerivedQuantity
         functional
         inverse functional
     ]
 
-    aspect SICoherentDerivedUnit < SIDerivedUnit [
+    aspect CoherentDerivedUnit < DerivedUnit [
          restricts vim3-v:isCoherentDerivedUnitIn to iso-80000-1-d:SI
     ]
 
     relation isCoherentDerivedUnitFor [
-        from SIDerivedUnit
-        to ISQDerivedQuantity
+        from DerivedUnit
+        to DerivedQuantity
         functional
         inverse functional
     ] < isDerivedUnitFor
 
-    concept SIValue < vim3-v:QuantityValue
+    concept Value < vim3-v:QuantityValue
     
 }
