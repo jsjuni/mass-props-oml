@@ -8,7 +8,7 @@ vocabulary <http://iso.org/iso-80000/4.7-v#> as iso-80000-4.7-v {
 
     uses <http://iso.org/iso-80000/4.7-d#> as iso-80000-4.7-d
 
-    concept MomentOfInertia < iso-80000-1-v:ISQDerivedQuantity [
+    concept MomentOfInertia < iso-80000-1-v:ISQQuantity [
         restricts vim3-v:isSameKindAs to iso-80000-4.7-d:moment_of_inertia
     ]
 

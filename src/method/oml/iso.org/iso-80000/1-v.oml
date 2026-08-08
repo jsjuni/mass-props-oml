@@ -6,15 +6,15 @@ vocabulary <http://iso.org/iso-80000/1-v#> as iso-80000-1-v {
 
     uses <http://iso.org/iso-80000/1-d#> as iso-80000-1-d
 
-    aspect ISQDimension [
+    concept ISQDimension [
         key vim3-v:hasDimensionSymbol
-    ]
+    ] < vim3-v:BaseDimension 
 
-    aspect ISQQuantity [
+    concept ISQQuantity [
         key vim3-v:hasQuantityIdentifier
-    ]
+    ] < vim3-v:Quantity
 
-    concept ISQBaseQuantity < vim3-v:Quantity, ISQQuantity [
+    aspect ISQBaseQuantity < [
         restricts vim3-v:isBaseQuantityIn to iso-80000-1-d:ISQ
     ]
 
@@ -25,9 +25,11 @@ vocabulary <http://iso.org/iso-80000/1-v#> as iso-80000-1-v {
         inverse functional
     ]
 
-    concept ISQDerivedQuantity < vim3-v:Quantity, ISQQuantity [
+    aspect ISQDerivedQuantity < [
         restricts vim3-v:isDerivedQuantityIn to iso-80000-1-d:ISQ
     ]
+
+    aspect ISQQuantityOfDimensionOne < vim3-v:QuantityOfDimensionOne, ISQDerivedQuantity
 
     aspect SIUnit [
         key vim3-v:hasMeasurementUnitIdentifier

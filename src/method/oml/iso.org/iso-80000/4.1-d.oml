@@ -8,11 +8,11 @@ description <http://iso.org/iso-80000/4.1-d#> as iso-80000-4.1-d {
     uses <http://iso.org/iso-80000/1-v#> as iso-80000-1-v
     uses <http://iso.org/iso-80000/4.1-v#> as iso-80000-4.1-v
 
-    instance M : vim3-v:BaseDimension [
+    instance M : iso-80000-1-v:ISQDimension [
         vim3-v:hasDimensionSymbol "M"
     ]
 
-    instance mass : iso-80000-4.1-v:Mass [
+    instance mass : iso-80000-4.1-v:Mass, iso-80000-1-v:ISQBaseQuantity [
         vim3-v:hasQuantityIdentifier "mass"
         vim3-v:hasQuantityDimension : vim3-v:QuantityDimension [
             vim3-v:hasDimensionFactor : vim3-v:BaseDimensionPower [ 

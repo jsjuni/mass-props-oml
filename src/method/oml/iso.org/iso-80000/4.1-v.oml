@@ -8,7 +8,7 @@ vocabulary <http://iso.org/iso-80000/4.1-v#> as iso-80000-4.1-v {
 
     uses <http://iso.org/iso-80000/4.1-d#> as iso-80000-4.1-d
 
-    concept Mass < iso-80000-1-v:ISQBaseQuantity [
+    concept Mass < iso-80000-1-v:ISQQuantity [
         restricts vim3-v:isSameKindAs to iso-80000-4.1-d:mass
     ]
 
