@@ -3,6 +3,7 @@ vocabulary bundle <http://iso.org/iso-80000/bundle-v#> as iso-80000-bundle-v {
     includes <http://bipm.org/jcgm/vim3-v#>
     includes <http://iso.org/iso-80000/1-v#>
     includes <http://iso.org/iso-80000/3.1-v#>
+    includes <http://iso.org/iso-80000/3.9-v#>
     includes <http://iso.org/iso-80000/4.1-v#>
     includes <http://iso.org/iso-80000/4.7-v#>
     includes <http://iso.org/iso-80000/5.1-v#>
