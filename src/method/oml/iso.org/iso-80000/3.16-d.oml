@@ -1,0 +1,24 @@
+@dc:description "The ISO-80000-3 library."
+@dc:title "ISO-80000-3.16 rotation"
+description <http://iso.org/iso-80000/3.16-d#> as iso-80000-3.16-d {
+
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://bipm.org/jcgm/vim3-v#> as vim3-v
+    uses <http://iso.org/iso-80000/1-v#> as iso-80000-1-v
+    uses <http://iso.org/iso-80000/3.16-v#> as iso-80000-3.16-v
+ 
+	extends <http://bipm.org/jcgm/vim3-d#> as vim3-d
+
+	extends <http://iso.org/iso-80000/1-d#> as iso-80000-1-d
+   
+    instance rotation : iso-80000-3.16-v:Rotation, iso-80000-1-v:QuantityOfDimensionOne [
+        iso-80000-1-v:hasQuantityIdentifier "rotation"
+        vim3-v:hasQuantityDimension  vim3-d:empty_quantity_dimension
+    ]
+
+    ref instance iso-80000-1-d:one [
+        iso-80000-1-v:isCoherentDerivedUnitFor rotation
+        vim3-v:isSameKindAs rotation
+    ]
+
+}

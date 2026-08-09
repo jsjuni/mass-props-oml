@@ -27,6 +27,12 @@ description <http://bipm.org/jcgm/vim3-d#> as vim3-d {
 	]
 
 	//
+	// 1.8 quantity of dimension one
+	//
+
+	instance empty_quantity_dimension : vim3-v:EmptyQuantityDimension
+
+	//
 	// 1.16 International System of Units
 	//
 
