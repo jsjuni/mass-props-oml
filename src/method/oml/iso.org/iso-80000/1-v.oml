@@ -46,7 +46,7 @@ vocabulary <http://iso.org/iso-80000/1-v#> as iso-80000-1-v {
 
     concept Unit [
         key hasUnitIdentifier
-    ] < vim3-v:MeasurementUnit, vim3-v:Reference
+    ] < vim3-v:MeasurementUnit, vim3-v:Reference, Quantity
 
     aspect BaseUnit < [
         restricts vim3-v:isBaseUnitIn to iso-80000-1-d:SI

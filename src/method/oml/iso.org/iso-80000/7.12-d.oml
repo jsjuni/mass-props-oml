@@ -1,0 +1,31 @@
+@dc:description "The ISO-80000-7 library."
+@dc:title "ISO-80000-7.12 luminous intensity, candela"
+description <http://iso.org/iso-80000/7.12-d#> as iso-80000-7.12-d {
+
+    uses <http://www.w3.org/2002/07/owl#> as owl
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://bipm.org/jcgm/vim3-v#> as vim3-v
+    uses <http://iso.org/iso-80000/1-v#> as iso-80000-1-v
+    uses <http://iso.org/iso-80000/7.12-v#> as iso-80000-7.12-v
+
+    instance J : iso-80000-1-v:Dimension [
+        vim3-v:hasDimensionSymbol "J"
+    ]
+
+    instance luminous_intensity : iso-80000-7.12-v:LuminousIntensity, iso-80000-1-v:BaseQuantity [
+        iso-80000-1-v:hasQuantityIdentifier "luminous intensity"
+        vim3-v:hasQuantityDimension : vim3-v:QuantityDimension [
+            vim3-v:hasDimensionFactor : vim3-v:BaseDimensionPower [ 
+                vim3-v:raisesBaseDimension J
+                vim3-v:toPower "1/1"^^owl:rational
+            ]
+            vim3-v:hasDimensionSymbol "J"
+        ]
+        iso-80000-1-v:hasDimension J
+    ]
+
+    instance candela : iso-80000-7.12-v:LuminousIntensityUnit, iso-80000-1-v:BaseUnit [
+        iso-80000-1-v:hasUnitIdentifier "candela"
+        iso-80000-1-v:isBaseUnitFor luminous_intensity
+    ]
+}

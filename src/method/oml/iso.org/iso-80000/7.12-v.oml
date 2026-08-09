@@ -1,0 +1,23 @@
+@dc:description "The ISO-80000-7 library."
+@dc:title "ISO-80000-7.12 luminous intensity, mole"
+vocabulary <http://iso.org/iso-80000/7.12-v#> as iso-80000-7.12-v {
+
+    extends <http://purl.org/dc/elements/1.1/> as dc
+    extends <http://bipm.org/jcgm/vim3-v#> as vim3-v
+	extends <http://iso.org/iso-80000/1-v#> as iso-80000-1-v
+
+	uses <http://iso.org/iso-80000/7.12-d#> as iso-80000-7.12-d
+
+    concept LuminousIntensity < iso-80000-1-v:Quantity [
+        restricts vim3-v:isSameKindAs to iso-80000-7.12-d:luminous_intensity
+    ]
+
+    concept LuminousIntensityUnit < iso-80000-1-v:Unit [
+        restricts vim3-v:isSameKindAs to iso-80000-7.12-d:luminous_intensity
+    ]
+
+    concept LuminousIntensityValue < iso-80000-1-v:Value [
+        restricts all vim3-v:hasReference to LuminousIntensityUnit
+    ]
+    
+}

@@ -1,5 +1,5 @@
-@dc:description "The ISO-80000-4 library."
-@dc:title "ISO-80000-4.1 thermodynamic temperature, kilogram"
+@dc:description "The ISO-80000-5 library."
+@dc:title "ISO-80000-5.1 thermodynamic temperature, kilogram"
 vocabulary <http://iso.org/iso-80000/5.1-v#> as iso-80000-5.1-v {
 
     extends <http://purl.org/dc/elements/1.1/> as dc

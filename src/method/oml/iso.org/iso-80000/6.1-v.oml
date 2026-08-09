@@ -6,8 +6,6 @@ vocabulary <http://iso.org/iso-80000/6.1-v#> as iso-80000-6.1-v {
     extends <http://bipm.org/jcgm/vim3-v#> as vim3-v
 	extends <http://iso.org/iso-80000/1-v#> as iso-80000-1-v
 
-    uses <http://iso.org/iso-80000/5.1-d#> as iso-80000-5.1-d
-
 	uses <http://iso.org/iso-80000/6.1-d#> as iso-80000-6.1-d
 
     concept ElectricCurrent < iso-80000-1-v:Quantity [
@@ -15,7 +13,7 @@ vocabulary <http://iso.org/iso-80000/6.1-v#> as iso-80000-6.1-v {
     ]
 
     concept ElectricCurrentUnit < iso-80000-1-v:Unit [
-        restricts vim3-v:isSameKindAs to iso-80000-5.1-d:thermodynamic_temperature
+        restricts vim3-v:isSameKindAs to iso-80000-6.1-d:electric_current
     ]
 
     concept ElectricCurrentValue < iso-80000-1-v:Value [

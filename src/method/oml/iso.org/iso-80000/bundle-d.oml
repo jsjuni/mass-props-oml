@@ -10,5 +10,7 @@ description bundle <http://iso.org/iso-80000/bundle-d#> as iso-80000-bundle-d {
     includes <http://iso.org/iso-80000/4.7-d#>
     includes <http://iso.org/iso-80000/5.1-d#>
     includes <http://iso.org/iso-80000/6.1-d#>
+    includes <http://iso.org/iso-80000/7.12-d#>
+    includes <http://iso.org/iso-80000/9.2-d#>
 
 }
