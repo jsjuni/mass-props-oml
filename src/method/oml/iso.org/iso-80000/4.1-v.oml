@@ -17,6 +17,7 @@ vocabulary <http://iso.org/iso-80000/4.1-v#> as iso-80000-4.1-v {
     ]
 
     concept MassValue < iso-80000-1-v:Value [
+        restricts all vim3-v:expressesMagnitudeOf to Mass
         restricts all vim3-v:hasReference to MassUnit
     ]
     

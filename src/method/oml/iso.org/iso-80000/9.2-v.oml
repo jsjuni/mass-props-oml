@@ -17,6 +17,7 @@ vocabulary <http://iso.org/iso-80000/9.2-v#> as iso-80000-9.2-v {
     ]
 
     concept AmountOfSubstanceValue < iso-80000-1-v:Value [
+        restricts all vim3-v:expressesMagnitudeOf to AmountOfSubstance
         restricts all vim3-v:hasReference to AmountOfSubstanceUnit
     ]
     

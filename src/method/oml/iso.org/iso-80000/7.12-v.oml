@@ -17,6 +17,7 @@ vocabulary <http://iso.org/iso-80000/7.12-v#> as iso-80000-7.12-v {
     ]
 
     concept LuminousIntensityValue < iso-80000-1-v:Value [
+        restricts all vim3-v:expressesMagnitudeOf to LuminousIntensity
         restricts all vim3-v:hasReference to LuminousIntensityUnit
     ]
     

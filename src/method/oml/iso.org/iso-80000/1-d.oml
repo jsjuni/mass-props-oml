@@ -4,12 +4,17 @@ description <http://iso.org/iso-80000/1-d#> as iso-80000-1-d {
 	uses <http://purl.org/dc/elements/1.1/> as dc
 	uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
 	uses <http://bipm.org/jcgm/vim3-v#> as vim3-v
+	uses <http://iso.org/iso-80000/1-v#> as iso-80000-1-v
 
 	@rdfs:comment "The International System of Quantities"
     instance ISQ : vim3-v:SystemOfQuantities [
     	vim3-v:hasSystemOfQuantitiesIdentifier "ISQ"
 	]
   
+	instance one : iso-80000-1-v:Unit, iso-80000-1-v:CoherentDerivedUnit [
+		iso-80000-1-v:hasUnitIdentifier 
+	]
+
     @rdfs:comment "The International System of Units"
     @rdfs:seeAlso "https://www.bipm.org/en/publications/si-brochure/"
     instance SI : vim3-v:CoherentSystemOfUnits [
