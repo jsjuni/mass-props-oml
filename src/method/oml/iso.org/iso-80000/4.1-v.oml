@@ -10,6 +10,7 @@ vocabulary <http://iso.org/iso-80000/4.1-v#> as iso-80000-4.1-v {
 
     concept Mass < iso-80000-1-v:Quantity [
         restricts vim3-v:isSameKindAs to iso-80000-4.1-d:mass
+        restricts all vim3-v:hasMagnitude to MassValue
     ]
 
     concept MassUnit < iso-80000-1-v:Unit [

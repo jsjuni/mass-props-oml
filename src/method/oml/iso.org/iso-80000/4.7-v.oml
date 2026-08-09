@@ -10,6 +10,7 @@ vocabulary <http://iso.org/iso-80000/4.7-v#> as iso-80000-4.7-v {
 
     concept MomentOfInertia < iso-80000-1-v:Quantity [
         restricts vim3-v:isSameKindAs to iso-80000-4.7-d:moment_of_inertia
+        restricts all vim3-v:hasMagnitude to MomentOfInertiaValue
     ]
 
     concept MomentOfInertiaUnit < iso-80000-1-v:Unit [

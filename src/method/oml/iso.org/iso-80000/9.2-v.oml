@@ -10,6 +10,7 @@ vocabulary <http://iso.org/iso-80000/9.2-v#> as iso-80000-9.2-v {
 
     concept AmountOfSubstance < iso-80000-1-v:Quantity [
         restricts vim3-v:isSameKindAs to iso-80000-9.2-d:amount_of_substance
+        restricts all vim3-v:hasMagnitude to AmountOfSubstanceValue
     ]
 
     concept AmountOfSubstanceUnit < iso-80000-1-v:Unit [

@@ -332,5 +332,6 @@ vocabulary <http://bipm.org/jcgm/vim3-v#> as vim3-v {
 	relation expressesMagnitudeOf [
 		from QuantityValue
 		to Quantity
+		reverse hasMagnitude
 	]
 }

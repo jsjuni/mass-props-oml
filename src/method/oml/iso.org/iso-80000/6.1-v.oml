@@ -10,6 +10,7 @@ vocabulary <http://iso.org/iso-80000/6.1-v#> as iso-80000-6.1-v {
 
     concept ElectricCurrent < iso-80000-1-v:Quantity [
         restricts vim3-v:isSameKindAs to iso-80000-6.1-d:electric_current
+        restricts all vim3-v:hasMagnitude to ElectricCurrentValue
     ]
 
     concept ElectricCurrentUnit < iso-80000-1-v:Unit [

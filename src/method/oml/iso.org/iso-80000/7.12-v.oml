@@ -10,6 +10,7 @@ vocabulary <http://iso.org/iso-80000/7.12-v#> as iso-80000-7.12-v {
 
     concept LuminousIntensity < iso-80000-1-v:Quantity [
         restricts vim3-v:isSameKindAs to iso-80000-7.12-d:luminous_intensity
+        restricts all vim3-v:hasMagnitude to LuminousIntensityValue
     ]
 
     concept LuminousIntensityUnit < iso-80000-1-v:Unit [

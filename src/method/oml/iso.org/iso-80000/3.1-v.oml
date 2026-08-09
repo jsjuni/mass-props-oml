@@ -10,6 +10,7 @@ vocabulary <http://iso.org/iso-80000/3.1-v#> as iso-80000-3.1-v {
 
     concept Length < iso-80000-1-v:Quantity [
         restricts vim3-v:isSameKindAs to iso-80000-3.1-d:length
+        restricts all vim3-v:hasMagnitude to LengthValue
     ]
 
     concept LengthUnit < iso-80000-1-v:Unit [

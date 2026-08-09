@@ -10,6 +10,7 @@ vocabulary <http://iso.org/iso-80000/5.1-v#> as iso-80000-5.1-v {
 
     concept ThermodynamicTemperature < iso-80000-1-v:Quantity [
         restricts vim3-v:isSameKindAs to iso-80000-5.1-d:thermodynamic_temperature
+        restricts all vim3-v:hasMagnitude to ThermodynamicTemperatureValue
     ]
 
     concept ThermodynamicTemperatureUnit < iso-80000-1-v:Unit [
