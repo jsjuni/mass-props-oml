@@ -13,6 +13,12 @@ vocabulary <http://iso.org/iso-80000/3.1-v#> as iso-80000-3.1-v {
         restricts all vim3-v:hasMagnitude to LengthValue
     ]
 
+    relation isLengthOf [
+        from vim3-v:Object
+        to Length
+        reverse hasLength
+    ] < vim3-v:isPropertyOf
+    
     concept LengthUnit < iso-80000-1-v:Unit [
         restricts vim3-v:isSameKindAs to iso-80000-3.1-d:length
     ]

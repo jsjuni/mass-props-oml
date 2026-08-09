@@ -13,6 +13,12 @@ vocabulary <http://iso.org/iso-80000/6.1-v#> as iso-80000-6.1-v {
         restricts all vim3-v:hasMagnitude to ElectricCurrentValue
     ]
 
+    relation isElectricCurrentOf [
+        from vim3-v:Object
+        to ElectricCurrent
+        reverse hasElectricCurrent
+    ] < vim3-v:isPropertyOf
+    
     concept ElectricCurrentUnit < iso-80000-1-v:Unit [
         restricts vim3-v:isSameKindAs to iso-80000-6.1-d:electric_current
     ]

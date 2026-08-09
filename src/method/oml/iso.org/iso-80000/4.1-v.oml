@@ -13,6 +13,12 @@ vocabulary <http://iso.org/iso-80000/4.1-v#> as iso-80000-4.1-v {
         restricts all vim3-v:hasMagnitude to MassValue
     ]
 
+    relation isMassOf [
+        from vim3-v:Object
+        to Mass
+        reverse hasMass
+    ] < vim3-v:isPropertyOf
+    
     concept MassUnit < iso-80000-1-v:Unit [
         restricts vim3-v:isSameKindAs to iso-80000-4.1-d:mass
     ]

@@ -13,6 +13,12 @@ vocabulary <http://iso.org/iso-80000/5.1-v#> as iso-80000-5.1-v {
         restricts all vim3-v:hasMagnitude to ThermodynamicTemperatureValue
     ]
 
+    relation isThermodynamicTemperatureOf [
+        from vim3-v:Object
+        to ThermodynamicTemperature
+        reverse hasThermodynamicTemperature
+    ] < vim3-v:isPropertyOf
+    
     concept ThermodynamicTemperatureUnit < iso-80000-1-v:Unit [
         restricts vim3-v:isSameKindAs to iso-80000-5.1-d:thermodynamic_temperature
     ]

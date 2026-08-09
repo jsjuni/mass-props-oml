@@ -13,6 +13,12 @@ vocabulary <http://iso.org/iso-80000/4.7-v#> as iso-80000-4.7-v {
         restricts all vim3-v:hasMagnitude to MomentOfInertiaValue
     ]
 
+    relation isMomentOfInertiaOf [
+        from vim3-v:Object
+        to MomentOfInertia
+        reverse hasMomentOfInertia
+    ] < vim3-v:isPropertyOf
+    
     concept MomentOfInertiaUnit < iso-80000-1-v:Unit [
         restricts vim3-v:isSameKindAs to iso-80000-4.7-d:moment_of_inertia
     ]

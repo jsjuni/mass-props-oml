@@ -15,6 +15,12 @@ vocabulary <http://iso.org/iso-80000/3.16-v#> as iso-80000-3.16-v {
         restricts all vim3-v:hasMagnitude to RotationValue
     ]
 
+    relation isRotationOf [
+        from vim3-v:Object
+        to Rotation
+        reverse hasRotation
+    ] < vim3-v:isPropertyOf
+    
     concept RotationValue < iso-80000-1-v:Value [
         restricts all vim3-v:expressesMagnitudeOf to Rotation
         restricts vim3-v:hasReference to iso-80000-1-d:one

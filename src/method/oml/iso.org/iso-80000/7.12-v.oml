@@ -13,6 +13,12 @@ vocabulary <http://iso.org/iso-80000/7.12-v#> as iso-80000-7.12-v {
         restricts all vim3-v:hasMagnitude to LuminousIntensityValue
     ]
 
+    relation isLunimousIntensityOf [
+        from vim3-v:Object
+        to LuminousIntensity
+        reverse hasLuminousIntensity
+    ] < vim3-v:isPropertyOf
+    
     concept LuminousIntensityUnit < iso-80000-1-v:Unit [
         restricts vim3-v:isSameKindAs to iso-80000-7.12-d:luminous_intensity
     ]
