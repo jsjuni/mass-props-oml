@@ -7,9 +7,17 @@ vocabulary <http://iso.org/iso-80000/1-v#> as iso-80000-1-v {
 
     uses <http://iso.org/iso-80000/1-d#> as iso-80000-1-d
 
+    @dc:description """Dimension contains those and only those dimensions that are defined as base dimensions in the ISQ.
+                    It classifies provenance and metrology."""
     concept Dimension [
         key vim3-v:hasDimensionSymbol
     ] < vim3-v:BaseDimension 
+
+    @dc:description """Quantity contains those quantities whose definition is consistent with the semantics
+                    of quantity as defined in VIM3 and ISQ. It classifies metrology, not provenance."""
+    concept Quantity [
+        key hasQuantityIdentifier
+    ] < vim3-v:Quantity
 
     scalar property hasQuantityIdentifier [
         domain Quantity
@@ -17,10 +25,8 @@ vocabulary <http://iso.org/iso-80000/1-v#> as iso-80000-1-v {
         functional
     ] < vim3-v:hasQuantityIdentifier
 
-    concept Quantity [
-        key hasQuantityIdentifier
-    ] < vim3-v:Quantity
-
+    @dc:description """BaseQuantity contains those and only those quantities that are defined as base quantities in the ISQ.
+                    It classifies provenance, not metrology."""
     aspect BaseQuantity < [
         restricts vim3-v:isBaseQuantityIn to iso-80000-1-d:ISQ
     ]
@@ -32,11 +38,15 @@ vocabulary <http://iso.org/iso-80000/1-v#> as iso-80000-1-v {
         inverse functional
     ]
 
+    @dc:description """DerivedQuantity contains those and only those quantities that are defined as derived quantities in the ISQ.
+                    It classifies provenance, not metrology."""
     aspect DerivedQuantity < [
         restricts vim3-v:isDerivedQuantityIn to iso-80000-1-d:ISQ
     ]
 
-    aspect QuantityOfDimensionOne < vim3-v:QuantityOfDimensionOne, DerivedQuantity
+    @dc:description """QuantityOfDimensionOne contains those quantities whose definition is consistent with the semantics
+                    of quantity of dimension one as defined in VIM3 and SI. It classifies metrology, not provenance."""
+    concept QuantityOfDimensionOne < vim3-v:QuantityOfDimensionOne, Quantity
 
     scalar property hasUnitIdentifier [
         domain Unit
@@ -44,11 +54,15 @@ vocabulary <http://iso.org/iso-80000/1-v#> as iso-80000-1-v {
         functional
     ] < vim3-v:hasMeasurementUnitIdentifier
 
+    @dc:description """Unit contains those units whose definition is consistent with the semantics
+                    of unit as defined in VIM3 and SI. It classifies metrology, not provenance."""
     concept Unit [
         key hasUnitIdentifier
     ] < vim3-v:MeasurementUnit, vim3-v:Reference, Quantity
 
-    aspect BaseUnit < [
+    @dc:description """BaseUnit contains those and only those units that are defined as base units in the SI.
+                    It classifies provenance, not metrology."""
+     aspect BaseUnit < [
         restricts vim3-v:isBaseUnitIn to iso-80000-1-d:SI
     ]
 
@@ -59,6 +73,8 @@ vocabulary <http://iso.org/iso-80000/1-v#> as iso-80000-1-v {
         inverse functional
     ]
 
+    @dc:description """DerivedUnit contains those and only those units that are defined as derived units in the SI.
+                    It classifies provenance, not metrology."""
     aspect DerivedUnit < [
         restricts vim3-v:isDerivedUnitIn to iso-80000-1-d:SI
     ]
@@ -70,6 +86,8 @@ vocabulary <http://iso.org/iso-80000/1-v#> as iso-80000-1-v {
         inverse functional
     ]
 
+    @dc:description """CoherentDerivedUnit contains those and only those units that are defined as coherent derived units in the SI.
+                    It classifies provenance, not metrology."""
     aspect CoherentDerivedUnit < DerivedUnit [
          restricts vim3-v:isCoherentDerivedUnitIn to iso-80000-1-d:SI
     ]
