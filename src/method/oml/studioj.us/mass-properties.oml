@@ -8,18 +8,26 @@ vocabulary <http://studioj.us/mass-properties#> as mass-properties {
 
     concept Mass < iso-80000-4.1-v:Mass 
 
+    relation isMassOf < vim3-v:isPropertyOf
+
     // later
     concept CenterOfMass < iso-80000-3.1-v:Length
 
     concept CenterOfMassCoordinate < iso-80000-3.1-v:Length
+
+    relation isCenterOfMassCoordinateOf < vim3-v:isPropertyOf
 
     // later
     concept InertiaTensor < iso-80000-4.7-v:MomentOfInertia
 
     concept MomentOfInertia < iso-80000-4.7-v:MomentOfInertia
 
+    relation isMomentOfInertiaOf < vim3-v:isPropertyOf
+
     concept ProductOfInertia < iso-80000-4.7-v:MomentOfInertia
 
+    relation isProductOfInertiaOf < vim3-v:isPropertyOf
+    
     scalar poiConvention [
         oneOf "+", "-"
     ]
