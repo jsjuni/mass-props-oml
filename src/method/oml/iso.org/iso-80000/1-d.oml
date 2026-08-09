@@ -12,7 +12,7 @@ description <http://iso.org/iso-80000/1-d#> as iso-80000-1-d {
 	]
   
 	instance one : iso-80000-1-v:Unit, iso-80000-1-v:CoherentDerivedUnit [
-		iso-80000-1-v:hasUnitIdentifier 
+		iso-80000-1-v:hasUnitIdentifier "one"
 	]
 
     @rdfs:comment "The International System of Units"
