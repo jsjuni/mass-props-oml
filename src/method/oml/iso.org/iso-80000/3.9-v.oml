@@ -8,6 +8,7 @@ vocabulary <http://iso.org/iso-80000/3.9-v#> as iso-80000-3.9-v {
 
     uses <http://iso.org/iso-80000/3.9-d#> as iso-80000-3.9-d
 
+    @dc:description """Time is the class of all quantities of kind time. It classifies metrology, not provenance."""
     concept Time < iso-80000-1-v:Quantity [
         restricts vim3-v:isSameKindAs to iso-80000-3.9-d:time
         restricts all vim3-v:hasMagnitude to TimeValue

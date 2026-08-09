@@ -8,6 +8,8 @@ vocabulary <http://iso.org/iso-80000/5.1-v#> as iso-80000-5.1-v {
 
     uses <http://iso.org/iso-80000/5.1-d#> as iso-80000-5.1-d
 
+    @dc:description """ThermodynamicTemperature is the class of all quantities of kind thermodynamic_temperature.
+                    It classifies metrology, not provenance."""
     concept ThermodynamicTemperature < iso-80000-1-v:Quantity [
         restricts vim3-v:isSameKindAs to iso-80000-5.1-d:thermodynamic_temperature
         restricts all vim3-v:hasMagnitude to ThermodynamicTemperatureValue

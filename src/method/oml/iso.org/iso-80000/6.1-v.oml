@@ -8,6 +8,8 @@ vocabulary <http://iso.org/iso-80000/6.1-v#> as iso-80000-6.1-v {
 
 	uses <http://iso.org/iso-80000/6.1-d#> as iso-80000-6.1-d
 
+    @dc:description """ElectricCurrent is the class of all quantities of kind electric_current.
+                    It classifies metrology, not provenance."""
     concept ElectricCurrent < iso-80000-1-v:Quantity [
         restricts vim3-v:isSameKindAs to iso-80000-6.1-d:electric_current
         restricts all vim3-v:hasMagnitude to ElectricCurrentValue

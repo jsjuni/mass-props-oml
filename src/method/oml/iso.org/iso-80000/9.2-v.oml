@@ -8,6 +8,8 @@ vocabulary <http://iso.org/iso-80000/9.2-v#> as iso-80000-9.2-v {
 
 	uses <http://iso.org/iso-80000/9.2-d#> as iso-80000-9.2-d
 
+    @dc:description """AmountOfSubstance is the class of all quantities of kind amount of substance.
+                    It classifies metrology, not provenance."""
     concept AmountOfSubstance < iso-80000-1-v:Quantity [
         restricts vim3-v:isSameKindAs to iso-80000-9.2-d:amount_of_substance
         restricts all vim3-v:hasMagnitude to AmountOfSubstanceValue

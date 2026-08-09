@@ -8,6 +8,8 @@ vocabulary <http://iso.org/iso-80000/7.12-v#> as iso-80000-7.12-v {
 
 	uses <http://iso.org/iso-80000/7.12-d#> as iso-80000-7.12-d
 
+    @dc:description """LuminousIntensity is the class of all quantities of kind luminous_intensity.
+                    It classifies metrology, not provenance."""
     concept LuminousIntensity < iso-80000-1-v:Quantity [
         restricts vim3-v:isSameKindAs to iso-80000-7.12-d:luminous_intensity
         restricts all vim3-v:hasMagnitude to LuminousIntensityValue

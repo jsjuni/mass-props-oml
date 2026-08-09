@@ -10,7 +10,8 @@ vocabulary <http://iso.org/iso-80000/3.16-v#> as iso-80000-3.16-v {
 
 	uses <http://iso.org/iso-80000/1-d#> as iso-80000-1-d
 
-    concept Rotation < iso-80000-1-v:Quantity [
+    @dc:description """Rotation is the class of all quantities of kind rotation. It classifies metrology, not provenance."""
+    concept Rotation < iso-80000-1-v:QuantityOfDimensionOne [
         restricts vim3-v:isSameKindAs to iso-80000-3.16-d:rotation
         restricts all vim3-v:hasMagnitude to RotationValue
     ]
