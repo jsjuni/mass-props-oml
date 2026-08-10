@@ -1,0 +1,42 @@
+description bundle <http://studioj.us/mass-props-oml/slice-bundle#> as slice-description-bundle {
+    uses <http://studioj.us/bundle-v#> as studioj-bundle-v
+    extends <http://studioj.us/bundle-d#> as studioj-bundle-d    includes <http://studioj.us/mass-props-oml/WP.4.2.2.1/QV#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2.2/QV#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2.3/QV#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2.4/QV#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2.5/QV#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.1#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.2#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.3#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.4#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.5#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2/IF/C.1.2.2.1#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2/IF/C.1.2.2.2#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2/IF/C.1.2.2.3#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2/IF/C.1.2.2.4#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2/IF/C.1.2.2.5#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2/IT/IT.C.1.2.2.1_out#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2/IT/IT.C.1.2.2.2_out#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2/IT/IT.C.1.2.2.3_out#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2/IT/IT.C.1.2.2.4_out#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2/Q/C.1.2.2.1#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2/Q/C.1.2.2.2#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2/Q/C.1.2.2.3#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2/Q/C.1.2.2.4#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2/Q/C.1.2.2.5#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2/QV#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2/SBS#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2/SIS#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2/WBS#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2/WP/WP.4.2.2.1#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2/WP/WP.4.2.2.2#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2/WP/WP.4.2.2.3#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2/WP/WP.4.2.2.4#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2.2/WP/WP.4.2.2.5#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2/C/C.1.2.2#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2/IF/C.1.2.2#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2/IT/IT.C.1.2.1_out#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2/IT/IT.C.1.2.2_out#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2/Q/C.1.2.2#>
+    includes <http://studioj.us/mass-props-oml/WP.4.2/WP/WP.4.2.2#>
+}
