@@ -1,4 +1,4 @@
-description bundle <http://studioj.us/mass-props-oml/slice-bundle#> as slice-description-bundle {
+description bundle <http://studioj.us/mass-props-oml/4.2.2-bundle#> as slice-description-bundle {
     uses <http://studioj.us/bundle-v#> as studioj-bundle-v
     extends <http://studioj.us/bundle-d#> as studioj-bundle-d    includes <http://studioj.us/mass-props-oml/WP.4.2.2.1/QV#>
     includes <http://studioj.us/mass-props-oml/WP.4.2.2.2/QV#>

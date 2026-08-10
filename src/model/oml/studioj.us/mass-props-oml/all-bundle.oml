@@ -1,4 +1,4 @@
-description bundle <http://studioj.us/mass-props-oml/bundle#> as description-bundle {
+description bundle <http://studioj.us/mass-props-oml/all-bundle#> as description-bundle {
     uses <http://studioj.us/bundle-v#> as studioj-bundle-v
     extends <http://studioj.us/bundle-d#> as studioj-bundle-d
     includes <http://studioj.us/mass-props-oml/P.1/P#>
