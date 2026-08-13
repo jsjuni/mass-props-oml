@@ -1,4 +1,4 @@
-vocabulary <http://studioj.us/mass-properties#> as mass-properties {
+vocabulary <http://studioj.us/mass-properties-v#> as mass-properties-v {
     extends <http://www.w3.org/2001/XMLSchema#> as xsd
     extends <http://imce.jpl.nasa.gov/foundation/mission#> as mission 
     extends <http://bipm.org/jcgm/vim3-v#> as vim3-v

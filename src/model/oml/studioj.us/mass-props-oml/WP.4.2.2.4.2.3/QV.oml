@@ -4,7 +4,7 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2.4.2.3/QV#> as WP.4.2.2.4.
     uses <http://purl.org/dc/elements/1.1/> as dc
     uses <http://www.w3.org/2001/XMLSchema#> as xsd
     uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
-    uses <http://studioj.us/mass-properties#> as mass-properties
+    uses <http://studioj.us/mass-properties-v#> as mass-properties
     uses <http://bipm.org/jcgm/vim3-v#> as vim3-v
     extends <http://studioj.us/mass-props-oml/WP.4.2.2.4.2/Q/C.1.2.2.4.2.3#> as C.1.2.2.4.2.3_Q
     extends <http://studioj.us/mass-props-oml/WP.4.2.2.4.2/C/C.1.2.2.4.2.3#> as C.1.2.2.4.2.3

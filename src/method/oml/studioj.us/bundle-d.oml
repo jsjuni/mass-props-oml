@@ -1,4 +1,5 @@
 description bundle <http://studioj.us/bundle-d#> as studioj-bundle-d {
 
     extends <http://iso.org/iso-80000/bundle-d#>
+    includes <http://studioj.us/mass-properties-d#>
 }

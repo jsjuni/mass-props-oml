@@ -1,0 +1,16 @@
+description <http://studioj.us/mass-properties-d#> as mass-properties-d {
+
+	uses <http://iso.org/iso-80000/1-v#> as iso-80000-1-v
+
+	uses <http://iso.org/iso-80000/4.7-v#> as iso-80000-4.7-v
+
+	extends <http://iso.org/iso-80000/4.7-d#> as iso-80000-4.7-d
+
+	extends <http://iso.org/iso-80000/1-d#> as iso-80000-1-d
+
+    instance kilogram_millimetre_squared : iso-80000-4.7-v:MomentOfInertiaUnit, iso-80000-1-v:SubmultipleOfUnit [
+        iso-80000-1-v:hasUnitIdentifier "kilogram millimeter squared"
+        iso-80000-1-v:multipliesUnit iso-80000-4.7-d:kilogram_metre_squared
+        iso-80000-1-v:byMultiple iso-80000-1-d:micro // milli^2
+    ]
+}

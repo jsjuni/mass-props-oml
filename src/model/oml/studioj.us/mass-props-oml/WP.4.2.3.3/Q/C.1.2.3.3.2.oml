@@ -5,7 +5,7 @@ description <http://studioj.us/mass-props-oml/WP.4.2.3.3/Q/C.1.2.3.3.2#> as C.1.
     uses <http://www.w3.org/2001/XMLSchema#> as xsd
     uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
     uses <http://bipm.org/jcgm/vim3-v#> as vim3-v
-    uses <http://studioj.us/mass-properties#> as mass-properties
+    uses <http://studioj.us/mass-properties-v#> as mass-properties
     extends <http://studioj.us/mass-props-oml/WP.4.2.3.3/C/C.1.2.3.3.2#> as C.1.2.3.3.2
 
     @rdfs:label "mass"
