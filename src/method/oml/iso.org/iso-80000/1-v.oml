@@ -101,4 +101,198 @@ vocabulary <http://iso.org/iso-80000/1-v#> as iso-80000-1-v {
 
     concept Value < vim3-v:QuantityValue
     
-}
+    //
+    //
+    // temporary location for tensor shape mechanism
+    //
+    //
+
+    //
+    // tensor component description
+    //
+
+    aspect TensorComponentDescription
+
+    scalar property hasComponentCardinality [
+        domain TensorComponentDescription
+        range xsd:positiveInteger
+    ]
+
+    //
+    // tensor component description list
+    //
+
+    aspect TensorComponentDescriptionList
+
+    relation hasTensorComponentDescription [
+        from TensorComponentDescriptionList
+        to TensorShape
+        functional
+    ]
+
+    relation isFollowedBy [
+        from TensorComponentDescriptionList
+        to TensorComponentDescriptionList
+       transitive
+    ]
+
+    relation hasNext [
+        from TensorComponentDescriptionList
+        to TensorComponentDescriptionList
+        functional
+        irreflexive
+        asymmetric
+    ] < isFollowedBy
+
+    aspect EmptyTensorComponentDescriptionList < TensorComponentDescriptionList [
+        restricts hasNext to exactly 0
+    ]
+
+    aspect VectorComponentDescriptionList < TensorComponentDescriptionList [
+        // restricts isFollowedBy to exactly 2 // 1 plus list terminator
+    ]
+
+    aspect MatrixComponentDescriptionList< TensorComponentDescriptionList [
+        // restricts isFollowedBy to exactly 3 // 2 plus list terminator
+    ]
+
+    //
+    // tensor shape
+    //
+
+    relation isSameShapeAs [
+        from Quantity
+        to TensorShape
+        functional
+    ]
+
+    aspect TensorShape [
+        key hasTensorShapeIdentifier
+    ]
+
+    scalar property hasTensorShapeIdentifier [
+        domain TensorShape
+        range xsd:string
+        functional
+    ]
+
+    scalar property hasTensorOrder [
+        domain TensorShape
+        range xsd:nonNegativeInteger
+        functional
+    ]
+
+    relation hasTensorComponentDescriptionList [
+        from TensorShape
+        to TensorComponentDescriptionList
+        functional
+    ]
+
+    scalar field_type [
+        oneOf "real", "complex"
+    ]
+
+    scalar property hasFieldType [
+        domain TensorShape
+        range field_type
+        functional
+    ]
+
+    scalar property isHomogeneous [
+        domain TensorShape
+        range xsd:boolean
+        functional
+    ]
+
+    scalar property isCartesian [
+        domain TensorShape
+        range xsd:boolean
+        functional
+    ]
+
+    aspect CartesianComponentDescription < TensorShape [
+        restricts isCartesian to true
+    ]
+    
+    aspect RealTensorShape < TensorShape [
+        restricts hasFieldType to "real"
+    ]
+    
+    aspect ComplexTensorShape < TensorShape [
+        restricts hasFieldType to "complex"
+    ]
+    
+    aspect ScalarTensorShape < TensorShape [
+        restricts hasTensorOrder to 0
+        restricts hasTensorComponentDescriptionList to max 0
+    ]
+
+    aspect HigherOrderTensorShape < TensorShape [
+        restricts all hasTensorOrder to xsd:nonPositiveInteger
+        restricts hasTensorComponentDescriptionList to min 1
+    ]
+
+    aspect VectorTensorShape < TensorShape [
+        restricts hasTensorOrder to 1
+        restricts all hasTensorComponentDescriptionList to VectorComponentDescriptionList
+    ]
+
+    aspect MatrixTensorShape < TensorShape [
+        restricts hasTensorOrder to 2
+        restricts all hasTensorComponentDescriptionList to MatrixComponentDescriptionList
+    ]
+
+    aspect HomogeneousTensorShape < TensorShape [
+        restricts isHomogeneous to true
+    ]
+
+    aspect RealMatrix3x3Quantity < [
+        restricts isSameShapeAs to iso-80000-1-d:real_matrix_3x3_tensor_shape
+    ]
+
+    //
+    //
+    // multiples and submultiples
+    //
+    //
+
+    aspect Multiple [
+        key hasPrefixSymbol
+    ]
+
+    scalar property hasPrefixSymbol [
+        domain Multiple
+        range xsd:string
+        functional
+    ]
+
+    scalar property hasPrefixName [
+        domain Multiple
+        range xsd:string
+    ]
+
+    scalar property hasFactor [
+        domain Multiple
+        range xsd:double
+        functional
+    ]
+
+    aspect MultipleOrSubmultipleOfUnit
+
+    relation multipliesUnit [
+        from MultipleOrSubmultipleOfUnit
+        to Unit
+        functional
+    ]
+
+    relation byMultiple [
+        from MultipleOrSubmultipleOfUnit
+        to Multiple
+        functional
+    ]
+
+    aspect MultipleOfUnit < MultipleOrSubmultipleOfUnit
+
+    aspect SubmultipleOfUnit < MultipleOrSubmultipleOfUnit
+
+ }

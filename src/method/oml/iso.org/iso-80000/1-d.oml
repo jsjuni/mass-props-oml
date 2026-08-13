@@ -6,6 +6,8 @@ description <http://iso.org/iso-80000/1-d#> as iso-80000-1-d {
 	uses <http://bipm.org/jcgm/vim3-v#> as vim3-v
 	uses <http://iso.org/iso-80000/1-v#> as iso-80000-1-v
 
+	uses <http://www.w3.org/2001/XMLSchema#> as xsd
+
 	@rdfs:comment "The International System of Quantities"
     instance ISQ : vim3-v:SystemOfQuantities [
     	vim3-v:hasSystemOfQuantitiesIdentifier "ISQ"
@@ -22,4 +24,200 @@ description <http://iso.org/iso-80000/1-d#> as iso-80000-1-d {
 		vim3-v:isSystemOfUnitsFor ISQ
 	]
 	
+	//
+	//
+	// placeholder
+	//
+	//
+
+	instance empty_tensor_component_description_list : iso-80000-1-v:EmptyTensorComponentDescriptionList
+
+	//
+	// scalar shapes
+	//
+
+	instance scalar_component_description_list : iso-80000-1-v:TensorComponentDescriptionList [
+		iso-80000-1-v:hasNext empty_tensor_component_description_list
+	]
+
+	instance real_scalar_tensor_shape : iso-80000-1-v:RealTensorShape, iso-80000-1-v:ScalarTensorShape
+
+	instance complex_scalar_tensor_shape : iso-80000-1-v:ComplexTensorShape, iso-80000-1-v:ScalarTensorShape
+
+	//
+	// vector shapes
+	//
+
+	// double
+
+	instance vector_2_component_description_list : iso-80000-1-v:VectorComponentDescriptionList [
+		iso-80000-1-v:hasNext empty_tensor_component_description_list
+		iso-80000-1-v:hasComponentCardinality 2
+	]
+
+	instance real_vector_2_tensor_shape : iso-80000-1-v:RealTensorShape, iso-80000-1-v:HomogeneousTensorShape, iso-80000-1-v:VectorTensorShape [
+		iso-80000-1-v:hasTensorComponentDescriptionList vector_2_component_description_list
+	]
+
+	instance complex_vector_2_tensor_shape : iso-80000-1-v:ComplexTensorShape, iso-80000-1-v:HomogeneousTensorShape, iso-80000-1-v:VectorTensorShape [
+		iso-80000-1-v:hasTensorComponentDescriptionList vector_2_component_description_list
+	]
+
+	// triple
+
+	instance vector_3_component_description_list : iso-80000-1-v:VectorComponentDescriptionList [
+		iso-80000-1-v:hasNext empty_tensor_component_description_list
+		iso-80000-1-v:hasComponentCardinality 3
+	]
+
+	instance real_vector_3_tensor_shape : iso-80000-1-v:RealTensorShape, iso-80000-1-v:HomogeneousTensorShape, iso-80000-1-v:VectorTensorShape [
+		iso-80000-1-v:hasTensorComponentDescriptionList vector_3_component_description_list
+	]
+
+	instance complex_vector_3_tensor_shape : iso-80000-1-v:ComplexTensorShape, iso-80000-1-v:HomogeneousTensorShape, iso-80000-1-v:VectorTensorShape [
+		iso-80000-1-v:hasTensorComponentDescriptionList vector_3_component_description_list
+	]
+
+	//
+	// matrix shapes
+	//
+
+	// 2 x 2
+
+	instance matrix_2x2_component_description_list : iso-80000-1-v:MatrixComponentDescriptionList [
+		iso-80000-1-v:hasNext vector_2_component_description_list
+		iso-80000-1-v:hasComponentCardinality 2
+	]
+
+	instance real_matrix_2x2_tensor_shape : iso-80000-1-v:RealTensorShape, iso-80000-1-v:HomogeneousTensorShape, iso-80000-1-v:MatrixTensorShape [
+		iso-80000-1-v:hasTensorComponentDescriptionList matrix_2x2_component_description_list
+	]
+
+	instance complex_matrix_2x2_tensor_shape : iso-80000-1-v:ComplexTensorShape, iso-80000-1-v:HomogeneousTensorShape, iso-80000-1-v:MatrixTensorShape [
+		iso-80000-1-v:hasTensorComponentDescriptionList matrix_2x2_component_description_list
+	]
+
+	// 3 x 3
+
+	instance matrix_3x3_component_description_list : iso-80000-1-v:MatrixComponentDescriptionList [
+		iso-80000-1-v:hasNext vector_3_component_description_list
+		iso-80000-1-v:hasComponentCardinality 3
+	]
+
+	instance real_matrix_3x3_tensor_shape : iso-80000-1-v:RealTensorShape, iso-80000-1-v:HomogeneousTensorShape, iso-80000-1-v:MatrixTensorShape [
+		iso-80000-1-v:hasTensorComponentDescriptionList matrix_3x3_component_description_list
+	]
+
+	instance complex_matrix_3x3_tensor_shape : iso-80000-1-v:ComplexTensorShape, iso-80000-1-v:HomogeneousTensorShape, iso-80000-1-v:MatrixTensorShape [
+		iso-80000-1-v:hasTensorComponentDescriptionList matrix_3x3_component_description_list
+	]
+	
+    //
+    //
+    // multiples and submultiples
+    //
+    //
+
+ 
+    instance yotta : iso-80000-1-v:Multiple [
+        iso-80000-1-v:hasPrefixSymbol "Y"
+        iso-80000-1-v:hasPrefixName "yotta"
+        iso-80000-1-v:hasFactor "1e24"^^xsd:double
+    ]
+    instance zetta : iso-80000-1-v:Multiple [
+        iso-80000-1-v:hasPrefixSymbol "Z"
+        iso-80000-1-v:hasPrefixName "zetta"
+        iso-80000-1-v:hasFactor "1e21"^^xsd:double
+    ]
+    instance exa : iso-80000-1-v:Multiple [
+        iso-80000-1-v:hasPrefixSymbol "E"
+        iso-80000-1-v:hasPrefixName "exa"
+        iso-80000-1-v:hasFactor "1e18"^^xsd:double
+    ]
+    instance peta : iso-80000-1-v:Multiple [
+        iso-80000-1-v:hasPrefixSymbol "P"
+        iso-80000-1-v:hasPrefixName "peta"
+        iso-80000-1-v:hasFactor "1e15"^^xsd:double
+    ]
+    instance tera : iso-80000-1-v:Multiple [
+        iso-80000-1-v:hasPrefixSymbol "T"
+        iso-80000-1-v:hasPrefixName "tera"
+        iso-80000-1-v:hasFactor "1e12"^^xsd:double
+    ]
+    instance giga : iso-80000-1-v:Multiple [
+        iso-80000-1-v:hasPrefixSymbol "G"
+        iso-80000-1-v:hasPrefixName "giga"
+        iso-80000-1-v:hasFactor "1e9"^^xsd:double
+    ]
+    instance mega : iso-80000-1-v:Multiple [
+        iso-80000-1-v:hasPrefixSymbol "M"
+        iso-80000-1-v:hasPrefixName "mega"
+        iso-80000-1-v:hasFactor "1e6"^^xsd:double
+    ]
+    instance kilo : iso-80000-1-v:Multiple [
+        iso-80000-1-v:hasPrefixSymbol "k"
+        iso-80000-1-v:hasPrefixName "kilo"
+        iso-80000-1-v:hasFactor "1e3"^^xsd:double
+    ]
+    instance hecto : iso-80000-1-v:Multiple [
+        iso-80000-1-v:hasPrefixSymbol "h"
+        iso-80000-1-v:hasPrefixName "hecto"
+        iso-80000-1-v:hasFactor "1e2"^^xsd:double
+    ]
+    instance deca : iso-80000-1-v:Multiple [
+        iso-80000-1-v:hasPrefixSymbol "da"
+        iso-80000-1-v:hasPrefixName "deca"
+        iso-80000-1-v:hasFactor "1e1"^^xsd:double
+    ]
+    instance deci : iso-80000-1-v:Multiple [
+        iso-80000-1-v:hasPrefixSymbol "d"
+        iso-80000-1-v:hasPrefixName "deci"
+        iso-80000-1-v:hasFactor "1e-1"^^xsd:double
+    ]
+    instance centi : iso-80000-1-v:Multiple [
+        iso-80000-1-v:hasPrefixSymbol "c"
+        iso-80000-1-v:hasPrefixName "centi"
+        iso-80000-1-v:hasFactor "1e-2"^^xsd:double
+    ]
+    instance milli : iso-80000-1-v:Multiple [
+        iso-80000-1-v:hasPrefixSymbol "m"
+        iso-80000-1-v:hasPrefixName "milli"
+        iso-80000-1-v:hasFactor "1e-3"^^xsd:double
+    ]
+    instance micro : iso-80000-1-v:Multiple [
+        iso-80000-1-v:hasPrefixSymbol "µ"
+        iso-80000-1-v:hasPrefixName "micro"
+        iso-80000-1-v:hasFactor "1e-6"^^xsd:double
+    ]
+    instance nano : iso-80000-1-v:Multiple [
+        iso-80000-1-v:hasPrefixSymbol "n"
+        iso-80000-1-v:hasPrefixName "nano"
+        iso-80000-1-v:hasFactor "1e-9"^^xsd:double
+    ]
+    instance pico : iso-80000-1-v:Multiple [
+        iso-80000-1-v:hasPrefixSymbol "p"
+        iso-80000-1-v:hasPrefixName "pico"
+        iso-80000-1-v:hasFactor "1e-12"^^xsd:double
+    ]
+    instance femto : iso-80000-1-v:Multiple [
+        iso-80000-1-v:hasPrefixSymbol "f"
+        iso-80000-1-v:hasPrefixName "femto"
+        iso-80000-1-v:hasFactor "1e-15"^^xsd:double
+    ]
+    instance atto : iso-80000-1-v:Multiple [
+        iso-80000-1-v:hasPrefixSymbol "a"
+        iso-80000-1-v:hasPrefixName "atto"
+        iso-80000-1-v:hasFactor "1e-18"^^xsd:double
+    ]
+    instance zepto : iso-80000-1-v:Multiple [
+        iso-80000-1-v:hasPrefixSymbol "z"
+        iso-80000-1-v:hasPrefixName "zepto"
+        iso-80000-1-v:hasFactor "1e-21"^^xsd:double
+    ]
+    instance yocto : iso-80000-1-v:Multiple [
+        iso-80000-1-v:hasPrefixSymbol "y"
+        iso-80000-1-v:hasPrefixName "yocto"
+        iso-80000-1-v:hasFactor "1e-24"^^xsd:double
+    ]
+
 }

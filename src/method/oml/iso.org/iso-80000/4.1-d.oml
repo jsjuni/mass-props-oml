@@ -8,6 +8,8 @@ description <http://iso.org/iso-80000/4.1-d#> as iso-80000-4.1-d {
     uses <http://iso.org/iso-80000/1-v#> as iso-80000-1-v
     uses <http://iso.org/iso-80000/4.1-v#> as iso-80000-4.1-v
 
+	extends <http://iso.org/iso-80000/1-d#> as iso-80000-1-d
+
     instance M : iso-80000-1-v:Dimension [
         vim3-v:hasDimensionSymbol "M"
     ]
@@ -28,4 +30,11 @@ description <http://iso.org/iso-80000/4.1-d#> as iso-80000-4.1-d {
         iso-80000-1-v:hasUnitIdentifier "kilogram"
         iso-80000-1-v:isBaseUnitFor mass
     ]
+
+    instance gram : iso-80000-4.1-v:MassUnit, iso-80000-1-v:SubmultipleOfUnit [
+        iso-80000-1-v:hasUnitIdentifier "gram"
+        iso-80000-1-v:multipliesUnit kilogram
+        iso-80000-1-v:byMultiple iso-80000-1-d:milli
+    ]
+
 }

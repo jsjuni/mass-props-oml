@@ -8,6 +8,8 @@ description <http://iso.org/iso-80000/3.1-d#> as iso-80000-3.1-d {
     uses <http://iso.org/iso-80000/1-v#> as iso-80000-1-v
     uses <http://iso.org/iso-80000/3.1-v#> as iso-80000-3.1-v
 
+	extends <http://iso.org/iso-80000/1-d#> as iso-80000-1-d
+
     instance L : iso-80000-1-v:Dimension [
         vim3-v:hasDimensionSymbol "L"
     ]
@@ -28,4 +30,17 @@ description <http://iso.org/iso-80000/3.1-d#> as iso-80000-3.1-d {
         iso-80000-1-v:hasUnitIdentifier "metre"
         iso-80000-1-v:isBaseUnitFor ^length
     ]
+
+   instance millimetre : iso-80000-3.1-v:LengthUnit, iso-80000-1-v:MultipleOfUnit [
+        iso-80000-1-v:hasUnitIdentifier "millimetre"
+        iso-80000-1-v:multipliesUnit metre
+        iso-80000-1-v:byMultiple iso-80000-1-d:milli
+    ]
+    
+    instance kilometre : iso-80000-3.1-v:LengthUnit, iso-80000-1-v:MultipleOfUnit [
+        iso-80000-1-v:hasUnitIdentifier "kilometre"
+        iso-80000-1-v:multipliesUnit metre
+        iso-80000-1-v:byMultiple iso-80000-1-d:kilo
+    ]
+
 }

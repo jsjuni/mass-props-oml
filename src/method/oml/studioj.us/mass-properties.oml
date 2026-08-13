@@ -6,6 +6,8 @@ vocabulary <http://studioj.us/mass-properties#> as mass-properties {
     extends <http://iso.org/iso-80000/4.1-v#> as iso-80000-4.1-v
     extends <http://iso.org/iso-80000/4.7-v#> as iso-80000-4.7-v
 
+	extends <http://iso.org/iso-80000/1-v#> as iso-80000-1-v
+
     concept Mass < iso-80000-4.1-v:Mass 
 
     relation isMassOf < vim3-v:isPropertyOf
@@ -53,4 +55,7 @@ vocabulary <http://studioj.us/mass-properties#> as mass-properties {
     concept ProductOfInertiaValue < iso-80000-4.7-v:MomentOfInertiaValue
 
     ref concept mission:Component < vim3-v:Object
+
+    concept InertiaTensor < iso-80000-4.7-v:MomentOfInertia, iso-80000-1-v:RealMatrix3x3Quantity
+    
 }
