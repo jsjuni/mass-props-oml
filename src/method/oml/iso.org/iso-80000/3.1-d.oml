@@ -31,16 +31,16 @@ description <http://iso.org/iso-80000/3.1-d#> as iso-80000-3.1-d {
         iso-80000-1-v:isBaseUnitFor ^length
     ]
 
-   instance millimetre : iso-80000-3.1-v:LengthUnit, iso-80000-1-v:MultipleOfUnit [
-        iso-80000-1-v:hasUnitIdentifier "millimetre"
-        iso-80000-1-v:multipliesUnit metre
-        iso-80000-1-v:byMultiple iso-80000-1-d:milli
-    ]
-    
     instance kilometre : iso-80000-3.1-v:LengthUnit, iso-80000-1-v:MultipleOfUnit [
         iso-80000-1-v:hasUnitIdentifier "kilometre"
         iso-80000-1-v:multipliesUnit metre
         iso-80000-1-v:byMultiple iso-80000-1-d:kilo
     ]
 
+   instance millimetre : iso-80000-3.1-v:LengthUnit, iso-80000-1-v:SubmultipleOfUnit [
+        iso-80000-1-v:hasUnitIdentifier "millimetre"
+        iso-80000-1-v:multipliesUnit metre
+        iso-80000-1-v:byMultiple iso-80000-1-d:milli
+    ]
+    
 }
