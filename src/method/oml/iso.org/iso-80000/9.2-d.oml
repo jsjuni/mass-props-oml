@@ -12,7 +12,7 @@ description <http://iso.org/iso-80000/9.2-d#> as iso-80000-9.2-d {
         vim3-v:hasDimensionSymbol "N"
     ]
 
-    instance amount_of_substance : iso-80000-9.2-v:AmountOfSubstance, iso-80000-1-v:BaseQuantity [
+    instance amount_of_substance : iso-80000-9.2-v:AmountOfSubstance, iso-80000-1-v:ISQBaseQuantity [
         iso-80000-1-v:hasQuantityIdentifier "amount of substance"
         vim3-v:hasQuantityDimension : vim3-v:QuantityDimension [
             vim3-v:hasDimensionFactor : vim3-v:BaseDimensionPower [ 
@@ -24,7 +24,7 @@ description <http://iso.org/iso-80000/9.2-d#> as iso-80000-9.2-d {
         iso-80000-1-v:hasDimension N
     ]
 
-    instance mole : iso-80000-9.2-v:AmountOfSubstanceUnit, iso-80000-1-v:BaseUnit [
+    instance mole : iso-80000-9.2-v:AmountOfSubstanceUnit, iso-80000-1-v:SIBaseUnit [
         iso-80000-1-v:hasUnitIdentifier "mole"
         iso-80000-1-v:isBaseUnitFor amount_of_substance
     ]

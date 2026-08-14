@@ -10,8 +10,10 @@ description <http://iso.org/iso-80000/4.7-d#> as iso-80000-4.7-d {
  
     extends <http://iso.org/iso-80000/3.1-d#> as iso-80000-3.1-d
     extends <http://iso.org/iso-80000/4.1-d#> as iso-80000-4.1-d
+
+	extends <http://iso.org/iso-80000/1-d#> as iso-80000-1-d
    
-    instance moment_of_inertia : iso-80000-4.7-v:MomentOfInertia, iso-80000-1-v:DerivedQuantity [
+    instance moment_of_inertia : iso-80000-4.7-v:MomentOfInertia, iso-80000-1-v:ISQDerivedQuantity [
         iso-80000-1-v:hasQuantityIdentifier "moment of inertia"
         vim3-v:hasQuantityDimension : vim3-v:QuantityDimension [
             vim3-v:hasDimensionFactor : vim3-v:BaseDimensionPower [ 
@@ -29,6 +31,14 @@ description <http://iso.org/iso-80000/4.7-d#> as iso-80000-4.7-d {
     instance kilogram_metre_squared : iso-80000-4.7-v:MomentOfInertiaUnit, iso-80000-1-v:CoherentDerivedUnit [
         iso-80000-1-v:hasUnitIdentifier "kilogram metre squared"
         iso-80000-1-v:isCoherentDerivedUnitFor moment_of_inertia
+    ]
+
+    // This would appear to be the official way to define kg mm^2. Can there be an alias?
+
+    instance milligram_metre_squared : iso-80000-4.7-v:MomentOfInertiaUnit, iso-80000-1-v:SISubmultipleOfUnit [
+        iso-80000-1-v:hasUnitIdentifier "milligram metre squared"
+        vim3-v:multipliesUnit kilogram_metre_squared
+        vim3-v:byMultiple iso-80000-1-d:micro // milli * milli
     ]
 
 }

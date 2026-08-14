@@ -120,104 +120,104 @@ description <http://iso.org/iso-80000/1-d#> as iso-80000-1-d {
 
  
     instance yotta : iso-80000-1-v:Multiple [
-        iso-80000-1-v:hasPrefixSymbol "Y"
-        iso-80000-1-v:hasPrefixName "yotta"
-        iso-80000-1-v:hasFactor "1e24"^^xsd:double
+        vim3-v:hasPrefixSymbol "Y"
+        vim3-v:hasPrefixName "yotta"
+        vim3-v:hasFactor "1e24"^^xsd:double
     ]
     instance zetta : iso-80000-1-v:Multiple [
-        iso-80000-1-v:hasPrefixSymbol "Z"
-        iso-80000-1-v:hasPrefixName "zetta"
-        iso-80000-1-v:hasFactor "1e21"^^xsd:double
+        vim3-v:hasPrefixSymbol "Z"
+        vim3-v:hasPrefixName "zetta"
+        vim3-v:hasFactor "1e21"^^xsd:double
     ]
     instance exa : iso-80000-1-v:Multiple [
-        iso-80000-1-v:hasPrefixSymbol "E"
-        iso-80000-1-v:hasPrefixName "exa"
-        iso-80000-1-v:hasFactor "1e18"^^xsd:double
+        vim3-v:hasPrefixSymbol "E"
+        vim3-v:hasPrefixName "exa"
+        vim3-v:hasFactor "1e18"^^xsd:double
     ]
     instance peta : iso-80000-1-v:Multiple [
-        iso-80000-1-v:hasPrefixSymbol "P"
-        iso-80000-1-v:hasPrefixName "peta"
-        iso-80000-1-v:hasFactor "1e15"^^xsd:double
+        vim3-v:hasPrefixSymbol "P"
+        vim3-v:hasPrefixName "peta"
+        vim3-v:hasFactor "1e15"^^xsd:double
     ]
     instance tera : iso-80000-1-v:Multiple [
-        iso-80000-1-v:hasPrefixSymbol "T"
-        iso-80000-1-v:hasPrefixName "tera"
-        iso-80000-1-v:hasFactor "1e12"^^xsd:double
+        vim3-v:hasPrefixSymbol "T"
+        vim3-v:hasPrefixName "tera"
+        vim3-v:hasFactor "1e12"^^xsd:double
     ]
     instance giga : iso-80000-1-v:Multiple [
-        iso-80000-1-v:hasPrefixSymbol "G"
-        iso-80000-1-v:hasPrefixName "giga"
-        iso-80000-1-v:hasFactor "1e9"^^xsd:double
+        vim3-v:hasPrefixSymbol "G"
+        vim3-v:hasPrefixName "giga"
+        vim3-v:hasFactor "1e9"^^xsd:double
     ]
     instance mega : iso-80000-1-v:Multiple [
-        iso-80000-1-v:hasPrefixSymbol "M"
-        iso-80000-1-v:hasPrefixName "mega"
-        iso-80000-1-v:hasFactor "1e6"^^xsd:double
+        vim3-v:hasPrefixSymbol "M"
+        vim3-v:hasPrefixName "mega"
+        vim3-v:hasFactor "1e6"^^xsd:double
     ]
     instance kilo : iso-80000-1-v:Multiple [
-        iso-80000-1-v:hasPrefixSymbol "k"
-        iso-80000-1-v:hasPrefixName "kilo"
-        iso-80000-1-v:hasFactor "1e3"^^xsd:double
+        vim3-v:hasPrefixSymbol "k"
+        vim3-v:hasPrefixName "kilo"
+        vim3-v:hasFactor "1e3"^^xsd:double
     ]
     instance hecto : iso-80000-1-v:Multiple [
-        iso-80000-1-v:hasPrefixSymbol "h"
-        iso-80000-1-v:hasPrefixName "hecto"
-        iso-80000-1-v:hasFactor "1e2"^^xsd:double
+        vim3-v:hasPrefixSymbol "h"
+        vim3-v:hasPrefixName "hecto"
+        vim3-v:hasFactor "1e2"^^xsd:double
     ]
     instance deca : iso-80000-1-v:Multiple [
-        iso-80000-1-v:hasPrefixSymbol "da"
-        iso-80000-1-v:hasPrefixName "deca"
-        iso-80000-1-v:hasFactor "1e1"^^xsd:double
+        vim3-v:hasPrefixSymbol "da"
+        vim3-v:hasPrefixName "deca"
+        vim3-v:hasFactor "1e1"^^xsd:double
     ]
     instance deci : iso-80000-1-v:Multiple [
-        iso-80000-1-v:hasPrefixSymbol "d"
-        iso-80000-1-v:hasPrefixName "deci"
-        iso-80000-1-v:hasFactor "1e-1"^^xsd:double
+        vim3-v:hasPrefixSymbol "d"
+        vim3-v:hasPrefixName "deci"
+        vim3-v:hasFactor "1e-1"^^xsd:double
     ]
     instance centi : iso-80000-1-v:Multiple [
-        iso-80000-1-v:hasPrefixSymbol "c"
-        iso-80000-1-v:hasPrefixName "centi"
-        iso-80000-1-v:hasFactor "1e-2"^^xsd:double
+        vim3-v:hasPrefixSymbol "c"
+        vim3-v:hasPrefixName "centi"
+        vim3-v:hasFactor "1e-2"^^xsd:double
     ]
     instance milli : iso-80000-1-v:Multiple [
-        iso-80000-1-v:hasPrefixSymbol "m"
-        iso-80000-1-v:hasPrefixName "milli"
-        iso-80000-1-v:hasFactor "1e-3"^^xsd:double
+        vim3-v:hasPrefixSymbol "m"
+        vim3-v:hasPrefixName "milli"
+        vim3-v:hasFactor "1e-3"^^xsd:double
     ]
     instance micro : iso-80000-1-v:Multiple [
-        iso-80000-1-v:hasPrefixSymbol "µ"
-        iso-80000-1-v:hasPrefixName "micro"
-        iso-80000-1-v:hasFactor "1e-6"^^xsd:double
+        vim3-v:hasPrefixSymbol "µ"
+        vim3-v:hasPrefixName "micro"
+        vim3-v:hasFactor "1e-6"^^xsd:double
     ]
     instance nano : iso-80000-1-v:Multiple [
-        iso-80000-1-v:hasPrefixSymbol "n"
-        iso-80000-1-v:hasPrefixName "nano"
-        iso-80000-1-v:hasFactor "1e-9"^^xsd:double
+        vim3-v:hasPrefixSymbol "n"
+        vim3-v:hasPrefixName "nano"
+        vim3-v:hasFactor "1e-9"^^xsd:double
     ]
     instance pico : iso-80000-1-v:Multiple [
-        iso-80000-1-v:hasPrefixSymbol "p"
-        iso-80000-1-v:hasPrefixName "pico"
-        iso-80000-1-v:hasFactor "1e-12"^^xsd:double
+        vim3-v:hasPrefixSymbol "p"
+        vim3-v:hasPrefixName "pico"
+        vim3-v:hasFactor "1e-12"^^xsd:double
     ]
     instance femto : iso-80000-1-v:Multiple [
-        iso-80000-1-v:hasPrefixSymbol "f"
-        iso-80000-1-v:hasPrefixName "femto"
-        iso-80000-1-v:hasFactor "1e-15"^^xsd:double
+        vim3-v:hasPrefixSymbol "f"
+        vim3-v:hasPrefixName "femto"
+        vim3-v:hasFactor "1e-15"^^xsd:double
     ]
     instance atto : iso-80000-1-v:Multiple [
-        iso-80000-1-v:hasPrefixSymbol "a"
-        iso-80000-1-v:hasPrefixName "atto"
-        iso-80000-1-v:hasFactor "1e-18"^^xsd:double
+        vim3-v:hasPrefixSymbol "a"
+        vim3-v:hasPrefixName "atto"
+        vim3-v:hasFactor "1e-18"^^xsd:double
     ]
     instance zepto : iso-80000-1-v:Multiple [
-        iso-80000-1-v:hasPrefixSymbol "z"
-        iso-80000-1-v:hasPrefixName "zepto"
-        iso-80000-1-v:hasFactor "1e-21"^^xsd:double
+        vim3-v:hasPrefixSymbol "z"
+        vim3-v:hasPrefixName "zepto"
+        vim3-v:hasFactor "1e-21"^^xsd:double
     ]
     instance yocto : iso-80000-1-v:Multiple [
-        iso-80000-1-v:hasPrefixSymbol "y"
-        iso-80000-1-v:hasPrefixName "yocto"
-        iso-80000-1-v:hasFactor "1e-24"^^xsd:double
+        vim3-v:hasPrefixSymbol "y"
+        vim3-v:hasPrefixName "yocto"
+        vim3-v:hasFactor "1e-24"^^xsd:double
     ]
 
 }

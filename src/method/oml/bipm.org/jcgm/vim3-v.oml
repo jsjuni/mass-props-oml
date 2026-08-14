@@ -310,6 +310,65 @@ vocabulary <http://bipm.org/jcgm/vim3-v#> as vim3-v {
 	//
 
 	//
+	// 1.17 multiple of a unit
+	//
+
+    aspect Multiple [
+        key hasPrefixSymbol
+    ]
+
+    scalar property hasPrefixSymbol [
+        domain Multiple
+        range xsd:string
+        functional
+    ]
+
+    scalar property hasPrefixName [
+        domain Multiple
+        range xsd:string
+    ]
+
+    scalar property hasFactor [
+        domain Multiple
+        range xsd:double
+        functional
+    ]
+
+    aspect MultipleOrSubmultipleOfUnit
+
+    relation multipliesUnit [
+        from MultipleOrSubmultipleOfUnit
+        to MeasurementUnit
+        functional
+    ]
+
+    relation byMultiple [
+        from MultipleOrSubmultipleOfUnit
+        to Multiple
+        functional
+    ]
+
+	relation isMultipleOfUnitIn [
+		from MeasurementUnit
+		to SystemOfUnits
+		functional
+	]
+
+    aspect MultipleOfUnit < MultipleOrSubmultipleOfUnit
+
+	//
+	// 1.18 submultiple of a unit
+	//
+
+    aspect SubmultipleOfUnit < MultipleOrSubmultipleOfUnit
+
+	relation isSubmultipleOfUnitIn [
+		from MeasurementUnit
+		to SystemOfUnits
+		functional
+	]
+
+	//
 	// 1.19 quantity value
 	//
 
