@@ -4,113 +4,156 @@ description <http://studioj.us/mass-props-oml/WP.4.2.3.4.2.3/QV#> as WP.4.2.3.4.
     uses <http://purl.org/dc/elements/1.1/> as dc
     uses <http://www.w3.org/2001/XMLSchema#> as xsd
     uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
-    uses <http://studioj.us/mass-properties-v#> as mass-properties
+    uses <http://studioj.us/mass-properties-v#> as mass-properties-v
     uses <http://bipm.org/jcgm/vim3-v#> as vim3-v
     extends <http://studioj.us/mass-props-oml/WP.4.2.3.4.2/Q/C.1.2.3.4.2.3#> as C.1.2.3.4.2.3_Q
     extends <http://studioj.us/mass-props-oml/WP.4.2.3.4.2/C/C.1.2.3.4.2.3#> as C.1.2.3.4.2.3
+    extends <http://iso.org/iso-80000/4.1-d#> as iso-80000-4.1-d
+    extends <http://iso.org/iso-80000/3.1-d#> as iso-80000-3.1-d
+    extends <http://iso.org/iso-80000/4.7-d#> as iso-80000-4.7-d
 
     @rdfs:label "mass"
-    instance C.1.2.3.4.2.3_mass_value : mass-properties:MassValue [
+    instance C.1.2.3.4.2.3_mass_value : mass-properties-v:MassValue [
         vim3-v:expressesMagnitudeOf C.1.2.3.4.2.3_Q:C.1.2.3.4.2.3_mass
+        vim3-v:hasNumber 1.5351752669073169e0
+        vim3-v:hasReference iso-80000-4.1-d:kilogram
     ]
 
     @rdfs:label "Cx"
-    instance C.1.2.3.4.2.3_Cx_value : mass-properties:CenterOfMassCoordinateValue [
+    instance C.1.2.3.4.2.3_Cx_value : mass-properties-v:CenterOfMassCoordinateValue [
         vim3-v:expressesMagnitudeOf C.1.2.3.4.2.3_Q:C.1.2.3.4.2.3_Cx
+        vim3-v:hasNumber 0.05654827638376043e0
+        vim3-v:hasReference iso-80000-3.1-d:metre
     ]
 
     @rdfs:label "Cy"
-    instance C.1.2.3.4.2.3_Cy_value : mass-properties:CenterOfMassCoordinateValue [
+    instance C.1.2.3.4.2.3_Cy_value : mass-properties-v:CenterOfMassCoordinateValue [
         vim3-v:expressesMagnitudeOf C.1.2.3.4.2.3_Q:C.1.2.3.4.2.3_Cy
+        vim3-v:hasNumber 0.024365539323477334e0
+        vim3-v:hasReference iso-80000-3.1-d:metre
     ]
 
     @rdfs:label "Cz"
-    instance C.1.2.3.4.2.3_Cz_value : mass-properties:CenterOfMassCoordinateValue [
+    instance C.1.2.3.4.2.3_Cz_value : mass-properties-v:CenterOfMassCoordinateValue [
         vim3-v:expressesMagnitudeOf C.1.2.3.4.2.3_Q:C.1.2.3.4.2.3_Cz
+        vim3-v:hasNumber -0.006704477301442803e0
+        vim3-v:hasReference iso-80000-3.1-d:metre
     ]
 
     @rdfs:label "Ixx"
-    instance C.1.2.3.4.2.3_Ixx_value : mass-properties:MomentOfInertiaValue [
+    instance C.1.2.3.4.2.3_Ixx_value : mass-properties-v:MomentOfInertiaValue [
         vim3-v:expressesMagnitudeOf C.1.2.3.4.2.3_Q:C.1.2.3.4.2.3_Ixx
+        vim3-v:hasNumber 0.009852147597161272e0
+        vim3-v:hasReference iso-80000-4.7-d:kilogram_metre_squared
     ]
 
     @rdfs:label "Iyy"
-    instance C.1.2.3.4.2.3_Iyy_value : mass-properties:MomentOfInertiaValue [
+    instance C.1.2.3.4.2.3_Iyy_value : mass-properties-v:MomentOfInertiaValue [
         vim3-v:expressesMagnitudeOf C.1.2.3.4.2.3_Q:C.1.2.3.4.2.3_Iyy
+        vim3-v:hasNumber 0.0059566843446785655e0
+        vim3-v:hasReference iso-80000-4.7-d:kilogram_metre_squared
     ]
 
     @rdfs:label "Izz"
-    instance C.1.2.3.4.2.3_Izz_value : mass-properties:MomentOfInertiaValue [
+    instance C.1.2.3.4.2.3_Izz_value : mass-properties-v:MomentOfInertiaValue [
         vim3-v:expressesMagnitudeOf C.1.2.3.4.2.3_Q:C.1.2.3.4.2.3_Izz
+        vim3-v:hasNumber 0.009580983621838865e0
+        vim3-v:hasReference iso-80000-4.7-d:kilogram_metre_squared
     ]
 
     @rdfs:label "Ixy"
-    instance C.1.2.3.4.2.3_Ixy_value : mass-properties:ProductOfInertiaValue [
+    instance C.1.2.3.4.2.3_Ixy_value : mass-properties-v:ProductOfInertiaValue [
         vim3-v:expressesMagnitudeOf C.1.2.3.4.2.3_Q:C.1.2.3.4.2.3_Ixy
+        vim3-v:hasNumber -0.004147837266839745e0
+        vim3-v:hasReference iso-80000-4.7-d:kilogram_metre_squared
     ]
 
     @rdfs:label "Ixz"
-    instance C.1.2.3.4.2.3_Ixz_value : mass-properties:ProductOfInertiaValue [
+    instance C.1.2.3.4.2.3_Ixz_value : mass-properties-v:ProductOfInertiaValue [
         vim3-v:expressesMagnitudeOf C.1.2.3.4.2.3_Q:C.1.2.3.4.2.3_Ixz
+        vim3-v:hasNumber -0.002901633192155098e0
+        vim3-v:hasReference iso-80000-4.7-d:kilogram_metre_squared
     ]
 
     @rdfs:label "Iyz"
-    instance C.1.2.3.4.2.3_Iyz_value : mass-properties:ProductOfInertiaValue [
+    instance C.1.2.3.4.2.3_Iyz_value : mass-properties-v:ProductOfInertiaValue [
         vim3-v:expressesMagnitudeOf C.1.2.3.4.2.3_Q:C.1.2.3.4.2.3_Iyz
+        vim3-v:hasNumber -0.004555317507185562e0
+        vim3-v:hasReference iso-80000-4.7-d:kilogram_metre_squared
     ]
 
     @rdfs:label "sigma_mass"
-    instance C.1.2.3.4.2.3_sigma_mass_value : mass-properties:MassValue [
+    instance C.1.2.3.4.2.3_sigma_mass_value : mass-properties-v:MassValue [
         vim3-v:expressesMagnitudeOf C.1.2.3.4.2.3_Q:C.1.2.3.4.2.3_sigma_mass
+        vim3-v:hasNumber 0.5009446813056633e0
+        vim3-v:hasReference iso-80000-4.1-d:kilogram
     ]
 
     @rdfs:label "sigma_Cx"
-    instance C.1.2.3.4.2.3_sigma_Cx_value : mass-properties:CenterOfMassCoordinateValue [
+    instance C.1.2.3.4.2.3_sigma_Cx_value : mass-properties-v:CenterOfMassCoordinateValue [
         vim3-v:expressesMagnitudeOf C.1.2.3.4.2.3_Q:C.1.2.3.4.2.3_sigma_Cx
+        vim3-v:hasNumber 0.025474049840092862e0
+        vim3-v:hasReference iso-80000-3.1-d:metre
     ]
 
     @rdfs:label "sigma_Cy"
-    instance C.1.2.3.4.2.3_sigma_Cy_value : mass-properties:CenterOfMassCoordinateValue [
+    instance C.1.2.3.4.2.3_sigma_Cy_value : mass-properties-v:CenterOfMassCoordinateValue [
         vim3-v:expressesMagnitudeOf C.1.2.3.4.2.3_Q:C.1.2.3.4.2.3_sigma_Cy
+        vim3-v:hasNumber 0.03115318894553055e0
+        vim3-v:hasReference iso-80000-3.1-d:metre
     ]
 
     @rdfs:label "sigma_Cz"
-    instance C.1.2.3.4.2.3_sigma_Cz_value : mass-properties:CenterOfMassCoordinateValue [
+    instance C.1.2.3.4.2.3_sigma_Cz_value : mass-properties-v:CenterOfMassCoordinateValue [
         vim3-v:expressesMagnitudeOf C.1.2.3.4.2.3_Q:C.1.2.3.4.2.3_sigma_Cz
+        vim3-v:hasNumber 0.026044093023204037e0
+        vim3-v:hasReference iso-80000-3.1-d:metre
     ]
 
     @rdfs:label "sigma_Ixx"
-    instance C.1.2.3.4.2.3_sigma_Ixx_value : mass-properties:MomentOfInertiaValue [
+    instance C.1.2.3.4.2.3_sigma_Ixx_value : mass-properties-v:MomentOfInertiaValue [
         vim3-v:expressesMagnitudeOf C.1.2.3.4.2.3_Q:C.1.2.3.4.2.3_sigma_Ixx
+        vim3-v:hasNumber 0.007026984947344393e0
+        vim3-v:hasReference iso-80000-4.7-d:kilogram_metre_squared
     ]
 
     @rdfs:label "sigma_Iyy"
-    instance C.1.2.3.4.2.3_sigma_Iyy_value : mass-properties:MomentOfInertiaValue [
+    instance C.1.2.3.4.2.3_sigma_Iyy_value : mass-properties-v:MomentOfInertiaValue [
         vim3-v:expressesMagnitudeOf C.1.2.3.4.2.3_Q:C.1.2.3.4.2.3_sigma_Iyy
+        vim3-v:hasNumber 0.004898501998637577e0
+        vim3-v:hasReference iso-80000-4.7-d:kilogram_metre_squared
     ]
 
     @rdfs:label "sigma_Izz"
-    instance C.1.2.3.4.2.3_sigma_Izz_value : mass-properties:MomentOfInertiaValue [
+    instance C.1.2.3.4.2.3_sigma_Izz_value : mass-properties-v:MomentOfInertiaValue [
         vim3-v:expressesMagnitudeOf C.1.2.3.4.2.3_Q:C.1.2.3.4.2.3_sigma_Izz
+        vim3-v:hasNumber 0.006933499287468981e0
+        vim3-v:hasReference iso-80000-4.7-d:kilogram_metre_squared
     ]
 
     @rdfs:label "sigma_Ixy"
-    instance C.1.2.3.4.2.3_sigma_Ixy_value : mass-properties:ProductOfInertiaValue [
+    instance C.1.2.3.4.2.3_sigma_Ixy_value : mass-properties-v:ProductOfInertiaValue [
         vim3-v:expressesMagnitudeOf C.1.2.3.4.2.3_Q:C.1.2.3.4.2.3_sigma_Ixy
+        vim3-v:hasNumber 0.003326982356587181e0
+        vim3-v:hasReference iso-80000-4.7-d:kilogram_metre_squared
     ]
 
     @rdfs:label "sigma_Ixz"
-    instance C.1.2.3.4.2.3_sigma_Ixz_value : mass-properties:ProductOfInertiaValue [
+    instance C.1.2.3.4.2.3_sigma_Ixz_value : mass-properties-v:ProductOfInertiaValue [
         vim3-v:expressesMagnitudeOf C.1.2.3.4.2.3_Q:C.1.2.3.4.2.3_sigma_Ixz
+        vim3-v:hasNumber 0.0024463732507309273e0
+        vim3-v:hasReference iso-80000-4.7-d:kilogram_metre_squared
     ]
 
     @rdfs:label "sigma_Iyz"
-    instance C.1.2.3.4.2.3_sigma_Iyz_value : mass-properties:ProductOfInertiaValue [
+    instance C.1.2.3.4.2.3_sigma_Iyz_value : mass-properties-v:ProductOfInertiaValue [
         vim3-v:expressesMagnitudeOf C.1.2.3.4.2.3_Q:C.1.2.3.4.2.3_sigma_Iyz
+        vim3-v:hasNumber 0.0033914191667659215e0
+        vim3-v:hasReference iso-80000-4.7-d:kilogram_metre_squared
     ]
 
     ref instance C.1.2.3.4.2.3:C.1.2.3.4.2.3 [
-        mass-properties:hasPoiConvention "-"
-        mass-properties:isPointMass false
+        mass-properties-v:hasPoiConvention "-"
+        mass-properties-v:isPointMass false
     ]
 }

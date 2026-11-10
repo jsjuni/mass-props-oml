@@ -1,0 +1,116 @@
+@dc:creator "http://studioj.us/mass-props-oml/WP.4.2.3.4.2/WP/WP.4.2.3.4.2.4#WP.4.2.3.4.2.4"^^xsd:anyURI
+@dc:rights "http://studioj.us/mass-props-oml/WP.4.2.3.4.2.4/WP/WP.4.2.3.4.2.4.2#WP.4.2.3.4.2.4.2"^^xsd:anyURI
+description <http://studioj.us/mass-props-oml/WP.4.2.3.4.2.4/R/C.1.2.3.4.2.4.2#> as C.1.2.3.4.2.4.2_R {
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+    uses <http://studioj.us/base#> as base
+    uses <http://imce.jpl.nasa.gov/foundation/base#> as base1
+    uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
+    extends <http://studioj.us/mass-props-oml/WP.4.2.3.4.2.4/Q/C.1.2.3.4.2.4.2#> as C.1.2.3.4.2.4.2_Q
+    uses <http://studioj.us/mass-properties-v#> as mass-properties-v
+    uses <http://bipm.org/jcgm/vim3-v#> as vim3-v
+    extends <http://iso.org/iso-80000/4.1-d#> as iso-80000-4.1-d
+    extends <http://iso.org/iso-80000/3.1-d#> as iso-80000-3.1-d
+
+    instance C.1.2.3.4.2.4.2_mass_max : mission:Requirement [
+        base:hasRequirementIdentifier "C.1.2.3.4.2.4.2_R.1"
+        base1:hasDescription "The Part 58 mass shall not exceed 1.72 kg."
+        analysis:requires C.1.2.3.4.2.4.2_mass_max_constraint
+    ]
+
+    instance C.1.2.3.4.2.4.2_mass_max_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "le"
+        analysis:explains C.1.2.3.4.2.4.2_Q:C.1.2.3.4.2.4.2_mass
+        analysis:analyzes C.1.2.3.4.2.4.2_mass_max_value
+    ]
+
+    instance C.1.2.3.4.2.4.2_mass_max_value : mass-properties-v:MassValue [
+        vim3-v:hasNumber 1.72e0
+        vim3-v:hasReference iso-80000-4.1-d:kilogram
+    ]
+
+    instance C.1.2.3.4.2.4.2_Cx_range : mission:Requirement [
+        base:hasRequirementIdentifier "C.1.2.3.4.2.4.2_R.Cx_R.2"
+        base1:hasDescription "The Part 58 Cx shall lie in the interval [-0.14, -0.02] mm."
+        analysis:requires C.1.2.3.4.2.4.2_Cx_min_constraint, C.1.2.3.4.2.4.2_Cx_max_constraint
+    ]
+
+    instance C.1.2.3.4.2.4.2_Cx_min_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "ge"
+        analysis:explains C.1.2.3.4.2.4.2_Q:C.1.2.3.4.2.4.2_Cx
+        analysis:analyzes C.1.2.3.4.2.4.2_Cx_min_value
+    ]
+
+    instance C.1.2.3.4.2.4.2_Cx_max_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "le"
+        analysis:explains C.1.2.3.4.2.4.2_Q:C.1.2.3.4.2.4.2_Cx
+        analysis:analyzes C.1.2.3.4.2.4.2_Cx_max_value
+    ]
+
+    instance C.1.2.3.4.2.4.2_Cx_min_value : mass-properties-v:CenterOfMassCoordinate [
+        vim3-v:hasNumber -0.14e0
+        vim3-v:hasReference iso-80000-3.1-d:millimetre
+    ]
+
+    instance C.1.2.3.4.2.4.2_Cx_max_value : mass-properties-v:CenterOfMassCoordinate [
+        vim3-v:hasNumber -0.02e0
+        vim3-v:hasReference iso-80000-3.1-d:millimetre
+    ]
+
+    instance C.1.2.3.4.2.4.2_Cy_range : mission:Requirement [
+        base:hasRequirementIdentifier "C.1.2.3.4.2.4.2_R.Cy_R.3"
+        base1:hasDescription "The Part 58 Cy shall lie in the interval [-0.07, 0.04] mm."
+        analysis:requires C.1.2.3.4.2.4.2_Cy_min_constraint, C.1.2.3.4.2.4.2_Cy_max_constraint
+    ]
+
+    instance C.1.2.3.4.2.4.2_Cy_min_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "ge"
+        analysis:explains C.1.2.3.4.2.4.2_Q:C.1.2.3.4.2.4.2_Cy
+        analysis:analyzes C.1.2.3.4.2.4.2_Cy_min_value
+    ]
+
+    instance C.1.2.3.4.2.4.2_Cy_max_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "le"
+        analysis:explains C.1.2.3.4.2.4.2_Q:C.1.2.3.4.2.4.2_Cy
+        analysis:analyzes C.1.2.3.4.2.4.2_Cy_max_value
+    ]
+
+    instance C.1.2.3.4.2.4.2_Cy_min_value : mass-properties-v:CenterOfMassCoordinate [
+        vim3-v:hasNumber -0.07e0
+        vim3-v:hasReference iso-80000-3.1-d:millimetre
+    ]
+
+    instance C.1.2.3.4.2.4.2_Cy_max_value : mass-properties-v:CenterOfMassCoordinate [
+        vim3-v:hasNumber 0.04e0
+        vim3-v:hasReference iso-80000-3.1-d:millimetre
+    ]
+
+    instance C.1.2.3.4.2.4.2_Cz_range : mission:Requirement [
+        base:hasRequirementIdentifier "C.1.2.3.4.2.4.2_R.Cz_R.4"
+        base1:hasDescription "The Part 58 Cz shall lie in the interval [-0.08, 0.04] mm."
+        analysis:requires C.1.2.3.4.2.4.2_Cz_min_constraint, C.1.2.3.4.2.4.2_Cz_max_constraint
+    ]
+
+    instance C.1.2.3.4.2.4.2_Cz_min_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "ge"
+        analysis:explains C.1.2.3.4.2.4.2_Q:C.1.2.3.4.2.4.2_Cz
+        analysis:analyzes C.1.2.3.4.2.4.2_Cz_min_value
+    ]
+
+    instance C.1.2.3.4.2.4.2_Cz_max_constraint : analysis:QuantityValueConstraint [
+        analysis:hasQuantityValueRelation "le"
+        analysis:explains C.1.2.3.4.2.4.2_Q:C.1.2.3.4.2.4.2_Cz
+        analysis:analyzes C.1.2.3.4.2.4.2_Cz_max_value
+    ]
+
+    instance C.1.2.3.4.2.4.2_Cz_min_value : mass-properties-v:CenterOfMassCoordinate [
+        vim3-v:hasNumber -0.08e0
+        vim3-v:hasReference iso-80000-3.1-d:millimetre
+    ]
+
+    instance C.1.2.3.4.2.4.2_Cz_max_value : mass-properties-v:CenterOfMassCoordinate [
+        vim3-v:hasNumber 0.04e0
+        vim3-v:hasReference iso-80000-3.1-d:millimetre
+    ]
+}

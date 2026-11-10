@@ -5,126 +5,126 @@ description <http://studioj.us/mass-props-oml/WP.4.2.3.3.2.2/Q/C.1.2.3.3.2.2.2#>
     uses <http://www.w3.org/2001/XMLSchema#> as xsd
     uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
     uses <http://bipm.org/jcgm/vim3-v#> as vim3-v
-    uses <http://studioj.us/mass-properties-v#> as mass-properties
+    uses <http://studioj.us/mass-properties-v#> as mass-properties-v
     extends <http://studioj.us/mass-props-oml/WP.4.2.3.3.2.2/C/C.1.2.3.3.2.2.2#> as C.1.2.3.3.2.2.2
 
     @rdfs:label "mass"
-    instance C.1.2.3.3.2.2.2_mass : mass-properties:Mass [
+    instance C.1.2.3.3.2.2.2_mass : mass-properties-v:Mass [
         vim3-v:hasQuantityIdentifier "C.1.2.3.3.2.2.2_mass"
-        mass-properties:isMassOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
+        mass-properties-v:isMassOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
     ]
 
     @rdfs:label "Cx"
-    instance C.1.2.3.3.2.2.2_Cx : mass-properties:CenterOfMassCoordinate [
+    instance C.1.2.3.3.2.2.2_Cx : mass-properties-v:CenterOfMassCoordinate [
         vim3-v:hasQuantityIdentifier "C.1.2.3.3.2.2.2_Cx"
-        mass-properties:isCenterOfMassCoordinateOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
+        mass-properties-v:isCenterOfMassCoordinateOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
     ]
 
     @rdfs:label "Cy"
-    instance C.1.2.3.3.2.2.2_Cy : mass-properties:CenterOfMassCoordinate [
+    instance C.1.2.3.3.2.2.2_Cy : mass-properties-v:CenterOfMassCoordinate [
         vim3-v:hasQuantityIdentifier "C.1.2.3.3.2.2.2_Cy"
-        mass-properties:isCenterOfMassCoordinateOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
+        mass-properties-v:isCenterOfMassCoordinateOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
     ]
 
     @rdfs:label "Cz"
-    instance C.1.2.3.3.2.2.2_Cz : mass-properties:CenterOfMassCoordinate [
+    instance C.1.2.3.3.2.2.2_Cz : mass-properties-v:CenterOfMassCoordinate [
         vim3-v:hasQuantityIdentifier "C.1.2.3.3.2.2.2_Cz"
-        mass-properties:isCenterOfMassCoordinateOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
+        mass-properties-v:isCenterOfMassCoordinateOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
     ]
 
     @rdfs:label "Ixx"
-    instance C.1.2.3.3.2.2.2_Ixx : mass-properties:MomentOfInertia [
+    instance C.1.2.3.3.2.2.2_Ixx : mass-properties-v:MomentOfInertia [
         vim3-v:hasQuantityIdentifier "C.1.2.3.3.2.2.2_Ixx"
-        mass-properties:isMomentOfInertiaOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
+        mass-properties-v:isMomentOfInertiaOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
     ]
 
     @rdfs:label "Iyy"
-    instance C.1.2.3.3.2.2.2_Iyy : mass-properties:MomentOfInertia [
+    instance C.1.2.3.3.2.2.2_Iyy : mass-properties-v:MomentOfInertia [
         vim3-v:hasQuantityIdentifier "C.1.2.3.3.2.2.2_Iyy"
-        mass-properties:isMomentOfInertiaOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
+        mass-properties-v:isMomentOfInertiaOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
     ]
 
     @rdfs:label "Izz"
-    instance C.1.2.3.3.2.2.2_Izz : mass-properties:MomentOfInertia [
+    instance C.1.2.3.3.2.2.2_Izz : mass-properties-v:MomentOfInertia [
         vim3-v:hasQuantityIdentifier "C.1.2.3.3.2.2.2_Izz"
-        mass-properties:isMomentOfInertiaOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
+        mass-properties-v:isMomentOfInertiaOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
     ]
 
     @rdfs:label "Ixy"
-    instance C.1.2.3.3.2.2.2_Ixy : mass-properties:ProductOfInertia [
+    instance C.1.2.3.3.2.2.2_Ixy : mass-properties-v:ProductOfInertia [
         vim3-v:hasQuantityIdentifier "C.1.2.3.3.2.2.2_Ixy"
-        mass-properties:isProductOfInertiaOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
+        mass-properties-v:isProductOfInertiaOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
     ]
 
     @rdfs:label "Ixz"
-    instance C.1.2.3.3.2.2.2_Ixz : mass-properties:ProductOfInertia [
+    instance C.1.2.3.3.2.2.2_Ixz : mass-properties-v:ProductOfInertia [
         vim3-v:hasQuantityIdentifier "C.1.2.3.3.2.2.2_Ixz"
-        mass-properties:isProductOfInertiaOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
+        mass-properties-v:isProductOfInertiaOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
     ]
 
     @rdfs:label "Iyz"
-    instance C.1.2.3.3.2.2.2_Iyz : mass-properties:ProductOfInertia [
+    instance C.1.2.3.3.2.2.2_Iyz : mass-properties-v:ProductOfInertia [
         vim3-v:hasQuantityIdentifier "C.1.2.3.3.2.2.2_Iyz"
-        mass-properties:isProductOfInertiaOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
+        mass-properties-v:isProductOfInertiaOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
     ]
 
     @rdfs:label "sigma_mass"
-    instance C.1.2.3.3.2.2.2_sigma_mass : mass-properties:Mass [
+    instance C.1.2.3.3.2.2.2_sigma_mass : mass-properties-v:Mass [
         vim3-v:hasQuantityIdentifier "C.1.2.3.3.2.2.2_sigma_mass"
-        mass-properties:isMassOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
+        mass-properties-v:isMassOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
     ]
 
     @rdfs:label "sigma_Cx"
-    instance C.1.2.3.3.2.2.2_sigma_Cx : mass-properties:CenterOfMassCoordinate [
+    instance C.1.2.3.3.2.2.2_sigma_Cx : mass-properties-v:CenterOfMassCoordinate [
         vim3-v:hasQuantityIdentifier "C.1.2.3.3.2.2.2_sigma_Cx"
-        mass-properties:isCenterOfMassCoordinateOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
+        mass-properties-v:isCenterOfMassCoordinateOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
     ]
 
     @rdfs:label "sigma_Cy"
-    instance C.1.2.3.3.2.2.2_sigma_Cy : mass-properties:CenterOfMassCoordinate [
+    instance C.1.2.3.3.2.2.2_sigma_Cy : mass-properties-v:CenterOfMassCoordinate [
         vim3-v:hasQuantityIdentifier "C.1.2.3.3.2.2.2_sigma_Cy"
-        mass-properties:isCenterOfMassCoordinateOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
+        mass-properties-v:isCenterOfMassCoordinateOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
     ]
 
     @rdfs:label "sigma_Cz"
-    instance C.1.2.3.3.2.2.2_sigma_Cz : mass-properties:CenterOfMassCoordinate [
+    instance C.1.2.3.3.2.2.2_sigma_Cz : mass-properties-v:CenterOfMassCoordinate [
         vim3-v:hasQuantityIdentifier "C.1.2.3.3.2.2.2_sigma_Cz"
-        mass-properties:isCenterOfMassCoordinateOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
+        mass-properties-v:isCenterOfMassCoordinateOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
     ]
 
     @rdfs:label "sigma_Ixx"
-    instance C.1.2.3.3.2.2.2_sigma_Ixx : mass-properties:MomentOfInertia [
+    instance C.1.2.3.3.2.2.2_sigma_Ixx : mass-properties-v:MomentOfInertia [
         vim3-v:hasQuantityIdentifier "C.1.2.3.3.2.2.2_sigma_Ixx"
-        mass-properties:isMomentOfInertiaOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
+        mass-properties-v:isMomentOfInertiaOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
     ]
 
     @rdfs:label "sigma_Iyy"
-    instance C.1.2.3.3.2.2.2_sigma_Iyy : mass-properties:MomentOfInertia [
+    instance C.1.2.3.3.2.2.2_sigma_Iyy : mass-properties-v:MomentOfInertia [
         vim3-v:hasQuantityIdentifier "C.1.2.3.3.2.2.2_sigma_Iyy"
-        mass-properties:isMomentOfInertiaOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
+        mass-properties-v:isMomentOfInertiaOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
     ]
 
     @rdfs:label "sigma_Izz"
-    instance C.1.2.3.3.2.2.2_sigma_Izz : mass-properties:MomentOfInertia [
+    instance C.1.2.3.3.2.2.2_sigma_Izz : mass-properties-v:MomentOfInertia [
         vim3-v:hasQuantityIdentifier "C.1.2.3.3.2.2.2_sigma_Izz"
-        mass-properties:isMomentOfInertiaOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
+        mass-properties-v:isMomentOfInertiaOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
     ]
 
     @rdfs:label "sigma_Ixy"
-    instance C.1.2.3.3.2.2.2_sigma_Ixy : mass-properties:ProductOfInertia [
+    instance C.1.2.3.3.2.2.2_sigma_Ixy : mass-properties-v:ProductOfInertia [
         vim3-v:hasQuantityIdentifier "C.1.2.3.3.2.2.2_sigma_Ixy"
-        mass-properties:isProductOfInertiaOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
+        mass-properties-v:isProductOfInertiaOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
     ]
 
     @rdfs:label "sigma_Ixz"
-    instance C.1.2.3.3.2.2.2_sigma_Ixz : mass-properties:ProductOfInertia [
+    instance C.1.2.3.3.2.2.2_sigma_Ixz : mass-properties-v:ProductOfInertia [
         vim3-v:hasQuantityIdentifier "C.1.2.3.3.2.2.2_sigma_Ixz"
-        mass-properties:isProductOfInertiaOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
+        mass-properties-v:isProductOfInertiaOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
     ]
 
     @rdfs:label "sigma_Iyz"
-    instance C.1.2.3.3.2.2.2_sigma_Iyz : mass-properties:ProductOfInertia [
+    instance C.1.2.3.3.2.2.2_sigma_Iyz : mass-properties-v:ProductOfInertia [
         vim3-v:hasQuantityIdentifier "C.1.2.3.3.2.2.2_sigma_Iyz"
-        mass-properties:isProductOfInertiaOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
+        mass-properties-v:isProductOfInertiaOf C.1.2.3.3.2.2.2:C.1.2.3.3.2.2.2
     ]
 }
