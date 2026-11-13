@@ -8,9 +8,9 @@
 ## Scaling
 
 Model size:
-* descriptions: 1003
-* concept instances: 8452
-* axioms: 100,784
+* descriptions: 1004
+* concept instances: 8537
+* axioms: 113,540
 
 ## Metrology
 
@@ -29,14 +29,14 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2/Q/C.1.2.2.1#> as C.1.2.2.
     uses <http://purl.org/dc/elements/1.1/> as dc
     uses <http://www.w3.org/2001/XMLSchema#> as xsd
     uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
-    uses <http://studioj.us/metrology#> as metrology
-    uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
+    uses <http://bipm.org/jcgm/vim3-v#> as vim3-v
+    uses <http://studioj.us/mass-properties-v#> as mass-properties-v
     extends <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.1#> as C.1.2.2.1
 
     @rdfs:label "mass"
-    instance C.1.2.2.1_mass : metrology:MassQuantity [
-        metrology:hasQuantityIdentifier "C.1.2.2.1_mass"
-        analysis:characterizes C.1.2.2.1:C.1.2.2.1
+    instance C.1.2.2.1_mass : mass-properties-v:Mass [
+        vim3-v:hasQuantityIdentifier "C.1.2.2.1_mass"
+        mass-properties-v:isMassOf C.1.2.2.1:C.1.2.2.1
     ]
 
     ...
@@ -51,25 +51,27 @@ A _quantity value_ is a pair consisting of a number and a unit identifier. Vocab
 Here is an example of quantity value assertion:
 
 ```
-@dc:creator "http://studioj.us/mass-props-oml/WP.4.2.2/WP/WP.4.2.2.1#WP.4.2.2.1"^^xsd:anyURI
-@dc:rights "http://studioj.us/mass-props-oml/WP.4.2/WP/WP.4.2.2#WP.4.2.2"^^xsd:anyURI
-description <http://studioj.us/mass-props-oml/WP.4.2.2.1/QV#> as WP.4.2.2.1_QV {
+@dc:creator "http://studioj.us/mass-props-oml/WP.4.2.3.4.2/WP/WP.4.2.3.4.2.1#WP.4.2.3.4.2.1"^^xsd:anyURI
+@dc:rights "http://studioj.us/mass-props-oml/WP.4.2.3.4/WP/WP.4.2.3.4.2#WP.4.2.3.4.2"^^xsd:anyURI
+description <http://studioj.us/mass-props-oml/WP.4.2.3.4.2.1/QV#> as WP.4.2.3.4.2.1_QV {
     uses <http://purl.org/dc/elements/1.1/> as dc
     uses <http://www.w3.org/2001/XMLSchema#> as xsd
     uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
-    uses <http://studioj.us/metrology#> as metrology
-    uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
-    extends <http://studioj.us/mass-props-oml/WP.4.2.2/Q/C.1.2.2.1#> as C.1.2.2.1_Q
-    extends <http://studioj.us/units#> as units
-    extends <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.1#> as C.1.2.2.1
+    uses <http://studioj.us/mass-properties-v#> as mass-properties-v
+    uses <http://bipm.org/jcgm/vim3-v#> as vim3-v
+    extends <http://studioj.us/mass-props-oml/WP.4.2.3.4.2/Q/C.1.2.3.4.2.1#> as C.1.2.3.4.2.1_Q
+    extends <http://iso.org/iso-80000/4.1-d#> as iso-80000-4.1-d
+    extends <http://iso.org/iso-80000/3.1-d#> as iso-80000-3.1-d
+    extends <http://iso.org/iso-80000/4.7-d#> as iso-80000-4.7-d
+    extends <http://studioj.us/mass-props-oml/WP.4.2.3.4.2/C/C.1.2.3.4.2.1#> as C.1.2.3.4.2.1
 
     @rdfs:label "mass"
-    instance C.1.2.2.1_mass_value : metrology:MassValue [
-        analysis:characterizes C.1.2.2.1_Q:C.1.2.2.1_mass
-        metrology:hasNumber 0.102492327040061e0
-        metrology:hasUnit units:kg
+    instance C.1.2.3.4.2.1_mass_value : mass-properties-v:MassValue [
+        vim3-v:expressesMagnitudeOf C.1.2.3.4.2.1_Q:C.1.2.3.4.2.1_mass
+        vim3-v:hasNumber 0.0185517635163851e0
+        vim3-v:hasReference iso-80000-4.1-d:kilogram
     ]
-    
+
     ...
 
 }
@@ -148,20 +150,12 @@ description <http://studioj.us/mass-props-oml/WP.4.2/C/C.1.2.2#> as C.1.2.2 {
     uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
     uses <http://imce.jpl.nasa.gov/foundation/base#> as base
     uses <http://studioj.us/base#> as base1
-    extends <http://studioj.us/mass-props-oml/WP.4.2/IT/IT.C.1.2.1_out#> as IT.C.1.2.1_out
-    extends <http://studioj.us/mass-props-oml/WP.4.2/IT/IT.C.1.2.2_out#> as IT.C.1.2.2_out
-    uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
-    uses <http://studioj.us/metrology#> as metrology
-    uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
 
     instance C.1.2.2 : mission:Component [
         base:hasCanonicalName "Element 2"
         base1:hasComponentIdentifier "C.1.2.2"
         base:hasSortKey "010202"
-        ...
     ]
-
-...
 }
 ```
 Here our customer has asserted the existence of a `mission:Component` _C.1.2.2 (Element 2)_, which is the target of the `project:supplies` relation above. WP.4.2.2 is named "Element 2" because its purpose is to supply the "Element 2" component. Though not shown above, our customer will also have asserted facts about Element 2 in the form of quantity definitions, requirements, operational contexts, etc., and made those assertions visible to us through the `@dc:rights` annotation.
@@ -191,19 +185,12 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.1#> as C.1.2.2.
     uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
     uses <http://imce.jpl.nasa.gov/foundation/base#> as base
     uses <http://studioj.us/base#> as base1
-    extends <http://studioj.us/mass-props-oml/WP.4.2/IT/IT.C.1.2.1_out#> as IT.C.1.2.1_out
-    extends <http://studioj.us/mass-props-oml/WP.4.2.2/IT/IT.C.1.2.2.1_out#> as IT.C.1.2.2.1_out
-    uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
-    uses <http://studioj.us/metrology#> as metrology
-    uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
 
     instance C.1.2.2.1 : mission:Component [
         base:hasCanonicalName "Subsystem 1"
         base1:hasComponentIdentifier "C.1.2.2.1"
         base:hasSortKey "01020201"
-        ...
     ]
-...
 }
 ```
 
@@ -293,41 +280,33 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2/WBS#> as WP.4.2.2_WBS {
 
 To further illustrate the pattern, we introduce internal connectivity structure in the form of mission:Interfaces, mission:Junctions, and mission:Items.
 
-We ommitted some detail in the earler description of C.1.2.2 (Element 2). Here is some of that detail:
+Here is the interface description for C.1.2.2 (Element 2):
 
 ```
 @dc:creator "http://studioj.us/mass-props-oml/WP.4/WP/WP.4.2#WP.4.2"^^xsd:anyURI
 @dc:rights "http://studioj.us/mass-props-oml/WP.4.2/WP/WP.4.2.2#WP.4.2.2"^^xsd:anyURI
-description <http://studioj.us/mass-props-oml/WP.4.2/C/C.1.2.2#> as C.1.2.2 {
+description <http://studioj.us/mass-props-oml/WP.4.2/IF/C.1.2.2#> as C.1.2.2_IF {
     uses <http://purl.org/dc/elements/1.1/> as dc
     uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    extends <http://studioj.us/mass-props-oml/WP.4.2/C/C.1.2.2#> as C.1.2.2
     uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
-    uses <http://imce.jpl.nasa.gov/foundation/base#> as base
-    uses <http://studioj.us/base#> as base1
+    uses <http://studioj.us/base#> as base
     extends <http://studioj.us/mass-props-oml/WP.4.2/IT/IT.C.1.2.1_out#> as IT.C.1.2.1_out
     extends <http://studioj.us/mass-props-oml/WP.4.2/IT/IT.C.1.2.2_out#> as IT.C.1.2.2_out
-    uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
-    uses <http://studioj.us/metrology#> as metrology
-    uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
 
-    instance C.1.2.2 : mission:Component [
-        base:hasCanonicalName "Element 2"
-        base1:hasComponentIdentifier "C.1.2.2"
-        base:hasSortKey "010202"
+    ref instance C.1.2.2:C.1.2.2 [
         mission:presents IF.C.1.2.2_in, IF.C.1.2.2_out
     ]
 
     instance IF.C.1.2.2_in : mission:Interface [
-        base1:hasComponentIdentifier "IF.C.1.2.2_in"
+        base:hasInterfaceIdentifier "IF.C.1.2.2_in"
         mission:transfersIn IT.C.1.2.1_out:IT.C.1.2.1_out
     ]
 
     instance IF.C.1.2.2_out : mission:Interface [
-        base1:hasComponentIdentifier "IF.C.1.2.2_out"
+        base:hasInterfaceIdentifier "IF.C.1.2.2_out"
         mission:transfersOut IT.C.1.2.2_out:IT.C.1.2.2_out
     ]
-
-    ...
 }
 ```
 
@@ -337,83 +316,67 @@ Every item in the model except the input to C.1 (System 1) is the output of some
 
 Again for the purpose of illustration, we assume that the implementation of any component is the arrangement of its subcomponents into a string of output-to-input connections.
 
-Here is more detail on C.1.2.2.1 (Subsystem)
+Here is the interface description for C.1.2.2.1 (Subsystem 1):)
 
 ```
 @dc:creator "http://studioj.us/mass-props-oml/WP.4.2/WP/WP.4.2.2#WP.4.2.2"^^xsd:anyURI
 @dc:rights "http://studioj.us/mass-props-oml/WP.4.2.2/WP/WP.4.2.2.1#WP.4.2.2.1"^^xsd:anyURI
-description <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.1#> as C.1.2.2.1 {
+description <http://studioj.us/mass-props-oml/WP.4.2.2/IF/C.1.2.2.1#> as C.1.2.2.1_IF {
     uses <http://purl.org/dc/elements/1.1/> as dc
     uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.1#> as C.1.2.2.1
     uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
-    uses <http://imce.jpl.nasa.gov/foundation/base#> as base
-    uses <http://studioj.us/base#> as base1
+    uses <http://studioj.us/base#> as base
     extends <http://studioj.us/mass-props-oml/WP.4.2/IT/IT.C.1.2.1_out#> as IT.C.1.2.1_out
     extends <http://studioj.us/mass-props-oml/WP.4.2.2/IT/IT.C.1.2.2.1_out#> as IT.C.1.2.2.1_out
-    uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
-    uses <http://studioj.us/metrology#> as metrology
-    uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
 
-    instance C.1.2.2.1 : mission:Component [
-        base:hasCanonicalName "Subsystem 1"
-        base1:hasComponentIdentifier "C.1.2.2.1"
-        base:hasSortKey "01020201"
+    ref instance C.1.2.2.1:C.1.2.2.1 [
         mission:presents IF.C.1.2.2.1_in, IF.C.1.2.2.1_out
     ]
 
     instance IF.C.1.2.2.1_in : mission:Interface [
-        base1:hasComponentIdentifier "IF.C.1.2.2.1_in"
+        base:hasInterfaceIdentifier "IF.C.1.2.2.1_in"
         mission:transfersIn IT.C.1.2.1_out:IT.C.1.2.1_out
     ]
 
     instance IF.C.1.2.2.1_out : mission:Interface [
-        base1:hasComponentIdentifier "IF.C.1.2.2.1_out"
+        base:hasInterfaceIdentifier "IF.C.1.2.2.1_out"
         mission:transfersOut IT.C.1.2.2.1_out:IT.C.1.2.2.1_out
     ]
-
-    ...
 }
 ```
 
-Here is similar detail on C.1.2.2.2 (Subsystem 2):
+Here is the interface description for C.1.2.2.2 (Subsystem 2):
 
 ```
 @dc:creator "http://studioj.us/mass-props-oml/WP.4.2/WP/WP.4.2.2#WP.4.2.2"^^xsd:anyURI
 @dc:rights "http://studioj.us/mass-props-oml/WP.4.2.2/WP/WP.4.2.2.2#WP.4.2.2.2"^^xsd:anyURI
-description <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.2#> as C.1.2.2.2 {
+description <http://studioj.us/mass-props-oml/WP.4.2.2/IF/C.1.2.2.2#> as C.1.2.2.2_IF {
     uses <http://purl.org/dc/elements/1.1/> as dc
     uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.2#> as C.1.2.2.2
     uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
-    uses <http://imce.jpl.nasa.gov/foundation/base#> as base
-    uses <http://studioj.us/base#> as base1
+    uses <http://studioj.us/base#> as base
     extends <http://studioj.us/mass-props-oml/WP.4.2.2/IT/IT.C.1.2.2.1_out#> as IT.C.1.2.2.1_out
     extends <http://studioj.us/mass-props-oml/WP.4.2.2/IT/IT.C.1.2.2.2_out#> as IT.C.1.2.2.2_out
-    uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
-    uses <http://studioj.us/metrology#> as metrology
-    uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
 
-    instance C.1.2.2.2 : mission:Component [
-        base:hasCanonicalName "Subsystem 2"
-        base1:hasComponentIdentifier "C.1.2.2.2"
-        base:hasSortKey "01020202"
+    ref instance C.1.2.2.2:C.1.2.2.2 [
         mission:presents IF.C.1.2.2.2_in, IF.C.1.2.2.2_out
     ]
 
     instance IF.C.1.2.2.2_in : mission:Interface [
-        base1:hasComponentIdentifier "IF.C.1.2.2.2_in"
+        base:hasInterfaceIdentifier "IF.C.1.2.2.2_in"
         mission:transfersIn IT.C.1.2.2.1_out:IT.C.1.2.2.1_out
     ]
 
     instance IF.C.1.2.2.2_out : mission:Interface [
-        base1:hasComponentIdentifier "IF.C.1.2.2.2_out"
+        base:hasInterfaceIdentifier "IF.C.1.2.2.2_out"
         mission:transfersOut IT.C.1.2.2.2_out:IT.C.1.2.2.2_out
     ]
-
-    ...
 }
 ```
 
- Note that the item (IT.C.1.2.2.1_out) transferred out of C.1.2.2.1 via interface IF.C.1.2.2.1_out is transferred into C.1.2.2.2 via interface IF.C.1.2.2.2_in. This implies that the description of IT.C.1.2.2.1_out must be visible to the suppliers of those components. Consequently, we create a description with those rights:
+Note that the item (IT.C.1.2.2.1_out) transferred out of C.1.2.2.1 via interface IF.C.1.2.2.1_out is transferred into C.1.2.2.2 via interface IF.C.1.2.2.2_in. This implies that the description of IT.C.1.2.2.1_out must be visible to the suppliers of those components. Consequently, we create a description with those rights:
 
  ```
 @dc:creator "http://studioj.us/mass-props-oml/WP.4.2/WP/WP.4.2.2#WP.4.2.2"^^xsd:anyURI
@@ -422,8 +385,11 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2/IT/IT.C.1.2.2.1_out#> as 
     uses <http://purl.org/dc/elements/1.1/> as dc
     uses <http://www.w3.org/2001/XMLSchema#> as xsd
     uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+    uses <http://studioj.us/base#> as base
 
-    instance IT.C.1.2.2.1_out : mission:Item
+    instance IT.C.1.2.2.1_out : mission:Item [
+        base:hasItemIdentifier "IT.C.1.2.2.1_out"
+    ]
 }
 ```
 
@@ -435,22 +401,22 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2/IT/IT.C.1.2.2.1_out#> as 
 description <http://studioj.us/mass-props-oml/WP.4.2.2/SIS#> as WP.4.2.2_SIS {
     uses <http://purl.org/dc/elements/1.1/> as dc
     uses <http://www.w3.org/2001/XMLSchema#> as xsd
-    uses <http://imce.jpl.nasa.gov/foundation/base#> as base
+    uses <http://studioj.us/base#> as base
     uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
-    extends <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.1#> as C.1.2.2.1
-    extends <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.2#> as C.1.2.2.2
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/IF/C.1.2.2.1#> as C.1.2.2.1_IF
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/IF/C.1.2.2.2#> as C.1.2.2.2_IF
     extends <http://studioj.us/mass-props-oml/WP.4.2.2/IT/IT.C.1.2.2.1_out#> as IT.C.1.2.2.1_out
-    extends <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.3#> as C.1.2.2.3
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/IF/C.1.2.2.3#> as C.1.2.2.3_IF
     extends <http://studioj.us/mass-props-oml/WP.4.2.2/IT/IT.C.1.2.2.2_out#> as IT.C.1.2.2.2_out
-    extends <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.4#> as C.1.2.2.4
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/IF/C.1.2.2.4#> as C.1.2.2.4_IF
     extends <http://studioj.us/mass-props-oml/WP.4.2.2/IT/IT.C.1.2.2.3_out#> as IT.C.1.2.2.3_out
-    extends <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.5#> as C.1.2.2.5
+    extends <http://studioj.us/mass-props-oml/WP.4.2.2/IF/C.1.2.2.5#> as C.1.2.2.5_IF
     extends <http://studioj.us/mass-props-oml/WP.4.2.2/IT/IT.C.1.2.2.4_out#> as IT.C.1.2.2.4_out
 
     instance J.IF.C.1.2.2.1_out.IF.C.1.2.2.2_in : mission:Junction [
-        base:hasIdentifier "J.IF.C.1.2.2.1_out.IF.C.1.2.2.2_in"
-        mission:joins1 C.1.2.2.1:IF.C.1.2.2.1_out
-        mission:joins2 C.1.2.2.2:IF.C.1.2.2.2_in
+        base:hasJunctionIdentifier "J.IF.C.1.2.2.1_out.IF.C.1.2.2.2_in"
+        mission:joins1 C.1.2.2.1_IF:IF.C.1.2.2.1_out
+        mission:joins2 C.1.2.2.2_IF:IF.C.1.2.2.2_in
     ]
 
     ref instance IT.C.1.2.2.1_out:IT.C.1.2.2.1_out [
@@ -458,9 +424,9 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2/SIS#> as WP.4.2.2_SIS {
     ]
 
     instance J.IF.C.1.2.2.2_out.IF.C.1.2.2.3_in : mission:Junction [
-        base:hasIdentifier "J.IF.C.1.2.2.2_out.IF.C.1.2.2.3_in"
-        mission:joins1 C.1.2.2.2:IF.C.1.2.2.2_out
-        mission:joins2 C.1.2.2.3:IF.C.1.2.2.3_in
+        base:hasJunctionIdentifier "J.IF.C.1.2.2.2_out.IF.C.1.2.2.3_in"
+        mission:joins1 C.1.2.2.2_IF:IF.C.1.2.2.2_out
+        mission:joins2 C.1.2.2.3_IF:IF.C.1.2.2.3_in
     ]
 
     ref instance IT.C.1.2.2.2_out:IT.C.1.2.2.2_out [
@@ -468,9 +434,9 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2/SIS#> as WP.4.2.2_SIS {
     ]
 
     instance J.IF.C.1.2.2.3_out.IF.C.1.2.2.4_in : mission:Junction [
-        base:hasIdentifier "J.IF.C.1.2.2.3_out.IF.C.1.2.2.4_in"
-        mission:joins1 C.1.2.2.3:IF.C.1.2.2.3_out
-        mission:joins2 C.1.2.2.4:IF.C.1.2.2.4_in
+        base:hasJunctionIdentifier "J.IF.C.1.2.2.3_out.IF.C.1.2.2.4_in"
+        mission:joins1 C.1.2.2.3_IF:IF.C.1.2.2.3_out
+        mission:joins2 C.1.2.2.4_IF:IF.C.1.2.2.4_in
     ]
 
     ref instance IT.C.1.2.2.3_out:IT.C.1.2.2.3_out [
@@ -478,9 +444,9 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2/SIS#> as WP.4.2.2_SIS {
     ]
 
     instance J.IF.C.1.2.2.4_out.IF.C.1.2.2.5_in : mission:Junction [
-        base:hasIdentifier "J.IF.C.1.2.2.4_out.IF.C.1.2.2.5_in"
-        mission:joins1 C.1.2.2.4:IF.C.1.2.2.4_out
-        mission:joins2 C.1.2.2.5:IF.C.1.2.2.5_in
+        base:hasJunctionIdentifier "J.IF.C.1.2.2.4_out.IF.C.1.2.2.5_in"
+        mission:joins1 C.1.2.2.4_IF:IF.C.1.2.2.4_out
+        mission:joins2 C.1.2.2.5_IF:IF.C.1.2.2.5_in
     ]
 
     ref instance IT.C.1.2.2.4_out:IT.C.1.2.2.4_out [
@@ -500,32 +466,32 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2/Q/C.1.2.2.1#> as C.1.2.2.
     uses <http://purl.org/dc/elements/1.1/> as dc
     uses <http://www.w3.org/2001/XMLSchema#> as xsd
     uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
-    uses <http://studioj.us/metrology#> as metrology
-    uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
+    uses <http://bipm.org/jcgm/vim3-v#> as vim3-v
+    uses <http://studioj.us/mass-properties-v#> as mass-properties-v
     extends <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.1#> as C.1.2.2.1
 
     @rdfs:label "mass"
-    instance C.1.2.2.1_mass : metrology:MassQuantity [
-        metrology:hasQuantityIdentifier "C.1.2.2.1_mass"
-        analysis:characterizes C.1.2.2.1:C.1.2.2.1
+    instance C.1.2.2.1_mass : mass-properties-v:Mass [
+        vim3-v:hasQuantityIdentifier "C.1.2.2.1_mass"
+        mass-properties-v:isMassOf C.1.2.2.1:C.1.2.2.1
     ]
 
     @rdfs:label "Cx"
-    instance C.1.2.2.1_Cx : metrology:CenterOfMassQuantity [
-        metrology:hasQuantityIdentifier "C.1.2.2.1_Cx"
-        analysis:characterizes C.1.2.2.1:C.1.2.2.1
+    instance C.1.2.2.1_Cx : mass-properties-v:CenterOfMassCoordinate [
+        vim3-v:hasQuantityIdentifier "C.1.2.2.1_Cx"
+        mass-properties-v:isCenterOfMassCoordinateOf C.1.2.2.1:C.1.2.2.1
     ]
 
     @rdfs:label "Cy"
-    instance C.1.2.2.1_Cy : metrology:CenterOfMassQuantity [
-        metrology:hasQuantityIdentifier "C.1.2.2.1_Cy"
-        analysis:characterizes C.1.2.2.1:C.1.2.2.1
+    instance C.1.2.2.1_Cy : mass-properties-v:CenterOfMassCoordinate [
+        vim3-v:hasQuantityIdentifier "C.1.2.2.1_Cy"
+        mass-properties-v:isCenterOfMassCoordinateOf C.1.2.2.1:C.1.2.2.1
     ]
 
     @rdfs:label "Cz"
-    instance C.1.2.2.1_Cz : metrology:CenterOfMassQuantity [
-        metrology:hasQuantityIdentifier "C.1.2.2.1_Cz"
-        analysis:characterizes C.1.2.2.1:C.1.2.2.1
+    instance C.1.2.2.1_Cz : mass-properties-v:CenterOfMassCoordinate [
+        vim3-v:hasQuantityIdentifier "C.1.2.2.1_Cz"
+        mass-properties-v:isCenterOfMassCoordinateOf C.1.2.2.1:C.1.2.2.1
     ]
 
     ...
@@ -551,12 +517,14 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2/R/C.1.2.2.1#> as C.1.2.2.
     uses <http://imce.jpl.nasa.gov/foundation/base#> as base1
     uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
     extends <http://studioj.us/mass-props-oml/WP.4.2.2/Q/C.1.2.2.1#> as C.1.2.2.1_Q
-    uses <http://studioj.us/metrology#> as metrology
-    extends <http://studioj.us/units#> as units
+    uses <http://studioj.us/mass-properties-v#> as mass-properties-v
+    uses <http://bipm.org/jcgm/vim3-v#> as vim3-v
+    extends <http://iso.org/iso-80000/4.1-d#> as iso-80000-4.1-d
+    extends <http://iso.org/iso-80000/3.1-d#> as iso-80000-3.1-d
 
     instance C.1.2.2.1_mass_max : mission:Requirement [
         base:hasRequirementIdentifier "C.1.2.2.1_R.1"
-        base1:hasDescription "The Subsystem 1 mass shall not exceed 0.44 kg."
+        base1:hasDescription "The Subsystem 1 mass shall not exceed 0.66 kg."
         analysis:requires C.1.2.2.1_mass_max_constraint
     ]
 
@@ -566,14 +534,14 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2/R/C.1.2.2.1#> as C.1.2.2.
         analysis:analyzes C.1.2.2.1_mass_max_value
     ]
 
-    instance C.1.2.2.1_mass_max_value : metrology:MassValue [
-        metrology:hasNumber 0.44e0
-        metrology:hasUnit units:kg
+    instance C.1.2.2.1_mass_max_value : mass-properties-v:MassValue [
+        vim3-v:hasNumber 0.66e0
+        vim3-v:hasReference iso-80000-4.1-d:kilogram
     ]
 
     instance C.1.2.2.1_Cx_range : mission:Requirement [
         base:hasRequirementIdentifier "C.1.2.2.1_R.Cx_R.2"
-        base1:hasDescription "The Subsystem 1 Cx shall lie in the interval [33.87, 149.20] mm."
+        base1:hasDescription "The Subsystem 1 Cx shall lie in the interval [0.02, 0.14] mm."
         analysis:requires C.1.2.2.1_Cx_min_constraint, C.1.2.2.1_Cx_max_constraint
     ]
 
@@ -589,14 +557,14 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2/R/C.1.2.2.1#> as C.1.2.2.
         analysis:analyzes C.1.2.2.1_Cx_max_value
     ]
 
-    instance C.1.2.2.1_Cx_min_value : metrology:LengthValue [
-        metrology:hasNumber 33.87e0
-        metrology:hasUnit units:mm
+    instance C.1.2.2.1_Cx_min_value : mass-properties-v:CenterOfMassCoordinate [
+        vim3-v:hasNumber 0.02e0
+        vim3-v:hasReference iso-80000-3.1-d:millimetre
     ]
 
-    instance C.1.2.2.1_Cx_max_value : metrology:LengthValue [
-        metrology:hasNumber 149.2e0
-        metrology:hasUnit units:mm
+    instance C.1.2.2.1_Cx_max_value : mass-properties-v:CenterOfMassCoordinate [
+        vim3-v:hasNumber 0.14e0
+        vim3-v:hasReference iso-80000-3.1-d:millimetre
     ]
 
     ...
@@ -617,38 +585,40 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2.1/QV#> as WP.4.2.2.1_QV {
     uses <http://purl.org/dc/elements/1.1/> as dc
     uses <http://www.w3.org/2001/XMLSchema#> as xsd
     uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
-    uses <http://studioj.us/metrology#> as metrology
-    uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
+    uses <http://studioj.us/mass-properties-v#> as mass-properties-v
+    uses <http://bipm.org/jcgm/vim3-v#> as vim3-v
     extends <http://studioj.us/mass-props-oml/WP.4.2.2/Q/C.1.2.2.1#> as C.1.2.2.1_Q
-    extends <http://studioj.us/units#> as units
+    extends <http://iso.org/iso-80000/4.1-d#> as iso-80000-4.1-d
+    extends <http://iso.org/iso-80000/3.1-d#> as iso-80000-3.1-d
+    extends <http://iso.org/iso-80000/4.7-d#> as iso-80000-4.7-d
     extends <http://studioj.us/mass-props-oml/WP.4.2.2/C/C.1.2.2.1#> as C.1.2.2.1
 
     @rdfs:label "mass"
-    instance C.1.2.2.1_mass_value : metrology:MassValue [
-        analysis:characterizes C.1.2.2.1_Q:C.1.2.2.1_mass
-        metrology:hasNumber 0.102492327040061e0
-        metrology:hasUnit units:kg
+    instance C.1.2.2.1_mass_value : mass-properties-v:MassValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.1_Q:C.1.2.2.1_mass
+        vim3-v:hasNumber 0.102492327040061e0
+        vim3-v:hasReference iso-80000-4.1-d:kilogram
     ]
 
     @rdfs:label "Cx"
-    instance C.1.2.2.1_Cx_value : metrology:CenterOfMassValue [
-        analysis:characterizes C.1.2.2.1_Q:C.1.2.2.1_Cx
-        metrology:hasNumber 68.4176930226386e0
-        metrology:hasUnit units:mm
+    instance C.1.2.2.1_Cx_value : mass-properties-v:CenterOfMassCoordinateValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.1_Q:C.1.2.2.1_Cx
+        vim3-v:hasNumber 0.0684176930226386e0
+        vim3-v:hasReference iso-80000-3.1-d:metre
     ]
 
     @rdfs:label "Cy"
-    instance C.1.2.2.1_Cy_value : metrology:CenterOfMassValue [
-        analysis:characterizes C.1.2.2.1_Q:C.1.2.2.1_Cy
-        metrology:hasNumber -99.9254682566971e0
-        metrology:hasUnit units:mm
+    instance C.1.2.2.1_Cy_value : mass-properties-v:CenterOfMassCoordinateValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.1_Q:C.1.2.2.1_Cy
+        vim3-v:hasNumber -0.0999254682566971e0
+        vim3-v:hasReference iso-80000-3.1-d:metre
     ]
 
     @rdfs:label "Cz"
-    instance C.1.2.2.1_Cz_value : metrology:CenterOfMassValue [
-        analysis:characterizes C.1.2.2.1_Q:C.1.2.2.1_Cz
-        metrology:hasNumber 32.0405026897788e0
-        metrology:hasUnit units:mm
+    instance C.1.2.2.1_Cz_value : mass-properties-v:CenterOfMassCoordinateValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2.1_Q:C.1.2.2.1_Cz
+        vim3-v:hasNumber 0.032040502689778795e0
+        vim3-v:hasReference iso-80000-3.1-d:metre
     ]
 
     ...
@@ -667,38 +637,40 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2/QV#> as WP.4.2.2_QV {
     uses <http://purl.org/dc/elements/1.1/> as dc
     uses <http://www.w3.org/2001/XMLSchema#> as xsd
     uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
-    uses <http://studioj.us/metrology#> as metrology
-    uses <http://imce.jpl.nasa.gov/foundation/analysis#> as analysis
+    uses <http://studioj.us/mass-properties-v#> as mass-properties-v
+    uses <http://bipm.org/jcgm/vim3-v#> as vim3-v
     extends <http://studioj.us/mass-props-oml/WP.4.2/Q/C.1.2.2#> as C.1.2.2_Q
     extends <http://studioj.us/mass-props-oml/WP.4.2/C/C.1.2.2#> as C.1.2.2
-    extends <http://studioj.us/units#> as units
+    extends <http://iso.org/iso-80000/4.1-d#> as iso-80000-4.1-d
+    extends <http://iso.org/iso-80000/3.1-d#> as iso-80000-3.1-d
+    extends <http://iso.org/iso-80000/4.7-d#> as iso-80000-4.7-d
 
     @rdfs:label "mass"
-    instance C.1.2.2_mass_value : metrology:MassValue [
-        analysis:characterizes C.1.2.2_Q:C.1.2.2_mass
-        metrology:hasNumber 23.35192460687412e0
-        metrology:hasUnit units:kg
+    instance C.1.2.2_mass_value : mass-properties-v:MassValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2_Q:C.1.2.2_mass
+        vim3-v:hasNumber 23.35192460687412e0
+        vim3-v:hasReference iso-80000-4.1-d:kilogram
     ]
 
     @rdfs:label "Cx"
-    instance C.1.2.2_Cx_value : metrology:CenterOfMassValue [
-        analysis:characterizes C.1.2.2_Q:C.1.2.2_Cx
-        metrology:hasNumber 6.408958326831247e0
-        metrology:hasUnit units:mm
+    instance C.1.2.2_Cx_value : mass-properties-v:CenterOfMassCoordinateValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2_Q:C.1.2.2_Cx
+        vim3-v:hasNumber 0.006408958326831247e0
+        vim3-v:hasReference iso-80000-3.1-d:metre
     ]
 
     @rdfs:label "Cy"
-    instance C.1.2.2_Cy_value : metrology:CenterOfMassValue [
-        analysis:characterizes C.1.2.2_Q:C.1.2.2_Cy
-        metrology:hasNumber -3.49571469131731e0
-        metrology:hasUnit units:mm
+    instance C.1.2.2_Cy_value : mass-properties-v:CenterOfMassCoordinateValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2_Q:C.1.2.2_Cy
+        vim3-v:hasNumber -0.003495714691317306e0
+        vim3-v:hasReference iso-80000-3.1-d:metre
     ]
 
     @rdfs:label "Cz"
-    instance C.1.2.2_Cz_value : metrology:CenterOfMassValue [
-        analysis:characterizes C.1.2.2_Q:C.1.2.2_Cz
-        metrology:hasNumber 7.930235096321932e0
-        metrology:hasUnit units:mm
+    instance C.1.2.2_Cz_value : mass-properties-v:CenterOfMassCoordinateValue [
+        vim3-v:expressesMagnitudeOf C.1.2.2_Q:C.1.2.2_Cz
+        vim3-v:hasNumber 0.007930235096321934e0
+        vim3-v:hasReference iso-80000-3.1-d:metre
     ]
 
     ...
