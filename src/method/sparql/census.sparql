@@ -1,0 +1,8 @@
+PREFIX oml: <http://opencaesar.io/oml#>
+SELECT (COUNT(?description) as ?descriptions) (COUNT(?instance) as ?instances) (COUNT(?axiom) as ?axioms) WHERE {
+        { ?description oml:type oml:Description }
+    UNION
+        { ?instance oml:type oml:ConceptInstance }
+    UNION
+        { ?axiom ?p ?o }
+}
