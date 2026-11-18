@@ -1,6 +1,7 @@
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX oml: <http://opencaesar.io/oml#>
 SELECT (COUNT(?description) as ?descriptions) (COUNT(?instance) as ?instances) (COUNT(?axiom) as ?axioms) WHERE {
-        { ?description oml:type oml:Description }
+        { ?description oml:type oml:Description ; dc:creator ?any }
     UNION
         { ?instance oml:type oml:ConceptInstance }
     UNION

@@ -8,7 +8,7 @@
 ## Scaling
 
 Model size:
-* descriptions: 1004
+* descriptions: 1003
 * concept instances: 8537
 * axioms: 113,540
 
