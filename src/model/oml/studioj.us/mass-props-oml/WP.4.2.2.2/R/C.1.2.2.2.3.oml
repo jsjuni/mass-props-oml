@@ -15,7 +15,7 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2.2/R/C.1.2.2.2.3#> as C.1.
 
     instance C.1.2.2.2.3_mass_max : mission:Requirement [
         base:hasRequirementIdentifier "C.1.2.2.2.3_R.1"
-        base1:hasDescription "The Assembly 3 mass shall not exceed 3.67 kg."
+        base1:hasDescription "The Assembly 3 mass shall not exceed 6.07 kg."
         analysis:requires C.1.2.2.2.3_mass_max_constraint
     ]
 
@@ -26,13 +26,13 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2.2/R/C.1.2.2.2.3#> as C.1.
     ]
 
     instance C.1.2.2.2.3_mass_max_value : mass-properties-v:MassValue [
-        vim3-v:hasNumber 3.67e0
+        vim3-v:hasNumber 6.07e0
         vim3-v:hasReference iso-80000-4.1-d:kilogram
     ]
 
     instance C.1.2.2.2.3_Cx_range : mission:Requirement [
         base:hasRequirementIdentifier "C.1.2.2.2.3_R.Cx_R.2"
-        base1:hasDescription "The Assembly 3 Cx shall lie in the interval [-0.03, 0.04] mm."
+        base1:hasDescription "The Assembly 3 Cx shall lie in the interval [-0.07, 0.00] mm."
         analysis:requires C.1.2.2.2.3_Cx_min_constraint, C.1.2.2.2.3_Cx_max_constraint
     ]
 
@@ -49,18 +49,18 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2.2/R/C.1.2.2.2.3#> as C.1.
     ]
 
     instance C.1.2.2.2.3_Cx_min_value : mass-properties-v:CenterOfMassCoordinate [
-        vim3-v:hasNumber -0.03e0
+        vim3-v:hasNumber -0.07e0
         vim3-v:hasReference iso-80000-3.1-d:millimetre
     ]
 
     instance C.1.2.2.2.3_Cx_max_value : mass-properties-v:CenterOfMassCoordinate [
-        vim3-v:hasNumber 0.04e0
+        vim3-v:hasNumber 0.0e0
         vim3-v:hasReference iso-80000-3.1-d:millimetre
     ]
 
     instance C.1.2.2.2.3_Cy_range : mission:Requirement [
         base:hasRequirementIdentifier "C.1.2.2.2.3_R.Cy_R.3"
-        base1:hasDescription "The Assembly 3 Cy shall lie in the interval [-0.03, 0.06] mm."
+        base1:hasDescription "The Assembly 3 Cy shall lie in the interval [-0.05, 0.04] mm."
         analysis:requires C.1.2.2.2.3_Cy_min_constraint, C.1.2.2.2.3_Cy_max_constraint
     ]
 
@@ -77,12 +77,12 @@ description <http://studioj.us/mass-props-oml/WP.4.2.2.2/R/C.1.2.2.2.3#> as C.1.
     ]
 
     instance C.1.2.2.2.3_Cy_min_value : mass-properties-v:CenterOfMassCoordinate [
-        vim3-v:hasNumber -0.03e0
+        vim3-v:hasNumber -0.05e0
         vim3-v:hasReference iso-80000-3.1-d:millimetre
     ]
 
     instance C.1.2.2.2.3_Cy_max_value : mass-properties-v:CenterOfMassCoordinate [
-        vim3-v:hasNumber 0.06e0
+        vim3-v:hasNumber 0.04e0
         vim3-v:hasReference iso-80000-3.1-d:millimetre
     ]
 

@@ -15,7 +15,7 @@ description <http://studioj.us/mass-props-oml/WP.4.2.3.4.2.3/R/C.1.2.3.4.2.3.2#>
 
     instance C.1.2.3.4.2.3.2_mass_max : mission:Requirement [
         base:hasRequirementIdentifier "C.1.2.3.4.2.3.2_R.1"
-        base1:hasDescription "The Part 55 mass shall not exceed 1.03 kg."
+        base1:hasDescription "The Part 55 mass shall not exceed 1.49 kg."
         analysis:requires C.1.2.3.4.2.3.2_mass_max_constraint
     ]
 
@@ -26,7 +26,7 @@ description <http://studioj.us/mass-props-oml/WP.4.2.3.4.2.3/R/C.1.2.3.4.2.3.2#>
     ]
 
     instance C.1.2.3.4.2.3.2_mass_max_value : mass-properties-v:MassValue [
-        vim3-v:hasNumber 1.03e0
+        vim3-v:hasNumber 1.49e0
         vim3-v:hasReference iso-80000-4.1-d:kilogram
     ]
 
@@ -60,7 +60,7 @@ description <http://studioj.us/mass-props-oml/WP.4.2.3.4.2.3/R/C.1.2.3.4.2.3.2#>
 
     instance C.1.2.3.4.2.3.2_Cy_range : mission:Requirement [
         base:hasRequirementIdentifier "C.1.2.3.4.2.3.2_R.Cy_R.3"
-        base1:hasDescription "The Part 55 Cy shall lie in the interval [-0.14, -0.02] mm."
+        base1:hasDescription "The Part 55 Cy shall lie in the interval [-0.16, -0.04] mm."
         analysis:requires C.1.2.3.4.2.3.2_Cy_min_constraint, C.1.2.3.4.2.3.2_Cy_max_constraint
     ]
 
@@ -77,18 +77,18 @@ description <http://studioj.us/mass-props-oml/WP.4.2.3.4.2.3/R/C.1.2.3.4.2.3.2#>
     ]
 
     instance C.1.2.3.4.2.3.2_Cy_min_value : mass-properties-v:CenterOfMassCoordinate [
-        vim3-v:hasNumber -0.14e0
+        vim3-v:hasNumber -0.16e0
         vim3-v:hasReference iso-80000-3.1-d:millimetre
     ]
 
     instance C.1.2.3.4.2.3.2_Cy_max_value : mass-properties-v:CenterOfMassCoordinate [
-        vim3-v:hasNumber -0.02e0
+        vim3-v:hasNumber -0.04e0
         vim3-v:hasReference iso-80000-3.1-d:millimetre
     ]
 
     instance C.1.2.3.4.2.3.2_Cz_range : mission:Requirement [
         base:hasRequirementIdentifier "C.1.2.3.4.2.3.2_R.Cz_R.4"
-        base1:hasDescription "The Part 55 Cz shall lie in the interval [-0.18, -0.06] mm."
+        base1:hasDescription "The Part 55 Cz shall lie in the interval [-0.19, -0.07] mm."
         analysis:requires C.1.2.3.4.2.3.2_Cz_min_constraint, C.1.2.3.4.2.3.2_Cz_max_constraint
     ]
 
@@ -105,12 +105,12 @@ description <http://studioj.us/mass-props-oml/WP.4.2.3.4.2.3/R/C.1.2.3.4.2.3.2#>
     ]
 
     instance C.1.2.3.4.2.3.2_Cz_min_value : mass-properties-v:CenterOfMassCoordinate [
-        vim3-v:hasNumber -0.18e0
+        vim3-v:hasNumber -0.19e0
         vim3-v:hasReference iso-80000-3.1-d:millimetre
     ]
 
     instance C.1.2.3.4.2.3.2_Cz_max_value : mass-properties-v:CenterOfMassCoordinate [
-        vim3-v:hasNumber -0.06e0
+        vim3-v:hasNumber -0.07e0
         vim3-v:hasReference iso-80000-3.1-d:millimetre
     ]
 }

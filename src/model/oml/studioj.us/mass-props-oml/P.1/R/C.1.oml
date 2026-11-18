@@ -15,7 +15,7 @@ description <http://studioj.us/mass-props-oml/P.1/R/C.1#> as C.1_R {
 
     instance C.1_mass_max : mission:Requirement [
         base:hasRequirementIdentifier "C.1_R.1"
-        base1:hasDescription "The System 1 mass shall not exceed 53.62 kg."
+        base1:hasDescription "The System 1 mass shall not exceed 46.70 kg."
         analysis:requires C.1_mass_max_constraint
     ]
 
@@ -26,13 +26,13 @@ description <http://studioj.us/mass-props-oml/P.1/R/C.1#> as C.1_R {
     ]
 
     instance C.1_mass_max_value : mass-properties-v:MassValue [
-        vim3-v:hasNumber 53.62e0
+        vim3-v:hasNumber 46.7e0
         vim3-v:hasReference iso-80000-4.1-d:kilogram
     ]
 
     instance C.1_Cx_range : mission:Requirement [
         base:hasRequirementIdentifier "C.1_R.Cx_R.2"
-        base1:hasDescription "The System 1 Cx shall lie in the interval [-0.01, 0.01] mm."
+        base1:hasDescription "The System 1 Cx shall lie in the interval [-0.01, 0.02] mm."
         analysis:requires C.1_Cx_min_constraint, C.1_Cx_max_constraint
     ]
 
@@ -54,7 +54,7 @@ description <http://studioj.us/mass-props-oml/P.1/R/C.1#> as C.1_R {
     ]
 
     instance C.1_Cx_max_value : mass-properties-v:CenterOfMassCoordinate [
-        vim3-v:hasNumber 0.01e0
+        vim3-v:hasNumber 0.02e0
         vim3-v:hasReference iso-80000-3.1-d:millimetre
     ]
 
@@ -88,7 +88,7 @@ description <http://studioj.us/mass-props-oml/P.1/R/C.1#> as C.1_R {
 
     instance C.1_Cz_range : mission:Requirement [
         base:hasRequirementIdentifier "C.1_R.Cz_R.4"
-        base1:hasDescription "The System 1 Cz shall lie in the interval [-0.00, 0.02] mm."
+        base1:hasDescription "The System 1 Cz shall lie in the interval [0.00, 0.02] mm."
         analysis:requires C.1_Cz_min_constraint, C.1_Cz_max_constraint
     ]
 

@@ -15,7 +15,7 @@ description <http://studioj.us/mass-props-oml/WP.4/R/C.1.4#> as C.1.4_R {
 
     instance C.1.4_mass_max : mission:Requirement [
         base:hasRequirementIdentifier "C.1.4_R.1"
-        base1:hasDescription "The Segment 4 mass shall not exceed 0.81 kg."
+        base1:hasDescription "The Segment 4 mass shall not exceed 0.61 kg."
         analysis:requires C.1.4_mass_max_constraint
     ]
 
@@ -26,13 +26,13 @@ description <http://studioj.us/mass-props-oml/WP.4/R/C.1.4#> as C.1.4_R {
     ]
 
     instance C.1.4_mass_max_value : mass-properties-v:MassValue [
-        vim3-v:hasNumber 0.81e0
+        vim3-v:hasNumber 0.61e0
         vim3-v:hasReference iso-80000-4.1-d:kilogram
     ]
 
     instance C.1.4_Cx_range : mission:Requirement [
         base:hasRequirementIdentifier "C.1.4_R.Cx_R.2"
-        base1:hasDescription "The Segment 4 Cx shall lie in the interval [-0.06, 0.06] mm."
+        base1:hasDescription "The Segment 4 Cx shall lie in the interval [-0.11, 0.01] mm."
         analysis:requires C.1.4_Cx_min_constraint, C.1.4_Cx_max_constraint
     ]
 
@@ -49,18 +49,18 @@ description <http://studioj.us/mass-props-oml/WP.4/R/C.1.4#> as C.1.4_R {
     ]
 
     instance C.1.4_Cx_min_value : mass-properties-v:CenterOfMassCoordinate [
-        vim3-v:hasNumber -0.06e0
+        vim3-v:hasNumber -0.11e0
         vim3-v:hasReference iso-80000-3.1-d:millimetre
     ]
 
     instance C.1.4_Cx_max_value : mass-properties-v:CenterOfMassCoordinate [
-        vim3-v:hasNumber 0.06e0
+        vim3-v:hasNumber 0.01e0
         vim3-v:hasReference iso-80000-3.1-d:millimetre
     ]
 
     instance C.1.4_Cy_range : mission:Requirement [
         base:hasRequirementIdentifier "C.1.4_R.Cy_R.3"
-        base1:hasDescription "The Segment 4 Cy shall lie in the interval [-0.08, 0.04] mm."
+        base1:hasDescription "The Segment 4 Cy shall lie in the interval [-0.06, 0.06] mm."
         analysis:requires C.1.4_Cy_min_constraint, C.1.4_Cy_max_constraint
     ]
 
@@ -77,18 +77,18 @@ description <http://studioj.us/mass-props-oml/WP.4/R/C.1.4#> as C.1.4_R {
     ]
 
     instance C.1.4_Cy_min_value : mass-properties-v:CenterOfMassCoordinate [
-        vim3-v:hasNumber -0.08e0
+        vim3-v:hasNumber -0.06e0
         vim3-v:hasReference iso-80000-3.1-d:millimetre
     ]
 
     instance C.1.4_Cy_max_value : mass-properties-v:CenterOfMassCoordinate [
-        vim3-v:hasNumber 0.04e0
+        vim3-v:hasNumber 0.06e0
         vim3-v:hasReference iso-80000-3.1-d:millimetre
     ]
 
     instance C.1.4_Cz_range : mission:Requirement [
         base:hasRequirementIdentifier "C.1.4_R.Cz_R.4"
-        base1:hasDescription "The Segment 4 Cz shall lie in the interval [-0.16, -0.04] mm."
+        base1:hasDescription "The Segment 4 Cz shall lie in the interval [-0.14, -0.02] mm."
         analysis:requires C.1.4_Cz_min_constraint, C.1.4_Cz_max_constraint
     ]
 
@@ -105,12 +105,12 @@ description <http://studioj.us/mass-props-oml/WP.4/R/C.1.4#> as C.1.4_R {
     ]
 
     instance C.1.4_Cz_min_value : mass-properties-v:CenterOfMassCoordinate [
-        vim3-v:hasNumber -0.16e0
+        vim3-v:hasNumber -0.14e0
         vim3-v:hasReference iso-80000-3.1-d:millimetre
     ]
 
     instance C.1.4_Cz_max_value : mass-properties-v:CenterOfMassCoordinate [
-        vim3-v:hasNumber -0.04e0
+        vim3-v:hasNumber -0.02e0
         vim3-v:hasReference iso-80000-3.1-d:millimetre
     ]
 }

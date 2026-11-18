@@ -15,7 +15,7 @@ description <http://studioj.us/mass-props-oml/WP.4.2.3.4/R/C.1.2.3.4.3#> as C.1.
 
     instance C.1.2.3.4.3_mass_max : mission:Requirement [
         base:hasRequirementIdentifier "C.1.2.3.4.3_R.1"
-        base1:hasDescription "The Assembly 20 mass shall not exceed 3.69 kg."
+        base1:hasDescription "The Assembly 20 mass shall not exceed 3.37 kg."
         analysis:requires C.1.2.3.4.3_mass_max_constraint
     ]
 
@@ -26,7 +26,7 @@ description <http://studioj.us/mass-props-oml/WP.4.2.3.4/R/C.1.2.3.4.3#> as C.1.
     ]
 
     instance C.1.2.3.4.3_mass_max_value : mass-properties-v:MassValue [
-        vim3-v:hasNumber 3.69e0
+        vim3-v:hasNumber 3.37e0
         vim3-v:hasReference iso-80000-4.1-d:kilogram
     ]
 
@@ -60,7 +60,7 @@ description <http://studioj.us/mass-props-oml/WP.4.2.3.4/R/C.1.2.3.4.3#> as C.1.
 
     instance C.1.2.3.4.3_Cy_range : mission:Requirement [
         base:hasRequirementIdentifier "C.1.2.3.4.3_R.Cy_R.3"
-        base1:hasDescription "The Assembly 20 Cy shall lie in the interval [-0.07, 0.02] mm."
+        base1:hasDescription "The Assembly 20 Cy shall lie in the interval [0.00, 0.09] mm."
         analysis:requires C.1.2.3.4.3_Cy_min_constraint, C.1.2.3.4.3_Cy_max_constraint
     ]
 
@@ -77,18 +77,18 @@ description <http://studioj.us/mass-props-oml/WP.4.2.3.4/R/C.1.2.3.4.3#> as C.1.
     ]
 
     instance C.1.2.3.4.3_Cy_min_value : mass-properties-v:CenterOfMassCoordinate [
-        vim3-v:hasNumber -0.07e0
+        vim3-v:hasNumber 0.0e0
         vim3-v:hasReference iso-80000-3.1-d:millimetre
     ]
 
     instance C.1.2.3.4.3_Cy_max_value : mass-properties-v:CenterOfMassCoordinate [
-        vim3-v:hasNumber 0.02e0
+        vim3-v:hasNumber 0.09e0
         vim3-v:hasReference iso-80000-3.1-d:millimetre
     ]
 
     instance C.1.2.3.4.3_Cz_range : mission:Requirement [
         base:hasRequirementIdentifier "C.1.2.3.4.3_R.Cz_R.4"
-        base1:hasDescription "The Assembly 20 Cz shall lie in the interval [-0.03, 0.06] mm."
+        base1:hasDescription "The Assembly 20 Cz shall lie in the interval [-0.04, 0.05] mm."
         analysis:requires C.1.2.3.4.3_Cz_min_constraint, C.1.2.3.4.3_Cz_max_constraint
     ]
 
@@ -105,12 +105,12 @@ description <http://studioj.us/mass-props-oml/WP.4.2.3.4/R/C.1.2.3.4.3#> as C.1.
     ]
 
     instance C.1.2.3.4.3_Cz_min_value : mass-properties-v:CenterOfMassCoordinate [
-        vim3-v:hasNumber -0.03e0
+        vim3-v:hasNumber -0.04e0
         vim3-v:hasReference iso-80000-3.1-d:millimetre
     ]
 
     instance C.1.2.3.4.3_Cz_max_value : mass-properties-v:CenterOfMassCoordinate [
-        vim3-v:hasNumber 0.06e0
+        vim3-v:hasNumber 0.05e0
         vim3-v:hasReference iso-80000-3.1-d:millimetre
     ]
 }

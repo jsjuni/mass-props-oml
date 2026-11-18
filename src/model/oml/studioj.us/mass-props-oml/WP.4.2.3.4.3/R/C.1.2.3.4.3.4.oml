@@ -15,7 +15,7 @@ description <http://studioj.us/mass-props-oml/WP.4.2.3.4.3/R/C.1.2.3.4.3.4#> as 
 
     instance C.1.2.3.4.3.4_mass_max : mission:Requirement [
         base:hasRequirementIdentifier "C.1.2.3.4.3.4_R.1"
-        base1:hasDescription "The Subassembly 34 mass shall not exceed 0.63 kg."
+        base1:hasDescription "The Subassembly 34 mass shall not exceed 0.69 kg."
         analysis:requires C.1.2.3.4.3.4_mass_max_constraint
     ]
 
@@ -26,7 +26,7 @@ description <http://studioj.us/mass-props-oml/WP.4.2.3.4.3/R/C.1.2.3.4.3.4#> as 
     ]
 
     instance C.1.2.3.4.3.4_mass_max_value : mass-properties-v:MassValue [
-        vim3-v:hasNumber 0.63e0
+        vim3-v:hasNumber 0.69e0
         vim3-v:hasReference iso-80000-4.1-d:kilogram
     ]
 
@@ -60,7 +60,7 @@ description <http://studioj.us/mass-props-oml/WP.4.2.3.4.3/R/C.1.2.3.4.3.4#> as 
 
     instance C.1.2.3.4.3.4_Cy_range : mission:Requirement [
         base:hasRequirementIdentifier "C.1.2.3.4.3.4_R.Cy_R.3"
-        base1:hasDescription "The Subassembly 34 Cy shall lie in the interval [0.10, 0.22] mm."
+        base1:hasDescription "The Subassembly 34 Cy shall lie in the interval [0.02, 0.13] mm."
         analysis:requires C.1.2.3.4.3.4_Cy_min_constraint, C.1.2.3.4.3.4_Cy_max_constraint
     ]
 
@@ -77,18 +77,18 @@ description <http://studioj.us/mass-props-oml/WP.4.2.3.4.3/R/C.1.2.3.4.3.4#> as 
     ]
 
     instance C.1.2.3.4.3.4_Cy_min_value : mass-properties-v:CenterOfMassCoordinate [
-        vim3-v:hasNumber 0.1e0
+        vim3-v:hasNumber 0.02e0
         vim3-v:hasReference iso-80000-3.1-d:millimetre
     ]
 
     instance C.1.2.3.4.3.4_Cy_max_value : mass-properties-v:CenterOfMassCoordinate [
-        vim3-v:hasNumber 0.22e0
+        vim3-v:hasNumber 0.13e0
         vim3-v:hasReference iso-80000-3.1-d:millimetre
     ]
 
     instance C.1.2.3.4.3.4_Cz_range : mission:Requirement [
         base:hasRequirementIdentifier "C.1.2.3.4.3.4_R.Cz_R.4"
-        base1:hasDescription "The Subassembly 34 Cz shall lie in the interval [-0.11, 0.01] mm."
+        base1:hasDescription "The Subassembly 34 Cz shall lie in the interval [-0.10, 0.02] mm."
         analysis:requires C.1.2.3.4.3.4_Cz_min_constraint, C.1.2.3.4.3.4_Cz_max_constraint
     ]
 
@@ -105,12 +105,12 @@ description <http://studioj.us/mass-props-oml/WP.4.2.3.4.3/R/C.1.2.3.4.3.4#> as 
     ]
 
     instance C.1.2.3.4.3.4_Cz_min_value : mass-properties-v:CenterOfMassCoordinate [
-        vim3-v:hasNumber -0.11e0
+        vim3-v:hasNumber -0.1e0
         vim3-v:hasReference iso-80000-3.1-d:millimetre
     ]
 
     instance C.1.2.3.4.3.4_Cz_max_value : mass-properties-v:CenterOfMassCoordinate [
-        vim3-v:hasNumber 0.01e0
+        vim3-v:hasNumber 0.02e0
         vim3-v:hasReference iso-80000-3.1-d:millimetre
     ]
 }

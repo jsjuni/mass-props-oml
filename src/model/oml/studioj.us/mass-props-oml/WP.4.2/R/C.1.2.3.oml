@@ -15,7 +15,7 @@ description <http://studioj.us/mass-props-oml/WP.4.2/R/C.1.2.3#> as C.1.2.3_R {
 
     instance C.1.2.3_mass_max : mission:Requirement [
         base:hasRequirementIdentifier "C.1.2.3_R.1"
-        base1:hasDescription "The Element 3 mass shall not exceed 22.10 kg."
+        base1:hasDescription "The Element 3 mass shall not exceed 23.11 kg."
         analysis:requires C.1.2.3_mass_max_constraint
     ]
 
@@ -26,7 +26,7 @@ description <http://studioj.us/mass-props-oml/WP.4.2/R/C.1.2.3#> as C.1.2.3_R {
     ]
 
     instance C.1.2.3_mass_max_value : mass-properties-v:MassValue [
-        vim3-v:hasNumber 22.1e0
+        vim3-v:hasNumber 23.11e0
         vim3-v:hasReference iso-80000-4.1-d:kilogram
     ]
 
@@ -60,7 +60,7 @@ description <http://studioj.us/mass-props-oml/WP.4.2/R/C.1.2.3#> as C.1.2.3_R {
 
     instance C.1.2.3_Cy_range : mission:Requirement [
         base:hasRequirementIdentifier "C.1.2.3_R.Cy_R.3"
-        base1:hasDescription "The Element 3 Cy shall lie in the interval [-0.00, 0.03] mm."
+        base1:hasDescription "The Element 3 Cy shall lie in the interval [-0.01, 0.03] mm."
         analysis:requires C.1.2.3_Cy_min_constraint, C.1.2.3_Cy_max_constraint
     ]
 
@@ -77,7 +77,7 @@ description <http://studioj.us/mass-props-oml/WP.4.2/R/C.1.2.3#> as C.1.2.3_R {
     ]
 
     instance C.1.2.3_Cy_min_value : mass-properties-v:CenterOfMassCoordinate [
-        vim3-v:hasNumber 0.0e0
+        vim3-v:hasNumber -0.01e0
         vim3-v:hasReference iso-80000-3.1-d:millimetre
     ]
 

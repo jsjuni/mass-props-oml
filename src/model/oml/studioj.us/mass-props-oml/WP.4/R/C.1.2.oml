@@ -15,7 +15,7 @@ description <http://studioj.us/mass-props-oml/WP.4/R/C.1.2#> as C.1.2_R {
 
     instance C.1.2_mass_max : mission:Requirement [
         base:hasRequirementIdentifier "C.1.2_R.1"
-        base1:hasDescription "The Segment 2 mass shall not exceed 47.70 kg."
+        base1:hasDescription "The Segment 2 mass shall not exceed 44.86 kg."
         analysis:requires C.1.2_mass_max_constraint
     ]
 
@@ -26,7 +26,7 @@ description <http://studioj.us/mass-props-oml/WP.4/R/C.1.2#> as C.1.2_R {
     ]
 
     instance C.1.2_mass_max_value : mass-properties-v:MassValue [
-        vim3-v:hasNumber 47.7e0
+        vim3-v:hasNumber 44.86e0
         vim3-v:hasReference iso-80000-4.1-d:kilogram
     ]
 
@@ -60,7 +60,7 @@ description <http://studioj.us/mass-props-oml/WP.4/R/C.1.2#> as C.1.2_R {
 
     instance C.1.2_Cy_range : mission:Requirement [
         base:hasRequirementIdentifier "C.1.2_R.Cy_R.3"
-        base1:hasDescription "The Segment 2 Cy shall lie in the interval [-0.01, 0.01] mm."
+        base1:hasDescription "The Segment 2 Cy shall lie in the interval [-0.01, 0.02] mm."
         analysis:requires C.1.2_Cy_min_constraint, C.1.2_Cy_max_constraint
     ]
 
@@ -82,13 +82,13 @@ description <http://studioj.us/mass-props-oml/WP.4/R/C.1.2#> as C.1.2_R {
     ]
 
     instance C.1.2_Cy_max_value : mass-properties-v:CenterOfMassCoordinate [
-        vim3-v:hasNumber 0.01e0
+        vim3-v:hasNumber 0.02e0
         vim3-v:hasReference iso-80000-3.1-d:millimetre
     ]
 
     instance C.1.2_Cz_range : mission:Requirement [
         base:hasRequirementIdentifier "C.1.2_R.Cz_R.4"
-        base1:hasDescription "The Segment 2 Cz shall lie in the interval [-0.00, 0.02] mm."
+        base1:hasDescription "The Segment 2 Cz shall lie in the interval [-0.01, 0.02] mm."
         analysis:requires C.1.2_Cz_min_constraint, C.1.2_Cz_max_constraint
     ]
 
@@ -105,7 +105,7 @@ description <http://studioj.us/mass-props-oml/WP.4/R/C.1.2#> as C.1.2_R {
     ]
 
     instance C.1.2_Cz_min_value : mass-properties-v:CenterOfMassCoordinate [
-        vim3-v:hasNumber 0.0e0
+        vim3-v:hasNumber -0.01e0
         vim3-v:hasReference iso-80000-3.1-d:millimetre
     ]
 
