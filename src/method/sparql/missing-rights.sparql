@@ -1,14 +1,15 @@
 # finds importing descriptions whose imported descriptions do not grant rights to the
 # creator of the importing description
 # creator rights => creator of the imported matches creator of the importing
-# explicit rights => rights of the imported match creator of the importing
-# implicit_rights => neither creator nor explicit and rights of the imported as a regex match the creator of the importing
+# explicit rights => rights of the imported match creator of the importing or "all"
+# implicit rights => neither creator nor explicit and rights of the imported as a regex match the creator of the importing
+# method rights => imported is an unrestricted method description
 
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX oml: <http://opencaesar.io/oml#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX project: <http://imce.jpl.nasa.gov/foundation/project#>
-SELECT ?creator ?importing ?imported
+SELECT ?creator ?importing ?imported ?implicit_rights
 WHERE {
     ?importing owl:imports ?imported ;
         oml:type oml:Description ;
@@ -20,7 +21,23 @@ BIND(EXISTS { ?imported dc:rights ?creator } as ?has_explicit_rights)
 BIND(!?has_creator_rights && !?has_explicit_rights && EXISTS {
     ?imported dc:rights ?holder FILTER(REGEX(STR(?creator), STR(?holder)))
 } as ?has_implicit_rights)
+BIND(?imported = ?method_desc as ?has_method_rights)
+VALUES ?method_desc {
+  <http://studioj.us/mass-properties-d#>
+  <http://bipm.org/jcgm/vim3-d#>
+  <http://iso.org/iso-80000/7.12-d#>
+  <http://iso.org/iso-80000/4.1-d#>
+  <http://iso.org/iso-80000/1-d#>
+  <http://iso.org/iso-80000/5.1-d#>
+  <http://iso.org/iso-80000/4.7-d#>
+  <http://iso.org/iso-80000/3.9-d#>
+  <http://iso.org/iso-80000/6.1-d#>
+  <http://iso.org/iso-80000/3.1-d#>
+  <http://iso.org/iso-80000/9.2-d#>
+  <http://iso.org/iso-80000/3.16-d#>
+}
 
-FILTER(!?has_creator_rights && !?has_explicit_rights && !?has_implicit_rights)
+FILTER(!?has_creator_rights && !?has_explicit_rights && !?has_implicit_rights && !?has_method_rights)
+#FILTER(?has_implicit_rights)
 }
 ORDER BY ?imported ?importing

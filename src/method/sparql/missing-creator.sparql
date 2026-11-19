@@ -12,5 +12,20 @@ WHERE {
         ?auth a project:Authority .
         FILTER(IRI(STR(?creator)) = ?auth)
     }
-    FILTER(!BOUND(?creator))
+    BIND(?description = ?method_desc as ?is_method_desc)
+    FILTER(!BOUND(?creator) && !?is_method_desc)
+    VALUES ?method_desc {
+      <http://studioj.us/mass-properties-d#>
+      <http://bipm.org/jcgm/vim3-d#>
+      <http://iso.org/iso-80000/7.12-d#>
+      <http://iso.org/iso-80000/4.1-d#>
+      <http://iso.org/iso-80000/1-d#>
+      <http://iso.org/iso-80000/5.1-d#>
+      <http://iso.org/iso-80000/4.7-d#>
+      <http://iso.org/iso-80000/3.9-d#>
+      <http://iso.org/iso-80000/6.1-d#>
+      <http://iso.org/iso-80000/3.1-d#>
+      <http://iso.org/iso-80000/9.2-d#>
+      <http://iso.org/iso-80000/3.16-d#>
+    }
 }
